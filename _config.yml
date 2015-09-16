@@ -1,2 +1,5 @@
 name: EC-CUBE3
 markdown: redcarpet
+redcarpet:
+  extensions: [tables,autolink]
+highlighter: pygments

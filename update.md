@@ -37,6 +37,6 @@ EC-CUBE3.0.2から導入されたマイグレーションを利用したバー�
 
 https://github.com/EC-CUBE/ec-cube/compare/3.0.2...3.0.3
 
-### 3.0.3→3.0,4
+### 3.0.3→3.0.4
 
 https://github.com/EC-CUBE/ec-cube/compare/3.0.3...3.0.4

@@ -28,6 +28,40 @@ app/config/eccube 直下に config_dev.yml を用意することで開発環境�
 
 https://github.com/EC-CUBE/ec-cube/issues/207
 
+## メールの設定方法
+インストール画面でsmtpのメールサーバ設定を行うと以下の内容が作成されます。  
+
+```
+mail:
+    transport: smtp
+    host: ドメイン名
+    port: 587
+    username: ユーザー名
+    password: パスワード
+    encryption: null
+    auth_mode: null
+```
+
+この例ではportはOP25B対策しています。  
+SSLを使われている場合、
+```encryption```に```ssl```または```tls```を設定する必要があります。
+
+Gmailの場合、
+
+```
+mail:
+    transport: smtp
+    host: smtp.gmail.com
+    port: 465
+    username: GMAILのユーザー名
+    password: GMAILのパスワード
+    encryption: ssl
+    auth_mode: login
+```
+
+という設定で送信可能ですがGmail側で安全性の低いアプリへのアクセスを有効にする必要があります。
+
+
 ## メールの誤送信防止機能
 
 config.ymlまたはconfig_dev.yml に delivery_addressを追加することで
@@ -40,7 +74,8 @@ https://github.com/EC-CUBE/ec-cube/issues/195
 
 ## コンソールコマンドについて
 
-ver3.0.0には含まれていませんが、GitHubから最新版を取得するとコンソールコマンドとして、
+ver3.0.1からコンソールコマンドとして、
+
 ```
 php app/console router:debug
 php app/console cache:clear

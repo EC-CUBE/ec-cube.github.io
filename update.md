@@ -50,3 +50,7 @@ https://github.com/EC-CUBE/ec-cube/compare/3.0.2...3.0.3
 ### 3.0.3→3.0.4
 
 https://github.com/EC-CUBE/ec-cube/compare/3.0.3...3.0.4
+
+### 3.0.4→3.0.5
+
+https://github.com/EC-CUBE/ec-cube/compare/3.0.4...3.0.5

@@ -106,3 +106,33 @@ title: マイグレーションガイド
     $em->flush();
 
 3.コマンドラインからマイグレーションを実行(php app/console migrations:migrate)し、想定した初期データが挿入されることを確認する
+
+
+# Doctrineを使ってのマイグレーション
+## Entityファイル作成
+yamlを更新後、下記を実行するとEntityが作成される。  
+元のソースは削除されずに、存在しない項目のみ追記される。  
+
+```
+vendor/bin/doctrine orm:generate:entities --extend="Eccube\Entity\AbstractEntity" src
+```
+
+## DBへのマイグレーション
+
+```
+vendor/bin/doctrine orm:schema-tool:update
+```
+
+を実行してmigration可能かどうかを確認
+
+```
+vendor/bin/doctrine orm:schema-tool:update --dump-sql
+```
+
+を実行してsqlを確認
+
+```
+vendor/bin/doctrine orm:schema-tool:update --force
+```
+
+を実行してDBへマイグレーション

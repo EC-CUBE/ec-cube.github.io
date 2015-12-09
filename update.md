@@ -59,3 +59,7 @@ https://github.com/EC-CUBE/ec-cube/compare/3.0.4...3.0.5
 
 https://github.com/EC-CUBE/ec-cube/compare/3.0.5...3.0.6  
 ・今回は `autoload.php` も変更対象になっておりますのでご注意ください。
+
+### 3.0.6→3.0.7
+
+https://github.com/EC-CUBE/ec-cube/compare/3.0.6...3.0.7

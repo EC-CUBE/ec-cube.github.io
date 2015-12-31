@@ -63,3 +63,15 @@ https://github.com/EC-CUBE/ec-cube/compare/3.0.5...3.0.6
 ### 3.0.6→3.0.7
 
 https://github.com/EC-CUBE/ec-cube/compare/3.0.6...3.0.7
+
+### 3.0.7→3.0.8
+
+https://github.com/EC-CUBE/ec-cube/compare/3.0.7...3.0.8
+
+・index_dev.phpをお使いになる方は、
+``` php composer.phar update symfony/var-dumper symfony/debug-bundle ```
+を実行して必要なライブラリをインストールしてください。
+
+
+
+

@@ -9,12 +9,13 @@ title: 開発・デバッグTips
 
 ## デバッグモードの有効化
 
-通常 / や/index.phpでアクセスしているところを /index_dev.php と書き換えてアクセスすることにより、デバッグモードが有効になります。 デバッグモードでは、開発の手助けになる、WebProfilerやDebug情報が出力されるようになります。
+通常 / や/index.phpでアクセスしているところを /index_dev.php と書き換えてアクセスすることにより、デバッグモードが有効になります。  
+デバッグモードでは、開発の手助けになる、WebProfilerやDebug情報が出力されるようになります。
 
-```You are not allowed to access this file. Check index_dev.php for more information.```
-のようなエラーが表示される場合
+``` You are not allowed to access this file. Check index_dev.php for more information. ```
 
-index_dev.phpを開き、アクセス元のIPを以下の配列に追加してください。
+のようなエラーが表示される場合、index_dev.phpを開きアクセス元のIPを以下の配列に追加してください。
+
 ```
 $allow = array(
     '127.0.0.1',
@@ -22,6 +23,14 @@ $allow = array(
     '::1',
 );
 ```
+
+* EC-CUBE3.0.8からdump用ライブラリを導入したことにより、パッケージ版だと index\_dev.php がそのままだと使えません。  
+index\_dev.php を使えるようにするためにはEC-CUBEディレクトリ直下で、以下のコマンドを入力してください。  
+``` curl -sS https://getcomposer.org/installer | php ```  
+を実行後、  
+``` php composer.phar update symfony/var-dumper symfony/debug-bundle ```  
+を入力してください。これで必要なライブラリが導入されます。
+
 
 ## 開発と本番でconfig.ymlを使い分ける
 app/config/eccube 直下に config_dev.yml を用意することで開発環境だけの値を利用することができます。

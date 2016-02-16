@@ -72,6 +72,19 @@ https://github.com/EC-CUBE/ec-cube/compare/3.0.7...3.0.8
 ``` php composer.phar update symfony/var-dumper symfony/debug-bundle ```
 を実行して必要なライブラリをインストールしてください。
 
+### 3.0.8→3.0.9
 
+https://github.com/EC-CUBE/ec-cube/compare/3.0.8...3.0.9
+
+以下のファイルも更新対象となります。
+
+- app/console
+- cli-config.php
+- composer.json
+- composer.lock
+- eccube_install.sh
+- html/index.php
+- html/index_dev.php
+- html/template/install/assets/js/function.jp
 
 

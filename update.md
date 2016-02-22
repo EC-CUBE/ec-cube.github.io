@@ -88,3 +88,10 @@ https://github.com/EC-CUBE/ec-cube/compare/3.0.8...3.0.9
 - html/template/install/assets/js/function.jp
 
 
+・3.0.9からはdump用ライブラリを含めるようになりましたので、  
+```
+php composer.phar update symfony/var-dumper symfony/debug-bundle
+```  
+は不要です。
+
+

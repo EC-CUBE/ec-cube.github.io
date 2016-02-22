@@ -22,6 +22,7 @@ title: ホーム
     - [フックポイント仕様](/plugin_hookpoint.html)
     - [インストーラ仕様](/plugin_install.html)
     - [ハンドラによる優先制御仕様](/plugin_handler.html)
+    - [php app/console plugin:develop を利用したプラグイン開発](/plugin_console.html)
 - 開発ガイドライン
     - [コーディング規約](/coding_style.html)
     - [マイグレーションガイド](/migration.html)

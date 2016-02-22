@@ -24,6 +24,7 @@ $allow = array(
 );
 ```
 
+#### 以下の作業はEC-CUBE3.0.8の方のみが対象となります。
 * EC-CUBE3.0.8からdump用ライブラリを導入したことにより、パッケージ版だと index\_dev.php がそのままだと使えません。  
 index\_dev.php を使えるようにするためにはEC-CUBEディレクトリ直下で、以下のコマンドを入力してください。  
 ``` curl -sS https://getcomposer.org/installer | php ```  
@@ -88,12 +89,40 @@ ver3.0.1からコンソールコマンドとして、
 ```
 php app/console router:debug
 php app/console cache:clear
+php app/console plugin:develop (3.0.9からパラメータを追加)
 ```
 が用意されています。
 
+
+#### router:debugの使い方
 ```router:debug``` の方は現在登録されているrouting情報が一覧表示されます。
+ルーティングは探しやすいように、
+
+引数の文字列でフィルタ  
+sortオプション：並び順  
+orderbyオプション：nameかpathのどちらかで並び替え  
+
+が可能です。
+
+* example:
+
+```
+php app/console router:debug
+php app/console router:debug product
+php app/console router:debug --orderby=name --sort=desc
+php app/console router:debug --orderby=path --sort=asc
+php app/console router:debug product --orderby=path
+```
+
+
+#### cache:clearの使い方
+
 ```cache:clear``` はapp/cache配下のキャッシュがsession情報を除いて削除され、
 ```cache:clear --all``` と ```--all``` を指定するとsessionのキャッシュも含めて全て削除されます。
 
 
 
+#### plugin:developの使い方
+
+[php app/console plugin:develop を利用したプラグイン開発](/plugin_console.html)
+を参照してください。

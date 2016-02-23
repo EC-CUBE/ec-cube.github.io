@@ -18,8 +18,8 @@ title: ホーム
 - ディレクトリ・ファイル構成
     - [ディレクトリ・ファイル構成](/directory.html)
     - [テンプレート探索順序](/template.html)
-- [プラグイン仕様](/plugin.html)
-    - [フックポイント仕様](/plugin_hookpoint.html)
+- [プラグイン仕様]
+    - [プラグイン仕様・チュートリアル](/plugin.html)
     - [インストーラ仕様](/plugin_install.html)
     - [ハンドラによる優先制御仕様](/plugin_handler.html)
     - [php app/console plugin:develop を利用したプラグイン開発](/plugin_console.html)

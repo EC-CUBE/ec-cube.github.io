@@ -65,7 +65,7 @@ php app/console plugin:develop install --path=/aaa/bbb/plugin.tar.gz
 デフォルトはfalseです。
 
 ```
-php app/console plugin:develop install --code=plugincode --uninstall-force=true
+php app/console plugin:develop uninstall --code=plugincode --uninstall-force=true
 ```
 
 

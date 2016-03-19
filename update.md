@@ -85,7 +85,7 @@ https://github.com/EC-CUBE/ec-cube/compare/3.0.8...3.0.9
 - eccube_install.sh
 - html/index.php
 - html/index_dev.php
-- html/template/install/assets/js/function.jp
+- html/template/install/assets/js/function.js
 
 
 ・3.0.9からはdump用ライブラリを含めるようになりましたので、  

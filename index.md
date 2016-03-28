@@ -23,6 +23,8 @@ title: ホーム
     - [インストーラ仕様](/plugin_install.html)
     - [ハンドラによる優先制御仕様](/plugin_handler.html)
     - [php app/console plugin:develop を利用したプラグイン開発](/plugin_console.html)
+- API仕様
+    - [API開発指針](/api.html)
 - 開発ガイドライン
     - [コーディング規約](/coding_style.html)
     - [マイグレーションガイド](/migration.html)

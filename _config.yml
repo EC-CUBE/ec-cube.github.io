@@ -1,5 +1,5 @@
 name: EC-CUBE3
-markdown: redcarpet
-redcarpet:
-  extensions: [tables,autolink]
+markdown: kramdown
+kramdown:
+  input: GFM
 highlighter: pygments

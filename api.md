@@ -268,8 +268,39 @@ private function customerValidation(Application $app, array $data)
 
 ## 認証について
 
-今後、EC-CUBE3の認証情報を記述します。
+EC-CUBE で Web API を実行する際、一般公開された情報を参照する場合は必要ありませんが、顧客情報を参照したり、受注情報を更新する場合などは認証が必要です。
 
+EC-CUBE3 では、 OpenID Connect を使用した
+
+[OAuth2.0 Authorization](http://openid-foundation-japan.github.io/rfc6749.ja.html) 及び [OpenID Connect](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html) をサポートしています。
+
+### 対応する認証フロー
+
+以下の認証フローに対応しています。
+
+- [OAuth2.0 Authorization Code Flow](http://openid-foundation-japan.github.io/rfc6749.ja.html#grant-code) - 主にWebアプリ向け
+- [OAuth2.0 Implicit Flow](http://openid-foundation-japan.github.io/rfc6749.ja.html#grant-implicit) - 主にJavaScript、 ネイティブアプリ向け
+- [OpenID Connect Authorization Code Flow](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#CodeFlowAuth) - 主にWebアプリ向け
+- [OpenID Connect Implicit Flow](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#ImplicitFlowAuth) - 主にJavaScript、 ネイティブアプリ向け
+
+### 利用方法
+
+#### 管理画面メンバー(Member)
+
+1. 管理画面→設定→システム情報設定→メンバー管理→メンバーの編集より **APIクライアント一覧** をクリックします。
+2. 「新規作成」より、APIクライアントを新規登録します。
+    - **アプリケーション名** には任意の名称を入力します
+    - **redirect_uri** には、Authorization Endpoint からのリダイレクト先の URL を入力します。ネイティブアプリやテスト環境用に `urn:ietf:wg:oauth:2.0:oob` を使用することも可能です。
+3. 登録が終わると、`client_id`, `client_secret` などが発行されます。公開鍵は `id_token` を検証する際に使用します。
+3. APIクライアントを実装します。
+
+#### 会員(Customer)
+
+*準備中*
+
+### サンプルクライアント
+
+- [Symfony2 での実装例](https://github.com/nanasess/eccube3-oauth2-client)
 
 ## ドキュメント
 Swagger Editorを使ってWeb APIドキュメント(swagger.yml)を記述します。

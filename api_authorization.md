@@ -60,6 +60,8 @@ TODO
 
 #### Member/Customer と OAuth2 Client の関連
 
+- ログイン中の Member/Customer と OAuth2 Client の ID が相違している場合は、Authorization Code Flow で access_denied エラーとなります
+
 ### RFCに準拠しているもの
 
 #### ID Token

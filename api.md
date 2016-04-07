@@ -302,6 +302,7 @@ EC-CUBE3 では、 OpenID Connect を使用した
 
 - [Symfony2 での実装例](https://github.com/nanasess/eccube3-oauth2-client)
 - [C# での実装例(Web/Wpf)](https://github.com/nanasess/DotNetOpenAuth)
+- [Java での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-java)
 
 ## ドキュメント
 Swagger Editorを使ってWeb APIドキュメント(swagger.yml)を記述します。

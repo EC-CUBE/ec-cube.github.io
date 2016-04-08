@@ -22,13 +22,13 @@ EC-CUBE3.0.2から導入されたマイグレーションを利用したバー�
 
 ## 注意事項
 
-### venderの更新について
+### vendorの更新について
 
-* composer.jsonに変更がない場合vendor/の上書きは不要です
-* composerが利用可能な環境の場合vendorの上書きではなく以下でも可能です
+* composer.jsonに変更がない場合vendorの上書きは不要です
+* composerが利用可能な環境の場合は、vendorの上書きではなく、composer.json, composer.lockの上書き後、以下でも可能です
 
 ```
-> php composer.phar self-update
+> php composer.phar install --no-dev --no-interaction --optimize-autoloader
 ```
 
 ### htmlおよびappディレクトリ以下が更新された場合
@@ -85,7 +85,7 @@ https://github.com/EC-CUBE/ec-cube/compare/3.0.8...3.0.9
 - eccube_install.sh
 - html/index.php
 - html/index_dev.php
-- html/template/install/assets/js/function.jp
+- html/template/install/assets/js/function.js
 
 
 ・3.0.9からはdump用ライブラリを含めるようになりましたので、  

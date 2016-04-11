@@ -300,7 +300,14 @@ EC-CUBE3 では、 OpenID Connect を使用した
 
 ### サンプルクライアント
 
-- [Symfony2 での実装例](https://github.com/nanasess/eccube3-oauth2-client)
+- [PHP(Symfony2) での実装例](https://github.com/nanasess/eccube3-oauth2-client)
+- [Python(Flask) での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-python)
+- [C# での実装例(Web/Wpf)](https://github.com/nanasess/DotNetOpenAuth)
+- [Java での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-java)
+- [Google OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)
+    - OAuth 2.0 Configuration -> OAuth endpoint -> *Custom* にて動作確認済み
+    - Authorization Endpoint に `?state=<random_state>` を付与する必要があります
+
 
 ## ドキュメント
 Swagger Editorを使ってWeb APIドキュメント(swagger.yml)を記述します。

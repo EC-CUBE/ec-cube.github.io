@@ -274,6 +274,8 @@ EC-CUBE3 では、 OpenID Connect を使用した
 
 [OAuth2.0 Authorization](http://openid-foundation-japan.github.io/rfc6749.ja.html) 及び [OpenID Connect](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html) をサポートしています。
 
+詳しくは [Web API Authorization ガイド](/api_authorization.html) を参照してください。
+
 ### 対応する認証フロー
 
 以下の認証フローに対応しています。
@@ -302,6 +304,7 @@ EC-CUBE3 では、 OpenID Connect を使用した
 
 - [PHP(Symfony2) での実装例](https://github.com/nanasess/eccube3-oauth2-client)
 - [Python(Flask) での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-python)
+- [Node.js(Express) での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-nodejs)
 - [C# での実装例(Web/Wpf)](https://github.com/nanasess/DotNetOpenAuth)
 - [Java での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-java)
 - [Google OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)

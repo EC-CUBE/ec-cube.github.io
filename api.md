@@ -274,6 +274,8 @@ EC-CUBE3 では、 OpenID Connect を使用した
 
 [OAuth2.0 Authorization](http://openid-foundation-japan.github.io/rfc6749.ja.html) 及び [OpenID Connect](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html) をサポートしています。
 
+詳しくは [Web API Authorization ガイド](/api_authorization.html) を参照してください。
+
 ### 対応する認証フロー
 
 以下の認証フローに対応しています。

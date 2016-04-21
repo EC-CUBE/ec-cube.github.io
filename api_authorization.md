@@ -33,9 +33,15 @@ EC-CUBE3 では、 [OpenID Connect](http://openid-foundation-japan.github.io/ope
 
 ### 顧客(Customer)での実行
 
-*準備中*
+1. mypage にログインし、 `/mypage/api` へアクセスします。
+2. **新規登録** をクリックし、 APIクライアントを新規登録します。
+    - **アプリケーション名** には任意の名称を入力します
+    - **redirect_uri** には、Authorization Endpoint からのリダイレクト先の URL を入力します。
+3. 登録が終わると、 `client_id`, `client_secret` などが発行されます。公開鍵は `id_token` を検証する際に使用します。
 
 ## クライアント(OAuth 2.0 Client/Relying Party)の実装方法
+
+*各言語のサンプルは[こちら](/api.html#section-14)*
 
 ### 実装する際の注意
 
@@ -51,7 +57,7 @@ EC-CUBE3 では、 **state パラメータは必須** ですので、ご注意�
 
 #### 準備
 
-[APIクライアントを作成](#設定方法)しておきます。
+[APIクライアントを作成](#section-2)しておきます。
 この例では、 `redirect_uri` を `https://127.0.0.1:8080/Callback` に設定します。
 
 #### 1. Authorization code の取得
@@ -65,8 +71,8 @@ https://<eccube-host>/admin/OAuth2/v0/authorize?client_id=<client id>&redirect_u
 ログイン画面が表示されますので、ログインします。
 「このアプリ連携を許可しますか？」という画面が表示されますので、「許可する」をクリックすると、指定したリダイレクト先へリダイレクトします。
 
-このとき、ブラウザのアドレスバーのクエリストリングに **code=<authorization code>** が付与されます。
-CSRF 防止のため、リダイレクト前の **state** の値と、アドレスバーのクエリストリングに付与された **state=<state>** の値が同一かどうか確認します。
+このとき、ブラウザのアドレスバーのクエリストリングに `code=<authorization code>` が付与されます。
+CSRF 防止のため、リダイレクト前の **state** の値と、アドレスバーのクエリストリングに付与された `state=<state>` の値が同一かどうか確認します。
 
 #### 2. アクセストークンの取得
 
@@ -162,19 +168,15 @@ curl -F grant_type=refresh_token \
 - **exp** の値が、現在時刻のUNIXタイムスタンプ値より大きいことを確認します。
 - **nonce** の値が、クライアントで保持している `nonce` の値と同一であることを確認します。リプレイスアタック防止のため、セッションで保持している `nonce` を破棄します。
 
-#### Member/Customer と OAuth2 Client の関係
+#### Member/Customer と OAuth2.0 Client の関係
 
-- ログイン中の Member/Customer と OAuth2 Client の ID が相違している場合は、Authorization Code Flow で access_denied エラーとなります
+- ログイン中の Member/Customer と OAuth2.0 Client の ID が相違している場合は、認可リクエスト時に `access_denied` エラーとなります。
 
 ### 標準仕様に準拠しているもの
 
 #### ID Token
 
 [RFC7519 JSON Web Token](http://openid-foundation-japan.github.io/draft-ietf-oauth-json-web-token-11.ja.html) を使用しています。
-
-#### UserInfo Endpoint
-
-*準備中*
 
 #### OAuth2.0 Authorization Code Flow
 
@@ -200,3 +202,14 @@ curl -F grant_type=refresh_token \
 
 - 本APIでは **state パラメータは必須** となっています。
 - `response_type=id_token 及び response_type=id_token token` の場合、 **nonce パラメータは必須** となっています。
+
+#### UserInfo Endpoint
+
+[OpenID Connect UserInfo Endpoint](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#UserInfo) を使用しています。
+
+- この Endpoint を使用する場合は `scope=openid` で認証する必要があります。
+- 以下の scope を使用して、 [各種クレーム](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#Claims) の取得が可能です。
+  - profile
+  - email
+  - address
+  - phone

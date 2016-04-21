@@ -298,7 +298,11 @@ EC-CUBE3 では、 OpenID Connect を使用した
 
 #### 会員(Customer)
 
-*準備中*
+1. mypage にログインし、 `/mypage/api` へアクセスします。
+2. **新規登録** をクリックし、 APIクライアントを新規登録します。
+    - **アプリケーション名** には任意の名称を入力します
+    - **redirect_uri** には、Authorization Endpoint からのリダイレクト先の URL を入力します。
+3. 登録が終わると、 `client_id`, `client_secret` などが発行されます。公開鍵は `id_token` を検証する際に使用します。
 
 ### サンプルクライアント
 

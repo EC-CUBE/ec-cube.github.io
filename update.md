@@ -94,4 +94,14 @@ php composer.phar update symfony/var-dumper symfony/debug-bundle
 ```  
 は不要です。
 
+### 3.0.9→3.0.10
 
+https://github.com/EC-CUBE/ec-cube/compare/3.0.9...3.0.10
+
+以下のファイルも更新対象となります。
+
+- autoload.php
+- html/index.php
+- html/index_dev.php
+- html/template/admin/assets/css/dashboard.css
+- html/template/default/css/style.css

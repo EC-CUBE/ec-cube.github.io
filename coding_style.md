@@ -17,6 +17,7 @@ title: コーディング規約
 * PSR-2 – コーディングスタイルガイド
 * [Silexの作法](http://silex-users-jp.phper.jp/)
 * [Symfony2の作法](http://docs.symfony.gr.jp/symfony2/)に従う
+* twigテンプレート及びjsファイルのインデントは、Symfony2に合わせて4スペースで記述する
 
 ## EC-CUBEの独自規約
 

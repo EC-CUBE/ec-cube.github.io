@@ -7,11 +7,31 @@ title: ホーム
 
 # EC-CUBE 3 開発ドキュメント
 
+<!--
 ## GitHub
 
 [https://github.com/EC-CUBE/ec-cube](https://github.com/EC-CUBE/ec-cube)
+-->
 
-## 目次
+<!-- ## 目次 -->
+
+## 開発ガイドライン
+- [全体概要](/workflow-general-image.html)
+- [コーディング規約](/coding_style.html)
+- [マイグレーションガイド](/migration.html)
+- [開発環境の構築](/development-environment.html)
+- [pull requestまでの流れ](workflow.html)
+
+## [EC-CUBE3のアーキテクチャ]()
+
+
+## システム要件
+
+## 開発ガイドライン
+
+### EC-CUBE3仕様
+
+<!--
 - [インストール方法](/install.html)
 - [アップデート方法](/update.html)
 - [システム要件](/requirement.html)
@@ -32,3 +52,5 @@ title: ホーム
     - [開発・デバッグTips](/tips.html)
     - [用語集(準備中)](/glossary.html)
 - [FAQ(準備中)](/faq.html)
+    - [TEST](http://www.google.co.jp)
+-->

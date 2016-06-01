@@ -22,8 +22,14 @@ title: ホーム
 - [開発環境の構築](/development-environment.html)
 - [pull requestまでの流れ](workflow.html)
 
-## [EC-CUBE3のアーキテクチャ]()
+## EC-CUBE3で利用されている技術
 
+- [技術一覧](/architecture.html)
+	1. Silex 
+	1. Symfony2
+	1. データーベース抽象化レイヤ 
+	1. テンプレートエンジン 
+	1. ライブラリ管理 
 
 ## システム要件
 

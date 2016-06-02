@@ -1,11 +1,9 @@
 ---
 layout: default
-title: Gitを用いた開発手順
+title: Gitでの開発フロー
 ---
 
 ---
-
-# Gitを用いた開発手順
 
 ## 開発スタイルの基盤
 
@@ -27,13 +25,9 @@ title: Gitを用いた開発手順
 
 - 以下にワークフロー概要図の番号に添って、操作方法を説明します。
 
-### レポジトリのコピー ( 本家→個人 )
-
 ① まず本家のレポジトリをフォークします
  - <a href="http://qiita.com/tbpgr/items/4ff76ef35c4ff0ec8314" target="_blank">本家のレポジトリ</a>で、右上のForkボタンをクリックします。
 
-
-### ローカルレポジトリの構築
 
 ② フォークしたレポジトリをクローンします
 
@@ -83,8 +77,6 @@ $ git fetch upstream
 $ git checkout -b user_branch( 任意 ) upstream/master
 ```
 
-### 開発用ブランチの作成
-
 GitHubの自分のレポジトリに反映
 
 ```
@@ -107,8 +99,6 @@ $ git commit -m "コメント"
 ```
 $ git push origin admin_basis_point
 ```
-
-### プルリクエストを送る
 
 ⑤プルリクを送る
 

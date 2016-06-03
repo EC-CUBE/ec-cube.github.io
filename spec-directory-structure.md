@@ -7,8 +7,6 @@ title: ディレクトリ・ファイル構成
 
 # ディレクトリ・ファイル構成
 
-## ディレクトリ構成
-
 ### 特徴
 
 1. EC-CUBE3ではSilexフレームワークを採用しているため、**2系から大幅にディレクトリ構造が変化**
@@ -21,6 +19,12 @@ title: ディレクトリ・ファイル構成
 ### 主なディレクトリと役割
 
 - 以下に主なフォルダとディレクトリ構成を示します
+
+1. app : 主に環境によって変更が入るものを配置
+1. htm : Document Rootとなるフォルダ。外部から直接参照する物のみ配置) 
+1. src : EC-CUBEのCOREとなるソースを配置
+
+下記に各ディレクトリの詳細を説明します。
 
 <!--
 ```
@@ -290,7 +294,38 @@ title: ディレクトリ・ファイル構成
     └── autoload.php
 ```
 
-### 置き換え早見表
+### 設定ファイル
+
+- EC-CUBE3の設定ファイルは以下の通りです
+
+#### 対象ファイル
+
+1. /app/config/ec-cube/**config.yml**
+- SSL通信や言語など EC-CUBE3のサイト全体に関わる基本的な設定が記述されています。
+
+1. /app/config/ec-cube/**database.yml**
+- データーベース名や、ポートなどの、データーベース接続に関する設定が記述されています。
+
+1. /app/config/ec-cube/**mail.yml**
+- 暗号可や認証情報など、メールのオプションに関する設定が記述されています。
+
+1. /app/config/ec-cube/**path.yml**
+- 管理・フロント等のURLやアップロードファイル等のパスが設定されています。
+
+### 定数
+
+- EC-CUBE3で利用される定数は以下に保存されています
+
+#### 対象ファイル
+
+1. Common/**constants.php**
+    - EC-CUBEのバージョンなど、基本情報の定数です。
+
+2. Resource/config/**constant.yml.dist**
+    - 主にプログラム上で利用する定数です。
+
+
+### 2系・3系置き換え早見表
 
 | 2系                    | 3系                                      |
 |------------------------|------------------------------------------|
@@ -299,34 +334,3 @@ title: ディレクトリ・ファイル構成
 | SC\_Helper\_Purchase     | Eccube\Service\PurchaseService           |
 | LC\_Page\_Products\_Class | Eccube\Controller\ProductClassController |
 | *.tpl                  | Eccube\Resouce\template\\*.twig                       |
-
-
-<!--
-→開発ガイドラインに移行
-### リファクタ時に作成・変更するファイル
-{$Hoge}ページを作る場合
-
-| 種別 | ファイル | 詳細 |
-|------ |-----|------|
-| ルーター | src\Eccube\ControllerPrivider\(Front or Admin)Controller\{$Hoge}Controller.php | ルーティングを追加・変更する |
-| コントローラー | src\Eccube\Controller\{$Hoge}Controller.php  | リクエストを受けて、Viewを出し分けるロジックを書く、 ビジネスロジックをもたない |
-| フォームビルダー・バリデーター | src\Eccube\Form\Type\{$Hoge}Type.php | フォーム項目とバリデーション定義を作成する |
-| レポジトリ | src\Eccube\Repository\{$Hoge}Repository.php |  EntityRepositoryをextendsしたClassを定義しておく |
-| エンティティ | src\Eccube\Entity\{$Hoge}.php | Setter/Getterを記述, DBスキーマと紐づくため、型の定義などをしっかり記述する|
-| サービス | src\Eccube\Service\{$Hoge}Service.php | ビジネスロジックを書く ビジネスロジックはちゃんとしたOOPとなるように記述する |
-| ビュー | src\Eccube\View\{$Hoge}.twig |  View |
-| DIコンテナ定義 | src\Eccube\ServiceProvider\EccubeServiceProvider.php | 作成したForm\Typeを$app['form.types']に記述する, 利用するRepositoryを$app['eccube.repository.{$hoge}']としてDICにいれる |
-
-## 外部コンポーネント
-
-### 選定基準
-
-* できるだけ、テストが行われているものを利用する。
-* ライブラリの採用時には事前に検討を行う。
-* EC-CUBEの 3.0.X では基本的に外部ライブラリもAPIの変わらないバージョンを利用する。
-* PEARを利用しているもので、SymfonyComponentに置き換えが可能なものは積極的に置き換える。
-
-### 開発時には Composer による依存環境の解消を行う
-
-* Composer を標準で採用し、autoloader も同様に Composer 付属のものを利用する。
--->

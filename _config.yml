@@ -1,5 +1,6 @@
 name: EC-CUBE3
+pygments: false
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: pygments
+#highlighter: pygments

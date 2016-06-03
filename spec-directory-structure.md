@@ -21,7 +21,7 @@ title: ディレクトリ・ファイル構成
 - 以下に主なフォルダとディレクトリ構成を示します
 
 1. app : 主に環境によって変更が入るものを配置
-1. htm : Document Rootとなるフォルダ。外部から直接参照する物のみ配置) 
+1. html : Document Rootとなるフォルダ。外部から直接参照する物のみ配置
 1. src : EC-CUBEのCOREとなるソースを配置
 
 下記に各ディレクトリの詳細を説明します。
@@ -334,3 +334,8 @@ title: ディレクトリ・ファイル構成
 | SC\_Helper\_Purchase     | Eccube\Service\PurchaseService           |
 | LC\_Page\_Products\_Class | Eccube\Controller\ProductClassController |
 | *.tpl                  | Eccube\Resouce\template\\*.twig                       |
+
+
+## 参照元
+
+- <a href="http://sssslide.com/speakerdeck.com/amidaike/ec-cube3kodorideingu-number-1" targe="_blank">EC-CUBE3コードリーディング #1</a>

@@ -77,13 +77,13 @@ upstream https://github.com/EC-CUBE/ec-cube.git (push)
 $ git fetch upstream
 ```
 
+### 開発用ブランチの作成
+
 ③-② ローカルに開発用ブランチを作成
 
 ```
 $ git checkout -b user_branch( 任意 ) upstream/master
 ```
-
-### 開発用ブランチの作成
 
 GitHubの自分のレポジトリに反映
 

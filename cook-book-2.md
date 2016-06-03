@@ -1,112 +1,346 @@
 ---
 layout: default
-title: コントローラーで画面に文字を表示してみよう
+title: コントローラーからビューを表示してみよう
 ---
 
 ---
 
-# コントローラーで画面に文字を表示してみよう
+# コントローラーからビューを表示してみよう
 
 
-## ルーティングとコントローラープロバイダ
+## ビューのレンダリング
 
-- まずは、WEBアプリの基本となるルーティングの設定方法について説明します。
+- 前章でルーティングの設定が完了しました。
 
-### EC-CUBE3の各設定の基本的な考え方
+- 本章では、作成したルーティングに対してビューを表示してみましょう。
 
-- EC-CUBE3の設定は非常にシンプルです。基本的に設定ファイルに設定したい内容を記述する事で、アプリケーションを構築していきます。
+### コントローラーの作成
 
-- 設定ファイルには、「.php .yml」が用いられています。
+#### フォルダの作成
 
-### 本章メニュー
+- まずは以下フォルダを作成してください。
 
-- 本章では以下を行います。
+1. /src/Eccube/Controller/CookBook
+    - フォルダ毎で関連機能のコントローラーをまとめます。
+    - 作成方法はそれぞれの環境で異なると思いますので、割愛いたします。
+    - 以下の様にディレクトリを作成してください。
 
-1. URLとコントローラーの紐付けを設定するファイルの説明
+---
 
-1. ルーティングの設定
-    - コントローラーとURLを紐付け方を説明します。
+![フォルダの作成](/images/img-cookbook2-make-dir.png)
 
-### URLとコントローラーの紐付けを設定するファイルの説明
+---
 
-- ルーティングは、「**ControllerProvider**」と呼ばれているファイルに設定されています。
+#### ファイルの作成
 
-#### コントローラープロバイダーの保存ディレクトリ
+- 次にBbs.phpを作成します。
 
-- コントローラープロバイダは以下のディレクトリに保存されています。
+- TopControllerをコピー、リネームします。
 
-- /[インストールディレクトリ]/src/Eccube/ControllerProvider
-
-#### コントローラープロバイダーファイルの種類
-
-- ディレクトリ内に以下のファイルが保存されています。
-
-1. **AdminControllerProvider.php**
-    - **管理画面**のルーティングが設定されています。
-
-1. **FrontControllerProvider.php**
-    - **ユーザー画面(フロント画面)**のルーティングが設定されています。
-
-1. **InstallControllerProvider.php**
-    - **インストール画面**のルーティングが設定されています。
-    - カスタマイズにおいて**本設定ファイルを使用することはありません。**
-
-### ルーティングの設定
-
-#### FrontControllerProviderの設定
-
-- 今回の作成機能は「認証機能」を設けない、簡易なBBSをユーザー画面に構築していくのが目的ですので、ユーザー画面のルーティングの設定を行います。
-
-- ユーザー画面のルーティングの設定は、「FrontControllerProvider」に行なっていきますので、前項で説明した場所から、該当ファイルを開いてください。
-
-#### FrontControllerの中身
-
-- ファイルを開いたら、分かり易い項目を例としますので、まず「mypage」を検索してみてください。
-
-- mypageのルーティングの設定を下記に抜粋しました。
+- Bbs.php( 中身はTopController.phpのコピー )
 
 ```
-    // mypage
-    $c->match('/mypage', '\Eccube\Controller\Mypage\MypageController::index')->bind('mypage');
-    $c->match('/mypage/login', '\Eccube\Controller\Mypage\MypageController::login')->bind('mypage_login');
-    $c->match('/mypage/change', '\Eccube\Controller\Mypage\ChangeController::index')->bind('mypage_change');
-    $c->match('/mypage/change_complete', '\Eccube\Controller\Mypage\ChangeController::complete')->bind('mypage_change_complete');
+<?php
+/*
+ * This file is part of EC-CUBE
+ *
+ * Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
+ *
+ * http://www.lockon.co.jp/
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ */
 
-```
 
-#### コードについての説明
+namespace Eccube\Controller;★
 
-- 引数部を日本語で記述すると以下の様になります。
+use Eccube\Application;
 
-```
-$c->match([ドキュメントルートからのurl], [紐付けるコントローラーのパス])->bind([ルーティング名称])
-```
+class TopController★
+{
 
-1. ドキュメントルートからのURL
-    - /(スラッシュ)ではじめ、任意のURL名称を作成します。
-        - 名前からページでの処理が推測しやすい名前をつけましょう。
-
-1. 紐付けるコントローラーのパス
-    - /src/Eccube/Controller内に作成した、コントローラーのファイル名(クラス名)とメソッド名を、インストールディレクトリからのフルパスで指定します。
-    - クラス名とメソッド名の間は「::」コロン２つとなります。
-
-1. ルーティング名称
-    - 設定したルーティング名称に「名前」をつけておきます。
-    - リダイレクトの際などに、「名前」を利用します。
-
-#### 実際の記述内容
-
-1. FrontControllerProviderへのソースの追記
-
-- ファイル内最下部の「return」の前に以下の様に追記します。
-
-```
-        // CookBook
-        $c->match('/cookbok/bbs', '\Eccube\Controller\CookBook\Bbs::index')->bind('cookbook_bbs');
-
-        return $c;
+    public function index(Application $app)
+    {
+        return $app->render('index.twig');★
     }
 }
 ```
 
-- 以上でルーティングの設定は完了です。
+- 上記の「★」マークの箇所を下記に修正します。
+
+```
+<?php
+/*
+ * This file is part of EC-CUBE
+ *
+ * Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
+ *
+ * http://www.lockon.co.jp/
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ */
+
+
+namespace Eccube\Controller\CookBook;★フォルダのパスを追加
+
+use Eccube\Application;
+
+class Bbs★クラス名を修正
+{
+
+    public function index(Application $app)
+    {
+        echo 'First CookBook';☆追記
+        exit();☆追記
+        //return $app->render('index.twig');★一旦コメントアウト
+    }
+}
+```
+
+#### ルーティングの確認
+
+- 一度確認のためにブラウザにアクセスしてみましょう。
+
+1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/cookbook/Bbs」を入力してください。
+
+1. 次はエラーではなく、以下が表示されているはずです。
+
+---
+
+![エコーで文字表示](/images/img-cookbook2-echo-str.png)
+
+---
+
+- ルーティングの設定とコントローラーには問題がなさそうです。
+
+### ビューの作成
+
+- 以下フォルダにTwigファイルを追加します。
+
+1. /src/Eccube/Resource/template/default/CookBook
+		
+    - フォルダ毎で関するコントローラーのビューをまとめます。
+    - 作成方法はそれぞれの環境で異なるため、割愛します。
+    - 以下の様にディレクトリを作成してください。
+
+---
+
+![ビューフォルダの作成](/images/img-cookbook2-make-dir.png)
+
+---
+
+#### ファイルの作成
+
+- 次に、bbs_top.twigを作成します。
+
+- index.twigをコピー、リネームします。
+
+- bbs_top.twig( 中身はindex.twigのコピー )
+
+```
+{#
+This file is part of EC-CUBE
+
+Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
+
+http://www.lockon.co.jp/
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#}
+
+｛％ extends 'default_frame.twig' ％｝
+
+｛％ set body_class = 'front_page' ％｝
+
+｛％ block javascript ％｝
+<script>★
+$(function(){
+    $('.main_visual').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        speed: 300
+    });
+});
+</script>
+｛％ endblock ％｝
+
+｛％ block main ％｝
+    <div class="row">
+       <div class="col-sm-12">
+            <div class="main_visual">★
+                <div class="item">
+                  <img src="{{ app.config.front_urlpath }}/img/top/mv01.jpg">
+                </div>
+                <div class="item">
+                  <img src="{{ app.config.front_urlpath }}/img/top/mv02.jpg">
+                </div>
+                <div class="item">
+                  <img src="{{ app.config.front_urlpath }}/img/top/mv03.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+｛％ endblock ％｝
+```
+- 上記の「★」マークの箇所を下記に修正します。
+
+```
+{#
+This file is part of EC-CUBE
+
+Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
+
+http://www.lockon.co.jp/
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#}
+｛％ extends 'default_frame.twig' ％｝
+
+｛％ set body_class = 'front_page' ％｝
+
+｛％ block javascript ％｝☆<sctipt> ～ </script>を削除
+｛％ endblock ％」
+
+｛％ block main ％｝
+    <div class="row">
+       <div class="col-sm-12">
+            <div class="main_wrap">☆ID名称を変更「main_visual」→「main_wrap」、「main_visual」内を削除し新しく内容を追記
+                <h1>ご意見箱</h1>☆追記
+                <p>みなさんのご意見をかきこんでください</p>☆追記
+            </div>
+        </div>
+    </div>
+｛％ endblock ％｝
+```
+
+#### コントローラーの修正
+
+- コントローラーで「echo」していた箇所を以下の内容に修正します。
+
+```
+<?php
+/*
+ * This file is part of EC-CUBE
+ *
+ * Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
+ *
+ * http://www.lockon.co.jp/
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ */
+
+
+namespace Eccube\Controller\CookBook;
+
+use Eccube\Application;
+
+class Bbs
+{
+
+    public function index(Application $app)
+    {
+        return $app->render('CookBook/bbs_top.twig');☆修正箇所(コメント部と、echo、exitを削除)
+    }
+}
+```
+
+- 簡単な説明を行います。
+
+1. 引数 : $app
+    - $appにはEC-CUBEで用いるあらゆるクラスが格納されています。
+    - 正しくはServiceProviderで設定した内容が、実行時にインスタンス化されて利用できる構造になっています。
+    - ここでは詳細に解説は行いませんが、**「$app」からいろいろな機能を呼び出してアプリケーションを構築していく**とだけ覚えてください。
+
+2. $app->render([表示したいTwigのパス])
+    - 「render」にTwigのパスを引数として渡すと、対象のTwigが解析され、Htmlに変換されます。
+    - 通常はコントローラーのメソッドの戻り値として、上記の様に記述すると設定したルーティングと、設定したファイルにもとづき、画面が表示されます。
+
+#### 表示内容の確認	
+
+- 最後に確認のためにブラウザにアクセスしてみましょう。
+
+1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/cookbook/Bbs」を入力してください。
+
+1. Twigに記載した内容が表示されます。
+
+
+	- ヘッダーやフッターが表示されていませんが、現状はそれで正しいです。
+	- ヘッダーやフッターの表示設定は後で行います。
+
+---
+
+![twigで文字表示](/images/img-cookbook2-view-rendar.png)
+
+---
+
+#### 本章のまとめ
+
+- 内容量も増えてきたので、章の内容をまとめておきます。
+- 本章で以下を行いました。
+
+	1. 既存コントローラーをコピーして新しいコントローラーを作成
+	1. 既存Twigをコピーして新しいTwigを作成
+	1. コントローラー・Twigともに、関連するフォルダにまとめる
+	1. $appは各コントローラーのメソッドの引数として渡され、いろいろな機能が格納されている
+	1. renderでTwigをhtmlに変換する

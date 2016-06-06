@@ -1,270 +1,35 @@
 ---
 layout: default
-title: コントローラーからビューを表示してみよう
+title: 画面に変数を渡してみよう
 ---
 
 ---
 
-# コントローラーからビューを表示してみよう
+# 画面に変数を渡してみよう
 
 
-## ビューのレンダリング
+## Twig構文とView変数
 
-- 前章でルーティングの設定が完了しました。
+- 前章でコントローラー、Twigの作成・レンダリングを行いました。
 
-- 本章では、作成したルーティングに対してビューを表示してみましょう。
+- 本章では、コントローラーから変数を渡し、変数に格納した内容をTwigで表示してみましょう。
 
-### コントローラーの作成
+<!--
+### Twigを用いるメリット
 
-#### フォルダの作成
+- 前章ではTwigをコントローラーでレンダリングしただけで、表示内容はTwigに静的に保存した内容を表示しただけですが、それだけであれば、Twigを利用せずに「html」だけで可能です。
 
-- まずは以下フォルダを作成してください。
+- ではTwigを何故使うのか、「Twig」単体で様々な機能を提供してくれるのも、理由のひとつですが、実際はコントローラーからなんらかの変数を受け取り、その値を加工して表示出来る事が、テンプレートエンジンの有用性です。
 
-1. /src/Eccube/Controller/CookBook
-    - フォルダ毎で関連機能のコントローラーをまとめます。
-    - 作成方法はそれぞれの環境で異なると思いますので、割愛いたします。
-    - 以下の様にディレクトリを作成してください。
+- それでは、Twig利用の第一歩として、コントローラーから変数を渡し、その内容を表示したいと思います。
+-->
 
----
+### コントローラーの修正
 
-![フォルダの作成](/images/img-cookbook2-make-dir.png)
+- コントローラー内で変数を定義し、「render」メソッドで定義した変数を、連想配列で引数として与えます。
+- その際、「key」は任意の文字列となりますが、Twig側で変数を呼び出す際の、名称となります。
 
----
-
-#### ファイルの作成
-
-- 次にBbs.phpを作成します。
-
-- TopControllerをコピー、リネームします。
-
-- Bbs.php( 中身はTopController.phpのコピー )
-
-```
-<?php
-/*
- * This file is part of EC-CUBE
- *
- * Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
- *
- * http://www.lockon.co.jp/
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
- */
-
-
-namespace Eccube\Controller;★
-
-use Eccube\Application;
-
-class TopController★
-{
-
-    public function index(Application $app)
-    {
-        return $app->render('index.twig');★
-    }
-}
-```
-
-- 上記の「★」マークの箇所を下記に修正します。
-
-```
-<?php
-/*
- * This file is part of EC-CUBE
- *
- * Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
- *
- * http://www.lockon.co.jp/
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
- */
-
-
-namespace Eccube\Controller\CookBook;★フォルダのパスを追加
-
-use Eccube\Application;
-
-class Bbs★クラス名を修正
-{
-
-    public function index(Application $app)
-    {
-        echo 'First CookBook';☆追記
-        exit();☆追記
-        //return $app->render('index.twig');★一旦コメントアウト
-    }
-}
-```
-
-#### ルーティングの確認
-
-- 一度確認のためにブラウザにアクセスしてみましょう。
-
-1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/cookbook/Bbs」を入力してください。
-
-1. 次はエラーではなく、以下が表示されているはずです。
-
----
-
-![エコーで文字表示](/images/img-cookbook2-echo-str.png)
-
----
-
-- ルーティングの設定とコントローラーには問題がなさそうです。
-
-### ビューの作成
-
-- 以下フォルダにTwigファイルを追加します。
-
-1. /src/Eccube/Resource/template/default/CookBook
-		
-    - フォルダ毎で関するコントローラーのビューをまとめます。
-    - 作成方法はそれぞれの環境で異なるため、割愛します。
-    - 以下の様にディレクトリを作成してください。
-
----
-
-![ビューフォルダの作成](/images/img-cookbook2-make-dir.png)
-
----
-
-#### ファイルの作成
-
-- 次に、bbs_top.twigを作成します。
-
-- index.twigをコピー、リネームします。
-
-- bbs_top.twig( 中身はindex.twigのコピー )
-
-```
-{#
-This file is part of EC-CUBE
-
-Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
-
-http://www.lockon.co.jp/
-
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-#}
-
-｛％ extends 'default_frame.twig' ％｝
-
-｛％ set body_class = 'front_page' ％｝
-
-｛％ block javascript ％｝
-<script>★
-$(function(){
-    $('.main_visual').slick({
-        dots: true,
-        arrows: false,
-        autoplay: true,
-        speed: 300
-    });
-});
-</script>
-｛％ endblock ％｝
-
-｛％ block main ％｝
-    <div class="row">
-       <div class="col-sm-12">
-            <div class="main_visual">★
-                <div class="item">
-                  <img src="{{ app.config.front_urlpath }}/img/top/mv01.jpg">
-                </div>
-                <div class="item">
-                  <img src="{{ app.config.front_urlpath }}/img/top/mv02.jpg">
-                </div>
-                <div class="item">
-                  <img src="{{ app.config.front_urlpath }}/img/top/mv03.jpg">
-                </div>
-            </div>
-        </div>
-    </div>
-｛％ endblock ％｝
-```
-- 上記の「★」マークの箇所を下記に修正します。
-
-```
-{#
-This file is part of EC-CUBE
-
-Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
-
-http://www.lockon.co.jp/
-
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-#}
-｛％ extends 'default_frame.twig' ％｝
-
-｛％ set body_class = 'front_page' ％｝
-
-｛％ block javascript ％｝☆<sctipt> ～ </script>を削除
-｛％ endblock ％」
-
-｛％ block main ％｝
-    <div class="row">
-       <div class="col-sm-12">
-            <div class="main_wrap">☆ID名称を変更「main_visual」→「main_wrap」、「main_visual」内を削除し新しく内容を追記
-                <h1>ご意見箱</h1>☆追記
-                <p>みなさんのご意見をかきこんでください</p>☆追記
-            </div>
-        </div>
-    </div>
-｛％ endblock ％｝
-```
-
-#### コントローラーの修正
-
-- コントローラーで「echo」していた箇所を以下の内容に修正します。
+- /default/CookBook/Bbs.php
 
 ```
 <?php
@@ -300,47 +65,126 @@ class Bbs
 
     public function index(Application $app)
     {
-        return $app->render('CookBook/bbs_top.twig');☆修正箇所(コメント部と、echo、exitを削除)
+        $viewname = 'このビューは「CookBook/bbs_top.twig」が表示されています。';☆追記
+
+        return $app->render(
+            'CookBook/bbs_top.twig',
+            array(
+                'viewname' => $viewname,
+            )
+        );☆連想配列を追記
     }
 }
 ```
 
-- 簡単な説明を行います。
+### Twigの修正
 
-1. 引数 : $app
-    - $appにはEC-CUBEで用いるあらゆるクラスが格納されています。
-    - 正しくはServiceProviderで設定した内容が、実行時にインスタンス化されて利用できる構造になっています。
-    - ここでは詳細に解説は行いませんが、**「$app」からいろいろな機能を呼び出してアプリケーションを構築していく**とだけ覚えてください。
+- コントローラで連想配列で引き渡した変数の表示をTwigに追記します。
 
-2. $app->render([表示したいTwigのパス])
-    - 「render」にTwigのパスを引数として渡すと、対象のTwigが解析され、Htmlに変換されます。
-    - 通常はコントローラーのメソッドの戻り値として、上記の様に記述すると設定したルーティングと、設定したファイルにもとづき、画面が表示されます。
+	- CookBook/bbs_top.twig
 
-#### 表示内容の確認	
+```
+{#
+This file is part of EC-CUBE
+
+Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
+
+http://www.lockon.co.jp/
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#}
+｛％ extends 'default_frame.twig' ％｝
+
+｛％ set body_class = 'front_page' ％｝
+
+｛％ block javascript ％｝
+｛％ endblock ％｝
+
+｛％ block main ％｝
+    <div class="row">
+       <div class="col-sm-12">
+            <div class="main_wrap">
+                <h1>ご意見箱</h1>
+                <p>みなさんのご意見をかきこんでください</p>
+                <dl>☆追記
+                    <dt>コントローラーから取得した変数です</dt>
+                    <dd>｛｛ viewname ｝｝</dd>☆変数呼び出し部
+                </dl>
+            </div>
+        </div>
+    </div>
+｛％ endblock ％｝
+```
+
+- 今回追記内容について簡単な説明を行います。
+
+1. ｛｛｝｝Twigにコントローラーで設定した変数を表示しています。
+
+2. Twigのブロック(1.の｛｛｝｝)は3種類あります。
+
+	---
+
+	| ブロック種別 | 適用対象 | 凡例 |
+	|------|------|
+	| ｛｛｝｝ | 変数の中身を表示 | ｛｛ viewstr\|nl2b ｝｝ |
+	| ｛％％｝ | ブロック内でロジックを記述する | ｛％ if myvar is ... ％｝ |
+	| {##} | コメントアウト | {# DB取得内容を表示... #} |
+
+	---
+
+3. 上記の3種類を使い分けてViewを構築していきます。
+
+### 表示内容の確認
 
 - 最後に確認のためにブラウザにアクセスしてみましょう。
 
 1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/cookbook/Bbs」を入力してください。
 
-1. Twigに記載した内容が表示されます。
-
-
-	- ヘッダーやフッターが表示されていませんが、現状はそれで正しいです。
-	- ヘッダーやフッターの表示設定は後で行います。
+1. コントローラーで定義した変数の内容が表示されています。
 
 ---
 
-![twigで文字表示](/images/img-cookbook2-view-rendar.png)
+![View変数のレンダリング](/images/img-cookbook3-view-rendar.png)
 
 ---
 
-#### 本章のまとめ
+### 本章のまとめ
 
-- 内容量も増えてきたので、章の内容をまとめておきます。
-- 本章で以下を行いました。
+- 本章では以下を学びました。
 
-	1. 既存コントローラーをコピーして新しいコントローラーを作成
-	1. 既存Twigをコピーして新しいTwigを作成
-	1. コントローラー・Twigともに、関連するフォルダにまとめる
-	1. $appは各コントローラーのメソッドの引数として渡され、いろいろな機能が格納されている
-	1. renderでTwigをhtmlに変換する
+1. コントローラー内、renderメソッドへのView変数追加
+
+1. Twigの変数表示
+
+1. Twigのブロックの種類
+
+### Viewのグローバル変数
+
+- 以下の変数は「Application.php」で初期化、格納されているため、全てのTwigから直接呼び出す事が可能です。
+
+| 変数名 | 詳細情報 |
+|------ |-----|
+| BaseInfo | 管理画面 > 設定 > 基本情報設定 > ショップマスターで保存した内容 |
+| title | ページタイトル |
+
+- 呼び出し方は以下の様に呼び出せます。
+
+例. ｛｛ BaseInfo.カラム名 ｝｝
+
+- 詳細なTwig構文については後の章で説明を行います。
+
+### 参考
+
+<a href="http://qiita.com/poego/items/81628dcd0f8e4d4a2d9d" target="_blank">EC-CUBE3のTwigのタグ覚え書き（一部EC-CUBE2系のSmarty比較）<a/>

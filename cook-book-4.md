@@ -91,7 +91,6 @@ class Bbs
                 'mapped' => false,
                 'empty_data' => null,
                 'attr' => array(
-                    'placeholder' => '「商品毎の付与率」が設定されていない場合に本値が適用されます。( ％ )',
                     'style' => 'height:100px;',
                 ),
             )

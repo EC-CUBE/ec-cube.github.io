@@ -104,8 +104,8 @@ class Version20160607155514 extends AbstractMigration
             ));
             $table->addColumn('parent_id', 'integer', array('NotNull' => false, 'default' => 'null'));
             $table->addColumn('reason', 'smallint', array('NotNull' => true));
-            $table->addColumn('name', 'varchar', array('NotNull' => true, 'length' => 255));
-            $table->addColumn('title', 'varchar', array('NotNull' => true, 'length' => 255));
+            $table->addColumn('name', 'string', array('NotNull' => true, 'length' => 255));
+            $table->addColumn('title', 'string', array('NotNull' => true, 'length' => 255));
             $table->addColumn('notes', 'text', array('default' => 'null'));
             $table->addColumn('create_date', 'datetime', array('NotNull' => true));
             $table->addColumn('update_date', 'datetime', array('NotNull' => true));
@@ -136,6 +136,14 @@ class Version20160607155514 extends AbstractMigration
 1. 次に「down」メソッド時の「dropTable」メソッドでテーブルを削除しています。
 
 - 上記が完了したら、「マイグレーションガイド」の「マイグレーション受け入れ手順」の章を参照ください。
+
+- 成功すれば以下の様にテーブルが作成されているはずです。
+
+---
+
+![bbsテーブル](images/img-cookbook6-create-table.png)
+
+---
 
 ## 本章で学んだこと
 

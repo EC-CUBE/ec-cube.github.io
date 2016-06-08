@@ -114,8 +114,8 @@ class Bbs★クラス名を修正
 
     public function index(Application $app)
     {
-        echo 'First Tutorial';☆追記
-        exit();☆追記
+        echo 'First Tutorial';★追記
+        exit();★追記
         //return $app->render('index.twig');★一旦コメントアウト
     }
 }
@@ -247,15 +247,15 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 ｛％ set body_class = 'front_page' ％｝
 
-｛％ block javascript ％｝☆<sctipt> ～ </script>を削除
+｛％ block javascript ％｝★<sctipt> ～ </script>を削除
 ｛％ endblock ％」
 
 ｛％ block main ％｝
     <div class="row">
        <div class="col-sm-12">
-            <div class="main_wrap">☆ID名称を変更「main_visual」→「main_wrap」、「main_visual」内を削除し新しく内容を追記
-                <h1>ご意見箱</h1>☆追記
-                <p>みなさんのご意見をかきこんでください</p>☆追記
+            <div class="main_wrap">★ID名称を変更「main_visual」→「main_wrap」、「main_visual」内を削除し新しく内容を追記
+                <h1>ご意見箱</h1>★追記
+                <p>みなさんのご意見をかきこんでください</p>★追記
             </div>
         </div>
     </div>
@@ -300,7 +300,7 @@ class Bbs
 
     public function index(Application $app)
     {
-        return $app->render('Tutorial/bbs_top.twig');☆修正箇所(コメント部と、echo、exitを削除)
+        return $app->render('Tutorial/bbs_top.twig');★修正箇所(コメント部と、echo、exitを削除)
     }
 }
 ```

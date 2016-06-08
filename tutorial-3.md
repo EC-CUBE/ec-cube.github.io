@@ -65,14 +65,14 @@ class Bbs
 
     public function index(Application $app)
     {
-        $viewname = 'このビューは「Tutorial/bbs_top.twig」が表示されています。';☆追記
+        $viewname = 'このビューは「Tutorial/bbs_top.twig」が表示されています。';★追記
 
         return $app->render(
             'Tutorial/bbs_top.twig',
             array(
                 'viewname' => $viewname,
             )
-        );☆連想配列を追記
+        );★連想配列を追記
     }
 }
 ```
@@ -118,9 +118,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
             <div class="main_wrap">
                 <h1>ご意見箱</h1>
                 <p>みなさんのご意見をかきこんでください</p>
-                <dl>☆追記
+                <dl>★追記
                     <dt>コントローラーから取得した変数です</dt>
-                    <dd>｛｛ viewname ｝｝</dd>☆変数呼び出し部
+                    <dd>｛｛ viewname ｝｝</dd>★変数呼び出し部
                 </dl>
             </div>
         </div>

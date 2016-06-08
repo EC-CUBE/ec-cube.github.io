@@ -66,7 +66,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class ContactType extends AbstractType  ☆名称の変更
+class ContactType extends AbstractType  ★名称の変更
 {
     public $config;
 
@@ -80,7 +80,7 @@ class ContactType extends AbstractType  ☆名称の変更
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder  ☆以下を編集する
+        $builder  ★以下を編集する
             ->add('name', 'name', array(
                 'required' => true,
             ))
@@ -117,7 +117,7 @@ class ContactType extends AbstractType  ☆名称の変更
      */
     public function getName()
     {
-        return 'contact';  ☆名前を編集する
+        return 'contact';  ★名前を編集する
     }
 }
 ```
@@ -219,7 +219,7 @@ class BbsType extends AbstractType  ★BbsTypeに変更
      */
     public function getName()
     {
-        return 'bbs';☆名前を編集する
+        return 'bbs';★名前を編集する
     }
 }
 ```
@@ -297,14 +297,14 @@ class BbsType extends AbstractType
                 'multiple' => false,
             ),
         )
-        ->add( ☆ハンドルネームの項目追加
+        ->add( ★ハンドルネームの項目追加
             'name',
             'text',
             array(
                 'label' => '投稿者ハンドルネーム',
                 'required' => true,
                 'mapped' => false,
-                 new Assert\Regex( ☆正規表現でのバリデーション
+                 new Assert\Regex( ★正規表現でのバリデーション
                     array(
                         'pattern' => '/^[^\da-zA-Z]+$/u',
                         'message' => '半角英数字のみ入力可能です。',
@@ -320,7 +320,7 @@ class BbsType extends AbstractType
                 'required' => false,
                 'mapped' => false,
                 'constraints' => array(
-                    new Assert\Length( ☆文字入力の長さをチェック
+                    new Assert\Length( ★文字入力の長さをチェック
                         array(
                             'min' => '0',
                             'max' => '100',
@@ -342,7 +342,7 @@ class BbsType extends AbstractType
                     'style' => 'height:100px;',
                 ),
                 'constraints' => array(
-                    new Assert\Length( ☆文字入力の長さをチェック
+                    new Assert\Length( ★文字入力の長さをチェック
                         array(
                             'min' => '0',
                             'max' => '100',

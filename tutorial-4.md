@@ -59,7 +59,7 @@ class Bbs
     {
         //$viewname = 'このビューは「Tutorial/bbs_top.twig」が表示されています。';★コメントアウトします。
 
-        $builder = $app['form.factory']->createBuilder('form', null, array())☆以下フォーム定義を追加
+        $builder = $app['form.factory']->createBuilder('form', null, array())★以下フォーム定義を追加
 
         $builder->add(
             'reason',
@@ -102,7 +102,7 @@ class Bbs
             'Tutorial/bbs_top.twig',
             array(
                 //'viewname' => $viewname,★コメントアウトします。
-                'forms' => $forms->createView(),☆追記
+                'forms' => $forms->createView(),★追記
             )
         );
     }
@@ -232,7 +232,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
                     </dd>
                 </dl>
             </div>
-           <div id="form-wrapper">☆追記
+           <div id="form-wrapper">★追記
                ｛｛ form_widget(forms)｝｝
            </div>
         </div>

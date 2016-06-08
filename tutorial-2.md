@@ -162,7 +162,7 @@ class Bbs★クラス名を修正
 - bbs_top.twig( 中身はindex.twigのコピー )
 
 ```
-{#
+｛＃
 This file is part of EC-CUBE
 
 Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
@@ -182,7 +182,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-#}
+＃｝
 
 ｛％ extends 'default_frame.twig' ％｝
 
@@ -222,7 +222,7 @@ $(function(){
 - 上記の「★」マークの箇所を下記に修正します。
 
 ```
-{#
+｛＃
 This file is part of EC-CUBE
 
 Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
@@ -242,7 +242,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-#}
+＃｝
 ｛％ extends 'default_frame.twig' ％｝
 
 ｛％ set body_class = 'front_page' ％｝

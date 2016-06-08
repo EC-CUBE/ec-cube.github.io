@@ -467,7 +467,7 @@ $types[] = new \Eccube\Form\Type\Front\BbsType($app['config']); ★追記
  */
 
 
-namespace Eccube\Controller\CookBook;
+namespace Eccube\Controller\Tutorial;
 
 use Eccube\Application;
 
@@ -475,12 +475,12 @@ class Bbs
 {
     public function index(Application $app)
     {
-        //$viewname = 'このビューは「CookBook/bbs_top.twig」が表示されています。';
+        //$viewname = 'このビューは「Tutorial/bbs_top.twig」が表示されています。';
 
 
 
         return $app->render(
-            'CookBook/bbs_top.twig',
+            'Tutorial/bbs_top.twig',
             array(
                 //'viewname' => $viewname,
                 //'forms' => $forms->createView(), ★コメントアウト
@@ -521,7 +521,7 @@ class Bbs
  */
 
 
-namespace Eccube\Controller\CookBook;
+namespace Eccube\Controller\Tutorial;
 
 use Eccube\Application;
 use Symfony\Component\HttpFoundation\Request; ★リクエストを取得するため追加します。
@@ -547,7 +547,7 @@ class Bbs
         $forms = $builder->getForm();
 
         return $app->render(
-            'CookBook/bbs_top.twig',
+            'Tutorial/bbs_top.twig',
             array(
                 'message' => $message,
                 'forms' => $forms->createView(),
@@ -691,7 +691,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
                ｛％ endif ％｝
             </div>
            <div id="form-wrapper"> ★サブミット出来るようにフォーム定義を追記します
-               <form name="bbs-top-form" method="post" action="｛｛ url('cookbook_bbs') ｝｝">
+               <form name="bbs-top-form" method="post" action="｛｛ url('tutorial_bbs') ｝｝">
                ｛｛ form_widget(forms) ｝｝
                </form>
            </div>
@@ -720,13 +720,13 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 - 最後に確認のためにブラウザにアクセスしてみましょう。
 
-1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/cookbook/Bbs」を入力してください。
+1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
 
 1. フォームビルダーで構築したフォームが表示されています。
 
 ---
 
-![FormTypeのレンダリング](/images/img-cookbook5-view-rendar-default.png)
+![FormTypeのレンダリング](/images/img-tutorial5-view-rendar-default.png)
 
 ---
 
@@ -738,7 +738,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 ---
 
-![FormTypeのレンダリング](/images/img-cookbook5-view-rendar-success.png)
+![FormTypeのレンダリング](/images/img-tutorial5-view-rendar-success.png)
 
 ---
 
@@ -750,7 +750,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 ---
 
-![FormTypeのレンダリング](/images/img-cookbook5-view-rendar-error.png)
+![FormTypeのレンダリング](/images/img-tutorial5-view-rendar-error.png)
 
 ---
 

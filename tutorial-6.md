@@ -62,7 +62,7 @@ class Version20160607155514 extends AbstractMigration
 }
 ```
 
-## 今回CookBookのテーブル定義
+## 今回チュートリアルのテーブル定義
 
 - テーブル名 : dtb_bbs
 
@@ -141,7 +141,7 @@ class Version20160607155514 extends AbstractMigration
 
 ---
 
-![bbsテーブル](images/img-cookbook6-create-table.png)
+![bbsテーブル](images/img-tutorial6-create-table.png)
 
 ---
 

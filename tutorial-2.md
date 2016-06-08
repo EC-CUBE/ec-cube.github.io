@@ -20,14 +20,14 @@ title: コントローラーからビューを表示してみよう
 
 - まずは以下フォルダを作成してください。
 
-1. /src/Eccube/Controller/CookBook
+1. /src/Eccube/Controller/Tutorial
     - フォルダ毎で関連機能のコントローラーをまとめます。
     - 作成方法はそれぞれの環境で異なると思いますので、割愛いたします。
     - 以下の様にディレクトリを作成してください。
 
 ---
 
-![フォルダの作成](/images/img-cookbook2-make-dir.png)
+![フォルダの作成](/images/img-tutorial2-make-dir.png)
 
 ---
 
@@ -105,7 +105,7 @@ class TopController★
  */
 
 
-namespace Eccube\Controller\CookBook;★フォルダのパスを追加
+namespace Eccube\Controller\Tutorial;★フォルダのパスを追加
 
 use Eccube\Application;
 
@@ -114,7 +114,7 @@ class Bbs★クラス名を修正
 
     public function index(Application $app)
     {
-        echo 'First CookBook';☆追記
+        echo 'First Tutorial';☆追記
         exit();☆追記
         //return $app->render('index.twig');★一旦コメントアウト
     }
@@ -125,13 +125,13 @@ class Bbs★クラス名を修正
 
 - 一度確認のためにブラウザにアクセスしてみましょう。
 
-1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/cookbook/Bbs」を入力してください。
+1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
 
 1. 次はエラーではなく、以下が表示されているはずです。
 
 ---
 
-![エコーで文字表示](/images/img-cookbook2-echo-str.png)
+![エコーで文字表示](/images/img-tutorial2-echo-str.png)
 
 ---
 
@@ -141,7 +141,7 @@ class Bbs★クラス名を修正
 
 - 以下フォルダにTwigファイルを追加します。
 
-1. /src/Eccube/Resource/template/default/CookBook
+1. /src/Eccube/Resource/template/default/Tutorial
 		
     - フォルダ毎で関係するコントローラーのビューをまとめます。
     - 作成方法はそれぞれの環境で異なるため、割愛します。
@@ -149,7 +149,7 @@ class Bbs★クラス名を修正
 
 ---
 
-![ビューフォルダの作成](/images/img-cookbook2-make-dir.png)
+![ビューフォルダの作成](/images/img-tutorial2-make-dir.png)
 
 ---
 
@@ -291,7 +291,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
 
-namespace Eccube\Controller\CookBook;
+namespace Eccube\Controller\Tutorial;
 
 use Eccube\Application;
 
@@ -300,7 +300,7 @@ class Bbs
 
     public function index(Application $app)
     {
-        return $app->render('CookBook/bbs_top.twig');☆修正箇所(コメント部と、echo、exitを削除)
+        return $app->render('Tutorial/bbs_top.twig');☆修正箇所(コメント部と、echo、exitを削除)
     }
 }
 ```
@@ -330,7 +330,7 @@ class Bbs
 
 - 最後に確認のためにブラウザにアクセスしてみましょう。
 
-1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/cookbook/Bbs」を入力してください。
+1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
 
 1. Twigに記載した内容が表示されます。
 
@@ -340,7 +340,7 @@ class Bbs
 
 ---
 
-![twigで文字表示](/images/img-cookbook2-view-rendar.png)
+![twigで文字表示](/images/img-tutorial2-view-rendar.png)
 
 ---
 

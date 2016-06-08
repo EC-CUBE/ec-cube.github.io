@@ -29,7 +29,7 @@ title: 画面に変数を渡してみよう
 - コントローラー内で変数を定義し、「render」メソッドで定義した変数を、連想配列で引数として与えます。
 - その際、「key」は任意の文字列となりますが、Twig側で変数を呼び出す際の、名称となります。
 
-- /default/CookBook/Bbs.php
+- /default/Tutorial/Bbs.php
 
 ```
 <?php
@@ -56,7 +56,7 @@ title: 画面に変数を渡してみよう
  */
 
 
-namespace Eccube\Controller\CookBook;
+namespace Eccube\Controller\Tutorial;
 
 use Eccube\Application;
 
@@ -65,10 +65,10 @@ class Bbs
 
     public function index(Application $app)
     {
-        $viewname = 'このビューは「CookBook/bbs_top.twig」が表示されています。';☆追記
+        $viewname = 'このビューは「Tutorial/bbs_top.twig」が表示されています。';☆追記
 
         return $app->render(
-            'CookBook/bbs_top.twig',
+            'Tutorial/bbs_top.twig',
             array(
                 'viewname' => $viewname,
             )
@@ -81,7 +81,7 @@ class Bbs
 
 - コントローラで連想配列で引き渡した変数の表示をTwigに追記します。
 
-	- CookBook/bbs_top.twig
+	- Tutorial/bbs_top.twig
 
 ```
 {#
@@ -150,13 +150,13 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 - 最後に確認のためにブラウザにアクセスしてみましょう。
 
-1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/cookbook/Bbs」を入力してください。
+1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
 
 1. コントローラーで定義した変数の内容が表示されています。
 
 ---
 
-![View変数のレンダリング](/images/img-cookbook3-view-rendar.png)
+![View変数のレンダリング](/images/img-tutorial3-view-rendar.png)
 
 ---
 

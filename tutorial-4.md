@@ -49,7 +49,7 @@ title: フォームを表示してみよう
  */
 
 
-namespace Eccube\Controller\CookBook;
+namespace Eccube\Controller\Tutorial;
 
 use Eccube\Application;
 
@@ -57,7 +57,7 @@ class Bbs
 {
     public function index(Application $app)
     {
-        //$viewname = 'このビューは「CookBook/bbs_top.twig」が表示されています。';★コメントアウトします。
+        //$viewname = 'このビューは「Tutorial/bbs_top.twig」が表示されています。';★コメントアウトします。
 
         $builder = $app['form.factory']->createBuilder('form', null, array())☆以下フォーム定義を追加
 
@@ -99,7 +99,7 @@ class Bbs
         $forms = $builder->getForm();
 
         return $app->render(
-            'CookBook/bbs_top.twig',
+            'Tutorial/bbs_top.twig',
             array(
                 //'viewname' => $viewname,★コメントアウトします。
                 'forms' => $forms->createView(),☆追記
@@ -149,7 +149,7 @@ class Bbs
     - 通常は「null」を指定してください。
 
   1. フォーム生成時オプションを設定します。
-    - 使用頻度も少ないため、本CookBookでは割愛いたします。
+    - 使用頻度も少ないため、本チュートリアルでは割愛いたします。
 
 #### フォーム項目の追加
 
@@ -253,13 +253,13 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 - 最後に確認のためにブラウザにアクセスしてみましょう。
 
-1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/cookbook/Bbs」を入力してください。
+1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
 
 1. フォームビルダーで構築したフォームが表示されています。
 
 ---
 
-![フォームのレンダリング](/images/img-cookbook4-view-rendar.png)
+![フォームのレンダリング](/images/img-tutorial4-view-rendar.png)
 
 ---
 

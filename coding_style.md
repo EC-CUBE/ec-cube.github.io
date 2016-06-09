@@ -12,9 +12,9 @@ title: コーディング規約
 
 以下の規約に準じる
 
-* PSR-0 – オートローディング規約
-* PSR-1 – 基本コーディング規約
-* PSR-2 – コーディングスタイルガイド
+* PSR-0 - オートローディング規約
+* PSR-1 - 基本コーディング規約
+* PSR-2 - コーディングスタイルガイド
 * [Silexの作法](http://silex-users-jp.phper.jp/)
 * [Symfony2の作法](http://docs.symfony.gr.jp/symfony2/)に従う
 * twigテンプレート及びjsファイルのインデントは、Symfony2に合わせて4スペースで記述する

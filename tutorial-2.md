@@ -5,7 +5,7 @@ title: コントローラーからビューを表示してみよう
 
 ---
 
-# コントローラーからビューを表示してみよう
+# {{ page.title }}
 
 
 ## ビューのレンダリング
@@ -14,6 +14,14 @@ title: コントローラーからビューを表示してみよう
 
 - 本章では、作成したルーティングに対してビューを表示してみましょう。
 
+### 本章メニュー
+
+- 本章では以下を行います。
+
+    1. コントローラーの作成とビューのレンダリング方法
+
+    1. ビュー ( Twig ) の作成と役割
+
 ### コントローラーの作成
 
 #### フォルダの作成
@@ -21,7 +29,7 @@ title: コントローラーからビューを表示してみよう
 - まずは以下フォルダを作成してください。
 
 1. /src/Eccube/Controller/Tutorial
-    - フォルダ毎で関連機能のコントローラーをまとめます。
+    - 関連するコントローラーは一つのフォルダにまとめます。
     - 作成方法はそれぞれの環境で異なると思いますので、割愛いたします。
     - 以下の様にディレクトリを作成してください。
 
@@ -33,11 +41,11 @@ title: コントローラーからビューを表示してみよう
 
 #### ファイルの作成
 
-- 次にBbs.phpを作成します。
+- 次に**Bbs.php**を作成します。
 
 - TopControllerをコピー、リネームします。
 
-- Bbs.php( 中身はTopController.phpのコピー )
+- **Bbs.php**( 中身はTopController.phpのコピー )
 
 ```
 <?php
@@ -64,21 +72,21 @@ title: コントローラーからビューを表示してみよう
  */
 
 
-namespace Eccube\Controller;★
+namespace Eccube\Controller;
 
 use Eccube\Application;
 
-class TopController★
+class TopController
 {
 
     public function index(Application $app)
     {
-        return $app->render('index.twig');★
+        return $app->render('index.twig');
     }
 }
 ```
 
-- 上記の「★」マークの箇所を下記に修正します。
+- 下記の様に修正を行います。
 
 ```
 <?php
@@ -125,9 +133,9 @@ class Bbs★クラス名を修正
 
 - 一度確認のためにブラウザにアクセスしてみましょう。
 
-1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
+    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
 
-1. 次はエラーではなく、以下が表示されているはずです。
+    1. 次はエラーではなく、以下が表示されているはずです。
 
 ---
 
@@ -141,11 +149,11 @@ class Bbs★クラス名を修正
 
 - 以下フォルダにTwigファイルを追加します。
 
-1. /src/Eccube/Resource/template/default/Tutorial
-		
-    - フォルダ毎で関係するコントローラーのビューをまとめます。
-    - 作成方法はそれぞれの環境で異なるため、割愛します。
-    - 以下の様にディレクトリを作成してください。
+    1. /src/Eccube/Resource/template/default/Tutorial
+
+        - 関係するコントローラーのビューをフォルダ毎にまとめます。
+        - 作成方法はそれぞれの環境で異なるため、割愛します。
+        - 以下の様にディレクトリを作成してください。
 
 ---
 
@@ -155,11 +163,11 @@ class Bbs★クラス名を修正
 
 #### ファイルの作成
 
-- 次に、bbs_top.twigを作成します。
+- 次に、**bbs_top.twig**を作成します。
 
 - index.twigをコピー、リネームします。
 
-- bbs_top.twig( 中身はindex.twigのコピー )
+- **bbs_top.twig**( 中身はindex.twigのコピー )
 
 ```
 ｛＃
@@ -189,7 +197,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 ｛％ set body_class = 'front_page' ％｝
 
 ｛％ block javascript ％｝
-<script>★
+<script>
 $(function(){
     $('.main_visual').slick({
         dots: true,
@@ -204,7 +212,7 @@ $(function(){
 ｛％ block main ％｝
     <div class="row">
        <div class="col-sm-12">
-            <div class="main_visual">★
+            <div class="main_visual">
                 <div class="item">
                   <img src="{{ app.config.front_urlpath }}/img/top/mv01.jpg">
                 </div>
@@ -219,7 +227,7 @@ $(function(){
     </div>
 ｛％ endblock ％｝
 ```
-- 上記の「★」マークの箇所を下記に修正します。
+- 下記の様に修正を行います。
 
 ```
 ｛＃
@@ -309,30 +317,30 @@ class Bbs
 
 
 
-1. 引数 : $app
-    - $appにはEC-CUBEで用いるあらゆるクラスが格納されています。
-    - 正しくはApplication.php/ServiceProviderで設定した内容が、実行時にインスタンス化されて利用できる構造になっています。
-    - ここでは詳細に解説は行いませんが、**「$app」からいろいろな機能を呼び出してアプリケーションを構築していく**とだけ覚えてください。
+    1. 引数 : $app
+        - $appにはEC-CUBEで用いるあらゆるクラスが格納されています。
+        - 正しくはApplication.php/ServiceProviderで設定した内容が、実行時にインスタンス化されて利用できる構造になっています。
+        - ここでは詳細に解説は行いませんが、**「$app」からいろいろな機能を呼び出してアプリケーションを構築していく**とだけ覚えてください。
 
-1. 名前空間 : use Eccube\Application;
-    - 1.で説明した「$app」を利用するためには、クラスのスコープ外に必ず、名前空間を指定しなければなりません。
-    - 簡単にいうと、コントローラーに利用するクラスの保管場所を教えてあげるという事です。
-    - 名前空間で指定するパスは、使用するクラスによって変わりますが、「/src/Eccube」以下にあるクラスを利用する場合は、「Eccube」からの相対パスを指定してください。(先頭に「\\」は必要ありません)
+    1. 名前空間 : use Eccube\Application;
+        - 1.で説明した「$app」を利用するためには、クラスのスコープ外に必ず、名前空間を指定しなければなりません。
+        - 簡単にいうと、コントローラーに利用するクラスの保管場所を教えてあげるという事です。
+        - 名前空間で指定するパスは、使用するクラスによって変わりますが、「/src/Eccube」以下にあるクラスを利用する場合は、「Eccube」からの相対パスを指定してください。(先頭に「\\」は必要ありません)
 
-1. $app->render([表示したいTwigのパス])
-    - 「render」にTwigのパスを引数として渡すと、対象のTwigが解析され、htmlに変換されます。
-    - 通常はコントローラーのメソッドの戻り値として、renderの戻り値をそのまま「return」すると、変換されたhtmlが返却され、画面が表示されます。
-    - 「引数」として指定するパスは「/src/Eccube/Resource/template/」がルートパスとして設定されています。
-    - ルートパスはApplication.phpの初期化が終わった時点で設定されます。
-    - 管理者側のコントローラーであれば、上記フォルダの「/admin/」が対象、ユーザー画面であれば「/default/」がルートフォルダになります。
+    1. $app->render([表示したいTwigのパス])
+        - 「render」にTwigのパスを引数として渡すと、対象のTwigが解析され、htmlに変換されます。
+        - 通常はコントローラーのメソッドの戻り値として、renderの戻り値をそのまま「return」すると、変換されたhtmlが返却され、画面が表示されます。
+        - 「引数」として指定するパスは「/src/Eccube/Resource/template/」がルートパスとして設定されています。
+        - ルートパスはApplication.phpの初期化が終わった時点で設定されます。
+        - 管理者側のコントローラーであれば、上記フォルダの「/admin/」が対象、ユーザー画面であれば「/default/」がルートフォルダになります。
 
 #### 表示内容の確認
 
 - 最後に確認のためにブラウザにアクセスしてみましょう。
 
-1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
+    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
 
-1. Twigに記載した内容が表示されます。
+    1. Twigに記載した内容が表示されます。
 
 
 	- ヘッダーやフッターが表示されていませんが、現状はこれで正しい状態です。

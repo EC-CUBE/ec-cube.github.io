@@ -102,7 +102,7 @@ $c->match([ドキュメントルートからのurl], [紐付けるコントロ�
 
 ```
         // チュートリアル
-        $c->match('/tutorial/bbs', '\Eccube\Controller\Tutorial\Bbs::index')->bind('tutorial_bbs');
+        $c->match('/tutorial/crud', '\Eccube\Controller\Tutorial\CrudController::index')->bind('tutorial_crud');
 
         return $c;
     }
@@ -115,7 +115,7 @@ $c->match([ドキュメントルートからのurl], [紐付けるコントロ�
 
 - ルーティングの設定が終わったのでブラウザでアクセスしてみましょう。
 
-    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
+    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/crud」を入力してください。
 
     1. エラーメッセージの表示
 

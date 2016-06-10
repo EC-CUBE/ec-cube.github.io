@@ -29,9 +29,9 @@ title: 画面に変数を渡してみよう
 
 - その際、「key」は任意の文字列となりますが、Twig側で変数を呼び出す際の、名称となります。
 
-- 早速以下の様に**Bbs.php**を修正します。
+- 早速以下の様に**CrudController.php**を修正します。
 
-    - /default/Tutorial/Bbs.php
+    - /src/Eccube/Controller/Tutorial/CrudController.php
 
 ```
 <?php
@@ -59,18 +59,19 @@ title: 画面に変数を渡してみよう
 
 
 namespace Eccube\Controller\Tutorial;
+namespace Eccube\Controller\AbstractController;
 
 use Eccube\Application;
 
-class Bbs
+class CrudController extends AbstractController
 {
 
     public function index(Application $app)
     {
-        $viewname = 'このビューは「Tutorial/bbs_top.twig」が表示されています。';★追記
+        $viewname = 'このビューは「Tutorial/crud_top.twig」が表示されています。';★追記
 
         return $app->render(
-            'Tutorial/bbs_top.twig',
+            'Tutorial/crud_top.twig',
             array(
                 'viewname' => $viewname,
             )
@@ -90,7 +91,7 @@ class Bbs
 
 - 以下の様に修正します。
 
-	- Tutorial/bbs_top.twig
+	- Tutorial/crud_top.twig
 
 ```
 ｛＃
@@ -125,8 +126,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     <div class="row">
        <div class="col-sm-12">
             <div class="main_wrap">
-                <h1>ご意見箱</h1>
-                <p>みなさんのご意見をかきこんでください</p>
+                <h1>CRUDチュートリアル</h1>
+                <p>投稿を行なってください</p>
                 <dl>★追記
                     <dt>コントローラーから取得した変数です</dt>
                     <dd>｛｛ viewname ｝｝</dd>★変数呼び出し部
@@ -159,7 +160,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 - 最後に確認のためにブラウザにアクセスしてみましょう。
 
-    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
+    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/crud」を入力してください。
 
     1. コントローラーで定義した変数の内容が表示されています。
 

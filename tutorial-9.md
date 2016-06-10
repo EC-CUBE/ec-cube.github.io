@@ -23,18 +23,18 @@ title: データーベースに登録してみよう
 
 - 前章では、エンティティの概要と、ファイルの作成方法を説明しました。
 
-- ここまでの章で、**dtb_bbs**、**Eccube.Entity.Bbs.dcm.yml**、**Bbs.php**を作成しました。
+- ここまでの章で、**dtb_crud**、**Eccube.Entity.Crud.dcm.yml**、**Crud.php**を作成しました。
 
 - 作成物が揃ったために、この章では、エンティティマネージャーでデーターベースにデータを登録します。
 
 ## コントローラーの修正
 
 - 以下のコントローラーを修正していきます。
-    - /src/Controller/Default/Bbs.php
+    - /src/Controller/Default/CrudController.php
 
     1. ファイルを開いて以下の様に修正します。
 
-        - **Bbs.php**
+        - **CrudController.php**
 
 ```
 <?php
@@ -64,16 +64,18 @@ title: データーベースに登録してみよう
 namespace Eccube\Controller\Tutorial;
 
 use Eccube\Application;
+use Eccube\Controller\AbstractController;
+use Eccube\Entity\Crud;
 use Symfony\Component\HttpFoundation\Request;
 
-class Bbs
+class CrudController extends AbstractController
 {
     public function index(Application $app, Request $request)
     {
-        // Bbsエンティティをインスタンス化
-        $Bbs = new \Eccube\Entity\Bbs(); ★前章で作成した、Bbs用のエンティティ(データモデルオブジェクト)をインスタンス化します。
+        // Crudエンティティをインスタンス化
+        $Crud = new \Eccube\Entity\Crud(); ★前章で作成した、Crud用のエンティティ(データモデルオブジェクト)をインスタンス化します。
 
-        $builder = $app['form.factory']->createBuilder('bbs', $Bbs); ★ビルダーを取得する際に、第二引数にBbsのエンティティを渡します。
+        $builder = $app['form.factory']->createBuilder('crud', $Crud); ★ビルダーを取得する際に、第二引数にBbsのエンティティを渡します。
 
         $form = $builder->getForm();
 
@@ -83,16 +85,14 @@ class Bbs
 
         if ($form->isSubmitted() && $form->isValid()) {
             $message = array('success' => '入力値に問題はありません');
-            $app['orm.em']->persist($Bbs); ★エンティティマネージャーの管理下にBbsエンティティを登録します。
-            $app['orm.em']->flush($Bbs); ★エンティティマネージャーを通して、データーベースにエンティティの内容を登録します。
+            $app['orm.em']->persist($Crud); ★エンティティマネージャーの管理下にCrudエンティティを登録します。
+            $app['orm.em']->flush($Crud); ★エンティティマネージャーを通して、データーベースにエンティティの内容を登録します。
         } elseif($form->isSubmitted() && !$form->isValid()) {
             $message = array('error' => '入力値に誤りがあります');
         }
 
-        $forms = $builder->getForm();
-
         return $app->render(
-            'Tutorial/bbs_top.twig',
+            'Tutorial/crud_top.twig',
             array(
                 'message' => $message,
                 'forms' => $forms->createView(),
@@ -109,8 +109,7 @@ class Bbs
 
 1. まず前章で作成したエンティティをインスタンス化します。
       - エンティティの作成では、**バックスラッシュ + Eccubeからの相対パス + ファイル名(拡張子なし)**を**new**します。
-      - エンティティを**new**する際に、**ファイル名(拡張子)以外**を**名前空間で指定**して**new**する事も可能です。
-      - その際は、名前空間に以下記述を追記してください。
+      - エンティティを**new**する際に、**ファイル名(拡張子)以外**を**名前空間で指定**する事が必要です。
 
       ```
       use Eccube\Entity\[該当エンティティ名(拡張子なし)]
@@ -164,9 +163,9 @@ class Bbs
 
 - 今回は**リレーションのないデーターの保存**のために、あまり**Doctrineの利便性**は感じにくいかも知れませんが、**リレーションデーター(アソシエーションデーター)を扱う際**は、**定義ファイル**に関連を記述し、**該当エンティティを登録**して、**flush**するだけで、**外部キーも保存**されるために、その際には、**Doctrineの利便性を享受**出来るはずです。
 
-### BbsTypeの修正
+### CrudTypeの修正
 
-- 次にBbsTypeをエンティティに連動させるため、各項目のオプション値を変更します。
+- 次にCrudTypeをエンティティに連動させるため、各項目のオプション値を変更します。
 
     1. 保存フォルダ
 
@@ -174,7 +173,7 @@ class Bbs
 
     1. 以下の様にファイルを修正します。
 
-    - **BbsType.php**
+    - **CrudType.php**
 
 ```
 <?php
@@ -207,7 +206,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class BbsType extends AbstractType
+class CrudType extends AbstractType
 {
     public $config;
 
@@ -300,7 +299,7 @@ class BbsType extends AbstractType
      */
     public function getName()
     {
-        return 'bbs';
+        return 'crud';
     }
 }
 ```
@@ -315,7 +314,7 @@ class BbsType extends AbstractType
 
 - 最後に確認のためにブラウザにアクセスしてみましょう。
 
-    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
+    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/crud」を入力してください。
 
     1. 「投稿ハンドルネーム」に「テスト」を入力
 
@@ -335,9 +334,9 @@ class BbsType extends AbstractType
 
 #### 正常登録時
 
-- 最後に確認のためにブラウザにアクセスしてみましょう。
+- 正常登録時の表示を確認します。
 
-    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
+    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/crud」を入力してください。
 
     1. 「投稿ハンドルネーム」に「test」を入力
 

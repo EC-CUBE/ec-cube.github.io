@@ -78,12 +78,11 @@ class Version20160607155514 extends AbstractMigration
 
 ## 今回チュートリアルのテーブル定義
 
-- テーブル名 : dtb_bbs
+- テーブル名 : dtb_crud
 
 | 論理名 | 物理名 | フィールドタイプ | その他 |
 |------|------|------|------|
 | 投稿ID | id | int | NOT NULL PRIMARY AUTO_INCREMENT |
-| 親投稿ID | parent_id | int | DEFAULT NULL |
 | 投稿種別 | reason | smallint | NOT NULL |
 | 投稿者ハンドルネーム | name | varchar(255) | NOT NULL |
 | 投稿のタイトル | title | varchar(255) | NOT NULL |
@@ -111,12 +110,11 @@ class Version20160607155514 extends AbstractMigration
      */
     public function up(Schema $schema)
     {
-        if (!$schema->hasTable('dtb_bbs')) {
-            $table = $schema->createTable('dtb_bbs');
+        if (!$schema->hasTable('dtb_crud')) {
+            $table = $schema->createTable('dtb_crud');
             $table->addColumn('id', 'integer', array(
                 'autoincrement' => true,
             ));
-            $table->addColumn('parent_id', 'integer', array('NotNull' => false, 'default' => 'null'));
             $table->addColumn('reason', 'smallint', array('NotNull' => true));
             $table->addColumn('name', 'string', array('NotNull' => true, 'length' => 255));
             $table->addColumn('title', 'string', array('NotNull' => true, 'length' => 255));
@@ -132,8 +130,8 @@ class Version20160607155514 extends AbstractMigration
      */
     public function down(Schema $schema)
     {
-        if (!$schema->hasTable('dtb_bbs')) {
-            $schema->dropTable('dtb_bbs');
+        if (!$schema->hasTable('dtb_crud')) {
+            $schema->dropTable('dtb_crud');
         }
     }
 }
@@ -160,9 +158,9 @@ class Version20160607155514 extends AbstractMigration
 | 物理名 | 登録情報 | 登録値 |
 |------|------|------|
 | device_type_id | 表示デバイスのタイプ | mtb_device_typeのキー10(PC)を取得し格納 |
-| page_name | 画面のタイトル | チュートリアル/BBS |
-| url | 画面のルーティング名称 | shopping_payment |
-| file_name | 該当Twigのルートからのパスと名称 | Shopping/index |
+| page_name | 画面のタイトル | チュートリアル/CRUD |
+| url | 画面のルーティング名称 | tutorial_crud |
+| file_name | 該当Twigのルートからのパスと名称 | Tutorial/crud_top |
 | edit_flg | 管理画面から編集可能かどうか | 2 |
 
 - 上記のテーブル定義を以下に記述していきます
@@ -186,12 +184,11 @@ class Version20160607155514 extends AbstractMigration
      */
     public function up(Schema $schema)
     {
-        if (!$schema->hasTable('dtb_bbs')) {
-            $table = $schema->createTable('dtb_bbs');
+        if (!$schema->hasTable('dtb_crud')) {
+            $table = $schema->createTable('dtb_crud');
             $table->addColumn('id', 'integer', array(
                 'autoincrement' => true,
             ));
-            $table->addColumn('parent_id', 'integer', array('NotNull' => false, 'default' => 'null'));
             $table->addColumn('reason', 'smallint', array('NotNull' => true));
             $table->addColumn('name', 'string', array('NotNull' => true, 'length' => 255));
             $table->addColumn('title', 'string', array('NotNull' => true, 'length' => 255));
@@ -208,7 +205,7 @@ class Version20160607155514 extends AbstractMigration
         $qb->select('pl') ★該当情報が登録済みかどうかを確認するためのSQLを構築
             ->from('\Eccube\Entity\PageLayout', 'pl')
             ->where('pl.url = :Url')
-            ->setParameter('Url', 'tutorial_bbs');
+            ->setParameter('Url', 'tutorial_crud');
 
         $res = $Point = $qb->getQuery()->getResult(); ★SQL結果を取得
 
@@ -216,9 +213,9 @@ class Version20160607155514 extends AbstractMigration
             $PageLayout = new PageLayout(); ★登録するためのエンティティをインスタンス化
             $DeviceType = $em->getRepository('\Eccube\Entity\Master\DeviceType')->find(10); ★格納するデバイスタイプをDBから取得
             $PageLayout->setDeviceType($DeviceType); ★以下登録エンティティに必要情報を格納
-            $PageLayout->setName('チュートリアル/BBS');
-            $PageLayout->setUrl('tutorial_bbs');
-            $PageLayout->setFileName('Tutorial/bbs_top');
+            $PageLayout->setName('チュートリアル/CRUD');
+            $PageLayout->setUrl('tutorial_crud');
+            $PageLayout->setFileName('Tutorial/crud_top');
             $PageLayout->setEditFlg(2);
 
             $em->persist($PageLayout); ★エンティティマネージャーの管理化に登録エンティティ追加
@@ -231,8 +228,8 @@ class Version20160607155514 extends AbstractMigration
      */
     public function down(Schema $schema)
     {
-        if (!$schema->hasTable('dtb_bbs')) {
-            $schema->dropTable('dtb_bbs');
+        if (!$schema->hasTable('dtb_crud')) {
+            $schema->dropTable('dtb_crud');
         }
 
         $app = \Eccube\Application::getInstance(); ★EC-CUBEのアプリケーションクラスを取得
@@ -242,7 +239,7 @@ class Version20160607155514 extends AbstractMigration
         $qb->select('pl') ★該当画面情報が保存されているかを確認するためのSQLを生成
             ->from('\Eccube\Entity\PageLayout', 'pl')
             ->where('pl.url = :Url')
-            ->setParameter('Url', 'tutorial_bbs');
+            ->setParameter('Url', 'tutorial_crud');
 
         $res = $Point = $qb->getQuery()->getResult(); ★情報取得
 
@@ -250,7 +247,7 @@ class Version20160607155514 extends AbstractMigration
             $qb->delete('pl') ★該当画面情報を削除するための、SQLを生成
                 ->from('\Eccube\Entity\PageLayout', 'pl')
                 ->where('pl.url = :Url')
-                ->setParamater('Url', 'tutorial_bbs');
+                ->setParamater('Url', 'tutorial_crud');
             $res = $Point = $qb->getQuery()->execute(); ★削除処理実行
         }
     }

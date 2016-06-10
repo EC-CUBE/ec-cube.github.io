@@ -55,11 +55,11 @@ title: フォーム情報を整理して入力値チェックも追加しよう
 
 #### ファイルのリネーム
 
-- 次にBbsType.phpを作成します。
+- 次にCrudType.phpを作成します。
 
 - ContactType.phpをコピー、リネームします。
 
-    - **BbsType.php**( 中身はContactType.phpのコピー )
+    - **CrudType.php**( 中身はContactType.phpのコピー )
 
 ```
 <?php
@@ -92,7 +92,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class ContactType extends AbstractType  ★名称の変更
+class CrudType extends AbstractType  ★名称の変更
 {
     public $config;
 
@@ -148,7 +148,7 @@ class ContactType extends AbstractType  ★名称の変更
 }
 ```
 
-#### BbsTypeの作成
+#### CrudTypeの作成
 
 - 上記を以下に変更します。
 
@@ -183,7 +183,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class BbsType extends AbstractType  ★BbsTypeに変更
+class CrudType extends AbstractType  ★CrudTypeに変更
 {
     public $config;
 
@@ -245,7 +245,7 @@ class BbsType extends AbstractType  ★BbsTypeに変更
      */
     public function getName()
     {
-        return 'bbs';★名前を編集する
+        return 'crud';★名前を編集する
     }
 }
 ```
@@ -256,9 +256,9 @@ class BbsType extends AbstractType  ★BbsTypeに変更
 
 - 上記でFormTypeを作成しましたが、ここで、フォームの各項目の入力値チェック(以後、バリデーションと呼びます)を定義していきます。
 
-- 作成した「BbsType」の各項目のオプション欄に追記していきます。
+- 作成した「CrudType」の各項目のオプション欄に追記していきます。
 
-    - BbsType.php
+    - CrudType.php
 
 ```
 <?php
@@ -291,7 +291,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert; ★バリデーションを追加する際は、必ず必要となってきます。
 
-class BbsType extends AbstractType
+class CrudType extends AbstractType
 {
     public $config;
 
@@ -386,7 +386,7 @@ class BbsType extends AbstractType
      */
     public function getName()
     {
-        return 'bbs';
+        return 'crud';
     }
 }
 ```
@@ -466,7 +466,7 @@ $types[] = new \Eccube\Form\Type\Front\ShoppingShippingType();
 $types[] = new \Eccube\Form\Type\Front\CustomerAddressType($app['config']);
 $types[] = new \Eccube\Form\Type\Front\ForgotType();
 $types[] = new \Eccube\Form\Type\Front\CustomerLoginType($app['session']);
-$types[] = new \Eccube\Form\Type\Front\BbsType($app['config']); ★追記
+$types[] = new \Eccube\Form\Type\Front\CrudType($app['config']); ★追記
 ```
 
 - 今回は必要ありませんが、引数にコンフィグ情報を渡しています。
@@ -479,7 +479,7 @@ $types[] = new \Eccube\Form\Type\Front\BbsType($app['config']); ★追記
 
 - 以下の通りになります。
 
-    - Bbs.php
+    - CrudController.php
 
 ```
 <?php
@@ -508,18 +508,20 @@ $types[] = new \Eccube\Form\Type\Front\BbsType($app['config']); ★追記
 
 namespace Eccube\Controller\Tutorial;
 
-use Eccube\Application;
 
-class Bbs
+use Eccube\Application;
+use Eccube\Controller\AbstractController;
+
+class CrudController extends AbstractController
 {
     public function index(Application $app)
     {
-        //$viewname = 'このビューは「Tutorial/bbs_top.twig」が表示されています。';
+        //$viewname = 'このビューは「Tutorial/crud_top.twig」が表示されています。';
 
 
 
         return $app->render(
-            'Tutorial/bbs_top.twig',
+            'Tutorial/crud_top.twig',
             array(
                 //'viewname' => $viewname,
                 //'forms' => $forms->createView(), ★コメントアウト
@@ -563,13 +565,14 @@ class Bbs
 namespace Eccube\Controller\Tutorial;
 
 use Eccube\Application;
+use Eccube\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request; ★リクエストを取得するため追加します。
 
-class Bbs
+class CrudController extends AbstractController
 {
     public function index(Application $app, Request $request) ★リクエストを引数で取得するために追記します。
     {
-        $builder = $app['form.factory']->createBuilder('bbs', null); ★ビルダーからType名を指定して、BbsTypeを取得します。
+        $builder = $app['form.factory']->createBuilder('crud', null); ★ビルダーからType名を指定して、CrudTypeを取得します。
 
         $form = $builder->getForm();
 
@@ -586,7 +589,7 @@ class Bbs
         $forms = $builder->getForm();
 
         return $app->render(
-            'Tutorial/bbs_top.twig',
+            'Tutorial/crud_top.twig',
             array(
                 'message' => $message,
                 'forms' => $forms->createView(),
@@ -604,7 +607,7 @@ class Bbs
     - メソッドの引数に、タイプヒンティングで**Request型**を指定し、リクエストオブジェクトを受け取れるようにします。
     - リクエストオブジェクトは「Silex(Symfony2)」が自動で処理を行い、画面からのリクエスト内容を渡してくれます。
     1. 次にフォーム生成のために、**$app[form.factory]**の**createBuilder**メソッドで**Formオブジェクト**を生成します。
-    - BbsTypeの**getName**メソッドで定義した、**bbs**を**createBuilder**の第一引数として渡します。
+    - CrudTypeの**getName**メソッドで定義した、**bbs**を**createBuilder**の第一引数として渡します。
     - 第二引数には、今回は関連エンティティがないため「null」を指定します。
     - オプションは指定しません。
 
@@ -630,7 +633,7 @@ class Bbs
 
 - 最後にTwigファイルを修正しましょう
 
-    - **bbs_top.twig**
+    - **crud_top.twig**
 
     - 現状では以下表示となります。
 
@@ -667,8 +670,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     <div class="row">
        <div class="col-sm-12">
             <div class="main_wrap">
-                <h1>ご意見箱</h1>
-                <p>みなさんのご意見をかきこんでください</p>
+                <h1>CRUDチュートリアル</h1>
+                <p>投稿を行なってください</p>
                 <dl>
                     <dt>コントローラーから取得した変数です</dt>
                     <dd>
@@ -720,8 +723,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     <div class="row">
        <div class="col-sm-12">
             <div class="main_wrap">
-                <h1>ご意見箱</h1>
-                <p>みなさんのご意見をかきこんでください</p>
+                <h1>CRUDチュートリアル</h1>
+                <p>投稿を行なってください</p>
                ｛％ if message.error is defined ％｝★コントローラーで入力値判定した結果を表示します。
                 <p class="text-danger">｛｛ message.error ｝｝</p>
                ｛％ elseif message.success is defined ％｝
@@ -731,7 +734,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
                ｛％ endif ％｝
             </div>
            <div id="form-wrapper"> ★サブミット出来るようにフォーム定義を追記します
-               <form name="bbs-top-form" method="post" action="｛｛ url('tutorial_bbs') ｝｝">
+               <form name="bbs-top-form" method="post" action="｛｛ url('tutorial_crud') ｝｝">
                ｛｛ form_widget(forms) ｝｝
                </form>
            </div>
@@ -760,7 +763,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 - 最後に確認のためにブラウザにアクセスしてみましょう。
 
-    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
+    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/crud」を入力してください。
 
     1. フォームビルダーで構築したフォームが表示されています。
 

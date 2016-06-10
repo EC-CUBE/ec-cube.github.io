@@ -51,8 +51,8 @@ title: Doctrineのためにデーターベース構造を設定しよう
 
     1. フォルダの中のファイル**Eccube.Entity.AuthorityRole.dcm.yml**をコピー・リネームします。
 
-    2. ファイル名は**Eccube.Entity.Bbs.dcm.yml**とします。
-        - **Eccube.Entity.Bbs.dcm.yml**(中身はEccube.Entity.AuthorityRole.dcm.yml)
+    2. ファイル名は**Eccube.Entity.Crud.dcm.yml**とします。
+        - **Eccube.Entity.Crud.dcm.yml**(中身はEccube.Entity.AuthorityRole.dcm.yml)
 
 ```
 
@@ -102,10 +102,10 @@ Eccube\Entity\AuthorityRole:
 
 ```
 
-Eccube\Entity\Bbs: ★エンティティのパスをBbsに変更します( ファイルは後で作成します )
+Eccube\Entity\Crud: ★エンティティのパスをCrudに変更します( ファイルは後で作成します )
     type: entity
-    table: dtb_bbs  ★テーブル名をdtb_bbsに修正します
-    repositoryClass: Eccube\Repository\AuthorityRoleRepository ★レポジトリをBbsに修正します( ファイルは後で作成します )
+    table: dtb_bbs  ★テーブル名をdtb_crudに修正します
+    repositoryClass: Eccube\Repository\CrudRepository ★レポジトリをCrudに修正します( ファイルは後で作成します )
     id: ★プライマリーキーの設定を行います
         id:
             type: integer
@@ -116,9 +116,6 @@ Eccube\Entity\Bbs: ★エンティティのパスをBbsに変更します( フ�
             generator:
                 strategy: AUTO ★オートインクリメントを利用するためにAUTOを設定します
     fields: ★カラムの設定を行います
-        parent_id:
-            type: integer
-            nullable: true
         reason:
             type: smallint
             nullable: false
@@ -144,7 +141,7 @@ Eccube\Entity\Bbs: ★エンティティのパスをBbsに変更します( フ�
 ```
 - 上記の説明を行います
 
-    1. [Eccube\Entity\Bbs:]
+    1. [Eccube\Entity\Crud:]
     - エンティティファイルのパスを指定します。
     - ファイルの格納位置は決まっているため、ファイル名のみ変更となります。
 

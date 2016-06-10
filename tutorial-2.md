@@ -41,11 +41,11 @@ title: コントローラーからビューを表示してみよう
 
 #### ファイルの作成
 
-- 次に**Bbs.php**を作成します。
+- 次に**CrudController.php**を作成します。
 
 - TopControllerをコピー、リネームします。
 
-- **Bbs.php**( 中身はTopController.phpのコピー )
+- **CrudController.php**( 中身はTopController.phpのコピー )
 
 ```
 <?php
@@ -113,11 +113,12 @@ class TopController
  */
 
 
-namespace Eccube\Controller\Tutorial;★フォルダのパスを追加
+namespace Eccube\Controller\Tutorial; ★フォルダのパスを追加
+namespace Eccube\Controller\AbstractController; ★親コントローラーのパスを追加
 
 use Eccube\Application;
 
-class Bbs★クラス名を修正
+class CrudController extends AbstractController ★クラス名を修正 + 親コントローラーを継承
 {
 
     public function index(Application $app)
@@ -133,7 +134,7 @@ class Bbs★クラス名を修正
 
 - 一度確認のためにブラウザにアクセスしてみましょう。
 
-    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
+    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/crud」を入力してください。
 
     1. 次はエラーではなく、以下が表示されているはずです。
 
@@ -163,11 +164,11 @@ class Bbs★クラス名を修正
 
 #### ファイルの作成
 
-- 次に、**bbs_top.twig**を作成します。
+- 次に、**crud_top.twig**を作成します。
 
 - index.twigをコピー、リネームします。
 
-- **bbs_top.twig**( 中身はindex.twigのコピー )
+- **crud_top.twig**( 中身はindex.twigのコピー )
 
 ```
 ｛＃
@@ -262,8 +263,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     <div class="row">
        <div class="col-sm-12">
             <div class="main_wrap">★ID名称を変更「main_visual」→「main_wrap」、「main_visual」内を削除し新しく内容を追記
-                <h1>ご意見箱</h1>★追記
-                <p>みなさんのご意見をかきこんでください</p>★追記
+                <h1>CRUDチュートリアル</h1> ★追記
+                <p>投稿を行なってください</p> ★追記
             </div>
         </div>
     </div>
@@ -300,15 +301,16 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 
 namespace Eccube\Controller\Tutorial;
+namespace Eccube\Controller\AbstractController;
 
 use Eccube\Application;
 
-class Bbs
+class CrudController extends AbstractController
 {
 
     public function index(Application $app)
     {
-        return $app->render('Tutorial/bbs_top.twig');★修正箇所(コメント部と、echo、exitを削除)
+        return $app->render('Tutorial/crud_top.twig');★修正箇所(コメント部と、echo、exitを削除)
     }
 }
 ```
@@ -327,6 +329,9 @@ class Bbs
         - 簡単にいうと、コントローラーに利用するクラスの保管場所を教えてあげるという事です。
         - 名前空間で指定するパスは、使用するクラスによって変わりますが、「/src/Eccube」以下にあるクラスを利用する場合は、「Eccube」からの相対パスを指定してください。(先頭に「\\」は必要ありません)
 
+    1. 名前空間 : use Eccube\Controller\AbstractControler;
+        - コントローラーの親クラスを上記と同じ理由により設定いたします。
+
     1. $app->render([表示したいTwigのパス])
         - 「render」にTwigのパスを引数として渡すと、対象のTwigが解析され、htmlに変換されます。
         - 通常はコントローラーのメソッドの戻り値として、renderの戻り値をそのまま「return」すると、変換されたhtmlが返却され、画面が表示されます。
@@ -338,7 +343,7 @@ class Bbs
 
 - 最後に確認のためにブラウザにアクセスしてみましょう。
 
-    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
+    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/crud」を入力してください。
 
     1. Twigに記載した内容が表示されます。
 

@@ -46,8 +46,8 @@ title: Doctrineのためにエンティティファイルを作成しよう
     1. フォルダの中のファイル**AuthorityRole.php**をコピー・リネームします。
 
 
-    1. ファイル名は**Bbs.php**とします。
-        - **Bbs.php**(中身はAuthorityRole.php)
+    1. ファイル名は**Crud.php**とします。
+        - **Crud.php**(中身はAuthorityRole.php)
 
 ```
 <?php
@@ -234,20 +234,15 @@ namespace Eccube\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class Bbs
+ * Class Crud
  * @package Eccube\Entity
  */
-class Bbs extends \Eccube\Entity\AbstractEntity
+class Crud extends \Eccube\Entity\AbstractEntity
 {
     /**
      * @var integer
      */
     private $id;
-
-    /**
-     * @var integer
-     */
-    private $parent_id;
 
     /**
      * @var string
@@ -280,27 +275,7 @@ class Bbs extends \Eccube\Entity\AbstractEntity
     private $update_date;
 
     /**
-     * Get parent_id
-     *
-     * @return integer
-     */
-    public function getParentId()
-    {
-        return $this->parent_id;
-    }
-
-    /**
-     * Set parent_id
-     *
-     * @param $parent_id
-     */
-    public function setParentId($parent_id)
-    {
-        $this->parent_id = $parent_id;
-    }
-
-    /**
-     * Get parent_id
+     * Get reason
      *
      * @return string
      */
@@ -383,7 +358,6 @@ class Bbs extends \Eccube\Entity\AbstractEntity
      * Set create_date
      *
      * @param \DateTime $createDate
-     * @return AuthorityRole
      */
     public function setCreateDate($createDate)
     {
@@ -406,7 +380,6 @@ class Bbs extends \Eccube\Entity\AbstractEntity
      * Set update_date
      *
      * @param \DateTime $updateDate
-     * @return AuthorityRole
      */
     public function setUpdateDate($updateDate)
     {

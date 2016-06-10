@@ -36,7 +36,7 @@ title: フォームを表示してみよう
 
 - 以下の修正をコントローラーに行います。
 
-    - Bbs.php
+    - CrudController.php
 
 ```
 <?php
@@ -64,14 +64,15 @@ title: フォームを表示してみよう
 
 
 namespace Eccube\Controller\Tutorial;
+namespace Eccube\Controller\AbstractController;
 
 use Eccube\Application;
 
-class Bbs
+class CrudController extends AbstractController
 {
     public function index(Application $app)
     {
-        //$viewname = 'このビューは「Tutorial/bbs_top.twig」が表示されています。';★コメントアウトします。
+        //$viewname = 'このビューは「Tutorial/crud_top.twig」が表示されています。';★コメントアウトします。
 
         $builder = $app['form.factory']->createBuilder('form', null, array())★ここからフォーム定義を追加
 
@@ -113,7 +114,7 @@ class Bbs
         $forms = $builder->getForm();
 
         return $app->render(
-            'Tutorial/bbs_top.twig',
+            'Tutorial/crud_top.twig',
             array(
                 //'viewname' => $viewname,★コメントアウトします。
                 'forms' => $forms->createView(),★追記
@@ -218,9 +219,9 @@ class Bbs
 
 - 次はTwigに以下修正を加え、フォームのビューオブジェクトをhtmlとして表示出来る様にしましょう。
 
-- 以下の様に**bbs_test.twig**を修正します。
+- 以下の様に**crud_test.twig**を修正します。
 
-    - bbs_test.twig
+    - crud_test.twig
 
 ```
 ｛＃
@@ -255,8 +256,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     <div class="row">
        <div class="col-sm-12">
             <div class="main_wrap">
-                <h1>ご意見箱</h1>
-                <p>みなさんのご意見をかきこんでください</p>
+                <h1>CRUDチュートリアル</h1>
+                <p>投稿を行なってください</p>
                 <dl>
                     <dt>コントローラーから取得した変数です</dt>
                     <dd>
@@ -285,7 +286,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 - 最後に確認のためにブラウザにアクセスしてみましょう。
 
-    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/Bbs」を入力してください。
+    1. ブラウザのURLに「http://[ドメイン + インストールディレクトリ]/tutorial/crud」を入力してください。
 
     1. フォームビルダーで構築したフォームが表示されています。
 

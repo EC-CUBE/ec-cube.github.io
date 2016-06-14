@@ -92,7 +92,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class CrudType extends AbstractType  ★名称の変更
+class ContactType extends AbstractType  ★名称の変更
 {
     public $config;
 
@@ -198,7 +198,7 @@ class CrudType extends AbstractType  ★CrudTypeに変更
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         // 投稿種別の配列
-        $post_type = array(
+        $post_type = array( ★セレクトボックスの値生成
             '1' => '質問',
             '2' => '提案',
         );
@@ -209,7 +209,7 @@ class CrudType extends AbstractType  ★CrudTypeに変更
             array(
                 'label' => '投稿種別',
                 'required' => true,
-                'choices' => $post_type,
+                'choices' => $post_type, ★上部で宣言した、セレクトボックス値を設定します
                 'mapped' => false,
                 'expanded' => false,
                 'multiple' => false,
@@ -233,7 +233,7 @@ class CrudType extends AbstractType  ★CrudTypeに変更
                 'mapped' => false,
                 'empty_data' => null,
                 'attr' => array(
-                    'style' => 'height:100px;',
+                    'style' => 'height:100px;', ★高さを設定
                 ),
             )
         )
@@ -332,8 +332,8 @@ class CrudType extends AbstractType
                 'mapped' => false,
                  new Assert\Regex( ★正規表現でのバリデーション
                     array(
-                        'pattern' => '/^[^\da-zA-Z]+$/u',
-                        'message' => '半角英数字のみ入力可能です。',
+                        'pattern' => '/^[^\da-zA-Z]+$/u', ★条件
+                        'message' => '半角英数字のみ入力可能です。', ★エラー時表示メッセージ
                     )
                 )
             )
@@ -403,7 +403,7 @@ class CrudType extends AbstractType
     [オプションキー] => [設定値],
     'constraints' => array( ★バリデーション設定開始(連動配列で多重に設定可能)
       new Assert\Length( ★該当となるバリデーションのクラスをインスタンス化
-        array( ★連想配列でオプション値を設定
+        array( ★連想配列でバリデーションのオプション値を設定
           'min' => '0',
           'max' => '100',
           'maxMessage' => '1000文字以内で入力してください',
@@ -453,7 +453,7 @@ class CrudType extends AbstractType
 
         - 今回はユーザー画面(フロント画面)に関する「FormType」です。そのために、ファイルを開いたら「front」を検索してください。
 
-        - 「front」を検索すると、ユーザー画面に関する、「Type定義」がまとまっているはずですので、その最下部に以下の様に、作成した「BbsType」の定義を行いましょう。
+        - 「front」を検索すると、ユーザー画面に関する、「Type定義」がまとまっているはずですので、その最下部に以下の様に、作成した「CrudType」の定義を行いましょう。
 
             - EccubeServiceProvider.php
 
@@ -473,7 +473,7 @@ $types[] = new \Eccube\Form\Type\Front\CrudType($app['config']); ★追記
 
 ### コントローラーの修正
 
-- 次はコントローラーに記述していた、Form項目の設定を削除し、BbsTypeの読み込みを記述していきます。
+- 次はコントローラーに記述していた、Form項目の設定を削除し、CrudTypeの読み込みを記述していきます。
 
 - まず**createBuilder**でビルダーを生成している箇所から、Form定義部を全て削除します。
 
@@ -604,10 +604,10 @@ class CrudController extends AbstractController
 
     1. まずはじめに、リクエストを受け取るために「名前空間」とメソッドの引数を設定します。
     - 名前空間に「Silex(Symfony2)」の**リクエストクラスの読み込み宣言**を行います。
-    - メソッドの引数に、タイプヒンティングで**Request型**を指定し、リクエストオブジェクトを受け取れるようにします。
-    - リクエストオブジェクトは「Silex(Symfony2)」が自動で処理を行い、画面からのリクエスト内容を渡してくれます。
-    1. 次にフォーム生成のために、**$app[form.factory]**の**createBuilder**メソッドで**Formオブジェクト**を生成します。
-    - CrudTypeの**getName**メソッドで定義した、**bbs**を**createBuilder**の第一引数として渡します。
+    - メソッドの引数に、タイプヒンティングでRequest型を指定し、リクエストオブジェクトを受け取れるようにします。
+    - **リクエストオブジェクト**は「Silex(Symfony2)」が**自動で処理**を行い、画面からのリクエスト内容を渡してくれます。
+    1. 次にフォーム生成のために、**$app[form.factory]**の**createBuilder**メソッドで**フォームオブジェクト**を生成します。
+    - CrudTypeの**getName**メソッドで定義した、**crud**を**createBuilder**の第一引数として渡します。
     - 第二引数には、今回は関連エンティティがないため「null」を指定します。
     - オプションは指定しません。
 
@@ -625,7 +625,7 @@ class CrudController extends AbstractController
     - まず「isSubmitted」でFormからサブミットされた値かどうかチェックしています。
       - セキュリティのためです
     - 次に「isValid」でFormTypeの内容に基づき、入力値チェックを行います。
-      - 入力値に問題がなければ、「true」を、内容に問題あれば「false」が返却されます。
+      - 入力値に問題がなければ、**true**を、内容に問題あれば**false**が返却されます。
       - またフォームオブジェクト内で、エラーがあった項目と、それに対して設定されていたエラーメッセージも格納されているため、ビューの設定でエラーメッセージが表示されます。
       - ※ただし、**バリデーションエラー**が保持されるためには、**エンティティが必要ですが**、本章では、エンティティを保持していないため、ビューで自動でエラーが表示されるわけではありません。そのため今回は、コントローラーで判定し、判定に応じたメッセージをビューに渡しています。
 
@@ -754,7 +754,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     1. フォームの追加
         - 次にhtmlのフォームを定義します。
         - **action属性**以外は通常のフォーム定義と同様です。
-        - **action属性部**に記載されているのが、Twig構文で**url([ルーティング名])**で、指定したURLを取得できます。
+        - **action属性部**に記載されているのが、Twig構文で**url([ルーティング名])**、指定したURLを取得できます。
           - ここで云う**ルーティング名**とは**FrontControllerProvider**でルーティングの設定を行なった際に、**bind()に設定した値**です。
 
 ### 表示内容の確認
@@ -806,10 +806,10 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 1. コントローラーに記述された、Form定義情報をFormTypeに移設しました。
 1. FormTypeで、バリデーションを設定しました。
 1. サービスプロバイダに作成したFormTypeを登録しました。
-1. Twigにformを記述する際、「action」で「url構文」を利用しルーティング名による「URL」の取得方法を用いました。
-1. $app['form.factory']の「createBuilder」にフォームタイプ名を記述し、フォーム定義を取得しました。
+1. Twigにformを記述する際、「action」で「url構文」を利用しルーティング名により「URL」の取得を行いました。
+1. $app['form.factory']の「createBuilder」の第一引数にフォームタイプ名を記述し、フォーム定義を取得しました。
 1. フォーム定義をフォームオブジェクトへ変換した後に、リクエストオブジェクトに紐付けしました。
 1. コントローラーのメソッドからリクエストオブジェクトを取得しました。
 1. リクエストがサブミット値か、入力値に異常がないかの判定を行いました。
-1. 取得結果で、画面表示がかわるように、Twigで「if文」を用いました。
+1. 取得結果で、表示文言がかわるように、Twigで「if文」を用いました。
 1. Twigの構文「defined」を利用して、変数宣言を判定しました。

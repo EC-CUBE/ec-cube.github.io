@@ -22,7 +22,7 @@ title: Doctrineのためにデーターベース構造を設定しよう
 
 ## データーベース構造定義ファイル
 
-- 前章で、本クックブックのテーブルを作成しました。
+- 前章で、本チュートリアルのテーブルを作成しました。
 
 - EC-CUBE3ではデーターベース操作を**Doctine**という**ObjectRelationalMapping**を用いて透過的にデーターベースレコードを扱います。
 
@@ -35,9 +35,9 @@ title: Doctrineのためにデーターベース構造を設定しよう
 
         - <a href="https://vladmihalcea.com/2014/07/30/a-beginners-guide-to-jpahibernate-entity-state-transitions/">A beginner’s guide to JPA/Hibernate entity state transitions</a>
 
-- Doctrineでは、**エンティティマネージャー**がプログラム上の、**データモデルオブジェクト(エンティティ)を管理**し、データーベースとの差分を確認しながら、適切に登録、更新を行います。
+- Doctrineでは、**エンティティマネージャー**がプログラム上の、**データモデルオブジェクト(エンティティ)を管理**し、レコードの差分を確認しながら、適切に登録、更新を行います。
 
-- **エンティティ構造**は、**エンティティクラス**を実際に作成するため、構造を**Doctrineに明示する必要はありません**が、**エンティティとテーブルの関連**は、**定義ファイルを作成し、明示**することではじめて、エンティティと**テーブルを対応(Mapping)**させる事が可能となります。
+- エンティティ構造は、エンティティクラスを実際に作成するため、構造をDoctrineに明示する必要はありませんが、**エンティティとテーブル**の関連は、**定義ファイル**を作成し、明示することではじめて、エンティティと**テーブルを対応(Mapping)**させる事が可能となります。
 
 - この章では、Entityとテーブルを対応(Mapping)を定義するファイルを作成します。
 
@@ -105,7 +105,7 @@ Eccube\Entity\AuthorityRole:
 Eccube\Entity\Crud: ★エンティティのパスをCrudに変更します( ファイルは後で作成します )
     type: entity
     table: dtb_bbs  ★テーブル名をdtb_crudに修正します
-    repositoryClass: Eccube\Repository\CrudRepository ★レポジトリをCrudに修正します( ファイルは後で作成します )
+    repositoryClass: Eccube\Repository\CrudRepository ★レポジトリをCrudに修正します( ファイルは後の章で作成します )
     id: ★プライマリーキーの設定を行います
         id:
             type: integer
@@ -150,7 +150,7 @@ Eccube\Entity\Crud: ★エンティティのパスをCrudに変更します( フ
 
     1. [repositoryClass:]
      - 本テーブルに紐付けるレポジトリ名を指定します。
-     - ビジネスロジックの記述や、データベースの簡易操作などを行うためのクラスです。
+     - ビジネスロジックの記述や、データベース操作を行うためのクラスです。
      - 後の章で作成します。
 
     1. 「id:」に対してプライマリーキーの設定を行います
@@ -197,7 +197,7 @@ lifecycleCallbacks: {  }
 ## 本章で学んだ事
 
 1. Doctrineの概要
-1. DoctrineとEntityManager
+1. Doctrineとエンティティマネージャー
 1. テーブル、データーベース定義ファイル、エンティティ、レポジトリの関係
 1. Eccube.Entity.[エンティティ名].dcm.ymlの作成方法
 1. Eccube.Entity.[エンティティ名].dcm.ymlの記述方法

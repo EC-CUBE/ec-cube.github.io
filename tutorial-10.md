@@ -84,7 +84,7 @@ class CrudController extends AbstractController
             $app['orm.em']->persist($Crud);
             $app['orm.em']->flush($Crud);
         } elseif($form->isSubmitted() && !$form->isValid()) {
-            $app->addSuccess('入力内容をご確認ください'); ★メッセージをフラッシュメッセージに変更
+            $app->addError('入力内容をご確認ください'); ★メッセージをフラッシュメッセージに変更
         }
 
         $qb = $app['orm.em']->createQueryBuilder(); ★エンティティマネージャーからクエリビルダーを取得
@@ -114,7 +114,7 @@ class CrudController extends AbstractController
       - EC-CUBE3では、主に管理画面で使用されています。
       - 処理結果メッセージの表示を行う際は、変数で画面にメッセージを渡す方法は基本用いず、こちらを利用する事を推奨いたします。
 
-1. メッセージのクリア方法を説明します。
+1. フラッシュメッセージのクリア方法を説明します。
 
       ```
       $app->clearMessage()
@@ -134,7 +134,7 @@ class CrudController extends AbstractController
       - 第二引数には、以下画面種別を渡します。
         1. ユーザー画面 ( フロント画面 ) : front
         1. 管理画面 : admin
-        - 画面種別はセッションのキーに利用されます。
+            - 画面種別はセッションのキーに利用されます。
 
 1. エラーメッセージの表示方法を説明します。
 
@@ -145,11 +145,9 @@ class CrudController extends AbstractController
       - こちらも管理画面で利用します。
       - 概要は成功メッセージと同様です。
 
-- 以下参考
-
 #### クエリビルダーの取得とDQLの構築
 
-1. EC-CUBE3では、クエリを直接記述する事は、あまり行わず、基本的にはここで説明する、**クエリビルダー**を利用します。
+1. EC-CUBE3では、SQLを直接記述する事は、あまり行わず、基本的にはここで説明する、**クエリビルダー**を利用します。
     - **クエリビルダー**は**Doctrine**が提供しており、**「SQL文構築」を補助**してくれるメソッドを多数備えています。
     - クエリビルダーの**メリット**としては、**SQL構文の質の均一化**、**各データーベース毎のSQL方言の吸収**、**セキュリティ面の向上**などがあげられます。
     
@@ -180,13 +178,11 @@ $qb->select([テーブルエイリアス及び、エイリアス + 取得カラ�
 
     ① **from**で指定する**データーモデルエンティティパス**は**以下ディレクトリ以降**を記述し、**必ずバックスラッシュ**からはじめます。
 
-    - 該当パス
-
     - [EC-CUBE3インストールディレクトリ]/src/
 
     ② **from句には必ずエイリアスの指定 ( 任意 ) が必要**です。
 
-    ③ **orderBy句**には第一引数には**エイリアス + 対象カラム名**、第二引数には「desc/asc」**クォートで囲って**指定してください。
+    ③ **orderBy句**には第一引数には**エイリアス + 対象カラム名**、第二引数には「desc/asc」クォートで囲って指定してください。
 
     - 以下参考
 
@@ -216,11 +212,11 @@ $qb->select([テーブルエイリアス及び、エイリアス + 取得カラ�
         
         - 結果取得のメソッドは取得したい内容 ( 配列・オブジェクト配列・一件のみなど ) によって種類があります。
         - 今回は**オーソドックス**に、結果をオブジェクト配列で取得しています。
-        - **getResultメソッド**は**結果がなかった際**は、戻り値として**「array()」を返却**します。
+        - **getResultメソッド**で**結果が取得できなかった**際は、戻り値として**「array()」を返却**します。
 
         - 参考
 
-        - <a href="http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/dql-doctrine-query-language.html" target="_blank">Query Result Formats</a>
+            - <a href="http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/dql-doctrine-query-language.html" target="_blank">Query Result Formats</a>
 
 #### 取得結果をViewに渡す
 
@@ -396,7 +392,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #### twig内での変数定義
 
-1. データベースの取得結果の配列長を、変数に格納し、判定を行なっていますが、**twigでは以下の方法**で、**変数の定義・格納を行えます。**
+1. データベースの取得結果の配列長を変数に格納し、後で判定を行なっていますが、**twigでは以下の方法**で、**変数の定義・格納を行えます。**
 
 1. 変数の定義と格納方法は以下です。
 
@@ -429,7 +425,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 1. 上記の通りですが、**配列**に対して、**任意の変数名**を**「in」の前に記述**します。
 
-1. **inの前に記述した変数**には、**配列の要素が一つ格納**され、**配列の要素がなくなるまで、「endfor」の間の処理、htmlの表示が行われます。**
+1. **inの前に記述した変数**には、**配列の要素が一つ格納**され、**配列の要素がなくなるまで、「endfor」の間の処理・htmlの表示が行われます。**
 
 1. 今回は、**任意の変数名**の中に、**データモデルオブジェクトが格納**されています。
 
@@ -509,7 +505,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 1. クエリビルダーからクエリオブジェクトを取得する方法の説明
 1. クエリオブジェクトから結果を取得する方法の説明
 1. クエリビルダーの構文の説明
-1. 結果取得メソッドの種類概要の説明
+1. 結果取得メソッドの種類・概要の説明
 1. Viewでのappの利用方法の説明
 1. Viewでのメソッドの呼び出し方法の説明
 1. twig関数(length / for ～ in / set)の説明

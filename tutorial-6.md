@@ -13,7 +13,7 @@ title: データーベースを作成しよう
 
     1. テーブル定義を記述するマイグレーションファイルの作成方法を説明します。
 
-    1. 本チュートリアルのテーブル定義を説明します。
+    1. 本チュートリアルで利用するテーブルの定義を説明します。
 
     1. マイグレーションファイルの**schemaオブジェクト**を利用した、テーブル作成の方法を説明しています。
 
@@ -23,7 +23,7 @@ title: データーベースを作成しよう
 
 ## 本チュートリアルのテーブル定義
 
-- 目次で示した様に、本章ではテーブル定義の内容についてのみ説明をおこいます。
+- 本章メニューで示した様に、本章ではテーブル定義の内容についてのみ説明をおこいます。
 
 - テーブル定義は**マイグレーションファイル**に記述していきます。
 
@@ -87,8 +87,8 @@ class Version20160607155514 extends AbstractMigration
 | 投稿者ハンドルネーム | name | varchar(255) | NOT NULL |
 | 投稿のタイトル | title | varchar(255) | NOT NULL |
 | 投稿種別 | notes | text | DEFAULT NULL |
-| 投稿登録時間 | created | datetime | NOT NULL |
-| 投稿編集時間 | updated | datetime | NOT NULL |
+| 投稿登録時間 | created_date | datetime | NOT NULL |
+| 投稿編集時間 | updated_date | datetime | NOT NULL |
 
 - 上記のテーブル定義を以下に記述していきます
 
@@ -163,7 +163,7 @@ class Version20160607155514 extends AbstractMigration
 | file_name | 該当Twigのルートからのパスと名称 | Tutorial/crud_top |
 | edit_flg | 管理画面から編集可能かどうか | 2 |
 
-- 上記のテーブル定義を以下に記述していきます
+- 上記のレコード追加を以下に記述していきます
 
 ```
 <?php
@@ -244,7 +244,7 @@ class Version20160607155514 extends AbstractMigration
         $res = $Point = $qb->getQuery()->getResult(); ★情報取得
 
         if(count($res) > 0){ ★該当情報が保存されていれば、削除処理
-            $qb->delete('pl') ★該当画面情報を削除するための、SQLを生成
+            $qb->delete() ★該当画面情報を削除するための、SQLを生成
                 ->from('\Eccube\Entity\PageLayout', 'pl')
                 ->where('pl.url = :Url')
                 ->setParamater('Url', 'tutorial_crud');
@@ -276,7 +276,7 @@ class Version20160607155514 extends AbstractMigration
 1. コンソールから空の「マイグレーションファイル」を作成しました。
 1. テーブル構造を検討しました。
 1. 「マイグレーションファイル」の「schemaオブジェクト」でデーターベース操作をおこないました。
-1. 「schema」オブジェクトで「createTable」「hasTable」「addColumn」「setPrimaryKey」「dropTable」のメソッドを使いテーブルを構築しました。
+1. 「schema」オブジェクトで「createTable」「hasTable」「addColumn」「setPrimaryKey」「dropTable」のメソッドを使いテーブルの構築・削除を行いました。
 1. dtb_page_layoutに画面情報を登録しない限り作成した画面には、ヘッダー・フッターなどが表示されない事を説明しました。
 1. dtb_page_layoutへ登録する情報の説明を行いました。
 1. dtb_page_layoutに情報の登録を行いました。

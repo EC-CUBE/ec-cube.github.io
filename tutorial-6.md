@@ -19,7 +19,7 @@ title: データーベースを作成しよう
 
     1. テンプレートファイルの**ヘッダー・フッター表示**のために**dtb_page_layout**にデータの登録が必要な事を説明しています。
 
-    1. **dtb_page_layout**への画面情報の登録方法について説明しています。
+    1. **dtb_page_layout**に対して画面情報を登録する方法について説明しています。
 
 ## 本チュートリアルのテーブル定義
 
@@ -90,7 +90,7 @@ class Version20160607155514 extends AbstractMigration
 | 投稿登録時間 | created_date | datetime | NOT NULL |
 | 投稿編集時間 | updated_date | datetime | NOT NULL |
 
-- 上記のテーブル定義を以下に記述していきます
+- 上記のテーブルの作成処理を以下に記述していきます
 
 ```
 <?php
@@ -145,7 +145,7 @@ class Version20160607155514 extends AbstractMigration
     1. テーブルが存在しない場合のみ**createTable**メソッドで**テーブルを作成**します。
     1. テーブルを作成した後は、テーブルスキーマを確認しながら、**addColumn**メソッドでカラムを追加していきます。
     1. 最後に、**setPrimaryKey**でプライマリーキーを指定しています。
-    1. 次に「down」メソッド時の**dropTable**メソッドでテーブルを削除しています。
+    1. 次に「down」メソッドの説明ですが、「down」メソッドは**dropTable**メソッドでテーブルを削除しています。
 
 ## dtb_page_layoutへの画面情報の登録
 

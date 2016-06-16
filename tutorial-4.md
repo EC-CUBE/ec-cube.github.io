@@ -20,7 +20,7 @@ title: フォームを表示してみよう
 
 - 本章では以下を行います。
 
-    1. コントローラーへフォームビルダーを追加します。
+    1. コントローラーからフォームビルダを利用します。
 
     1. フォームビルダーでフォーム要素を構築します。
 
@@ -64,9 +64,9 @@ title: フォームを表示してみよう
 
 
 namespace Eccube\Controller\Tutorial;
-namespace Eccube\Controller\AbstractController;
 
 use Eccube\Application;
+use Eccube\Controller\AbstractController;
 
 class CrudController extends AbstractController
 {
@@ -137,12 +137,12 @@ class CrudController extends AbstractController
 - addメソッドの引数の説明を行います。
 
     1. [name属性]
-      - html上で識別される、フォームの項目名です。
+        - html上で識別される、フォームの項目名です。
 
     1. [type属性]
-      - フォーム項目の種類です(text、checkbox、textareaなど)
+        - フォーム項目の種類です(text、checkbox、textareaなど)
 
-    1. [オプション]は以下の内容を適宜連想配列で設定します。
+    1. [オプション]は以下の内容を、適宜連想配列で設定します。
 
         1. 必須の設定
           - 項目の入力必須の設定
@@ -154,7 +154,7 @@ class CrudController extends AbstractController
           - 入力値の精査
 
         1. value属性の設定
-          - ユーザー入力値です(hiddenを除く)
+          - ユーザー入力値(hiddenを除く)
 
         1. htmlでformに対して指定出来る属性全て
           - id、class、placeholderなど、htmlで指定出来るものは全て
@@ -192,6 +192,7 @@ class CrudController extends AbstractController
 - フォームビルダーは以下で取得が出来ます。
 
   - **$app['form.factory']**から以下メソッドを呼び出します。
+
     - **createBuilder([タイプ名称], [エンティティ(データーモデルオブジェクト)], [オプション])**
 
       1. [タイプ名称] : 次章で説明する「FormType」のメソッド**getName**で定義した名前を指定します。

@@ -18,9 +18,9 @@ title: コントローラーからビューを表示してみよう
 
 - 本章では以下を行います。
 
-    1. コントローラーの作成とビューのレンダリング方法
+    1. コントローラーの作成とビューのレンダリング方法を説明します。
 
-    1. ビュー ( Twig ) の作成と役割
+    1. ビュー ( Twig ) の作成と役割の説明を行います。
 
 ### コントローラーの作成
 
@@ -114,9 +114,9 @@ class TopController
 
 
 namespace Eccube\Controller\Tutorial; ★フォルダのパスを追加
-namespace Eccube\Controller\AbstractController; ★親コントローラーのパスを追加
 
 use Eccube\Application;
+use Eccube\Controller\AbstractController; ★親コントローラーのパスを追加
 
 class CrudController extends AbstractController ★クラス名を修正 + 親コントローラーを継承
 {
@@ -301,9 +301,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 
 namespace Eccube\Controller\Tutorial;
-namespace Eccube\Controller\AbstractController;
 
 use Eccube\Application;
+use Eccube\Controller\AbstractController;
 
 class CrudController extends AbstractController
 {
@@ -362,8 +362,8 @@ class CrudController extends AbstractController
 - 内容量も増えてきたので、章の内容をまとめておきます。
 - 本章で以下を行いました。
 
-	1. 既存コントローラーをコピーして新しいコントローラーを作成
-	1. 既存Twigをコピーして新しいTwigを作成
-	1. コントローラー・Twigともに、関連するフォルダにまとめる
-	1. $appは各コントローラーのメソッドの引数として渡され、いろいろな機能が格納されている
-	1. renderでTwigをhtmlに変換しメソッドの戻り値とする事で画面が描画される
+	1. 既存コントローラーをコピーして新しいコントローラーを作成しました。
+	1. 既存Twigをコピーして新しいTwigを作成しました。
+	1. コントローラー・Twigともに、関連するフォルダにまとめる事を説明しました。
+	1. $appは各コントローラーのメソッドの引数として渡され、いろいろな機能が格納されている事を説明しました。
+	1. renderでTwigをhtmlに変換しメソッドの戻り値とする事で画面が描画される事を説明しました。

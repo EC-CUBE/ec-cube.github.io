@@ -17,15 +17,15 @@ title: 画面に変数を渡してみよう
 
 - 本章では以下を行います。
 
-    1. コントローラーにビュー変数を定義
+    1. コントローラーにビュー変数を定義する説明を行います。
 
-    1. コントローラーレンダリング時に、変数を渡す
+    1. コントローラーレンダリング時に、変数を渡す方法を説明します。
 
-    1. Twigでコントローラーから受けた変数を表示する
+    1. Twigでコントローラーから受けた変数を表示する方法を説明します。
 
 ### コントローラーの修正
 
-- コントローラー内で変数を定義し、「render」メソッドで定義した変数を、連想配列で引数として与えます。
+- コントローラー内で変数を定義し、「render」メソッドで定義済みの変数を、連想配列で引数として与えます。
 
 - その際、「key」は任意の文字列となりますが、Twig側で変数を呼び出す際の、名称となります。
 
@@ -59,9 +59,9 @@ title: 画面に変数を渡してみよう
 
 
 namespace Eccube\Controller\Tutorial;
-namespace Eccube\Controller\AbstractController;
 
 use Eccube\Application;
+use Eccube\Controller\AbstractController;
 
 class CrudController extends AbstractController
 {
@@ -174,11 +174,11 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 - 本章では以下を学びました。
 
-    1. コントローラー内、renderメソッドへのView変数追加
+    1. コントローラー内、renderメソッドへのView変数追加の方法を説明しました。
 
-    1. Twigの変数表示
+    1. Twigの変数表示を行いました。
 
-    1. Twigのブロックの種類
+    1. Twigのブロックの種類を説明しました。
 
 ### Viewのグローバル変数
 

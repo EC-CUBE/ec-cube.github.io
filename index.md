@@ -132,7 +132,11 @@ title: ホーム
 
 #### 管理画面項目の追加
 
-1. [本体カスタマイズ](cookbook-1-cube3-customize.html)
+1. [本体カスタマイズ](cookbook-1-cube3-customize-admin-add.html)
+
+#### GoogleAnaliticsの追加方法
+
+1. [管理機能ブロックを利用したJavaScriptの追加](cookbook-2-cube3-customize-js.html)
 
 <!--
 ## システム要件

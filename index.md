@@ -23,7 +23,7 @@ title: ホーム
 	- [開発作業全体概要](workflow-general-image.html)
 	- [コーディング規約](coding_style.html)
 	- [マイグレーションガイド](migration.html)
-	- [ログ設計指針]()
+	- <a href="http://qiita.com/nanasess/items/350e59b29cceb2f122b3" target="_blank">ログ設計指針</a>
 	- [開発環境の構築](development-environment.html)
 	- [Gitを用いた開発手順](workflow.html)
 	- [カスタマイズリファレンス](customize-reference.html)

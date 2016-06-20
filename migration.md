@@ -59,19 +59,22 @@ title: マイグレーションガイド
 
 2系からのバージョンアップは別途検討します....
 
-# EC-CUBE 開発者向けDBマイグレーションガイド
+## EC-CUBE 開発者向けDBマイグレーションガイド
 
-## テーブル定義の変更手順
+### テーブル定義の変更手順
 
-### はじめに
+#### はじめに
 マイグレーション機構の用途としては、DDL(テーブル定義変更)の実行とDML(初期レコード定義)の実行の二種類があります。
 それぞれ作成手順を記載します
 
-# DDL用のマイグレーションファイルの作成手順
+#### DDL用のマイグレーションファイルの作成手順
 
 1.マイグレーションファイルを作成
+
   (php app/console migrations:generate)
+
 2.マイグレーションファイルのup,downメソッド内に変更手順を記述する
+
   ただし、既に予定の変更の内容が実施済みの場合は無視するように設定すること
   (クリーンインストール時のorm:schema-tool:createを実行した場合の動作と重複してしまうため)
 
@@ -88,15 +91,19 @@ title: マイグレーションガイド
     }
 
 3.doctrineのテーブル定義ファイル(yml)を2の内容に合わせて作成又は編集する
+
 4.doctineのentity、repositoryを3の内容に合わせて編集する
+
 5.コマンドラインからマイグレーションを実行(php app/console migrations:migrate)し、想定したDB定義となることを確認する
+
 6.Webインストーラからクリーンインストールを実行し、5と同じDB定義になることを確認する
 
 
-# DML用のマイグレーションファイルの作成手順
+#### DML用のマイグレーションファイルの作成手順
 
 1.マイグレーションファイルを作成
   (php app/console migrations:generate)
+
 2.マイグレーションファイルのup,downメソッド内に変更手順を記述する
   DML用の場合はDDLと違い実施内容のチェックは必要なし
 
@@ -108,8 +115,10 @@ title: マイグレーションガイド
 3.コマンドラインからマイグレーションを実行(php app/console migrations:migrate)し、想定した初期データが挿入されることを確認する
 
 
-# Doctrineを使ってのマイグレーション
-## Entityファイル作成
+## Doctrineを使ってのマイグレーション
+
+### Entityファイル作成
+
 yamlを更新後、下記を実行するとEntityが作成される。  
 元のソースは削除されずに、存在しない項目のみ追記される。  
 
@@ -117,7 +126,7 @@ yamlを更新後、下記を実行するとEntityが作成される。
 vendor/bin/doctrine orm:generate:entities --extend="Eccube\Entity\AbstractEntity" src
 ```
 
-## DBへのマイグレーション
+### DBへのマイグレーション
 
 ```
 vendor/bin/doctrine orm:schema-tool:update

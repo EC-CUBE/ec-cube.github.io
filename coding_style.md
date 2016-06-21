@@ -59,50 +59,9 @@ title: コーディング規約
     + twigのスカラ値のアクセスは、スネークケースとする
   + コード例
 
-```php
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/coding_style/HogeController.php"></script>
 
-// HogeController
-
-class HogeController
-{
-    protected $title;
-
-    protected $subTitle;
-
-    public function index(Application $app, $id)
-    {
-        $Product = $app['eccube.repository.product']->find($id);
-
-        $totalCount = 1;
-
-        // ...
-
-        $app->render('path/to/hoge.twig', array(
-            'form' => $form->createView(),
-            'Product' => $Product,
-            'total_count' => $totalCount,
-        ))
-    }
-}
-
-// hoge.twig
-
-{{ total_count }}
-
-{{ Product.name }}
-{{ Product.free_area }}
-
-{% for ProductClass in Product.ProductClasses %}
-    {{ ProductClass.price01 }}
-    {{ ProductClass.price02 }}
-{% endfor %}
-
-{% for OrderDetailForm in form.OrderDetails %}
-    {{ form_widget(OrderDetailForm.product_name) }}
-    {{ form_widget(OrderDetailForm.price) }}
-    {{ form_widget(OrderDetailForm.quantity) }}
-{% endfor %}
-```
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/coding_style/hoge.twig"></script>
 
 * データベース
   + https://github.com/EC-CUBE/ec-cube/issues/210 に従う

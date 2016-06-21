@@ -59,9 +59,9 @@ title: コーディング規約
     + twigのスカラ値のアクセスは、スネークケースとする
   + コード例
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/coding_style/HogeController.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/coding_style/HogeController.php"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/coding_style/hoge.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/coding_style/hoge.twig"></script>
 
 * データベース
   + https://github.com/EC-CUBE/ec-cube/issues/210 に従う

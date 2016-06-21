@@ -234,7 +234,7 @@ FormTypeを利用できる箇所はFormTypeを使って入力チェックを行�
 ###### 個別入力チェックサンプル
 
  
-<script src="http://gist-it.appspot.com/github/geany-y/ec-cube.github.io/blob/renew/io/Source/api/SampleValidate.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/api/SampleValidate.php"></script>
 
 ## 認証について
 

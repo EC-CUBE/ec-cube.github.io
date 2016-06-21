@@ -75,7 +75,7 @@ code,eventは英数_ のみ
 処理としてはプラグイン固有のテーブルやリソースファイルの作成、展開などを想定する
 インストール処理等の必要ない単純なプラグインの場合はハンドラクラスやメソッドを定義しなくてもよい
 
-<script src="https://gist.github.com/geany-y/efbbc2cc17744181db2a762f1c15adae.js"></script>
+<script src="http://gist-it.appspot.com/github/EC-CUBE/ec-cube.github.io/blob/master/Source/plugin_install/PluginManager.php"></script>
 
 (引数はconfig.ymlをパースした内容とEccube\Application)
 

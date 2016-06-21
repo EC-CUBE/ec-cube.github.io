@@ -1,4 +1,10 @@
 name: EC-CUBE3
+title:        EC-CUBE3
+tagline:      EC open platform EC-CUBE
+# About/contact
+author:
+  name:       Author name
+  url:        http://yourhomepage.com     
 pygments: false
 markdown: kramdown
 kramdown:

@@ -232,39 +232,9 @@ FormTypeを利用できる箇所はFormTypeを使って入力チェックを行�
 個別入力チェックについては`Symfony\Component\Validator\Constraints`パッケージにあるクラスを極力使うようにします。
 
 ###### 個別入力チェックサンプル
-```php
-$data = $request->request->all();
 
-// 入力チェック
-$errors = $this->customerValidation($app, $data);
-
-
-/**
- * @param Application $app
- * @param array $data
- * @return array
- */
-private function customerValidation(Application $app, array $data)
-{
-    // 入力チェック
-    $errors = array();
-
-    $errors[] = $app['validator']->validateValue($data['customer_name01'], array(
-        new Assert\NotBlank(),
-        new Assert\Length(array('max' => $app['config']['name_len'],)),
-        new Assert\Regex(array('pattern' => '/^[^\s ]+$/u', 'message' => 'form.type.name.firstname.nothasspace'))
-    ));
-
-    $errors[] = $app['validator']->validateValue($data['customer_name02'], array(
-        new Assert\NotBlank(),
-        new Assert\Length(array('max' => $app['config']['name_len'], )),
-        new Assert\Regex(array('pattern' => '/^[^\s ]+$/u', 'message' => 'form.type.name.firstname.nothasspace'))
-    ));
-
-    return $errors;
-}
-
-```
+ 
+<script src="http://gist-it.appspot.com/github/geany-y/ec-cube.github.io/blob/renew/io/Source/api/SampleValidate.php"></script>
 
 ## 認証について
 

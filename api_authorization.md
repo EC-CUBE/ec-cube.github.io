@@ -39,6 +39,16 @@ EC-CUBE3 では、 [OpenID Connect](http://openid-foundation-japan.github.io/ope
     - **redirect_uri** には、Authorization Endpoint からのリダイレクト先の URL を入力します。
 3. 登録が終わると、 `client_id`, `client_secret` などが発行されます。公開鍵は `id_token` を検証する際に使用します。
 
+### .htaccess の設定
+
+一部のレンタルサーバーや SAPI CGI/FastCGI の環境では、認証情報(Authorization ヘッダ)が取得できず、 401 Unauthorized エラーとなってしまう場合があります。
+この場合は、 `<ec-cube-install-path>/html/.htaccess` に以下を追記してください。
+
+```.htaccess
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+```
+
 ## クライアント(OAuth 2.0 Client/Relying Party)の実装方法
 
 *各言語のサンプルは[こちら](/api.html#section-14)*
@@ -65,7 +75,7 @@ EC-CUBE3 では、 **state パラメータは必須** ですので、ご注意�
 以下の URL にブラウザでアクセスします。 **state パラメータは必須** です。
 
 ```
-https://<eccube-host>/admin/OAuth2/v0/authorize?client_id=<client id>&redirect_uri=http%3A%2F%2F127.0.0.1%3A8080%2FCallback&response_type=code&state=<random_state>&nonce=<random_nonce>&scope=read%20write%20openid%20offline_access
+https://<eccube-host>/admin/OAuth2/v0/authorize?client_id=<client id>&redirect_uri=http%3A%2F%2F127.0.0.1%3A8080%2FCallback&response_type=code&state=<random_state>&nonce=<random_nonce>&scope=product_read%20product_write%20openid%20offline_access
 ```
 
 ログイン画面が表示されますので、ログインします。
@@ -96,7 +106,7 @@ curl -F grant_type=authorization_code \
   "access_token":"e5b0a9a885eb2a5a4aacff3b3a11596e346b9703",
   "expires_in":3600,
   "token_type":"bearer",
-  "scope":"read write openid offline_access",
+  "scope":"product_read product_write openid offline_access",
   "refresh_token":"0e3f3741514240f48d180f3cbf03d53410f064ef",
   "id_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xOTIuMTY4LjU2LjEwMTo4MDgxIiwic3ViIjoiNG53c25ic3pJSDRYdVFuWHdpZ3RQOEhhS1FwamVHeDQ5OXMwQTlJMXFrbyIsImF1ZCI6IjJlODE1MzAyM2Q2YWZiMmZiMjk5MzFkYmY5YTI3NWVkNDcxNWYzODQiLCJpYXQiOjE0NjA1MzU1MjMsImV4cCI6MTQ2MDUzOTEyMywiYXV0aF90aW1lIjoxNDYwNTM1NTIzLCJub25jZSI6InJhbmRvbV9ub25jZSJ9.D3RE1i-Oc_bCANI28BwqT-6voLk645kqGZCs3PCOfDRATUX6_hvyBOc3PvfrH6BCaNfYX8m8sGQPD2g-GRUJ-j6OMCHp1KHcycsN5OS6QoZOucvM_gDKITivwW0q3BvLYsc-zK00DRlYuAhSW1pCqdWGRGk-3LWbqfasttYvx34KoSazfCsIyMqxC_zQ4qDoYaReeuCjiMX1xW3vXueEidMQ9_5s7SQgJwtwMnqOdDoEHUQce65wWa2yNXBHaohrGwXmg9Sbd5pD_Anhrh7WIAnYEbDoHc1rb40oUT-kye5cplYUTd4F9y88PnyXeWN3-vGRVxsvMRdJQmiTqzwVvA"
 }
@@ -115,7 +125,7 @@ curl -F grant_type=authorization_code \
 curl -H "Accept: application/json" \
      -H "Content-type: application/json" \
      -H 'Authorization: Bearer <access token>' \
-     -X GET https://<eccube-host>/api/v0/products
+     -X GET https://<eccube-host>/api/v0/product
 ```
 
 #### 5. アクセストークンの更新

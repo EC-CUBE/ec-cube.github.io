@@ -1,0 +1,17 @@
+// hoge.twig
+
+{{ total_count }}
+
+{{ Product.name }}
+{{ Product.free_area }}
+
+{% for ProductClass in Product.ProductClasses %}
+    {{ ProductClass.price01 }}
+    {{ ProductClass.price02 }}
+{% endfor %}
+
+{% for OrderDetailForm in form.OrderDetails %}
+    {{ form_widget(OrderDetailForm.product_name) }}
+    {{ form_widget(OrderDetailForm.price) }}
+    {{ form_widget(OrderDetailForm.quantity) }}
+{% endfor %}

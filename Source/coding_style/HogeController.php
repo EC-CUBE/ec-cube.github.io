@@ -22,5 +22,3 @@ class HogeController
         ))
     }
 }
-
-// hoge.twig

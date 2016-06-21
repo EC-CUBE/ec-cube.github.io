@@ -179,14 +179,15 @@ _“結局のところ、Symfony2 とはいったい何なのでしょうか？ 
 1. <a href="http://www.doctrine-project.org/api/orm/2.4/index.html" target="_blank">APIドキュメント</a>
 
 1. 基本リファレンス
-  - 基本事項として以下を確認してください。
-  - エンティティマネージャ、レポジトリ、クエリビルダの説明です。
 
-[EntityManager](http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.EntityManager.html)
+    - 基本事項として以下を確認してください。
+    - エンティティマネージャ、レポジトリ、クエリビルダの説明です。
 
-[EntityRepository](http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.EntityRepository.html)
+        - [EntityManager](http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.EntityManager.html)
 
-[QueryBuilder](http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.QueryBuilder.html)
+        - [EntityRepository](http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.EntityRepository.html)
+
+        - [QueryBuilder](http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.QueryBuilder.html)
 
 
 

@@ -68,7 +68,8 @@ a {
 
 .project-name {
   margin-top: 0;
-  margin-bottom: 0.1rem; }
+  margin-bottom: 0.1rem; 
+  }
   @media screen and (min-width: 64em) {
     .project-name {
       font-size: 3.25rem; } }
@@ -79,11 +80,18 @@ a {
     .project-name {
       font-size: 1.75rem; } }
 
+.project-name a:link,
+.project-name a:visited,
+.project-name a:hover,
+.project-name a:active {
+    color:#ffffff;
+    text-decoration: none;
+}
+
 .project-tagline {
   margin-bottom: 2rem;
   font-weight: normal;
   opacity: 0.7; 
-  position:relative;
   }
   @media screen and (min-width: 64em) {
     .project-tagline {
@@ -244,19 +252,13 @@ a {
 .site-footer-credits {
   color: #819198; }
 
-.logo-cube {
-    position:absolute;
-    top:-81px;
-}
-@media screen and (min-width: 64em) {
-.site-footer {
-  font-size: 1rem; } }
 @media screen and (min-width: 42em) and (max-width: 64em) {
 .logo-cube{
   display: none; } }
 @media screen and (max-width: 42em) {
 .logo-cube{
   display: none; } }
+
 .inner {
   position: relative;
   width: 760px;

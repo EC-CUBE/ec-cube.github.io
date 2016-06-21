@@ -12,11 +12,9 @@ title: Gitを用いた開発手順
 - EC-CUBE本体の開発はGitHub Flowにもとづいて行なっています。
 
     - 以下はGitHub Flowの説明です。
-
        - <a href="https://gist.github.com/Gab-km/3705015" target="_blank">GitHub Flow</a>
 
     - 以下はGitHub Flowの概念図の参考です。
-
        - <a href="http://qiita.com/tbpgr/items/4ff76ef35c4ff0ec8314" target="_blank">GitHub Flow 図解</a>
 
 ## Gitワークフロー概要
@@ -30,6 +28,7 @@ title: Gitを用いた開発手順
 ### レポジトリのコピー ( 本家→個人 )
 
 ① まず本家のレポジトリをフォークします
+
  - <a href="http://qiita.com/tbpgr/items/4ff76ef35c4ff0ec8314" target="_blank">本家のレポジトリ</a>で、右上のForkボタンをクリックします。
 
 

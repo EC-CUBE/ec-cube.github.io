@@ -50,6 +50,9 @@ title: Doctrineのためにエンティティファイルを作成しよう
     1. ファイル名は**Crud.php**とします。
         - **Crud.php**(中身はAuthorityRole.php)
 
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_8/crud_entity_before.php"></script>
+
+<!--
 ```
 <?php
 
@@ -220,6 +223,7 @@ class AuthorityRole extends \Eccube\Entity\AbstractEntity
 }
 
 ```
+-->
 
 #### ファイルの修正
 
@@ -227,6 +231,9 @@ class AuthorityRole extends \Eccube\Entity\AbstractEntity
 - 「create_date/update_date」に関する内容以外の記述をほとんど書き換えます。
 - 以下が書き換えた内容です。
 
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_8/crud_entity_after.php"></script>
+
+<!--
 ```
 <?php
 
@@ -400,6 +407,7 @@ class Crud extends \Eccube\Entity\AbstractEntity
     }
 }
 ```
+-->
 
 
 ### エンティティファイルをコマンドラインで作成

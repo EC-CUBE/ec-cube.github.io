@@ -1,18 +1,17 @@
-
-Eccube\Entity\Crud: šƒGƒ“ƒeƒBƒeƒB‚ÌƒpƒX‚ğCrud‚É•ÏX‚µ‚Ü‚·( ƒtƒ@ƒCƒ‹‚ÍŒã‚Åì¬‚µ‚Ü‚· )
+Eccube\Entity\Crud: â˜…ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã®ãƒ‘ã‚¹ã‚’Crudã«å¤‰æ›´ã—ã¾ã™( ãƒ•ã‚¡ã‚¤ãƒ«ã¯å¾Œã§ä½œæˆã—ã¾ã™ )
     type: entity
-    table: dtb_bbs  šƒe[ƒuƒ‹–¼‚ğdtb_crud‚ÉC³‚µ‚Ü‚·
-    repositoryClass: Eccube\Repository\CrudRepository šƒŒƒ|ƒWƒgƒŠ‚ğCrud‚ÉC³‚µ‚Ü‚·( ƒtƒ@ƒCƒ‹‚ÍŒã‚ÌÍ‚Åì¬‚µ‚Ü‚· )
-    id: šƒvƒ‰ƒCƒ}ƒŠ[ƒL[‚Ìİ’è‚ğs‚¢‚Ü‚·
+    table: dtb_bbs  â˜…ãƒ†ãƒ¼ãƒ–ãƒ«åã‚’dtb_crudã«ä¿®æ­£ã—ã¾ã™
+    repositoryClass: Eccube\Repository\CrudRepository â˜…ãƒ¬ãƒã‚¸ãƒˆãƒªã‚’Crudã«ä¿®æ­£ã—ã¾ã™( ãƒ•ã‚¡ã‚¤ãƒ«ã¯å¾Œã®ç« ã§ä½œæˆã—ã¾ã™ )
+    id: â˜…ãƒ—ãƒ©ã‚¤ãƒãƒªãƒ¼ã‚­ãƒ¼ã®è¨­å®šã‚’è¡Œã„ã¾ã™
         id:
             type: integer
             nullable: false
             unsigned: false
             id: true
-            column: id šƒJƒ‰ƒ€–¼‚ğC³‚µ‚Ü‚·
+            column: id â˜…ã‚«ãƒ©ãƒ åã‚’ä¿®æ­£ã—ã¾ã™
             generator:
-                strategy: AUTO šƒI[ƒgƒCƒ“ƒNƒŠƒƒ“ƒg‚ğ—˜—p‚·‚é‚½‚ß‚ÉAUTO‚ğİ’è‚µ‚Ü‚·
-    fields: šƒJƒ‰ƒ€‚Ìİ’è‚ğs‚¢‚Ü‚·
+                strategy: AUTO â˜…ã‚ªãƒ¼ãƒˆã‚¤ãƒ³ã‚¯ãƒªãƒ¡ãƒ³ãƒˆã‚’åˆ©ç”¨ã™ã‚‹ãŸã‚ã«AUTOã‚’è¨­å®šã—ã¾ã™
+    fields: â˜…ã‚«ãƒ©ãƒ ã®è¨­å®šã‚’è¡Œã„ã¾ã™
         reason:
             type: smallint
             nullable: false

@@ -86,7 +86,7 @@ title: 管理画面項目の追加
 
   - 今回であれば、**cutomer**を検索します。
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/cookbook1_customize/AdminControllerProvider_view.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/AdminControllerProvider_view.php"></script>
 
 <!--
 ```
@@ -131,7 +131,7 @@ title: 管理画面項目の追加
 
     - 以下が抜粋した内容です。
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/cookbook1_customize/CustomerEditController_view.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/CustomerEditController_view.php"></script>
 
 <!--
 ```
@@ -360,7 +360,7 @@ php app/console migrations:generate
 
   - 以下内容を記述します
   
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/cookbook1_customize/migration_view.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/migration_view.php"></script>
 
 <!--
 ```
@@ -461,7 +461,7 @@ class Version20160616155605 extends AbstractMigration
 - 以下定義を追記します。
   - Eccube.Entity.Customer.dcm.yml
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/cookbook1_customize/dcm_yml_add_column.yml"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/dcm_yml_add_column.yml"></script>
 
 <!--
 ```
@@ -494,7 +494,7 @@ department:
 
 - 以下修正箇所です
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/cookbook1_customize/CustomerEntity_mofdified.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/CustomerEntity_mofdified.php"></script>
 
 <!--
 ```
@@ -568,7 +568,7 @@ public function getDepartment()
 - 下記の様に修正を加えます。
  - 今回は会社名の下に追記します。
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/cookbook1_customize/CustomerType_modified.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/CustomerType_modified.php"></script>
 
 <!--
 ```
@@ -611,7 +611,7 @@ public function getDepartment()
 - 以下が対象ファイルです。
  - /src/Eccube/Resource/template/admin/Customer/edit.twig
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/cookbook1_customize/customer_edit_modified.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/customer_edit_modified.twig"></script>
 
 <!--
 ```

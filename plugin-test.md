@@ -36,7 +36,7 @@ title: プラグインのテスト
 1. 今回は以下に例としてのプラグインを作成しています。
 
 1. 以下をクローンして、参考としてください。
-  - <a href="https://github.com/geany-y/ExamleTest" target="_blank">ExampleTestプラグイン</a>
+  - <a href="https://github.com/EC-CUBE/ExamleTest" target="_blank">ExampleTestプラグイン</a>
 
 1. 今回のテスト対象は上記レポジトリの「ExampleService.php」というサービスクラスが対象となります。
 
@@ -74,7 +74,7 @@ title: プラグインのテスト
 
   - 以下の様に修正・メソッドの追記を行います。
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/plugin_test/ExampleServiceTest.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/plugin_test/ExampleServiceTest.php"></script>
 
 <!--
 ```
@@ -215,7 +215,7 @@ vendor/bin/phpunit ./app/Plugin/[自身で作成したプラグインのフォ�
 
   - .travis.yml
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/plugin_test/Travis.yml"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/plugin_test/Travis.yml"></script>
 
 <!--
 ```

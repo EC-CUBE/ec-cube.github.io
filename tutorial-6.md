@@ -41,7 +41,7 @@ title: データーベースを作成しよう
     - 下記に内容を記述します。
     - 「up」メソッドと「down」メソッドが記載されています。
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_6/migration_before.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_6/migration_before.php"></script>
 
 <!--
 ```
@@ -96,7 +96,7 @@ class Version20160607155514 extends AbstractMigration
 
 - 上記のテーブルの作成処理を以下に記述していきます
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_6/migration_after.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_6/migration_after.php"></script>
 
 <!--
 ```
@@ -173,7 +173,7 @@ class Version20160607155514 extends AbstractMigration
 
 - 上記のレコード追加を以下に記述していきます
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_6/migration_add_dtb_layout.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_6/migration_add_dtb_layout.php"></script>
 
 <!--
 ```

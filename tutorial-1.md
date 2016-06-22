@@ -66,7 +66,7 @@ title: URLを設定しよう
 - mypageのルーティングの設定を下記に抜粋しました。
 
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_1/FrontControllerProvider_mypage.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_1/FrontControllerProvider_mypage.php"></script>
 
 <!--
 ```
@@ -105,7 +105,7 @@ $c->match([ドキュメントルートからのurl], [紐付けるコントロ�
 
 - ファイル内最下部の「return」の前に以下の様に追記します。
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_1/FrontControllerProvider_add_source.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_1/FrontControllerProvider_add_source.php"></script>
 
 
 <!--

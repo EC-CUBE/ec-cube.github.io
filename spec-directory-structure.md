@@ -84,7 +84,7 @@ title: ディレクトリ・ファイル構成
 - **設定ファイル**や**ログ・ファイル等**が配置、**プラグインは「Plugin」ディレクトリ**配下に配置
 
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/spec_directory_structure/directory_app.txt"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/spec_directory_structure/directory_app.txt"></script>
 
 
 <!--
@@ -116,7 +116,7 @@ title: ディレクトリ・ファイル構成
 
 - **公開ディレクトリ**となり、**リソースファイル**(cssや画像ファイル）を配置
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/spec_directory_structure/directory_html.txt"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/spec_directory_structure/directory_html.txt"></script>
 
 <!--
 ```
@@ -188,7 +188,7 @@ title: ディレクトリ・ファイル構成
 
 - **アプリケーション本体**となり、phpファイルやTwigファイルを配置
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/spec_directory_structure/directory_src.txt"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/spec_directory_structure/directory_src.txt"></script>
 
 <!--
 ```

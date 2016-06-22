@@ -34,7 +34,7 @@ title: データベースから情報を取り出してリストを表示しよ�
 
         - **CrudController.php**
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_10/CrudController_add_save.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_10/CrudController_add_save.php"></script>
 
 <!--
 ```
@@ -235,7 +235,7 @@ $qb->select([テーブルエイリアス及び、エイリアス + 取得カラ�
 
         - **crud_top.twig**
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_10/crud_top_add_save_loop.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_10/crud_top_add_save_loop.twig"></script>
 
 <!--
 ```

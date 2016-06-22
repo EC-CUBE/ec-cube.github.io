@@ -74,7 +74,7 @@ title: プラグインのテスト
 
   - 以下の様に修正・メソッドの追記を行います。
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/plugin_test/ExampleServiceTest.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/plugin_test/ExampleServiceTest.php"></script>
 
 <!--
 ```
@@ -215,7 +215,7 @@ vendor/bin/phpunit ./app/Plugin/[自身で作成したプラグインのフォ�
 
   - .travis.yml
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/plugin_test/Travis.yml"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/plugin_test/Travis.yml"></script>
 
 <!--
 ```

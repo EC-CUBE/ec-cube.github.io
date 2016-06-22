@@ -54,7 +54,7 @@ title: Doctrineのためにデーターベース構造を設定しよう
     2. ファイル名は**Eccube.Entity.Crud.dcm.yml**とします。
         - **Eccube.Entity.Crud.dcm.yml**(中身はEccube.Entity.AuthorityRole.dcm.yml)
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_7/dcm_yml_before.yml"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_7/dcm_yml_before.yml"></script>
 
 <!--
 ```
@@ -104,7 +104,7 @@ Eccube\Entity\AuthorityRole:
 
 - 上記を以下の様に修正します。
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_7/dcm_yml_after.yml"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_7/dcm_yml_after.yml"></script>
 
 
 <!--

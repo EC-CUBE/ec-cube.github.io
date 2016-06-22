@@ -33,7 +33,7 @@ title: 画面に変数を渡してみよう
 
     - /src/Eccube/Controller/Tutorial/CrudController.php
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_3/CrudController_add_var.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_3/CrudController_add_var.php"></script>
 
 <!--
 ```
@@ -98,7 +98,7 @@ class CrudController extends AbstractController
 
 	- Tutorial/crud_top.twig
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_3/crud_top_add_var.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_3/crud_top_add_var.twig"></script>
 
 <!--
 ```

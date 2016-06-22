@@ -1,0 +1,62 @@
+{#
+This file is part of EC-CUBE
+
+Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
+
+http://www.lockon.co.jp/
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#}
+{% extends 'default_frame.twig' %}
+
+{% set body_class = 'front_page' %}
+
+{% block javascript %}
+{% endblock %}
+
+{% block main %}
+    <style type="text/css">
+        .tutorial-table {
+            padding :100px 0 0 0;
+        }
+        .tutorial-td {
+            border-right :1px dotted #aaaaaa;
+        }
+        .tutorial-box-top {
+            border-top :1px dotted #aaaaaa;
+        }
+    </style>
+    <div class="row">
+       <div class="col-sm-12">
+            <div class="main_wrap">
+                <h1>CRUDチュートリアル</h1>
+                <p>編集を行なってください</p> ★編集画面を示すリード文
+            </div>
+           <div>
+               {% for message in app.session.getFlashBag.get('eccube.front.success') %}
+                   <p class="text-success"><bold>{{ message }}</bold></p>
+               {% endfor %}
+               {% for message in app.session.getFlashBag.get('eccube.front.error') %}
+                   <p class="text-error"><bold>{{ message }}</bold></p>
+               {% endfor %}
+           </div>
+           <div id="form-wrapper">
+               <form name="bbs-top-form" method="post" action="{{ url('tutorial_crud_edit', {'id' : crud.id}) }}"> ★actionを編集画面へ遷移する様に設定
+                   {{ form_widget(forms) }}
+               </form>
+           </div>
+        </div>
+    </div>
+{% endblock %}

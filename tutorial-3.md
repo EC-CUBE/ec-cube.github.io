@@ -33,6 +33,9 @@ title: 画面に変数を渡してみよう
 
     - /src/Eccube/Controller/Tutorial/CrudController.php
 
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_2/CrudController_add_var.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -79,6 +82,8 @@ class CrudController extends AbstractController
     }
 }
 ```
+-->
+
 - 修正の説明を行います。
 
     1. **render**メソッドの第二引数に連想配列を渡すと、**twig**内で渡した変数の操作が可能となります。その際、連想配列のキーを元に変数操作を行います。
@@ -93,6 +98,9 @@ class CrudController extends AbstractController
 
 	- Tutorial/crud_top.twig
 
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_2/crud_top_add_var.twig"></script>
+
+<!--
 ```
 ｛＃
 This file is part of EC-CUBE
@@ -137,6 +145,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     </div>
 ｛％ endblock ％｝
 ```
+-->
 
 - 今回追記内容について簡単な説明を行います。
 

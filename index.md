@@ -20,6 +20,8 @@ title: ホーム
 ### 本体
 
 - [システム要件](/requirement.html)
+- [インストール方法](/install.html)
+- [アップデート方法](/update.html)
 
 ### プラグイン仕様
 
@@ -49,16 +51,9 @@ title: ホーム
         1. カスタマイズ時に作成・変更するファイル
         2. 外部コンポーネント
 
-#### EC-CUBE3本体のインストール
-
-- [インストール方法](/install.html)
-- [アップデート方法](/update.html)
-
 #### 開発の補助
 
 - [デバッグ・Tips](tips.html)
-
-<!-- [テンプレート探索順序](/template.html)★ -->
 
 #### EC-CUBE3で利用されている技術
 - EC-CUBE3のコアとなる技術概要と、参考になるサイトの参照先を紹介しています。
@@ -80,6 +75,7 @@ title: ホーム
     1. 定数
     1. 2系・3系置き換え早見表
 
+	- [テンプレート探索順序](/template.html)
 	- <a href="https://github.com/EC-CUBE/eccube3-doc" target="_blank">テーブル構成</a>
 
 

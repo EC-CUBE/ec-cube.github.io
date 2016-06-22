@@ -45,7 +45,7 @@ title: いらない情報を削除してみよう
         // Tutorial
         $c->match('/tutorial/crud', '\Eccube\Controller\Tutorial\CrudController::index')->bind('tutorial_crud');
         $c->match('/tutorial/crud/edit/{id}', '\Eccube\Controller\Tutorial\CrudController::edit')->bind('tutorial_crud_edit')->assert('id', '^[1-9]+[0]?$');
-        $c->match('/tutorial/crud/delete/{id}', '\Eccube\Controller\Tutorial\CrudController::delete')->bind('tutorial_crud_delete')->assert('id', '^[1-9]+[0]?$');
+        $c->delete('/tutorial/crud/delete/{id}', '\Eccube\Controller\Tutorial\CrudController::delete')->bind('tutorial_crud_delete')->assert('id', '^[1-9]+[0]?$');
 
         return $c;
     }
@@ -57,15 +57,25 @@ title: いらない情報を削除してみよう
 
     1. まず「Tutorial」を検索します。
 
-    1. 以前追記した、チュートリアル削除画面用のルーティングが記述されています。
+    1. 以前追記した、チュートリアル編集画面用のルーティングが記述されています。
 
     1. その行をコピーし、ルーティング名、メソッド名を削除処理用のものに書き換えます。
-        - 前章の説明と相違はありません。
+
+    - 削除処理の際のルーティングメソッドですが、以下を指定します。
+
+        ```
+        $c->delete(...
+        ```
+
+    - 削除処理内で、**本来の画面以外からのリクエストを受け付ける**と、**必要なデーターが削除**されてしまいます。
+    - 上記の様なセキュリティホールを作らないための措置の一つとして、リクエストメソッドを**delete**に限定します。
+        - メソッドの指定は、後述しますが、Viewで行います。
 
 ### 画面へのルーティングの追加
 
 - **crud_top.twig**に**削除ボタンを追加**し、**先程定義したルーティング名を設定**します。
-- またあわせて**確認ダイアログ**を**Js**を記述します。
+- またあわせて**確認ダイアログ**を**Js**の設定も行います。
+- **セキュリティに対する設定**も行います。
 - 以下のファイルを確認します。
     - /src/Eccube/Resource/template/default/Tutorial/crud_top.twig
 
@@ -103,17 +113,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 ｛％ set body_class = 'front_page' ％｝
 
 ｛％ block javascript ％｝
-    <script type="text/javascript">
-        (function($){ ★誤操作防止のためのダイアログをJsで定義します。
-            $('#delete-btn').bind('click', function(){
-                if(confirm('削除したデータは元に戻せません。よろしいですか?')){
-                    return true;
-                }else{
-                    return false;
-                }
-            });
-        })(jQuery);
-    </script>
 ｛％ endblock ％｝
 
 ｛％ block main ％｝
@@ -144,6 +143,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
            </div>
            <div id="form-wrapper">
                <form name="bbs-top-form" method="post" action="｛｛ url('tutorial_crud') ｝｝">
+                   ｛｛ form_widget(form._token) ｝｝★追加
                    ｛｛ form_widget(forms) ｝｝
                </form>
            </div>
@@ -177,9 +177,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
                                         <div class="td tutorial-td"><a class="btn btn-default btn-block btn-sm" href="｛｛ url('tutorial_crud_edit', {'id' : Crud.id}) ｝｝">
                                             編集
                                             </a></div>
-                                        <div class="td tutorial-td"><a id="delete-btn" class="btn btn-default btn-block btn-sm" href="｛｛ url('tutorial_crud_delete', {'id' : Crud.id}) ｝｝">
-                                                削除
-                                            </a></div> ★削除ボタンを追記します。誤操作防止のためのJsのためにidを付与します。
+                                        <div class="td tutorial-td">
+                                            <a class="btn btn-default btn-block btn-sm" href="｛｛ url('tutorial_crud_delete', {'id' : Crud.id})  {{ csrf_token_for_anchor() }} data-method="delete" data-message="この会員情報を削除してもよろしいですか？"｝｝">削除</a>
+                                            </div> ★削除ボタンを追記します。
                                     </div>
                                     ｛％ endfor ％｝
                                 </div>
@@ -202,6 +202,15 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 1. テーブル項目の最後に削除ボタンを追記します。
     - **「a」タグ**を用い、**CSSでボタン形状**に成形しています。
+    - さらにルーティング定義の際に説明した、セキュリティ対策のために**data-method="delete"**でメソッドを指定しています。
+    - セキュリティ対策がもう一つ施されています。
+    
+        ```
+        ｛｛ csrf_token_for_anchor() ｝｝
+        ```
+
+    - 上記メソッドで、トークンを発行しています。
+    - トークンの説明については、後述のコントローラーで詳細な説明を行います。
 
 1. 先程追加した**「a」タグ**の**リンク部URL**ですが、以前利用した**Twig関数**の**url()**でを用いています。
     - 今回の**ルーティング先で削除処理**を行うため、**レコードの特定が行えるID**を、**URLパラメーター**として付与しています。
@@ -228,7 +237,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 ```
     /**
      * 削除画面
-     * 引数を元に該当レコードを削除後、エラーがあれば、LogicExceptionをスロー
+     * 引数を元に該当レコードを削除
      * 問題がなければ、登録画面に遷移
      *
      * @param Application $app
@@ -238,13 +247,22 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
      */
     public function delete(Application $app, Request $request, $id)
     {
-        $deleteResult = $app['eccube.repository.crud']->deleteDataById($id);
+        $this->isTokenValid($app);
 
-        if (!$deleteResult) {
-            throw new \LogicException();
-        }
+        $Crud = $app['orm.em']
+            ->getRepository('Eccube\Entity\Crud')
+            ->find($id);
+
+       if (is_null($Crud)) {
+            $app->addError('該当IDのデーターが見つかりません');
+            return $app->redirect($app->url('tutorial_crud'));
+       }
+
+        $app['orm.em']->remove($Crud);
+        $app['orm.em']->flush($Crud);
 
         return $app->redirect($app->url('tutorial_crud'));
+     }
 ```
 -->
 
@@ -257,91 +275,51 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     - **遷移元のViewからURLパラメーターとして、渡ってきた値**です。
     - 今回の**削除対象レコード**の、**idを保持**しています。
 
-    3.処理冒頭で、レポジトリで定義した削除処理メソッドにidを渡し、処理を委譲しています。
+    3.処理冒頭で、トークンのチェックを行なっています。
 
-    - 削除メソッドは後で記述します。
+    - Viewで以下を記述しました。
 
-    4.取得値のエラーハンドリングとして、レコードが削除出来なかった際は、不正なアクセス及びエラーとみなし、以下エラーをスローします。
+        ```
+        ｛｛ csrf_token_for_anchor() ｝｝
+        ```
+
+    - 上記の記述により**リクエストにトークン**がサーバーに送信されます。
+    - 上記を冒頭の以下メソッドで確認しています。
+    
+        ```
+        $this->isTokenValid($app);
+        ```
+
+    - 今回の**削除機能**は、画面のボタンのクリックで、コントローラーに直接アクセスします。
+    - これは、フォームからサブミットされるのとは異なります。
+    - 例えば、悪意のあるユーザーが、本URL記載したメールを誰かに送信した際に、受信者が何も知らずにクリックすると、大切なデータが削除されてしまいます。
+    - これは編集画面においても同様ですが、編集画面に遷移するのとは違い、削除が行われると実害となります。
+    - 上記の様な事を防ぐために、**画面からのトークンをリクエスト受け付け時にチェック**し、**正しい画面遷移**でリクエストが送られてきた事を確認します。
+
+    4.次に以下の新しいメソッドが記述されています。
 
     ```
-    throw new \LogicException();
+    $app['orm.em']->getRepository([エンティティ名])
     ```
 
-    5.**処理成功時**に、**登録画面に画面遷移**しています。
+    - 上記は与えられた引数名のエンティティを取得します。
+    - 今回はエンティティのマジックメソッド**find**を用い、該当IDのレコードを取得しています。
+
+    5.次は取得レコードの有無をチェックし、取得できない際はメッセージを表示し、元の画面にリダイレクトしています。
+
+    6.レコードチェックで問題がなければ、該当レコードを以下メソッドを用い、エンティティマネージャーに削除依頼を行います。
+
+    ```
+    $app['orm.em']->remove($Crud);
+    ```
+
+    7.エンティティマネージャーに依頼が完了したら、**flush**で削除処理を実行します。
+
+    8.**処理成功時**に、**登録画面に画面遷移**しています。
 
     - **画面遷移**をさせるために**redirectメソッド**を用いています。
 
-    6.本メソッドでは、画面をレンダリングしません。
-
-## レポジトリに削除メソッドを追加する
-
-- idをもとにdtb_crudからレコードを削除するメソッドを追記します。
-
-### ファイルの修正
-
-- CrudRepository.phpを開きます。
-    - /src/Eccube/Repository/CrudRepository.php
-
-        1. saveメソッドの下に以下の様にメソッドを追記します。
-
-        - **CrudRepository.php**
-
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_13/CrudRepository_add_delete.php"></script>
-
-<!--
-```
-   /**
-     * deleteById
-     * dtb_crudの値をIDで引き当て、削除
-     *
-     * @param null $id
-     * @return bool|mixed
-     */
-    public function deleteDataById($id = null)
-    {
-        if (is_null($id)) {
-            return false;
-        }
-
-        $qb = $this->createQueryBuilder('dc');
-        $qb->delete()
-            ->where('dc.id = :Id')
-            ->setParameter('Id', $id);
-
-        return $qb->getQuery()->execute();
-    }
-```
--->
-
-- 上記説明を行います。
-
-1. メソッドの引数として取得レコードのidを定義します。
-    - ここで受け取る**id**は**URLパラメーター**から渡されてきた**削除対象レコード**の**id**です
-    - idのデフォルト値として、nullを指定しています。
-    - nullの指定はエラーハンドリングのために設定しています。
-
-1. 引数のデフォルト値を利用して、エラーハンドリングを行なっています。
-    - コントローラー側で判断するため、falseを返却するだけとしています。
-
-1. 次にクエリビルダーでSQLを構築しています。
-    - 今回新たに記述されている内容として、以下があります
-    
-    ```
-    $qb->delete()
-    ```
-
-    - 上記は**通常のSQLのdelete構文と同義**です。
-    - カラムに対して条件を付与しています。
-    - 今回は、dtb_crudのカラムidに対して、引数のidが同じレコードを削除する条件を記述しています。
-    - またクエリビルダーの条件指定では、**プリペアドステートメント**が用いらてます。
-
-    - もうひとつ新たな記述があります。
-
-    ```
-    return $qb->getQuery()->execute();
-    ```
-
-    - 上記ですが、**取得系の処理以外**では、**execute**でDQLを**実行**します。
+    9.本メソッドでは、画面をレンダリングしません。
 
 ### 表示内容の確認
 

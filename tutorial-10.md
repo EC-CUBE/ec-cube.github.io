@@ -295,6 +295,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
            </div>
            <div id="form-wrapper">
                <form name="bbs-top-form" method="post" action="｛｛ url('tutorial_crud') ｝｝">
+                   ｛｛ form_widget(forms._token) ｝｝
                    ｛｛ form_widget(forms) ｝｝
                </form>
            </div>

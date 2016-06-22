@@ -276,7 +276,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
                 </dl>
             </div>
            <div id="form-wrapper">★追記
-               ｛｛ form_widget(forms)｝｝
+               ｛｛ form_widget(forms._token) ｝｝
+               ｛｛ form_widget(forms) ｝｝
            </div>
         </div>
     </div>
@@ -284,13 +285,17 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 ```
 -->
 
-- ここで重要なのは以下です。
+- ここで重要なのは以下2行です。
 
+    - ｛｛ form_widget(forms._token) ｝｝
     - ｛｛ form_widget(forms)｝｝
 
 - 上記の設定によって、フォームオブジェクトがビューに書きだされます。
 
-    - 本当は1項目づつ表示すことも可能ですが、本チュートリアルでは全項目を一度に書き出しています。
+    - 本当は1項目づつ表示することも可能ですが、本チュートリアルでは全項目を一度に書き出しています。
+    - **forms._token**は本画面から、サーバーへアクセスした事をサーバーで判断するために、必ず記述します。
+    - 上記はセキュリティのために行います。
+    - サーバー側での判断はフォームオブジェクトが自動で行なってくれます。
 
 ### 表示内容の確認
 

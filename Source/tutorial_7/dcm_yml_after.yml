@@ -1,0 +1,36 @@
+
+Eccube\Entity\Crud: ★エンティティのパスをCrudに変更します( ファイルは後で作成します )
+    type: entity
+    table: dtb_bbs  ★テーブル名をdtb_crudに修正します
+    repositoryClass: Eccube\Repository\CrudRepository ★レポジトリをCrudに修正します( ファイルは後の章で作成します )
+    id: ★プライマリーキーの設定を行います
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id ★カラム名を修正します
+            generator:
+                strategy: AUTO ★オートインクリメントを利用するためにAUTOを設定します
+    fields: ★カラムの設定を行います
+        reason:
+            type: smallint
+            nullable: false
+        name:
+            type: string
+            lenght: 255
+            nullable: false
+        title:
+            type: string
+            lenght: 255
+            nullable: false
+        notes:
+            type: text
+            nullable: false
+        create_date:
+            type: datetime
+            nullable: false
+        update_date:
+            type: datetime
+            nullable: false
+    lifecycleCallbacks: {  }

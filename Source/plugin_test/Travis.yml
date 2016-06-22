@@ -1,0 +1,63 @@
+language: php
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+    - /home/travis/.composer/cache
+
+php: ★テスト対象のPHPバージョンを指定します
+  - 5.3
+  - 5.4
+  - 5.5
+  - 5.6
+#  - 7.0
+
+env:
+  # plugin code
+  global:
+    PLUGIN_CODE=ExampleTest ★作成したプラグインのコードを指定します
+  matrix:
+#    # ec-cube master ★EC-CUBE3のバージョンを指定します
+#    - ECCUBE_VERSION=master DB=mysql USER=root DBNAME=myapp_test DBPASS=' ' DBUSER=root
+#    - ECCUBE_VERSION=master DB=pgsql USER=postgres DBNAME=myapp_test DBPASS=password DBUSER=postgres
+    - ECCUBE_VERSION=3.0.9 DB=mysql USER=root DBNAME=myapp_test DBPASS=' ' DBUSER=root
+    - ECCUBE_VERSION=3.0.9 DB=pgsql USER=postgres DBNAME=myapp_test DBPASS=password DBUSER=postgres
+    - ECCUBE_VERSION=3.0.10 DB=mysql USER=root DBNAME=myapp_test DBPASS=' ' DBUSER=root
+    - ECCUBE_VERSION=3.0.10 DB=pgsql USER=postgres DBNAME=myapp_test DBPASS=password DBUSER=postgres
+
+matrix:
+  fast_finish: true
+
+before_script: ★Travisを初期化しています
+  # archive plugin
+  - tar cvzf ${HOME}/${PLUGIN_CODE}.tar.gz ./*
+  # clone ec-cube
+  - git clone https://github.com/EC-CUBE/ec-cube.git
+  - cd ec-cube
+  # checkout version
+  - sh -c "if [ ! '${ECCUBE_VERSION}' = 'master' ]; then  git checkout -b ${ECCUBE_VERSION} refs/tags/${ECCUBE_VERSION}; fi"
+  # update composer
+  - composer selfupdate
+  - composer install --dev --no-interaction -o
+  # install ec-cube
+  - sh eccube_install.sh ${DB} none
+  # install plugin
+  - php app/console plugin:develop install --path=${HOME}/${PLUGIN_CODE}.tar.gz
+  # enable plugin
+  - php app/console plugin:develop enable --code=${PLUGIN_CODE}
+
+script: ★プラグインをインストールしています
+  # exec phpunit on ec-cube
+  - phpunit app/Plugin/${PLUGIN_CODE}/Tests
+
+after_script: ★プラグインの、インストール・アンインストール、有効化・無効化のテストを行なっています
+  # disable plugin
+  - php app/console plugin:develop disable --code=${PLUGIN_CODE}
+  # uninstall plugin
+  - php app/console plugin:develop uninstall --code=${PLUGIN_CODE}
+  # re install plugin
+  - php app/console plugin:develop install --code=${PLUGIN_CODE}
+  # re enable plugin
+  - php app/console plugin:develop enable --code=${PLUGIN_CODE}

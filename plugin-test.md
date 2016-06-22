@@ -74,6 +74,9 @@ title: プラグインのテスト
 
   - 以下の様に修正・メソッドの追記を行います。
 
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/plugin_test/ExampleServiceTest.php"></script>
+
+<!--
 ```
 <?php
 
@@ -140,6 +143,7 @@ class ExampleServiceTest extends EccubeTestCase ★クラス名称を修正
     }
 }
 ```
+-->
 
 - 上記の説明を行います。
 
@@ -211,6 +215,9 @@ vendor/bin/phpunit ./app/Plugin/[自身で作成したプラグインのフォ�
 
   - .travis.yml
 
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/plugin_test/Travis.yml"></script>
+
+<!--
 ```
 
 language: php
@@ -277,6 +284,8 @@ after_script: ★プラグインの、インストール・アンインストー
   # re enable plugin
   - php app/console plugin:develop enable --code=${PLUGIN_CODE}
 ```
+-->
+
 - 上記の設定項目内容を以下に説明します。
 
 1. [php：]

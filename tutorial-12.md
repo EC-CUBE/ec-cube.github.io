@@ -95,7 +95,7 @@ $c->match('/[Twigで設定したルーティング名]/{id}', '[コントロー�
 
         - **crud_top.twig**
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_12/crud_edit_before.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_12/crud_top_add_edit.twig"></script>
 
 <!--
 ```
@@ -379,7 +379,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
     - **crud_edit.twig**
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_12/crud_edit_after.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_12/crud_edit_before.twig"></script>
 
 <!--
 ```

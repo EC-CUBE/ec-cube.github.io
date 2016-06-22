@@ -38,6 +38,9 @@ title: いらない情報を削除してみよう
 
         - **FrontControllerProvider.php**
 
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_13/FrontControllerProvider_add_crud_delete.php"></script>
+
+<!--
 ```
         // Tutorial
         $c->match('/tutorial/crud', '\Eccube\Controller\Tutorial\CrudController::index')->bind('tutorial_crud');
@@ -48,6 +51,7 @@ title: いらない情報を削除してみよう
     }
 }
 ```
+-->
 
 - 上記の説明を行います。
 
@@ -69,6 +73,9 @@ title: いらない情報を削除してみよう
 
         - **crud_top.twig**
 
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_13/crud_top_add_delete.twig"></script>
+
+<!--
 ```
 ｛＃
 This file is part of EC-CUBE
@@ -186,6 +193,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     </div>
 ｛％ endblock ％｝
 ```
+-->
 
 - 上記説明を行います。
 
@@ -214,6 +222,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
         - **CrudController.php**
 
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_13/CrudController_add_delete.php"></script>
+
+<!--
 ```
     /**
      * 削除画面
@@ -235,6 +246,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
         return $app->redirect($app->url('tutorial_crud'));
 ```
+-->
 
 - 上記を説明します。
 
@@ -274,6 +286,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
         - **CrudRepository.php**
 
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_13/CrudRepository_add_delete.php"></script>
+
+<!--
 ```
    /**
      * deleteById
@@ -296,6 +311,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
         return $qb->getQuery()->execute();
     }
 ```
+-->
 
 - 上記説明を行います。
 

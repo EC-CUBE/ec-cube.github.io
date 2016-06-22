@@ -47,6 +47,9 @@ title: コントローラーからビューを表示してみよう
 
 - **CrudController.php**( 中身はTopController.phpのコピー )
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_2/CrudController_before.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -85,9 +88,13 @@ class TopController
     }
 }
 ```
+-->
 
 - 下記の様に修正を行います。
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_2/CrudController_after.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -129,6 +136,7 @@ class CrudController extends AbstractController ★クラス名を修正 + 親�
     }
 }
 ```
+-->
 
 #### ルーティングの確認
 
@@ -170,6 +178,9 @@ class CrudController extends AbstractController ★クラス名を修正 + 親�
 
 - **crud_top.twig**( 中身はindex.twigのコピー )
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_2/crud_top_before.twig"></script>
+
+<!--
 ```
 ｛＃
 This file is part of EC-CUBE
@@ -228,8 +239,13 @@ $(function(){
     </div>
 ｛％ endblock ％｝
 ```
+-->
+
 - 下記の様に修正を行います。
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_2/crud_top_after.twig"></script>
+
+<!--
 ```
 ｛＃
 This file is part of EC-CUBE
@@ -270,11 +286,15 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     </div>
 ｛％ endblock ％｝
 ```
+-->
 
 #### コントローラーの修正
 
 - コントローラーで「echo」していた箇所を以下の内容に修正します。
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_2/CrudController_modified.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -314,6 +334,7 @@ class CrudController extends AbstractController
     }
 }
 ```
+-->
 
 - コントローラーとメソッドについて簡単な説明を行います。
 

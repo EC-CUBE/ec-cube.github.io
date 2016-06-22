@@ -65,6 +65,10 @@ title: URLを設定しよう
 
 - mypageのルーティングの設定を下記に抜粋しました。
 
+
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_1/FrontControllerProvider_mypage.php"></script>
+
+<!--
 ```
     // mypage
     $c->match('/mypage', '\Eccube\Controller\Mypage\MypageController::index')->bind('mypage');
@@ -73,6 +77,7 @@ title: URLを設定しよう
     $c->match('/mypage/change_complete', '\Eccube\Controller\Mypage\ChangeController::complete')->bind('mypage_change_complete');
 
 ```
+-->
 
 #### メソッドについての説明
 
@@ -100,6 +105,10 @@ $c->match([ドキュメントルートからのurl], [紐付けるコントロ�
 
 - ファイル内最下部の「return」の前に以下の様に追記します。
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_1/FrontControllerProvider_add_source.php"></script>
+
+
+<!--
 ```
         // チュートリアル
         $c->match('/tutorial/crud', '\Eccube\Controller\Tutorial\CrudController::index')->bind('tutorial_crud');
@@ -108,6 +117,7 @@ $c->match([ドキュメントルートからのurl], [紐付けるコントロ�
     }
 }
 ```
+-->
 
 - 以上でルーティングの設定は完了です。
 

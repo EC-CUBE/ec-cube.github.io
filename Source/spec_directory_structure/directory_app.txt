@@ -1,0 +1,20 @@
+[EC-CUBE3インストールディレクトリ]
+├── ■ app（主に環境によって変更が入るものを配置）
+│   ├── cache
+│   │   └── eccube
+│   ├── config
+│   │   └── eccube ■設定ファイル
+│   │       ├── config.yml
+│   │       ├── database.yml
+│   │       ├── mail.yml
+│   │       └── path.yml
+│   ├── console
+│   ├── log　■ログファイル
+│   ├── Plugin
+│   └── template　■拡張したテンプレート・デザインテンプレート
+│       ├── admin
+│       └── default
+├── cache
+│   └── plugin
+│
+・・続く

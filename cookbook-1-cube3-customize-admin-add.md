@@ -86,6 +86,9 @@ title: 管理画面項目の追加
 
   - 今回であれば、**cutomer**を検索します。
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/AdminControllerProvider_view.php"></script>
+
+<!--
 ```
 .
 ..
@@ -104,6 +107,7 @@ title: 管理画面項目の追加
 ...
 
 ```
+-->
 
 - 上記が検索でヒットした付近のソースです。
 
@@ -127,6 +131,9 @@ title: 管理画面項目の追加
 
     - 以下が抜粋した内容です。
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/CustomerEditController_view.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -275,6 +282,7 @@ class CustomerEditController extends AbstractController
     }
 }
 ```
+-->
 
 1.まずカスタマーにセットされているところでは、今回項目の関連も考えられますので、カスタマーのエンティティを追いかけていきます。
 
@@ -352,6 +360,9 @@ php app/console migrations:generate
 
   - 以下内容を記述します
   
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/migration_view.php"></script>
+
+<!--
 ```
 <?php
 
@@ -388,6 +399,7 @@ class Version20160616155605 extends AbstractMigration
     }
 }
 ```
+-->
 
 - 上記内容を簡単に説明します。
 
@@ -449,6 +461,9 @@ class Version20160616155605 extends AbstractMigration
 - 以下定義を追記します。
   - Eccube.Entity.Customer.dcm.yml
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/dcm_yml_add_column.yml"></script>
+
+<!--
 ```
 .
 ..
@@ -463,6 +478,7 @@ department:
 ..
 ...
 ```
+-->
 
 - 上記の説明を簡単に行います。
 
@@ -478,6 +494,9 @@ department:
 
 - 以下修正箇所です
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/CustomerEntity_mofdified.php"></script>
+
+<!--
 ```
 .
 ..
@@ -529,6 +548,7 @@ public function getDepartment()
     return $this->department;
 }
 ```
+-->
 
 - メンバ変数の最後に**department**を追記します。
 
@@ -548,6 +568,9 @@ public function getDepartment()
 - 下記の様に修正を加えます。
  - 今回は会社名の下に追記します。
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/CustomerType_modified.php"></script>
+
+<!--
 ```
 ->add('department', 'text', array(
     'required' => false,,
@@ -559,6 +582,7 @@ public function getDepartment()
     ),
 ))
 ```
+-->
 
 - 上記の簡単な説明を行います。
 
@@ -587,6 +611,9 @@ public function getDepartment()
 - 以下が対象ファイルです。
  - /src/Eccube/Resource/template/admin/Customer/edit.twig
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/cookbook1_customize/customer_edit_modified.twig"></script>
+
+<!--
 ```
 .
 ..
@@ -613,6 +640,7 @@ public function getDepartment()
 ...
 
 ```
+-->
 
 1. 会社名の下にカラムを追加するために、**company_name**を検索します。
 

@@ -38,6 +38,9 @@ title: フォームを表示してみよう
 
     - CrudController.php
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_4/CrudController_add_form.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -123,6 +126,7 @@ class CrudController extends AbstractController
     }
 }
 ```
+-->
 
 ### フォームビルダーを用いた項目の追加
 
@@ -224,6 +228,11 @@ class CrudController extends AbstractController
 
     - crud_test.twig
 
+
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_4/crud_top_add_form.twig"></script>
+
+
+<!--
 ```
 ｛＃
 This file is part of EC-CUBE
@@ -272,8 +281,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
         </div>
     </div>
 ｛％ endblock ％｝
-
 ```
+-->
 
 - ここで重要なのは以下です。
 

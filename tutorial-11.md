@@ -33,6 +33,9 @@ title: データーベース操作処理をレポジトリに整理しよう
 
         - **Eccube.Entity.Crud.dcm.yml**
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_11/dcm_yml_view_repository.yml"></script>
+
+<!--
 ```
 Eccube\Entity\Crud:
 type: entity
@@ -70,6 +73,7 @@ fields:
         nullable: false
 lifecycleCallbacks: {  }
 ```
+-->
 
 - 上記がデーターベース構造定義ファイルの内容です。
 - ★で示した箇所にレポジトリの定義がされています。
@@ -90,6 +94,9 @@ lifecycleCallbacks: {  }
 
     - **CrudRepository.php**( 中身はAuthorityRoleRepository.phpのコピー )
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_11/CrudRepository_before.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -139,9 +146,13 @@ class AuthorityRoleRepository extends EntityRepository ★リネーム
     }
 }
 ```
+-->
 
 - 上記のソースを以下の様に修正します。
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_11/CrudRepository_after.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -182,6 +193,7 @@ class CrudRepository extends EntityRepository ★クラス名を修正
     ★メソッドは一度全て削除
 }
 ```
+-->
 
 
 ## サービスプロバイダへの登録
@@ -197,6 +209,9 @@ class CrudRepository extends EntityRepository ★クラス名を修正
 
     1. 次に「Repository」のコメントを検索します。
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_11/EccubeServiceProvider_before.php"></script>
+
+<!--
 ```
         // Repository
         $app['eccube.repository.master.authority'] = $app->share(function () use ($app) {
@@ -212,9 +227,13 @@ class CrudRepository extends EntityRepository ★クラス名を修正
         ..
         .
 ```
+-->
 
 - 上記を検索で見つけたら、次に「Repository」の一番最後の行に**CrudRepository**をサービスプロバイダへ登録します。
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_11/EccubeServiceProvider_after.php"></script>
+
+<!--
 ```
         $app['eccube.repository.help'] = $app->share(function () use ($app) {
             return $app['orm.em']->getRepository('Eccube\Entity\Help');
@@ -232,6 +251,7 @@ class CrudRepository extends EntityRepository ★クラス名を修正
 
         // em
 ```
+-->
 
 - 上記の追加で、**$app**が利用できる箇所であれば、「**$app['eccube.repository.crud']**」で呼び出す事が可能となりました。
 
@@ -251,6 +271,9 @@ class CrudRepository extends EntityRepository ★クラス名を修正
 
         - **CrudController.php**
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_11/CrudController_add_repository.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -316,6 +339,7 @@ class CrudController extends AbstractController
     }
 }
 ```
+-->
 
 ### 表示内容の確認
 
@@ -355,6 +379,9 @@ class CrudController extends AbstractController
 
         - **CrudRepository.php**
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_11/CrudRepository_modified.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -436,6 +463,8 @@ class CrudRepository extends EntityRepository
     }
 }
 ```
+-->
+
 - 上記の説明を行います。
 
 ### 一覧表示データーの取得
@@ -492,6 +521,9 @@ class CrudRepository extends EntityRepository
 
         - **CrudController.php**
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_11/CrudController_modified_repository.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -566,6 +598,7 @@ class CrudController extends AbstractController
     }
 }
 ```
+-->
 
 - 上記の説明を行います。
 

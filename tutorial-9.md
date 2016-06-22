@@ -36,6 +36,9 @@ title: データーベースに登録してみよう
 
         - **CrudController.php**
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_9/CrudController_add_entity.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -101,6 +104,7 @@ class CrudController extends AbstractController
     }
 }
 ```
+-->
 
 
 - 上記の説明を行なっていきます。
@@ -175,6 +179,9 @@ class CrudController extends AbstractController
 
     - **CrudType.php**
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_9/CrudController_set_map_status.php"></script>
+
+<!--
 ```
 <?php
 /*
@@ -303,6 +310,7 @@ class CrudType extends AbstractType
     }
 }
 ```
+-->
 
 - 上記の説明
 

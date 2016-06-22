@@ -36,7 +36,7 @@ title: プラグインのテスト
 1. 今回は以下に例としてのプラグインを作成しています。
 
 1. 以下をクローンして、参考としてください。
-  - <a href="https://github.com/geany-y/ExamleTest" target="_blank">ExampleTestプラグイン</a>
+  - <a href="https://github.com/EC-CUBE/ExamleTest" target="_blank">ExampleTestプラグイン</a>
 
 1. 今回のテスト対象は上記レポジトリの「ExampleService.php」というサービスクラスが対象となります。
 
@@ -74,6 +74,9 @@ title: プラグインのテスト
 
   - 以下の様に修正・メソッドの追記を行います。
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/plugin_test/ExampleServiceTest.php"></script>
+
+<!--
 ```
 <?php
 
@@ -140,6 +143,7 @@ class ExampleServiceTest extends EccubeTestCase ★クラス名称を修正
     }
 }
 ```
+-->
 
 - 上記の説明を行います。
 
@@ -211,6 +215,9 @@ vendor/bin/phpunit ./app/Plugin/[自身で作成したプラグインのフォ�
 
   - .travis.yml
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/plugin_test/Travis.yml"></script>
+
+<!--
 ```
 
 language: php
@@ -277,6 +284,8 @@ after_script: ★プラグインの、インストール・アンインストー
   # re enable plugin
   - php app/console plugin:develop enable --code=${PLUGIN_CODE}
 ```
+-->
+
 - 上記の設定項目内容を以下に説明します。
 
 1. [php：]

@@ -89,6 +89,10 @@ title: ホーム
 
     - データーベースの「CRUD」を画面表示とあわせて作成します。
 
+    - 本チュートリアルの完成ソースは以下から入手できます。
+    
+        - <a href="https://github.com/geany-y/ec-cube/tree/documents/tutorial" target="_blank">GitHub</a>
+
 ##### チュートリアル一覧
 
 1. **URLを設定しよう**

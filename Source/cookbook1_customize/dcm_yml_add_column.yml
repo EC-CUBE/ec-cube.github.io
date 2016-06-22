@@ -1,0 +1,12 @@
+.
+..
+...
+company_name:
+    type: text
+    nullable: true
+department:
+    type: text
+    nullable: true
+.
+..
+...

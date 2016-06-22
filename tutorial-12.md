@@ -46,6 +46,9 @@ title: リストを編集しよう
 
         - **FrontControllerProvider.php**
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_12/FrontControllerProvider_add_crud_edit.php"></script>
+
+<!--
 ```
         // Tutorial
         $c->match('/tutorial/crud', '\Eccube\Controller\Tutorial\CrudController::index')->bind('tutorial_crud');
@@ -55,6 +58,7 @@ title: リストを編集しよう
     }
 }
 ```
+-->
 
 - 上記の説明を行います。
 
@@ -91,6 +95,9 @@ $c->match('/[Twigで設定したルーティング名]/{id}', '[コントロー�
 
         - **crud_top.twig**
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_12/crud_top_add_edit.twig"></script>
+
+<!--
 ```
 ｛＃
 This file is part of EC-CUBE
@@ -193,6 +200,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     </div>
 ｛％ endblock ％｝
 ```
+-->
 
 - 上記説明を行います。
 
@@ -228,6 +236,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
         - **CrudController.php**
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_12/CrudController_add_edit.php"></script>
+
+<!--
 ```
     /**
      * 編集画面
@@ -292,6 +303,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     }
 }
 ```
+-->
 
 - 上記を説明します。
 
@@ -367,6 +379,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
     - **crud_edit.twig**
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_12/crud_edit_before.twig"></script>
+
+<!--
 ```
 ｛＃
 This file is part of EC-CUBE
@@ -431,6 +446,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     </div>
 ｛％ endblock ％｝
 ```
+-->
 
 - 上記を説明します。
 
@@ -454,6 +470,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
         - **CrudRepository.php**
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_12/CrudRepository_add_edit.php"></script>
+
+<!--
 ```
    /**
      * getDataById
@@ -480,6 +499,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
         }
     }
 ```
+-->
 
 - 上記説明を行います。
 

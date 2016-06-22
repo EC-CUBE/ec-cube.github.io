@@ -83,6 +83,11 @@ title: ディレクトリ・ファイル構成
 
 - **設定ファイル**や**ログ・ファイル等**が配置、**プラグインは「Plugin」ディレクトリ**配下に配置
 
+
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/spec_directory_structure/directory_app.txt"></script>
+
+
+<!--
 ```
 [EC-CUBE3インストールディレクトリ]
 ├── ■ app（主に環境によって変更が入るものを配置）
@@ -105,11 +110,15 @@ title: ディレクトリ・ファイル構成
 │
 ・・続く
 ```
+-->
 
 #### html配下
 
 - **公開ディレクトリ**となり、**リソースファイル**(cssや画像ファイル）を配置
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/spec_directory_structure/directory_html.txt"></script>
+
+<!--
 ```
 ・・続き
 │
@@ -173,11 +182,15 @@ title: ディレクトリ・ファイル構成
 │
 ・・続く
 ```
+-->
 
 #### src配下
 
 - **アプリケーション本体**となり、phpファイルやTwigファイルを配置
 
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/spec_directory_structure/directory_src.txt"></script>
+
+<!--
 ```
 ・・続き
 │
@@ -293,6 +306,7 @@ title: ディレクトリ・ファイル構成
     ├── /*/
     └── autoload.php
 ```
+-->
 
 ### 設定ファイル
 

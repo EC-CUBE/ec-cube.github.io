@@ -61,7 +61,7 @@ title: フォーム情報を整理して入力値チェックも追加しよう
 
     - **CrudType.php**( 中身はContactType.phpのコピー )
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_5/CrudType_before.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_5/CrudType_before.php"></script>
 
 <!--
 ```
@@ -156,7 +156,7 @@ class ContactType extends AbstractType  ★名称の変更
 
 - 上記を以下に変更します。
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_5/CrudType_after.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_5/CrudType_after.php"></script>
 
 <!--
 ```
@@ -268,7 +268,7 @@ class CrudType extends AbstractType  ★CrudTypeに変更
 
     - CrudType.php
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_5/CrudType_add_valodate.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_5/CrudType_add_valodate.php"></script>
 
 <!--
 ```
@@ -407,7 +407,7 @@ class CrudType extends AbstractType
 
 - 上記で記述した通り、バリデーションは以下構文で追加します。
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_5/CrudType_example.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_5/CrudType_example.php"></script>
 
 <!--
 ```
@@ -473,7 +473,7 @@ class CrudType extends AbstractType
 
             - EccubeServiceProvider.php
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_5/EccubeServiceProvider_add_type.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_5/EccubeServiceProvider_add_type.php"></script>
 
 <!--
 ```
@@ -501,7 +501,7 @@ $types[] = new \Eccube\Form\Type\Front\CrudType($app['config']); ★追記
 
     - CrudController.php
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_5/CrudController_remove_form.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_5/CrudController_remove_form.php"></script>
 
 <!--
 ```
@@ -562,7 +562,7 @@ class CrudController extends AbstractController
 - コントローラーに以下を追加します。
 
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_5/CrudController_call_form.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_5/CrudController_call_form.php"></script>
 
 <!--
 ```
@@ -666,7 +666,7 @@ class CrudController extends AbstractController
 
     - 現状では以下表示となります。
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_5/crud_top_add_form_before.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_5/crud_top_add_form_before.twig"></script>
 
 <!--
 ```
@@ -724,7 +724,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 - コントローラーの修正にあわせて以下の様に追記、変更を行います。
 
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_5/crud_top_add_form_after.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_5/crud_top_add_form_after.twig"></script>
 
 <!--
 ```

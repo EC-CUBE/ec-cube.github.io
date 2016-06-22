@@ -46,7 +46,7 @@ title: リストを編集しよう
 
         - **FrontControllerProvider.php**
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_12/FrontControllerProvider_add_crud_edit.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_12/FrontControllerProvider_add_crud_edit.php"></script>
 
 <!--
 ```
@@ -95,7 +95,7 @@ $c->match('/[Twigで設定したルーティング名]/{id}', '[コントロー�
 
         - **crud_top.twig**
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_12/crud_top_add_edit.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_12/crud_top_add_edit.twig"></script>
 
 <!--
 ```
@@ -236,7 +236,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
         - **CrudController.php**
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_12/CrudController_add_edit.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_12/CrudController_add_edit.php"></script>
 
 <!--
 ```
@@ -379,7 +379,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
     - **crud_edit.twig**
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_12/crud_edit_before.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_12/crud_edit_before.twig"></script>
 
 <!--
 ```
@@ -470,7 +470,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
         - **CrudRepository.php**
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_12/CrudRepository_add_edit.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_12/CrudRepository_add_edit.php"></script>
 
 <!--
 ```

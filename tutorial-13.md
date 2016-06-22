@@ -38,7 +38,7 @@ title: いらない情報を削除してみよう
 
         - **FrontControllerProvider.php**
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_13/FrontControllerProvider_add_crud_delete.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_13/FrontControllerProvider_add_crud_delete.php"></script>
 
 <!--
 ```
@@ -73,7 +73,7 @@ title: いらない情報を削除してみよう
 
         - **crud_top.twig**
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_13/crud_top_add_delete.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_13/crud_top_add_delete.twig"></script>
 
 <!--
 ```
@@ -222,7 +222,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
         - **CrudController.php**
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_13/CrudController_add_delete.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_13/CrudController_add_delete.php"></script>
 
 <!--
 ```
@@ -286,7 +286,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
         - **CrudRepository.php**
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_13/CrudRepository_add_delete.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_13/CrudRepository_add_delete.php"></script>
 
 <!--
 ```

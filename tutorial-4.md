@@ -38,7 +38,7 @@ title: フォームを表示してみよう
 
     - CrudController.php
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_4/CrudController_add_form.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_4/CrudController_add_form.php"></script>
 
 <!--
 ```
@@ -229,7 +229,7 @@ class CrudController extends AbstractController
     - crud_test.twig
 
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/io/Source/tutorial_4/crud_top_add_form.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_4/crud_top_add_form.twig"></script>
 
 
 <!--

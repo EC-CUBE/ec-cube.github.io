@@ -666,7 +666,7 @@ class CrudController extends AbstractController
 
     - 現状では以下表示となります。
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_4/crud_top_add_form_before.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_5/crud_top_add_form_before.twig"></script>
 
 <!--
 ```
@@ -719,12 +719,12 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 ｛％ endblock ％｝
 
 ```
-->
+-->
 
 - コントローラーの修正にあわせて以下の様に追記、変更を行います。
 
 
-<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_4/crud_top_add_form_after.twig"></script>
+<script src="http://gist-it.appspot.com/https://github.com/geany-y/ec-cube.github.io/blob/renew/io/Source/tutorial_5/crud_top_add_form_after.twig"></script>
 
 <!--
 ```

@@ -3,17 +3,6 @@
 {% set body_class = 'front_page' %}
 
 {% block javascript %}
-    <script type="text/javascript">
-        (function($){ ★誤操作防止のためのダイアログをJsで定義します。
-            $('#delete-btn').bind('click', function(){
-                if(confirm('削除したデータは元に戻せません。よろしいですか?')){
-                    return true;
-                }else{
-                    return false;
-                }
-            });
-        })(jQuery);
-    </script>
 {% endblock %}
 
 {% block main %}
@@ -79,7 +68,7 @@
                                             編集
                                             </a></div>
                                         <div class="td tutorial-td">
-                                            <a class="btn btn-default btn-block btn-sm" href="｛｛ url('tutorial_crud_delete', {'id' : Crud.id})  {{ csrf_token_for_anchor() }} data-method="delete" data-message="この会員情報を削除してもよろしいですか？"｝｝">削除</a>
+                                            <a class="btn btn-default btn-block btn-sm" href="｛｛ url('tutorial_crud_delete', {'id' : Crud.id})  {{ csrf_token_for_anchor() }} data-method="delete" data-message="この情報を削除してもよろしいですか？"｝｝">削除</a>
                                         </div> ★削除ボタンを追記します。
                                     </div>
                                     {% endfor %}

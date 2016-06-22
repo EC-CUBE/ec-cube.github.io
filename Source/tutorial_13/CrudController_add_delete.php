@@ -2,9 +2,9 @@
 .
 ..
 ...
- /**
+    /**
      * 削除画面
-     * 引数を元に該当レコードを削除後、エラーがあれば、LogicExceptionをスロー
+     * 引数を元に該当レコードを削除
      * 問題がなければ、登録画面に遷移
      *
      * @param Application $app
@@ -14,13 +14,22 @@
      */
     public function delete(Application $app, Request $request, $id)
     {
-        $deleteResult = $app['eccube.repository.crud']->deleteDataById($id);
+        $this->isTokenValid($app);
 
-        if (!$deleteResult) {
-            throw new \LogicException();
-        }
+        $Crud = $app['orm.em']
+            ->getRepository('Eccube\Entity\Crud')
+            ->find($id);
+
+       if (is_null($Crud)) {
+            $app->addError('該当IDのデーターが見つかりません');
+            return $app->redirect($app->url('tutorial_crud'));
+       }
+
+        $app['orm.em']->remove($Crud);
+        $app['orm.em']->flush($Crud);
 
         return $app->redirect($app->url('tutorial_crud'));
+     }
 .
 ..
 ...

@@ -9,7 +9,7 @@ title: php app/console plugin:develop を利用したプラグイン開発
 
 
 プラグイン開発時、一旦アーカイブした後プラグインのインストールを行う必要がありますが、  
-EC-CUBE3.0.9からコマンドベースで開発の手助けを行う手順が提供されました。
+EC-CUBE 3.0.9からコマンドベースで開発の手助けを行う手順が提供されました。
 
 ```
 php app/console plugin:develop

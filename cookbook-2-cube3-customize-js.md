@@ -100,13 +100,13 @@ title: 管理機能ブロックを利用したJavaScriptの追加
 
 3.ビュー欄、「目標」をクリックします。
 
-4.「目標設定」で「テンプレート・注文」、「タイプ」は到達ページ、「目標の詳細」の「到達ページ」には「/[EC-CUBE3インストールディレクトリ]/html/shopping/complete」の「正規表現」を設定します。
+4.「目標設定」で「テンプレート・注文」、「タイプ」は到達ページ、「目標の詳細」の「到達ページ」には「/[EC-CUBE 3インストールディレクトリ]/html/shopping/complete」の「正規表現」を設定します。
 
 ## GoogleAnaliticsでの確認
 
 ### トラックングタグ確認
 
-1.EC-CUBE3のトップページに遷移後、GoogleAnaliticsのメニュー「レポート」をクリックします。
+1.EC-CUBE 3のトップページに遷移後、GoogleAnaliticsのメニュー「レポート」をクリックします。
 
 ---
 
@@ -124,7 +124,7 @@ title: 管理機能ブロックを利用したJavaScriptの追加
 
 ### コンバージョン確認
 
-1.EC-CUBE3ユーザー画面で購入完了を終えます。
+1.EC-CUBE 3ユーザー画面で購入完了を終えます。
 
 8.GoogleAnaliticsの画面左メニュー「リアルタイム > コンバージョン」をクリック
 
@@ -140,4 +140,4 @@ title: 管理機能ブロックを利用したJavaScriptの追加
 
 1.Js取り込みの参考元
 
-<a href="http://qiita.com/Geany/items/a1bea004f170d69af6c6" target="_blank">【EC-CUBE3/非公式手法】フロントエンド全画面にJSでゴキゲン ( 簡易版 )</a>
+<a href="http://qiita.com/Geany/items/a1bea004f170d69af6c6" target="_blank">【EC-CUBE 3/非公式手法】フロントエンド全画面にJSでゴキゲン ( 簡易版 )</a>

@@ -363,7 +363,7 @@ class CrudController extends AbstractController
     - <a href="http://docs.symfony.gr.jp/symfony2/book/doctrine.html#id8" target="_blank">データベースからのオブジェクトのフェッチ</a>
 
 - **マジックメソッドは便利**なため、**よく利用**しがちです。
-- その一種類である**findBy～**ですが、**オーバーライドによる、危険性**があるため、**EC-CUBE3では、利用する事を推奨していません。**
+- その一種類である**findBy～**ですが、**オーバーライドによる、危険性**があるため、**EC-CUBE 3では、利用する事を推奨していません。**
 
 ## レポジトリのメソッド定義
   - 上記でレポジトリのマジックメソッドについて説明を行いました。

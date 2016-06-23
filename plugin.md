@@ -9,7 +9,7 @@ title: プラグイン仕様
 
 プラグインに関する仕様書は、以下からダウンロードすることが出来ます。
 
-- <a href="http://downloads.ec-cube.net/src/manual/v3/plugin.pdf" target="_blank">ECCUBE3プラグイン仕様</a>
+- <a href="http://downloads.ec-cube.net/src/manual/v3/plugin.pdf" target="_blank">ECCUBE 3プラグイン仕様</a>
 
 # チュートリアル
 

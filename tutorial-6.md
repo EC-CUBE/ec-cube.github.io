@@ -157,7 +157,7 @@ class Version20160607155514 extends AbstractMigration
 
 ## dtb_page_layoutへの画面情報の登録
 
-- EC-CUBE3のテンプレートの**ヘッダー・フッター**は、**dtb_page_layout**に画面情報が**登録されていないと表示されません**。
+- EC-CUBE 3のテンプレートの**ヘッダー・フッター**は、**dtb_page_layout**に画面情報が**登録されていないと表示されません**。
 
 - 以下に**dtb_page_layout**に保存する情報を記載します。
 

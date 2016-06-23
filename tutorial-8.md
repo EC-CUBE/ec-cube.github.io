@@ -418,7 +418,7 @@ class Crud extends \Eccube\Entity\AbstractEntity
 
 - 手動で作成するとヒューマンエラーが起こりうるために、出来るかぎり**コンソール**での**自動作成**をおすすめします。
 
-- コマンドラインで**EC-CUBE3のインストールディレクトリに移動**後、以下**コマンドを実行**してください。
+- コマンドラインで**EC-CUBE 3のインストールディレクトリに移動**後、以下**コマンドを実行**してください。
 
 ※**PHPの実行パス**は、**環境変数に設定済み**とします。
 
@@ -432,7 +432,7 @@ vendor/bin/doctrine orm:generate:entities --extends="Eccube\\Entity\\AbstractEnt
 
 - 詳細は以下を参考にしてください。
 
-<a href="http://sssslide.com/speakerdeck.com/amidaike/ec-cube3kodorideingu-number-3" target="_blank">EC-CUBE3コードリーディング #3</a>
+<a href="http://sssslide.com/speakerdeck.com/amidaike/ec-cube3kodorideingu-number-3" target="_blank">EC-CUBE 3コードリーディング #3</a>
 
 ## 本章で学んだ事
 

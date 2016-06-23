@@ -27,7 +27,7 @@ title: プラグインのテスト
 
 1. 自身のGitHubレポジトリにプッシュ。
 
-1. EC-CUBE3の対象環境に適合しているか確認するために「Travis」を用いてテストを行う。
+1. EC-CUBE 3の対象環境に適合しているか確認するために「Travis」を用いてテストを行う。
 
 ### 前提
 
@@ -162,7 +162,7 @@ class ExampleServiceTest extends EccubeTestCase ★クラス名称を修正
 
   - 本章では、テストコードの書き方については、一切説明を行いません。
   - 以下を参考に作成を行なってください。
-  - <a href="http://qiita.com/chihiro-adachi/items/f2fd1cbe10dccacb3631" target="_blank">EC-CUBE3のメモ - ユニットテスト -</a>
+  - <a href="http://qiita.com/chihiro-adachi/items/f2fd1cbe10dccacb3631" target="_blank">EC-CUBE 3のメモ - ユニットテスト -</a>
 
 ### ローカルでのテストの実行
 
@@ -174,11 +174,11 @@ class ExampleServiceTest extends EccubeTestCase ★クラス名称を修正
   - ご自身の環境に合わせたコンソールを起動してください。
   - ※Windows環境であれば、環境パスに、PHPの実行パスは指定済みとします。
 
-  2.以下の様に**EC-CUBE3のインストールディレクトリ**に移動してください。
+  2.以下の様に**EC-CUBE 3のインストールディレクトリ**に移動してください。
 
 ---
 
-![EC-CUBE3インストールディレクトリ](images/img-plugin-test-open-console.png)
+![EC-CUBE 3インストールディレクトリ](images/img-plugin-test-open-console.png)
 
 ---
 
@@ -207,7 +207,7 @@ vendor/bin/phpunit ./app/Plugin/[自身で作成したプラグインのフォ�
 
 2.今回の例では以下フォルダが該当です。
 
-  - [EC-CUBE3インストールディレクトリ]/app/Plugin/ExampleTest
+  - [EC-CUBE 3インストールディレクトリ]/app/Plugin/ExampleTest
 
 3.フォルダ内にファイルを作成し、以下を記述します。
 
@@ -241,7 +241,7 @@ env:
   global:
     PLUGIN_CODE=ExampleTest ★作成したプラグインのコードを指定します
   matrix:
-#    # ec-cube master ★EC-CUBE3のバージョンを指定します
+#    # ec-cube master ★EC-CUBE 3のバージョンを指定します
 #    - ECCUBE_VERSION=master DB=mysql USER=root DBNAME=myapp_test DBPASS=' ' DBUSER=root
 #    - ECCUBE_VERSION=master DB=pgsql USER=postgres DBNAME=myapp_test DBPASS=password DBUSER=postgres
     - ECCUBE_VERSION=3.0.9 DB=mysql USER=root DBNAME=myapp_test DBPASS=' ' DBUSER=root

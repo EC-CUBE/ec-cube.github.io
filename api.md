@@ -5,9 +5,9 @@ title: API開発指針
 
 ---
 
-EC-CUBE3でAPIを開発するための指針をまとめたものです。
+EC-CUBE 3でAPIを開発するための指針をまとめたものです。
 
-EC-CUBE3では
+EC-CUBE 3では
 
 * RESTの原則に基づいてAPI対応を行います。
 * RESTでは商品一覧、商品詳細といったそれぞれのリソースに対して固有の一意なURIが与えられ、そのURIに対してGETやPOST、PUT、DELETEといった
@@ -91,7 +91,7 @@ https://ドメイン名/api/v1/search?name=aaaa&price=1000
 
 * 参考 [https://ja.wikipedia.org/wiki/HTTPステータスコード](https://ja.wikipedia.org/wiki/HTTPステータスコード)
 
-EC-CUBE3ではレスポンスを渡す時にHTTPステータスコードの`200`番台を返すようにします。
+EC-CUBE 3ではレスポンスを渡す時にHTTPステータスコードの`200`番台を返すようにします。
 
 ```php
 $data = 'aaa';
@@ -130,7 +130,7 @@ HTTPステータスコードに加えてエラーが発生した場合、エラ�
 
 
 ## レスポンスヘッダについて
-今後、認証処理のヘッダ情報などEC-CUBE3独自のヘッダ内容を記述します。
+今後、認証処理のヘッダ情報などEC-CUBE 3独自のヘッダ内容を記述します。
 
 ## レスポンスのフォーマット
 レスポンスデータフォーマットはJSONのみを原則とします。
@@ -138,7 +138,7 @@ HTTPステータスコードに加えてエラーが発生した場合、エラ�
 
 ## 返り値について
 JSONの属性名に規約はありませんがJavaScriptの命名規約においてキャメルケースを使うケースが多いため、
-なるべく先頭小文字のキャメルケースを使う方が望ましいですが、EC-CUBE3にとって使い勝手の良い形式とするため特に制約は設けません。
+なるべく先頭小文字のキャメルケースを使う方が望ましいですが、EC-CUBE 3にとって使い勝手の良い形式とするため特に制約は設けません。
 
 ただし、JSONの返り値の形式は必ず**key-value形式**にします。
 
@@ -240,7 +240,7 @@ FormTypeを利用できる箇所はFormTypeを使って入力チェックを行�
 
 EC-CUBE で Web API を実行する際、一般公開された情報を参照する場合は必要ありませんが、顧客情報を参照したり、受注情報を更新する場合などは認証が必要です。
 
-EC-CUBE3 では、 OpenID Connect を使用した
+EC-CUBE 3 では、 OpenID Connect を使用した
 
 [OAuth2.0 Authorization](http://openid-foundation-japan.github.io/rfc6749.ja.html) 及び [OpenID Connect](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html) をサポートしています。
 

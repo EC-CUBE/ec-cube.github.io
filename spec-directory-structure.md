@@ -9,9 +9,9 @@ title: ディレクトリ・ファイル構成
 
 ### 特徴
 
-1. EC-CUBE3ではSilexフレームワークを採用しているため、**2系から大幅にディレクトリ構造が変化**しました。
+1. EC-CUBE 3ではSilexフレームワークを採用しているため、**2系から大幅にディレクトリ構造が変化**しました。
 
-1. **Symfony2のディレクトリ構造を参考**に、EC-CUBE3**独自構成**となっています。
+1. **Symfony2のディレクトリ構造を参考**に、EC-CUBE 3**独自構成**となっています。
 
 1. **公開ディレクトリについては２系をほぼ踏襲**しています。
 
@@ -89,7 +89,7 @@ title: ディレクトリ・ファイル構成
 
 <!--
 ```
-[EC-CUBE3インストールディレクトリ]
+[EC-CUBE 3インストールディレクトリ]
 ├── ■ app（主に環境によって変更が入るものを配置）
 │   ├── cache
 │   │   └── eccube
@@ -310,12 +310,12 @@ title: ディレクトリ・ファイル構成
 
 ### 設定ファイル
 
-- EC-CUBE3の設定ファイルは以下の通りです
+- EC-CUBE 3の設定ファイルは以下の通りです
 
 #### 対象ファイル
 
 1. /app/config/ec-cube/**config.yml**
-- SSL通信や言語など EC-CUBE3のサイト全体に関わる基本的な設定が記述されています。
+- SSL通信や言語など EC-CUBE 3のサイト全体に関わる基本的な設定が記述されています。
 
 1. /app/config/ec-cube/**database.yml**
 - データーベース名や、ポートなどの、データーベース接続に関する設定が記述されています。
@@ -328,7 +328,7 @@ title: ディレクトリ・ファイル構成
 
 ### 定数
 
-- EC-CUBE3で利用される定数は以下に保存されています
+- EC-CUBE 3で利用される定数は以下に保存されています
 
 #### 対象ファイル
 
@@ -352,4 +352,4 @@ title: ディレクトリ・ファイル構成
 
 ## 参照元
 
-- <a href="http://sssslide.com/speakerdeck.com/amidaike/ec-cube3kodorideingu-number-1" targe="_blank">EC-CUBE3コードリーディング #1</a>
+- <a href="http://sssslide.com/speakerdeck.com/amidaike/ec-cube3kodorideingu-number-1" targe="_blank">EC-CUBE 3コードリーディング #1</a>

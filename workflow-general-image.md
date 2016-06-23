@@ -9,13 +9,13 @@ title: 作業概念図
 
 ![全体概要](/images/work-flow.png)
 
-- 上の図がEC-CUBE3開発で用いられているツールとワークフローです。
+- 上の図がEC-CUBE 3開発で用いられているツールとワークフローです。
 
 ## 各ツールの主な役割
 
 ### 情報交換
 
-- <a href="http://qiita.com/tags/EC-CUBE3" target="_blank">Qiita</a>
+- <a href="http://qiita.com/tags/EC-CUBE 3" target="_blank">Qiita</a>
     - 開発時のTIPSなどを公開しています。
 - <a href="https://gitter.im/" target="_blank">Gitter</a>
     - 開発者同士のコミュニケーションツールとして活用しています。

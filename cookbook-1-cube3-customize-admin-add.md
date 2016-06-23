@@ -286,7 +286,7 @@ class CustomerEditController extends AbstractController
 
 1.まずカスタマーにセットされているところでは、今回項目の関連も考えられますので、カスタマーのエンティティを追いかけていきます。
 
-- EC-CUBE3のコーディング規約でデーターモデルオブジェクトでは変数の初めが大文字で定義します。
+- EC-CUBE 3のコーディング規約でデーターモデルオブジェクトでは変数の初めが大文字で定義します。
 
 2.上記理由から**$Customer**を検索してみます。
 
@@ -346,14 +346,14 @@ class CustomerEditController extends AbstractController
 
 - 次にまず対象データーベースにカラムを追加します。
 - 操作はマイグレーションで行います。
-- コンソールコマンドを開きEC-CUBE3のインストールディレクトリに移動し、以下コマンドを実行します。
+- コンソールコマンドを開きEC-CUBE 3のインストールディレクトリに移動し、以下コマンドを実行します。
 
 ```
 php app/console migrations:generate
 ```
 
 - 上記を実行すると以下ディレクトリにマイグレーションファイルの雛形が作成されていると思います。
-  - [EC-CUBE3インストールディレクトリ]/src/Eccube/Resource/doctrine/migration
+  - [EC-CUBE 3インストールディレクトリ]/src/Eccube/Resource/doctrine/migration
 
 - 作成ファイル
   - **Version20160616144602.php**
@@ -433,7 +433,7 @@ class Version20160616155605 extends AbstractMigration
 ### マイグレーションファイルの実行
 
 - 上記記述が完了したら、以下のフォルダに移動し、マイグレーションのコマンドで、テーブルを作成します。
-  - [EC-CUBE3インストールディレクトリ]/src/Eccube/Resource/doctrine/migration
+  - [EC-CUBE 3インストールディレクトリ]/src/Eccube/Resource/doctrine/migration
 
   - コマンド
 
@@ -657,12 +657,12 @@ public function getDepartment()
 
 ## 関連ファイルの確認
 
-- 今回は管理画面への「登録・編集」が目的のために、ここまでの修正で完了ですが、本来であれば、EC-CUBE3インストールディレクトリで確認し、関連箇所で不整合が発生しないか、確認してくだい。
+- 今回は管理画面への「登録・編集」が目的のために、ここまでの修正で完了ですが、本来であれば、EC-CUBE 3インストールディレクトリで確認し、関連箇所で不整合が発生しないか、確認してくだい。
 
 - Linuxなどの環境であれば、以下で検索を行い、影響範囲を確認してみてください。
 
   - 検索対象トップディレクトリは以下から行なってください。
-  - [EC-CUBE3インストールディレクトリ]/src/Eccube/
+  - [EC-CUBE 3インストールディレクトリ]/src/Eccube/
 
 ```
 

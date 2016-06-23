@@ -11,7 +11,7 @@ title: Web API Authorization ガイド
 
 EC-CUBE で Web API を実行する際、一般公開された情報を参照する場合は必要ありませんが、顧客情報を参照したり、受注情報を更新する場合などは認証が必要です。
 
-EC-CUBE3 では、 [OpenID Connect](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html) を使用した認証をサポートしています。
+EC-CUBE 3 では、 [OpenID Connect](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html) を使用した認証をサポートしています。
 本認証を使用する場合は、[TLS をサポート](http://openid-foundation-japan.github.io/openid-connect-basic-1_0.ja.html#TLSRequirements)する必要があります。
 
 ## 対応するフロー
@@ -59,7 +59,7 @@ RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
 
 OAuth2.0 では CSRF を防ぐための state パラメータが[推奨となっています](http://openid-foundation-japan.github.io/rfc6749.ja.html#CSRF)。
 しかし、多くの OAuth2.0 クライアントのサンプルは、 state パラメータに標準では対応していません。
-EC-CUBE3 では、 **state パラメータは必須** ですので、ご注意ください。
+EC-CUBE 3 では、 **state パラメータは必須** ですので、ご注意ください。
 
 ### 実装チュートリアル
 

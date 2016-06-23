@@ -206,4 +206,4 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 ### 参考
 
-<a href="http://qiita.com/poego/items/81628dcd0f8e4d4a2d9d" target="_blank">EC-CUBE3のTwigのタグ覚え書き（一部EC-CUBE2系のSmarty比較）<a/>
+<a href="http://qiita.com/poego/items/81628dcd0f8e4d4a2d9d" target="_blank">EC-CUBE 3のTwigのタグ覚え書き（一部EC-CUBE2系のSmarty比較）<a/>

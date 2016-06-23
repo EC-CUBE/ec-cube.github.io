@@ -62,9 +62,9 @@ $allow = array(
 
 #### 備考
 
-- 以下の作業はEC-CUBE3.0.8以上の方のみが対象となります。
+- 以下の作業はEC-CUBE 3.0.8以上の方のみが対象となります。
 
-* EC-CUBE3.0.8からdump用ライブラリを導入したことにより、パッケージ版だと index\_dev.php がそのままだと使えません。  
+* EC-CUBE 3.0.8からdump用ライブラリを導入したことにより、パッケージ版だと index\_dev.php がそのままだと使えません。  
 index\_dev.php を使えるようにするためにはEC-CUBEディレクトリ直下で、以下のコマンドを入力してください。  
 
 ``` curl -sS https://getcomposer.org/installer | php ```  
@@ -77,7 +77,7 @@ index\_dev.php を使えるようにするためにはEC-CUBEディレクトリ�
 
 ## オブジェクトの中身を確認する
 
-- 前述した通りEC-CUBE3.0.8からdump用の以下Symfony Componentが導入されました。
+- 前述した通りEC-CUBE 3.0.8からdump用の以下Symfony Componentが導入されました。
 - 以下が該当コンポーネントです。
 
 - [VarDumper Component](http://symfony.com/doc/current/components/var_dumper/introduction.html)
@@ -100,7 +100,7 @@ dump([中身を確認したいオブジェクトのインスタンス]);
 
 - その際は、以下フォルダのログを参考にデバッグを行なってください。
 
-- **/[EC-CUBE3のインストールディレクトリ]/app/log**
+- **/[EC-CUBE 3のインストールディレクトリ]/app/log**
 
 - あわせて、**PHPのログ**、**WEBサーバーのログ**も参考の対象としてくだい。
 

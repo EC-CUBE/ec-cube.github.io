@@ -24,7 +24,7 @@ title: Doctrineのためにデーターベース構造を設定しよう
 
 - 前章で、本チュートリアルのテーブルを作成しました。
 
-- EC-CUBE3ではデーターベース操作を**Doctine**という**ObjectRelationalMapping**を用いて透過的にデーターベースレコードを扱います。
+- EC-CUBE 3ではデーターベース操作を**Doctine**という**ObjectRelationalMapping**を用いて透過的にデーターベースレコードを扱います。
 
 - おおまかな概念は以下の通りです。
 

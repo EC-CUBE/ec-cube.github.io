@@ -126,4 +126,4 @@ $ git push origin admin_basis_point
 
 ### 参照元
 
-- <a href="http://qiita.com/chihiro-adachi/items/f31c9d90b1bcc3553c20" target="_blank">EC-CUBE3のメモ - GitHub/Git使い方 -</a>
+- <a href="http://qiita.com/chihiro-adachi/items/f31c9d90b1bcc3553c20" target="_blank">EC-CUBE 3のメモ - GitHub/Git使い方 -</a>

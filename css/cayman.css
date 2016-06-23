@@ -276,3 +276,25 @@ a {
     position: relative;
   }
 }
+
+body {
+    position: relative;
+}
+
+#menu {
+    position: fixed;
+    right: 150px;
+    top: 310px;
+}
+
+#menu ul li{
+    list-style: none;
+    font-size: 0.1em;
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+#menu{
+  display: none; } }
+@media screen and (max-width: 42em) {
+#menu{
+  display: none; } }

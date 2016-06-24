@@ -12,16 +12,14 @@ title: ホーム
 - [EC-CUBE 3 開発レポジトリ](https://github.com/EC-CUBE/ec-cube)
 - [EC-CUBE 3 開発ドキュメントレポジトリ](https://github.com/EC-CUBE/ec-cube.github.io)
 
-## 基本仕様
-
-### Quick Start
+## Quick Start
 
 - [システム要件](/requirement.html)
 - [開発環境の構築](development-environment.html)
 - [インストール方法](/install.html)
 - [アップデート方法](/update.html)
 
-### EC-CUBE 3 仕様
+## EC-CUBE 3 仕様
 
 - [ディレクトリ・ファイル構成](/spec-directory-structure.html)
   1. 主なディレクトリと役割
@@ -31,7 +29,7 @@ title: ホーム
 - [テンプレート探索順序](/template.html)
 - <a href="https://github.com/EC-CUBE/eccube3-doc" target="_blank">テーブル構成</a>
 
-### プラグイン仕様
+## プラグイン仕様
 
 - [プラグイン仕様・チュートリアル](/plugin.html)
 - [インストーラ仕様](/plugin_install.html)
@@ -39,12 +37,12 @@ title: ホーム
 - [php app/console plugin:develop を利用したプラグイン開発](/plugin_console.html)
 - [プラグインのテスト](plugin-test.html)
 
-### Web API仕様
+## Web API仕様
 
 - [Web API開発指針](/api.html)
 - [Web API Authorization ガイド](/api_authorization.md)
 
-### 開発ガイドライン
+## 開発ガイドライン
 - 開発を行う際の、主なフローと、前提知識を提供します。
 
 	- [開発作業全体概要](workflow-general-image.html)
@@ -56,11 +54,11 @@ title: ホーム
         1. カスタマイズ時に作成・変更するファイル
         2. 外部コンポーネント
 
-### 開発の補助
+## 開発の補助
 
 - [デバッグ・Tips](tips.html)
 
-### EC-CUBE 3で利用されている技術
+## EC-CUBE 3で利用されている技術
 - EC-CUBE 3のコアとなる技術概要と、参考になるサイトの参照先を紹介しています。
 
 	- [技術一覧](/architecture.html)
@@ -71,7 +69,7 @@ title: ホーム
 		1. ライブラリ管理 
 
 
-### チュートリアル
+## チュートリアル
 
 - チュートリアルで最終的に作るもの
 
@@ -81,7 +79,7 @@ title: ホーム
     
         - <a href="https://github.com/geany-y/ec-cube/tree/documents/tutorial" target="_blank">GitHub</a>
 
-#### チュートリアル一覧
+### チュートリアル一覧
 
 - **URLを設定しよう**
     - [ルーティングとコントローラープロバイダー](tutorial-1.html)
@@ -126,14 +124,14 @@ title: ホーム
     - [レコードの削除](tutorial-13.html)
 
 
-### クックブック
+## クックブック
 
 - 本クックブックでは、チュートリアルとは違い、より実践的なカスタマイズ方法を説明していきます。
 
-#### 管理画面項目の追加
+### 管理画面項目の追加
 
 1. [本体カスタマイズ](cookbook-1-cube3-customize-admin-add.html)
 
-#### GoogleAnaliticsの追加方法
+### GoogleAnaliticsの追加方法
 
 1. [管理機能ブロックを利用したJavaScriptの追加](cookbook-2-cube3-customize-js.html)

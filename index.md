@@ -7,21 +7,29 @@ title: ホーム
 
 # EC-CUBE 3 開発ドキュメント
 
-<!--
 ## GitHub
 
-[https://github.com/EC-CUBE/ec-cube](https://github.com/EC-CUBE/ec-cube)
--->
-
-<!-- ## 目次 -->
+- [EC-CUBE 3 開発レポジトリ](https://github.com/EC-CUBE/ec-cube)
+- [EC-CUBE 3 開発ドキュメントレポジトリ](https://github.com/EC-CUBE/ec-cube.github.io)
 
 ## 基本仕様
 
-### 本体
+### Quick Start
 
 - [システム要件](/requirement.html)
+- [開発環境の構築](development-environment.html)
 - [インストール方法](/install.html)
 - [アップデート方法](/update.html)
+
+### EC-CUBE 3 仕様
+
+- [ディレクトリ・ファイル構成](/spec-directory-structure.html)
+  1. 主なディレクトリと役割
+  1. 設定ファイル
+  1. 定数
+  1. 2系・3系置き換え早見表
+- [テンプレート探索順序](/template.html)
+- <a href="https://github.com/EC-CUBE/eccube3-doc" target="_blank">テーブル構成</a>
 
 ### プラグイン仕様
 
@@ -31,10 +39,10 @@ title: ホーム
 - [php app/console plugin:develop を利用したプラグイン開発](/plugin_console.html)
 - [プラグインのテスト](plugin-test.html)
 
-### API仕様
+### Web API仕様
 
-- [API開発指針](/api.html)
-
+- [Web API開発指針](/api.html)
+- [Web API Authorization ガイド](/api_authorization.md)
 
 ### 開発ガイドライン
 - 開発を行う際の、主なフローと、前提知識を提供します。
@@ -43,7 +51,6 @@ title: ホーム
 	- [コーディング規約](coding_style.html)
 	- [マイグレーションガイド](migration.html)
 	- <a href="http://qiita.com/nanasess/items/350e59b29cceb2f122b3" target="_blank">ログ設計指針</a>
-	- [開発環境の構築](development-environment.html)
 	- [Gitを用いた開発手順](workflow.html)
 	- [カスタマイズリファレンス](customize-reference.html)
         1. カスタマイズ時に作成・変更するファイル
@@ -62,19 +69,6 @@ title: ホーム
 		1. データーベース抽象化レイヤ 
 		1. テンプレートエンジン 
 		1. ライブラリ管理 
-
-### EC-CUBE 3仕様
-
-- EC-CUBE 3の仕様を「ディレクトリ構成」を元に、説明しています。
-
-	- [ディレクトリ・ファイル構成](/spec-directory-structure.html)
-    1. 主なディレクトリと役割
-    1. 設定ファイル
-    1. 定数
-    1. 2系・3系置き換え早見表
-
-	- [テンプレート探索順序](/template.html)
-	- <a href="https://github.com/EC-CUBE/eccube3-doc" target="_blank">テーブル構成</a>
 
 
 ### チュートリアル
@@ -131,13 +125,6 @@ title: ホーム
 - **いらない情報を削除してみよう**
     - [レコードの削除](tutorial-13.html)
 
-<!--
-### チュートリアルを終えて
-
-### Silex + Symfony2 + EC-CUBE 3の関係
-
-### Symfony2コンポーネント
--->
 
 ### クックブック
 
@@ -150,34 +137,3 @@ title: ホーム
 #### GoogleAnaliticsの追加方法
 
 1. [管理機能ブロックを利用したJavaScriptの追加](cookbook-2-cube3-customize-js.html)
-
-
-<!--
-## システム要件
-
-## 開発ガイドライン
-
-### EC-CUBE 3仕様
--->
-
-<!--
-- [インストール方法](/install.html)★
-- [アップデート方法](/update.html)★
-- [システム要件](/requirement.html)★
-- ディレクトリ・ファイル構成
-    - [ディレクトリ・ファイル構成](/directory.html)☆
-- プラグイン仕様
-    - [プラグイン仕様・チュートリアル](/plugin.html)★
-    - [インストーラ仕様](/plugin_install.html)★
-    - [ハンドラによる優先制御仕様](/plugin_handler.html) ★
-    - [php app/console plugin:develop を利用したプラグイン開発](/plugin_console.html)★
-- API仕様
-    - [API開発指針](/api.html)★
-- 開発ガイドライン
-    - [コーディング規約](/coding_style.html) ○
-    - [マイグレーションガイド](/migration.html) ○
-    - [ユニットテストガイド](/unittest.html)★
-    - [開発・デバッグTips](/tips.html)☆
-    - [用語集(準備中)](/glossary.html)★
-- [FAQ(準備中)](/faq.html)★
--->

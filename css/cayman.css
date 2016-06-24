@@ -8,6 +8,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #606c71; 
+  position: relative;
   }
 
 a {
@@ -260,20 +261,42 @@ a {
   display: none; } }
 
 .inner {
-  position: relative;
+  /*position: relative;*/
   width: 760px;
   margin: 0 auto;
+  padding: 10px 0px 0px 0px;
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .inner {
     width: 740px;
+    /*float:left;*/
+    padding: 10px 0px 0px 0px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .inner {
-    width: 93%;
-    position: relative;
+    width: 100%;
+    float: left;
+    padding: 0px 0px 0px 10px;
+  }
+}
+
+#search-box {
+  text-align: right;
+}
+#search-box-inner {
+  float:right;
+  width: 300px;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #search-box {
+    float: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #search-box {
+    float: none;
   }
 }
 
@@ -282,14 +305,27 @@ body {
 }
 
 #menu {
+    width:300px;
     position: fixed;
-    right: 150px;
-    top: 310px;
+    right: 50px;
+    top: 450px;
 }
 
+/*
 #menu ul li{
     list-style: none;
     font-size: 0.1em;
+}
+*/
+#menu{
+    color: #999999;
+}
+#menu a:link,
+#menu a:visited,
+#menu a:hover,
+#menu a:active {
+    color: #999999;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
@@ -298,3 +334,35 @@ body {
 @media screen and (max-width: 42em) {
 #menu{
   display: none; } }
+
+#content-header {
+    padding: 10px 0px 0px 0px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+#menu .top a{
+    font-weight: bold;
+    color: #555555; 
+}
+#menu .top-second a{
+    font-weight: bold;
+    color: #777777; 
+    padding:0px 0px 0px 10px;
+}
+#menu .second-top a{
+    color: #aaaaaa; 
+}
+#menu .second-second a{
+    color: #cccccc; 
+    padding:0px 0px 0px 10px;
+}

@@ -72,8 +72,6 @@ class CrudController extends AbstractController
 {
     public function index(Application $app, Request $request)
     {
-        $app->clearMessage(); ★フラッシュメッセージをクリア
-
         $Crud = new \Eccube\Entity\Crud();
 
         $builder = $app['form.factory']->createBuilder('crud', $Crud);
@@ -114,18 +112,9 @@ class CrudController extends AbstractController
 #### フラッシュメッセージ
 
 1. 今まで保存の成功の有無を**$message**で画面へ受け渡していたのを、フラッシュメッセージに変更します。
-      - **フラッシュメッセージ**は**セッション**に格納されるメッセージで、画面遷移が発生すると破棄されます。
+      - **フラッシュメッセージ**は**セッション**に格納されるメッセージで、一度画面に表示すると破棄されます。
       - EC-CUBE 3では、主に管理画面で使用されています。
       - 処理結果メッセージの表示を行う際は、コントローラーから変数で画面にメッセージを渡す方法を基本的には用いずに、こちらを利用する事を推奨いたします。
-
-1. フラッシュメッセージのクリア方法を説明します。
-
-      ```
-      $app->clearMessage()
-      ```
-
-      - 今回は画面遷移がないため、明示的にメッセージのクリアが必要です。
-      - フラッシュメッセージを意図的にクリアしたい際は、上記をコールします。
 
 1. 成功メッセージの表示方法を説明します。
 
@@ -290,7 +279,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
                    <p class="text-success"><bold>｛｛ message ｝｝</bold></p>
                ｛％ endfor ％｝
                ｛％ for message in app.session.getFlashBag.get('eccube.front.error') ％｝ ★フラッシュメッセージのチェックと書き出す ( エラーメッセージ )
-                   <p class="text-error"><bold>｛｛ message ｝｝</bold></p>
+                   <p class="text-danger"><bold>｛｛ message ｝｝</bold></p>
                ｛％ endfor ％｝
            </div>
            <div id="form-wrapper">
@@ -355,7 +344,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 1. 今回は、**セッション**オブジェクトから、フラッシュメッセージの内容を取得しています。
 
-1. フラッシュメッセージは画面遷移(URLの変更)があれば、削除されると前述しましたが、情報が格納されているのは、**セッション**です。
+1. フラッシュメッセージは一度画面に表示されれば、削除されると前述しましたが、情報が格納されているのは、**セッション**です。
 
 1. 具体的にフラッシュメッセージを取得しているメソッドは以下です。
 

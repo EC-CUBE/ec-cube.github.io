@@ -28,7 +28,7 @@
                    <p class="text-success"><bold>{{ message }}</bold></p>
                {% endfor %}
                {% for message in app.session.getFlashBag.get('eccube.front.error') %}
-                   <p class="text-error"><bold>{{ message }}</bold></p>
+                   <p class="text-danger"><bold>{{ message }}</bold></p>
                {% endfor %}
            </div>
            <div id="form-wrapper">
@@ -68,7 +68,7 @@
                                             編集
                                             </a></div>
                                         <div class="td tutorial-td">
-                                            <a class="btn btn-default btn-block btn-sm" href="｛｛ url('tutorial_crud_delete', {'id' : Crud.id})  {{ csrf_token_for_anchor() }} data-method="delete" data-message="この情報を削除してもよろしいですか？"｝｝">削除</a>
+                                            <a class="btn btn-default btn-block btn-sm" href="{{ url('tutorial_crud_delete', {'id' : Crud.id}) }}" {{ csrf_token_for_anchor() }} data-method="delete" data-message="この情報を削除してもよろしいですか？">削除</a>
                                         </div> ★削除ボタンを追記します。
                                     </div>
                                     {% endfor %}

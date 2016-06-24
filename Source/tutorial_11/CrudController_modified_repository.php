@@ -12,8 +12,6 @@ class CrudController extends AbstractController
 
     public function index(Application $app, Request $request)
     {
-        $app->clearMessage();
-
         $Crud = new \Eccube\Entity\Crud(); ★フォーム生成部は処理かわらず
 
         $builder = $app['form.factory']->createBuilder('crud', $Crud);

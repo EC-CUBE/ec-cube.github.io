@@ -1,5 +1,5 @@
-name: EC-CUBE3
-title:        EC-CUBE3
+name: EC-CUBE 3
+title:        EC-CUBE 3 開発ドキュメント
 tagline:      EC open platform EC-CUBE
 # About/contact
 author:
@@ -10,3 +10,5 @@ markdown: kramdown
 kramdown:
   input: GFM
 #highlighter: pygments
+gems:
+  - jekyll-sitemap

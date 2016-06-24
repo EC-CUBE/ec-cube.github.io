@@ -9,7 +9,7 @@ title: システム要件
 
 | 分類 | ソフトウェア|Version|動作確認済み|
 |---|-------|---|-------|
-|WebServer|IS(windows系OS )| 8.0 以上| 8.0 |
+|WebServer|IIS(windows系OS )| 8.0 以上| 8.0 |
 |WebServer|Apache |2.2.x, 2.4.x| 2.2.15 |
 |PHP | PHP   | >= 5.3.9 |5.4.39|
 |Database|PostgreSQL| 8.4.x以降  9.x以降 ※pg_settingsテーブルへの参照権限が必要です|8.4.20|

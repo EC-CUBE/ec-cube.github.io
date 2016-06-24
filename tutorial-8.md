@@ -420,11 +420,13 @@ class Crud extends \Eccube\Entity\AbstractEntity
 
 - コマンドラインで**EC-CUBE 3のインストールディレクトリに移動**後、以下**コマンドを実行**してください。
 
+※**Eccube.Entity.[エンティティ名].dcm.yml**の一行目にエンティティのパスを指定しますが、この際、YAMLファイル名で指定した**[エンティティ名]**と**エンティティパスのエンティティ名**が違えば**エラー**となるため、必ず**ファイル名、パスのエンティティ名**は**同一名称を使用**してください。
+
 ※**PHPの実行パス**は、**環境変数に設定済み**とします。
 
 ```
 
-vendor/bin/doctrine orm:generate:entities --extends="Eccube\\Entity\\AbstractEntity" src
+vendor/bin/doctrine orm:generate:entities --extend="Eccube\\Entity\\AbstractEntity" src --filter="Crud"
 
 ```
 

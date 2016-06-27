@@ -261,16 +261,15 @@ a {
   display: none; } }
 
 .inner {
-  /*position: relative;*/
   width: 760px;
   margin: 0 auto;
-  padding: 10px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .inner {
-    width: 740px;
-    /*float:left;*/
-    padding: 10px 0px 0px 0px;
+    width: 48%;
+    float:left;
+    padding: 20px 0px 0px 15px;
   }
 }
 
@@ -283,6 +282,7 @@ a {
 }
 
 #search-box {
+  float:right;
   text-align: right;
 }
 #search-box-inner {
@@ -291,7 +291,9 @@ a {
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   #search-box {
-    float: none;
+    /*float: none;*/
+    float:right;
+    width: 45%;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -299,6 +301,35 @@ a {
     float: none;
   }
 }
+
+body {
+    position: relative;
+}
+
+#menu {
+    width:300px;
+    position: fixed;
+    right: 50px;
+    top: 450px;
+}
+#menu{
+    color: #999999;
+}
+#menu a:link,
+#menu a:visited,
+#menu a:hover,
+#menu a:active {
+    color: #999999;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+#menu{
+  display: none; } }
+@media screen and (max-width: 42em) {
+#menu{
+  display: none; } }
+
 #content-header {
     padding: 10px 0px 0px 0px;
 }
@@ -313,3 +344,20 @@ a {
 }
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+#menu .top a{
+    font-weight: bold;
+    color: #555555; 
+}
+#menu .top-second a{
+    font-weight: bold;
+    color: #777777; 
+    padding:0px 0px 0px 10px;
+}
+#menu .second-top a{
+    color: #aaaaaa; 
+}
+#menu .second-second a{
+    color: #cccccc; 
+    padding:0px 0px 0px 10px;
+}

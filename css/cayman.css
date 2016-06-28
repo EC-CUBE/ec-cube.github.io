@@ -307,9 +307,9 @@ body {
 }
 
 #menu {
-    width:270px;
+    width:180px;
     position: fixed;
-    right: 30px;
+    right: 20px;
     top: 450px;
 }
 #menu{

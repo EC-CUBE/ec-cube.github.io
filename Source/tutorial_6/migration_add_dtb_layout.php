@@ -40,7 +40,7 @@ class Version20160607155514 extends AbstractMigration
             ->where('pl.url = :Url')
             ->setParameter('Url', 'tutorial_crud');
 
-        $res = $Point = $qb->getQuery()->getResult(); ★SQL結果を取得
+        $res = $qb->getQuery()->getResult(); ★SQL結果を取得
 
         if(count($res) < 1){ ★結果がなければ、以下情報を書き込み
             $PageLayout = new PageLayout(); ★登録するためのエンティティをインスタンス化

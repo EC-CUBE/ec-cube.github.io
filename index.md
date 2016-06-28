@@ -9,8 +9,8 @@ title: ホーム
 
 ## GitHub
 
-- [EC-CUBE 3 開発レポジトリ](https://github.com/EC-CUBE/ec-cube)
-- [EC-CUBE 3 開発ドキュメントレポジトリ](https://github.com/EC-CUBE/ec-cube.github.io)
+- <a href="https://github.com/EC-CUBE/ec-cube" target="_blank">EC-CUBE 3 開発レポジトリ</a>
+- <a href="https://github.com/EC-CUBE/ec-cube.github.io" target="_blank">EC-CUBE 3 開発ドキュメントレポジトリ</a>
 
 ## Quick Start
 
@@ -40,7 +40,7 @@ title: ホーム
 ## Web API仕様
 
 - [Web API開発指針](/api.html)
-- [Web API Authorization ガイド](/api_authorization.md)
+- [Web API Authorization ガイド](/api_authorization.html)
 
 ## 開発ガイドライン
 - 開発を行う際の、主なフローと、前提知識を提供します。

@@ -183,11 +183,11 @@ _“結局のところ、Symfony2 とはいったい何なのでしょうか？ 
     - 基本事項として以下を確認してください。
     - エンティティマネージャ、レポジトリ、クエリビルダの説明です。
 
-        - [EntityManager](http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.EntityManager.html)
+        - <a href="http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.EntityManager.html" target="_blank">EntityManager</a>
 
-        - [EntityRepository](http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.EntityRepository.html)
+        - <a href="http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.EntityRepository.html" target="_blank">EntityRepository</a>
 
-        - [QueryBuilder](http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.QueryBuilder.html)
+        - <a href="http://www.doctrine-project.org/api/orm/2.4/class-Doctrine.ORM.QueryBuilder.html" target="_blank">QueryBuilder</a>
 
 
 

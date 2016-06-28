@@ -29,7 +29,7 @@ title: Gitを用いた開発手順
 
 ① まず本家のレポジトリをフォークします
 
- - <a href="http://qiita.com/tbpgr/items/4ff76ef35c4ff0ec8314" target="_blank">本家のレポジトリ</a>で、右上のForkボタンをクリックします。
+ - <a href="https://github.com/EC-CUBE/ec-cube" target="_blank">本家のレポジトリ</a>で、右上のForkボタンをクリックします。
 
 
 ### ローカルレポジトリの構築

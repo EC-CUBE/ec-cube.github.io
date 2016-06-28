@@ -265,7 +265,7 @@ a {
   margin: 0 auto;
   padding: 20px 0px 0px 0px;
 }
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 640px) and (max-width: 959px) {
   .inner {
     width: 48%;
     float:left;
@@ -273,7 +273,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 640px) {
   .inner {
     width: 100%;
     float: left;
@@ -289,14 +289,14 @@ a {
   float:right;
   width: 300px;
 }
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 640px) and (max-width: 959px) {
   #search-box {
     /*float: none;*/
     float:right;
     width: 45%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 640px) {
   #search-box {
     float: none;
   }
@@ -307,9 +307,9 @@ body {
 }
 
 #menu {
-    width:300px;
+    width:180px;
     position: fixed;
-    right: 50px;
+    right: 20px;
     top: 450px;
 }
 #menu{
@@ -322,7 +322,9 @@ body {
     color: #999999;
     text-decoration: none;
 }
-
+@media screen and (max-width: 1280px) {
+#menu{
+  display: none; } }
 @media screen and (min-width: 42em) and (max-width: 64em) {
 #menu{
   display: none; } }

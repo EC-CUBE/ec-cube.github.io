@@ -80,7 +80,7 @@ index\_dev.php を使えるようにするためにはEC-CUBEディレクトリ�
 - 前述した通りEC-CUBE 3.0.8からdump用の以下Symfony Componentが導入されました。
 - 以下が該当コンポーネントです。
 
-- [VarDumper Component](http://symfony.com/doc/current/components/var_dumper/introduction.html)
+- <a href="http://symfony.com/doc/current/components/var_dumper/introduction.html" target="_blank">VarDumper Component</a>
 
 ### 利用方法
 

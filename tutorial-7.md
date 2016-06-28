@@ -33,7 +33,7 @@ title: Doctrineのためにデーターベース構造を設定しよう
         - <a href="http://builder.japan.zdnet.com/sp_oracle/weblogic/35067018/" target="_blank">初めてのJPA--シンプルで使いやすい、Java EEのデータ永続化機能の基本を学ぶ</a>
 
 
-        - <a href="https://vladmihalcea.com/2014/07/30/a-beginners-guide-to-jpahibernate-entity-state-transitions/">A beginner’s guide to JPA/Hibernate entity state transitions</a>
+        - <a href="https://vladmihalcea.com/2014/07/30/a-beginners-guide-to-jpahibernate-entity-state-transitions/" target="_blank">A beginner’s guide to JPA/Hibernate entity state transitions</a>
 
 - Doctrineでは、**エンティティマネージャー**がプログラム上の、**データモデルオブジェクト(エンティティ)を管理**し、レコードの差分を確認しながら、適切に登録、更新を行います。
 

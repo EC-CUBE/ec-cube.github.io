@@ -36,7 +36,7 @@ title: プラグインのテスト
 1. 今回は以下に例としてのプラグインを作成しています。
 
 1. 以下をクローンして、参考としてください。
-  - <a href="https://github.com/EC-CUBE/ExamleTest" target="_blank">ExampleTestプラグイン</a>
+  - <a href="https://github.com/geany-y/ExamleTest" target="_blank">ExampleTestプラグイン</a>
 
 1. 今回のテスト対象は上記レポジトリの「ExampleService.php」というサービスクラスが対象となります。
 

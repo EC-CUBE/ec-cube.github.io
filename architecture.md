@@ -149,28 +149,17 @@ _“結局のところ、Symfony2 とはいったい何なのでしょうか？ 
 
 ### Symfony2
 
+1. <a href="http://gihyo.jp/book/2016/978-4-7741-7803-5" target="_blank">基本からしっかり学ぶSymfony2入門</a>
+
+	- Symfony2の入門本です。Symfony2の基礎を把握できれば、EC-CUBE3の全体像も理解しやすくなります。
+
 1. <a href="http://docs.symfony.gr.jp/" target="_blank">日本Symfonyユーザ会</a>
 
 	- Symfony2の翻訳ドキュメントが読める。
-		とくに、Form Type リファレンスやバリデータリファレンスは必須です。
-
-1. <a href="http://gihyo.jp/book/2012/978-4-7741-5082-6" target="_blank">効率的なWebアプリケーションの作り方</a>
-
-	- タイトルがわかりにくいですが、Symfony2のサンプルが豊富にあり参考になります。
-
-1. <a href="http://blog.asial.co.jp/669" target="_blank">Symfony 2のアプリケーション構成を読む</a>
-
-	- 情報は古いですが、全体像の把握に参考にしてください。
+	- とくに、Form Type リファレンスやバリデータリファレンスは必須です。
 
 
-<!--
-## Symfony Components
-
-- 保留
--->
-
-
-## データーベース抽象化レイヤ
+## O/Rマッピング
 
 ### Doctrine ORM
 
@@ -202,6 +191,6 @@ _“結局のところ、Symfony2 とはいったい何なのでしょうか？ 
 
 ## ライブラリ管理
 
-### コンポーザー
+### Composer
 
 <a href="https://kohkimakimoto.github.io/getcomposer.org_doc_jp/doc/00-intro.html" target="_blank">コンポーザー日本語ドキュメント</a>

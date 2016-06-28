@@ -15,7 +15,7 @@ title: データーベースを作成しよう
 
     1. 本チュートリアルで利用するテーブルの定義を説明します。
 
-    1. マイグレーションファイルの**schemaオブジェクト**を利用した、テーブル作成の方法を説明しています。
+    1. **エンティティマネージャー**を利用し、テーブルを作成する方法を説明しています。
 
     1. テンプレートファイルの**ヘッダー・フッター表示**のために**dtb_page_layout**にデータの登録が必要な事を説明しています。
 
@@ -25,7 +25,8 @@ title: データーベースを作成しよう
 
 - 本章メニューで示した様に、本章ではテーブル定義の内容についてのみ説明をおこいます。
 
-- テーブル定義は**マイグレーションファイル**に記述していきます。
+<!-- テーブル定義は**マイグレーションファイル**に記述していきます。 -->
+- **マイグレーションファイル**でエンティティマネージャーを用い、エンティティからテーブルスキーマを抽出し、テーブルを作成します。
 
 ## マイグレーションファイルの準備
 
@@ -94,12 +95,13 @@ class Version20160607155514 extends AbstractMigration
 | 投稿登録時間 | created_date | datetime | NOT NULL |
 | 投稿編集時間 | updated_date | datetime | NOT NULL |
 
-- 上記のテーブルの作成処理を以下に記述していきます
+- 上記が作成されるテーブルです。
 
 <script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/tutorial_6/migration_after.php"></script>
 
 <!--
 ```
+
 <?php
 
 namespace DoctrineMigrations;
@@ -107,28 +109,32 @@ namespace DoctrineMigrations;
 use Doctrine\DBAL\Migrations\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
 
+use Doctrine\ORM\Tools\SchemaTool; ★テーブルを作成するために利用します
+use Eccube\Application; ★エンティティマネージャーの取得のために必要です
+
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
 class Version20160607155514 extends AbstractMigration
 {
+
     /**
      * @param Schema $schema
      */
     public function up(Schema $schema)
     {
         if (!$schema->hasTable('dtb_crud')) {
-            $table = $schema->createTable('dtb_crud');
-            $table->addColumn('id', 'integer', array(
-                'autoincrement' => true,
-            ));
-            $table->addColumn('reason', 'smallint', array('NotNull' => true));
-            $table->addColumn('name', 'string', array('NotNull' => true, 'length' => 255));
-            $table->addColumn('title', 'string', array('NotNull' => true, 'length' => 255));
-            $table->addColumn('notes', 'text', array('default' => 'null'));
-            $table->addColumn('create_date', 'datetime', array('NotNull' => true));
-            $table->addColumn('update_date', 'datetime', array('NotNull' => true));
-            $table->setPrimaryKey(array('id'));
+            $entities = array(
+                'Eccube\Entity\Crud' ★テーブル作成を行うエンティティを指定します
+            );
+            $app = Application::getInstance(); ★エンティティマネージャーの取得のためにApplicationを取得します
+            $em = $app['orm.em']; ★エンティティマネージャーを取得します
+            $classes = array();
+            foreach ($entities as $entity) {
+                $classes[] = $em->getMetadataFactory()->getMetadataFor($entity); ★エンティティからカラム情報を取得します。
+            }
+            $tool = new SchemaTool($em); ★テーブル生成のためにスキーマツールをインスタンス化します
+            $tool->createSchema($classes); ★テーブルを生成します
         }
     }
 
@@ -141,18 +147,24 @@ class Version20160607155514 extends AbstractMigration
             $schema->dropTable('dtb_crud');
         }
     }
-}
 ```
 -->
 
 - 上記の説明を行います。
 
-- メソッドの引数に**$schema**変数が存在しますが、テーブル操作を行うためのオブジェクトです。
+    1. メソッドの引数に**$schema**変数が存在しますが、テーブル操作を行うためのオブジェクトです。
 
-    1. はじめに、**hasTable**メソッドを用いて、**今回テーブルの有無**を確認しています。
-    1. テーブルが存在しない場合のみ**createTable**メソッドで**テーブルを作成**します。
-    1. テーブルを作成した後は、テーブルスキーマを確認しながら、**addColumn**メソッドでカラムを追加していきます。
-    1. 最後に、**setPrimaryKey**でプライマリーキーを指定しています。
+    1. 本内容は次章以降で説明する内容を多数含んでいますが、今回は説明のみ行います。
+        - 詳細は次章以降を確認してください。
+    1. 次に「Application」のインスタンスを取得しています。
+        - 以前説明した通り、**「$app」**のメソッドを呼び出しアプリケーションを構築していきますが、今回も同様です。
+    1. アプリケーションのインスタンスから、エンティティマネージャーを取得しています。
+    1. **hasTable**メソッドを用いて、**今回テーブルの有無**を確認しています。
+    1. テーブル作成対象のエンティティのパスを配列に格納しています。
+        - 今回作成テーブル該当が一件のために、配列にエンティティ名を格納する必要性はありませんが、今回説明内容が、汎用的なために、あえて配列に格納しています。
+    1. エンティティマネージャーの**getMetadataFactory**と、そのメソッド**getMetadataFor**に今回該当のエンティティのパスを指定して、エンティティから、カラム情報を取得します。
+    1. **SchemaTool**にエンティティマネージャを引数で渡し、インスタンスを取得します。
+    1. **SchemaTool**のメソッド**createSchema**に取得済みのカラム情報を渡し、テーブルを生成します。
     1. 次に「down」メソッドの説明ですが、「down」メソッドは**dropTable**メソッドでテーブルを削除しています。
 
 ## dtb_page_layoutへの画面情報の登録
@@ -177,40 +189,42 @@ class Version20160607155514 extends AbstractMigration
 
 <!--
 ```
+
 <?php
 
 namespace DoctrineMigrations;
 
 use Doctrine\DBAL\Migrations\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
-use Eccube\Entity\PageLayout;
+
+use Doctrine\ORM\Tools\SchemaTool; ★テーブルを作成するために利用します
+use Eccube\Application; ★エンティティマネージャーの取得のために必要です
 
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
 class Version20160607155514 extends AbstractMigration
 {
+
     /**
      * @param Schema $schema
      */
     public function up(Schema $schema)
     {
+        $app = Application::getInstance();
+        $em = $app['orm.em'];
         if (!$schema->hasTable('dtb_crud')) {
-            $table = $schema->createTable('dtb_crud');
-            $table->addColumn('id', 'integer', array(
-                'autoincrement' => true,
-            ));
-            $table->addColumn('reason', 'smallint', array('NotNull' => true));
-            $table->addColumn('name', 'string', array('NotNull' => true, 'length' => 255));
-            $table->addColumn('title', 'string', array('NotNull' => true, 'length' => 255));
-            $table->addColumn('notes', 'text', array('default' => 'null'));
-            $table->addColumn('create_date', 'datetime', array('NotNull' => true));
-            $table->addColumn('update_date', 'datetime', array('NotNull' => true));
-            $table->setPrimaryKey(array('id'));
+            $entities = array(
+                'Eccube\Entity\Crud'
+            );
+            $classes = array();
+            foreach ($entities as $entity) {
+                $classes[] = $em->getMetadataFactory()->getMetadataFor($entity); ★エンティティからカラム情報を取得します。
+            }
+            $tool = new SchemaTool($em);
+            $tool->createSchema($classes);
         }
 
-        $app = \Eccube\Application::getInstance(); ★EC-CUBEのアプリケーションクラスを取得
-        $em = $app['orm.em']; ★エンティティマネージャーを取得
         $qb = $em->createQueryBuilder(); ★クエリビルダーを取得
 
         $qb->select('pl') ★該当情報が登録済みかどうかを確認するためのSQLを構築
@@ -266,12 +280,6 @@ class Version20160607155514 extends AbstractMigration
 ```
 -->
 
-- 上記の内容はこれ以降の章で習う内容がほとんどです。
-
-- そのため本章では説明を割愛させていただきます。
-
-- ただ参考のために、ソース内に★印で何を行なっているかは記述しました。
-
 - 上記が完了したら、「マイグレーションガイド」の「マイグレーション受け入れ手順」の章を参照しその内容を実行してください。
 
 - 成功すれば以下の様にテーブルが作成されているはずです。
@@ -287,8 +295,10 @@ class Version20160607155514 extends AbstractMigration
 
 1. コンソールから空の「マイグレーションファイル」を作成しました。
 1. テーブル構造を検討しました。
+1. エンティティマネージャーからエンティティのカラム情報を取得する方法を説明しました。
+1. **SchmeTool**でカラム情報からテーブルを作成する方法を説明しました。
 1. 「マイグレーションファイル」の「schemaオブジェクト」でデーターベース操作をおこないました。
-1. 「schema」オブジェクトで「createTable」「hasTable」「addColumn」「setPrimaryKey」「dropTable」のメソッドを使いテーブルの構築・削除を行いました。
+1. 「schema」オブジェクトで「hasTable」「dropTable」のメソッドを使いテーブルの削除を行いました。
 1. dtb_page_layoutに画面情報を登録しない限り作成した画面には、ヘッダー・フッターなどが表示されない事を説明しました。
 1. dtb_page_layoutへ登録する情報の説明を行いました。
 1. dtb_page_layoutに情報の登録を行いました。

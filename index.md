@@ -28,7 +28,9 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
   1. 定数
   1. 2系・3系置き換え早見表
 - [テンプレート探索順序](/template.html)
-- <a href="https://github.com/EC-CUBE/eccube3-doc" target="_blank">テーブル構成</a>
+- <a href="https://github.com/EC-CUBE/eccube3-doc/blob/master/feature_list.xls" target="_blank">機能一覧</a>
+- <a href="https://github.com/EC-CUBE/eccube3-doc/tree/master/ER-D" target="_blank">テーブル・ER図</a>
+- <a href="https://github.com/EC-CUBE/eccube3-doc/tree/master/IntegrationTest" target="_blank">結合試験項目書</a>
 
 ## プラグイン仕様
 
@@ -40,7 +42,7 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 
 ## Web API仕様
 
-- <a href="web-api-doc.html">Web API β版 プラグインスタートアップガイド</a>
+- [Web API β版 プラグインスタートアップガイド](/web-api-doc.html)
 - [Web API開発指針](/api.html)
 - [Web API認証 ( Authorization ) ガイド](/api_authorization.html)
 

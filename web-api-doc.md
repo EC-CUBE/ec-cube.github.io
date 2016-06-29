@@ -9,11 +9,11 @@ title: Web API β版 プラグインスタートアップガイド
 
 ## 本章の内容
 
-- C-CUBE API β版のインストール方法
+- EC-CUBE API β版のインストール方法
     - Swaggerを利用した動作確認方法
     - 開発に必要なドキュメント
 
-※また、AOuth2.0やOpenID Connectによる認証/APIの利用経験のある方を想定しています。
+※また、OAuth2.0やOpenID Connectによる認証/APIの利用経験のある方を想定しています。
 ※（Facebook/Twitter/Google連携アプリの作成など）
 
 ## 基本要件
@@ -29,7 +29,7 @@ title: Web API β版 プラグインスタートアップガイド
 1. OAuth2.0, OpenID Connect に準拠した認証
     - 一部未サポートの仕様あり（今後サポート予定）
     - セキュティ強化のためOAuth2.0, OpenID Connectの仕様で「推奨→必須」に変更しているパラメータあり
-    - 認証の安全性は SymfonySecurity, php-oauth2-server, EC-CUBE 3.0.0のプラグイン機構に依存
+    - 認証の安全性は SymfonySecurity, php-oauth2-server, EC-CUBE 3.0のプラグイン機構に依存
 1. シングルサインオンの機能は未実装
 1. API ドキュメント生成に使用している swagger は master ブランチの未リリースのものを使用
 1. <a href="https://github.com/EC-CUBE/eccube-api/issues" target="_blank">現状把握している課題</a>
@@ -156,7 +156,7 @@ URL：http://<サイトURL> /api/v0/product
 
 - 詳細は下記のドキュメントをご確認ください。
      - 認証についての開発ドキュメント
-         - <a href="http://ec-cube.github.io/api_authorization.html" target="_blank">Web API認証 ( Authorization ) ガイド</a>
+         - [Web API認証 ( Authorization ) ガイド](http://ec-cube.github.io/api_authorization.html)
 
 
 ### 実装サンプル
@@ -177,17 +177,17 @@ URL：http://<サイトURL> /api/v0/product
 
         1.API開発ドキュメント
 
-        - <a href="http://ec-cube.github.io/api" target="_blank">API開発指針</a>
+        - [API開発指針](http://ec-cube.github.io/api)
 
         2.APIエンドポイント一覧
 
-        - <a href="https://github.com/EC-CUBE/ec-cube.github.io/blob/master/documents/api/EC-CUBE_API_Endpoint.pdf" target="_blank">GitHub</a>
+        - [GitHub](https://github.com/EC-CUBE/ec-cube.github.io/blob/master/documents/api/EC-CUBE_API_Endpoint.pdf)
 
 ## APIで取得できる情報について
-- **β版**ではEC-CUBE 3.0.0の**各テーブル**に対して**CRUDアクセスを提供**しています。
+- **β版**ではEC-CUBE 3.0の**各テーブル**に対して**CRUDアクセスを提供**しています。
 - そのためAPIから**取得したデータの定義**は、**EC-CUBE 3.0のテーブル定義に依存**します。
-- EC-CUBE 3.0.0のテーブル定義は下記を参照してください。
-    - EC-CUBE 3.0.0テーブル定義
+- EC-CUBE 3.0のテーブル定義は下記を参照してください。
+    - EC-CUBE 3.0テーブル定義
         - <a href="https://github.com/EC-CUBE/eccube3-doc/tree/master/ER-D" target="_blank">GitHub</a>
 
 ## トラブルシューティング

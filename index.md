@@ -39,8 +39,9 @@ title: ホーム
 
 ## Web API仕様
 
+- <a href="web-api-doc.html">Web API β版 プラグインスタートアップガイド</a>
 - [Web API開発指針](/api.html)
-- [Web API Authorization ガイド](/api_authorization.html)
+- [Web API認証 ( Authorization ) ガイド](/api_authorization.html)
 
 ## 開発ガイドライン
 - 開発を行う際の、主なフローと、前提知識を提供します。

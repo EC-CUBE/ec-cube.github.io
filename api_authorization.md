@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Web API Authorization ガイド
+title: Web API認証 ( Authorization ) ガイド
 ---
 
 ---
 
-# Web API Authorization ガイド
+# Web API認証 ( Authorization ) ガイド
 
 ## 概要
 

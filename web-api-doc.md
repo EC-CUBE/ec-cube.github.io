@@ -18,6 +18,10 @@ title: Web API β版 プラグインスタートアップガイド
 	- OAuth2.0やOpenID Connectによる認証/APIの利用経験のある方を想定しています。   
 	（Facebook/Twitter/Google連携アプリの作成など）
 
+- 関連ページ  
+	[API開発指針](/api.html)
+	[Web API Authorization ガイド](/api_authorization.html)  
+
 ## β版 基本要件
 
 1. 全テーブルの CRUD が可能なこと

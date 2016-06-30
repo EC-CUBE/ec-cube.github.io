@@ -13,7 +13,9 @@ EC-CUBE 3では
 * RESTでは商品一覧、商品詳細といったそれぞれのリソースに対して固有の一意なURIが与えられ、そのURIに対してGETやPOST、PUT、DELETEといった
 HTTPメソッドでパラメータを送ることで投稿や削除などの操作を行います。
 
-
+#### 関連ページ
+[Web API Authorization ガイド](/api_authorization.html)  
+[EC-CUBE API β版 プラグイン スタートアップガイド](/web-api-doc.html)
 
 ## APIのエンドポイント
 

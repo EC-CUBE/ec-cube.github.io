@@ -182,6 +182,10 @@ curl -F grant_type=refresh_token \
 
 - ログイン中の Member/Customer と OAuth2.0 Client の ID が相違している場合は、認可リクエスト時に `access_denied` エラーとなります。
 
+#### redirect_uri の指定
+
+Authorization Code Flow にて、 `redirect_uri` に `urn:ietf:wg:oauth:2.0:oob` を指定することで、 ブラウザの画面に Authorization code を表示されます。 curl を使用したテスト用途や、ネイティブアプリケーションなどに利用可能です。
+
 ### 標準仕様に準拠しているもの
 
 #### ID Token

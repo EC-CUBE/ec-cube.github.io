@@ -199,9 +199,9 @@ vendor/bin/phpunit ./app/Plugin/[自身で作成したプラグインのフォ�
 
 ### 継続的インテグレーションを使った複数環境でのテスト
 
-- 前項で問題がなければ、自身のGitHub環境にプッシュし、継続的インテグレーションを提供する、「Travis」で複数環境でのテストをおこないます。
+- 前項で問題がなければ、自身のGitHub環境にプッシュし、継続的インテグレーションを提供する、「Travis-CI」で複数環境でのテストをおこないます。
 
-#### Travis設定ファイルの作成
+#### Travis-CI設定ファイルの作成
 
 1.プラグインのルートディレクトリに**.travis.yml**を作成します。
 
@@ -316,17 +316,17 @@ after_script: ★プラグインの、インストール・アンインストー
 
 - <a href="https://github.com/EC-CUBE/coupon-plugin/blob/master/.travis.yml" target="_blank">.travis.yml(参考)</a>
 
-#### travis-ciとgithubの連携
+#### Travis-CIとGitHubの連携
 
 - GitHubにログイン済みの状態で以下にアクセスし、連携をONにします。
 
-- <a href="https://travis-ci.org/profile/EC-CUBE" target="_blank">Travis</a>
+- `https://travis-ci.org/profile/[user]` 
 
 - 表示されているレポジトリの一覧から、該当レポジトリのボタン表示をスライドさせ緑色でONの状態で連携完了です。
 
 
-#### Gitへのプッシュ
+#### GitHubへのプッシュ
 
-- 完了したら、自身のレポジトリにプッシュを行うと自動でTravisが稼働し、テストを行います。
+- 完了したら、自身のレポジトリにプッシュを行うと自動でTravis-CIが稼働し、テストを行います。
 
-- テスト結果はGitHubとTravisを設定したページで確認できます。
+- テスト結果はGitHubとTravis-CIを設定したページで確認できます。

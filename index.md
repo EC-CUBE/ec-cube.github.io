@@ -125,17 +125,17 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
     - [条件検索とアップデート処理](tutorial-12.html)
 
 - **いらない情報を削除してみよう**
-    - [レコードの削除](tutorial-13.html)
+    - [レコードの削除](tutorial-13)
 
 
-## クックブック
-
-- 本クックブックでは、チュートリアルとは違い、より実践的なカスタマイズ方法を説明していきます。
+# クックブック
+本クックブックではチュートリアルとは違い、より実践的なカスタマイズ方法を説明します。
 
 ### 管理画面項目の追加
 
-1. [本体カスタマイズ](cookbook-1-cube3-customize-admin-add.html)
+- [管理画面項目の追加](cookbook-1-cube3-customize-admin-add)
 
-### GoogleAnaliticsの追加方法
 
-1. [管理機能ブロックを利用したJavaScriptの追加](cookbook-2-cube3-customize-js.html)
+### タグの追加
+- [ブロック管理を利用したGoogleAnalyticsタグの設定](cookbook-2-cube3-customize-js)
+

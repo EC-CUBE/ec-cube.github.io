@@ -5,7 +5,6 @@ tagline:      EC open platform EC-CUBE
 author:
   name:       LOCKON CO.,LTD.
   url:        http://www.lockon.co.jp/
-pygments: false
 markdown: kramdown
 kramdown:
   input: GFM

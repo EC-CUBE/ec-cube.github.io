@@ -139,3 +139,7 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 ### GoogleAnaliticsの追加方法
 
 1. [管理機能ブロックを利用したJavaScriptの追加](cookbook-2-cube3-customize-js.html)
+
+# EC-CUBE3利用ガイドライン
+
+- **[EC-CUBE3利用ガイドライン](guideline)**

@@ -109,7 +109,7 @@ title: ブロック管理を利用したGoogleAnalyticsタグの設定
 
 ---
 
-![Analyticsレポートトップ](images/cookbook2-view-Analytics-top.png)
+![Analyticsレポートトップ](images/cookbook2-view-analytics-top.png)
 
 ---
 
@@ -117,7 +117,7 @@ title: ブロック管理を利用したGoogleAnalyticsタグの設定
 
 ---
 
-![アクティブユーザー確認](images/cookbook2-view-Analytics-realtime-top.png)
+![アクティブユーザー確認](images/cookbook2-view-analytics-realtime-top.png)
 
 ---
 
@@ -131,5 +131,5 @@ title: ブロック管理を利用したGoogleAnalyticsタグの設定
 
 ---
 
-![アクティブユーザー確認](images/cookbook2-view-Analytics-realtime-target.png)
+![アクティブユーザー確認](images/cookbook2-view-analytics-realtime-target.png)
 

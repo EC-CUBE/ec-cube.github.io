@@ -18,7 +18,7 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 - [システム要件](/requirement.html)
 - [開発環境の構築](development-environment.html)
 - [インストール方法](/install.html)
-- [アップデート方法](/update.html)
+- [バージョンアップ方法](/update.html)
 
 ## EC-CUBE 3 仕様
 

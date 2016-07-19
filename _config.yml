@@ -8,6 +8,5 @@ author:
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: rouge
 gems:
   - jekyll-sitemap

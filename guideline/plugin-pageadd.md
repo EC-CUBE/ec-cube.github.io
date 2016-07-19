@@ -37,7 +37,7 @@ class SampleController
 ファイル名は、`sample.twig`としてください。
 
 ```
-{% extends 'default_frame.twig' %}
+{% raw %}{% extends 'default_frame.twig' %}
 
 {% set body_class = 'Customize_sample_page' %}
 
@@ -47,7 +47,7 @@ class SampleController
             <p class="text-danger">こんにちわ</p>
         </div>
     </div>
-{% endblock %}
+{% endblock %}{% endraw %}
 ```
 
 ## ServiceProviderでルーティングを定義する

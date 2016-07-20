@@ -7,7 +7,7 @@ title: EC-CUBE3利用ガイドライン
 
 ### デザインのカスタマイズ
 
-- [デザインテンプレートが読み込まれる順番](design-template-sequence)
+- [デザインテンプレートが読み込まれる順序](design-template)
 - [default_frame.twigの構成](design-default-frame)
 - [フォームレイアウトの変更](design-form)
 - [ブロックの利用](design-block)

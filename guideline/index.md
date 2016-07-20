@@ -1,6 +1,6 @@
 ---
 layout: default
-title: EC-CUBE3利用ガイドライン
+title: EC-CUBE 3 カスタマイズガイドライン
 ---
 
 # {{ page.title }}
@@ -18,7 +18,7 @@ title: EC-CUBE3利用ガイドライン
 - [プラグイン導入方法](plugin-install)
 - [プラグイン導入時のトラブルシューティング](plugin-tips)
 
-### プラグインの開発
+### プラグイン機構を利用した開発方法
 
 - [プラグインジェネレータの利用方法](plugin-generate)
 - [新規ページの追加](plugin-pageadd)

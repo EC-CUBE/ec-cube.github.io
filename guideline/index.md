@@ -26,21 +26,10 @@ title: EC-CUBE 3 カスタマイズガイドライン
 - [フォームの追加、変更](plugin-form)
 - [プラグイン用テーブルの追加](plugin-table)
 
-### EC-CUBE3本体のソースコードの変更
+### 本体のソースコードを修正する場合の指針
 
-- [バージョン管理](version)
-- [本体のアップデート方法](update)
-- [本体カスタマイズ後のバージョン追随方法](update)
-- [セキュリティリリース時の対応](security)
-
+- [カスタマイズ指針](customize-policy)
 
 ### 開発手順
 - [開発環境構築](development)
 - [本番反映](production)
-
-
-
-
-
-
-

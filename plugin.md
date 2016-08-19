@@ -19,7 +19,7 @@ title: プラグイン仕様
 
 プラグイン作成チュートリアル
 
-- <a href="http://qiita.com/chihiro-adachi/items/6318642120f67faedf0b" target="_blank">EC-CUBEのプラグインを作る(3.0.9向け)</a>
+- [EC-CUBEのプラグインを作る(3.0.9～)](plugin-tutorial)</a>
 
 # オーナーズストアへの公開について
 

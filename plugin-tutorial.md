@@ -1,6 +1,6 @@
 ---
 layout: default
-title: プラグイン作成チュートリアル
+title: EC-CUBEのプラグインを作る(3.0.9～)
 ---
 
 ---

@@ -31,6 +31,7 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 - <a href="https://github.com/EC-CUBE/eccube3-doc/blob/master/feature_list.xls" target="_blank">機能一覧</a>
 - <a href="https://github.com/EC-CUBE/eccube3-doc/tree/master/ER-D" target="_blank">テーブル・ER図</a>
 - <a href="https://github.com/EC-CUBE/eccube3-doc/tree/master/IntegrationTest" target="_blank">結合試験項目書</a>
+-[実験的な実装](/experimental.html)
 
 ## プラグイン仕様
 

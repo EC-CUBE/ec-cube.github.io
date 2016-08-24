@@ -116,6 +116,7 @@ public function onXxxBefore($event = null)
 コントローラ内でリダイレクトを行っている場合は、リダイレクトレスポンスをreturnするように修正してください。
 
 + 修正前 ： header関数を利用したリダイレクト
+
 ```
 public function index(Application $app, Request $request)
 {
@@ -125,7 +126,9 @@ public function index(Application $app, Request $request)
     exit;
 }
 ```
+
 + 修正後 ： リダイレクトレスポンスをreturnする
+
 ```
 public function index(Application $app, Request $request)
 {

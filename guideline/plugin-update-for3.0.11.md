@@ -35,6 +35,7 @@ exit;
 
 
 + 修正前 ： header関数を利用したリダイレクト
+
 ```
 public function onXxxBefore()
 {
@@ -44,7 +45,9 @@ public function onXxxBefore()
     exit;
 }
 ```
+
 + 修正後 ： $eventオブジェクトを利用したリダイレクト
+
 ```
 public function onXxxBefore($event = null)
 {

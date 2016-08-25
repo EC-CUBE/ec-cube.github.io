@@ -140,6 +140,10 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 ### タグの追加
 - [ブロック管理を利用したGoogleAnalyticsタグの設定](cookbook-2-cube3-customize-js)
 
+### パフォーマンス対応
+- [パフォーマンス対応](performance)
+
+
 # EC-CUBE3カスタマイズガイドライン
 
 - **[EC-CUBE3カスタマイズガイドライン](guideline)**

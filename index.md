@@ -24,14 +24,14 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 
 - [ディレクトリ・ファイル構成](/spec-directory-structure.html)
   1. 主なディレクトリと役割
-  1. 設定ファイル
   1. 定数
   1. 2系・3系置き換え早見表
 - [テンプレート探索順序](/template.html)
 - <a href="https://github.com/EC-CUBE/eccube3-doc/blob/master/feature_list.xls" target="_blank">機能一覧</a>
 - <a href="https://github.com/EC-CUBE/eccube3-doc/tree/master/ER-D" target="_blank">テーブル・ER図</a>
 - <a href="https://github.com/EC-CUBE/eccube3-doc/tree/master/IntegrationTest" target="_blank">結合試験項目書</a>
--[実験的な実装](/experimental.html)
+- [実験的な実装](/experimental.html)
+- [設定ファイル](/config.html)
 
 ## プラグイン仕様
 

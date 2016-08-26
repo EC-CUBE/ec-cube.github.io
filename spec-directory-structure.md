@@ -308,23 +308,6 @@ title: ディレクトリ・ファイル構成
 ```
 -->
 
-### 設定ファイル
-
-- EC-CUBE 3の設定ファイルは以下の通りです
-
-#### 対象ファイル
-
-1. /app/config/ec-cube/**config.yml**
-- SSL通信や言語など EC-CUBE 3のサイト全体に関わる基本的な設定が記述されています。
-
-1. /app/config/ec-cube/**database.yml**
-- データーベース名や、ポートなどの、データーベース接続に関する設定が記述されています。
-
-1. /app/config/ec-cube/**mail.yml**
-- 暗号可や認証情報など、メールのオプションに関する設定が記述されています。
-
-1. /app/config/ec-cube/**path.yml**
-- 管理・フロント等のURLやアップロードファイル等のパスが設定されています。
 
 ### 定数
 
@@ -332,12 +315,11 @@ title: ディレクトリ・ファイル構成
 
 #### 対象ファイル
 
-1. Common/**constants.php**
+1. Common/**Constant.php**
     - EC-CUBEのバージョンなど、基本情報の定数です。
 
 2. Resource/config/**constant.yml.dist**
     - 主にプログラム上で利用する定数です。
-
 
 ### 2系・3系置き換え早見表
 

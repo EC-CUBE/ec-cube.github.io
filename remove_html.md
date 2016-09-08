@@ -9,7 +9,7 @@ title: インストール時にURLからhtmlを無くす
 
 一部のレンタルサーバーなどDocumentRootを変更できない環境でも、インストール時に下記の手順を行うことで、URLからhtmlを無くした状態でインストールが可能です。
   
-例) `https://www.sampleshop.com/html/` → `https://www.sampleshop.com/`
+例) `https://www.example.com/html/` → `https://www.example.com/`
 
 ## 対応バージョン
 EC-CUBE 3.0.11 以降
@@ -55,7 +55,7 @@ __インストールを行う前__ に、以下作業を実施します。
 ```
 
 ### 2. .htaccess / web.config の置き換え
-手順1でコピーしてきた`.hraccess``web.config`を削除します。
+手順1で移動してきた`.htaccess``web.config`を削除します。
 ```
 [root]
   │
@@ -65,7 +65,7 @@ __インストールを行う前__ に、以下作業を実施します。
   ├── web.config.sample
 ```
 
-`.hraccess.sample``web.config.sample`をそれぞれ`.hraccess``web.config`にリネームします。
+`.htaccess.sample``web.config.sample`をそれぞれ`.htaccess``web.config`にリネームします。
 ```
 [root]
   │

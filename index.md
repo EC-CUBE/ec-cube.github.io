@@ -32,6 +32,8 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 - <a href="https://github.com/EC-CUBE/eccube3-doc/tree/master/IntegrationTest" target="_blank">結合試験項目書</a>
 - [実験的な実装](/experimental.html)
 - [設定ファイル](/config)
+- [複数配送機能](/multi-shipping)
+- [税率機能](/tax)
 
 ## プラグイン仕様
 

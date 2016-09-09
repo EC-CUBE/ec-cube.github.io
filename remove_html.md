@@ -7,12 +7,12 @@ title: インストール時にURLからhtmlを無くす
 
 # インストール時にURLからhtmlを無くす手順
 
-一部のレンタルサーバーなどDocumentRootを変更できない環境でも、インストール時に下記の手順を行うことで、URLからhtmlを無くした状態でインストールが可能です。
+一部のレンタルサーバーなどDocumentRootを変更できない環境でも、インストール時に下記の手順を行うことで、URLからhtmlを無くした状態でインストールが可能です。  
   
-例) `https://www.example.com/html/` → `https://www.example.com/`
+例) `https://www.example.com/html/` → `https://www.example.com/`  
 
 ## 対応バージョン
-EC-CUBE 3.0.11 以降
+EC-CUBE 3.0.11 以降  
 
 ## ご注意
 下記の手順を行うことで、通常のEC-CUBEとは異なるファイル構成になります。  
@@ -21,15 +21,16 @@ EC-CUBE 3.0.11 以降
 また、この方法でのインストールを行う前に、まずはDocumentRootの変更などサーバー設定での対応をご検討ください。  
 
 ## 作業手順
-__インストールを行う前__ に、以下作業を実施します。
-1. ファイル配置場所の変更
-2. .htaccess / web.config の置き換え
-3. index.php / index_dev.php / install.php の変更
-4. autoload.php の変更
-5. EC-CUBEのインストール
+__インストールを行う前__ に、以下作業を実施します。  
+1. ファイル配置場所の変更  
+2. .htaccess / web.config の置き換え  
+3. index.php / index_dev.php / install.php の変更  
+4. autoload.php の変更  
+5. EC-CUBEのインストール  
 
 ### 1. ファイル配置場所の変更
-以下の6つのファイルを、htmlフォルダの中から一階層上に移動します。(コピーではありません)
+以下の6つのファイルを、htmlフォルダの中から一階層上に移動します。(コピーではありません)  
+
 ```
 [root]
   ├──[html]
@@ -41,7 +42,9 @@ __インストールを行う前__ に、以下作業を実施します。
   │   └── web.config
   │
 ```
+
 ↓  
+
 ```
 [root]
   ├──[html]
@@ -55,7 +58,8 @@ __インストールを行う前__ に、以下作業を実施します。
 ```
 
 ### 2. .htaccess / web.config の置き換え
-手順1で移動してきた`.htaccess``web.config`を削除します。
+手順1で移動してきた`.htaccess``web.config`を削除します。  
+
 ```
 [root]
   │
@@ -65,14 +69,17 @@ __インストールを行う前__ に、以下作業を実施します。
   ├── web.config.sample
 ```
 
-`.htaccess.sample``web.config.sample`をそれぞれ`.htaccess``web.config`にリネームします。
+`.htaccess.sample``web.config.sample`をそれぞれ`.htaccess``web.config`にリネームします。  
+
 ```
 [root]
   │
   ├── .htaccess.sample
   ├── web.config.sample
 ```
-↓
+
+↓  
+
 ```
 [root]
   │
@@ -81,7 +88,7 @@ __インストールを行う前__ に、以下作業を実施します。
 ```
 
 ### 3. index.php / index_dev.php / install.php の変更
-それぞれのファイルで、以下のようにコメントアウトする行を変更します。
+それぞれのファイルで、以下のようにコメントアウトする行を変更します。  
 
 - index.php
 - index_dev.php
@@ -92,7 +99,9 @@ __インストールを行う前__ に、以下作業を実施します。
 require __DIR__.'/../autoload.php';
 //require __DIR__.'/autoload.php';
 ```
+
 ↓  
+
 ```
 //[INFO]index.php,install.phpをEC-CUBEルート直下に移動させる場合は、コメントアウトしている行に置き換える
 //require __DIR__.'/../autoload.php';
@@ -100,13 +109,16 @@ require __DIR__.'/autoload.php';
 ```
 
 ### 4. autoload.php の変更
-autoload.php で、以下のようにコメントアウトする行を変更します。
+autoload.php で、以下のようにコメントアウトする行を変更します。  
+
 ```
 //[INFO]index.php,install.phpをEC-CUBEルート直下に移動させる場合は、コメントアウトしている行に置き換える
 define("RELATIVE_PUBLIC_DIR_PATH", '');
 //define("RELATIVE_PUBLIC_DIR_PATH", '/html');
 ```
-↓
+
+↓  
+
 ```
 //[INFO]index.php,install.phpをEC-CUBEルート直下に移動させる場合は、コメントアウトしている行に置き換える
 //define("RELATIVE_PUBLIC_DIR_PATH", '');
@@ -117,4 +129,4 @@ define("RELATIVE_PUBLIC_DIR_PATH", '/html');
 EC-CUBEを配置したサイトにアクセスするとインストール画面が表示されます。  
 画面の指示に従ってインストールを進めてください。  
   
-※インストール画面で大きなレイアウト崩れが発生している場合は、正常にインストールできない可能性があります。 再度、上記手順をご確認ください。
+※インストール画面で大きなレイアウト崩れが発生している場合は、正常にインストールできない可能性があります。 再度、上記手順をご確認ください。  

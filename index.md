@@ -42,6 +42,7 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 - [ハンドラによる優先制御仕様](/plugin_handler.html) 
 - [php app/console plugin:develop を利用したプラグイン開発](/plugin_console.html)
 - [プラグインのテスト](plugin-test.html)
+- [EC-CUBE 3.0.11 での変更内容に伴うプラグインへの影響について](guideline/plugin-update-for3.0.11.html)
 
 ## Web API仕様
 

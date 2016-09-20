@@ -10,8 +10,11 @@ title: インストール方法
 ## 事前準備
 
 - 予めMySQLもしくはPostgreSQLでデータベースを作成しておいて下さい。
-- htmlのフォルダが、DocumentRootとなるように設置してください
-- htmlがDocumentRootでない場合は、http://{DocumentRoot}/{htmlへのパス} となります。
+- サイトのDocumentRootが、EC-CUBEのhtmlのフォルダとなるように設定してください  
+
+※DocumentRootが変更できない場合は、トップページのURLは「http://サイトURL/html/」となります。  
+※ただし、3.0.11以降では[こちらの手順](/remove_html.html)を行うことで、URLからhtmlを無くした状態でインストールできるようになりました。
+
 
 ## インストール方法
 

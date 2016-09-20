@@ -55,7 +55,7 @@ EC-CUBEのインストールディレクトリ以下をすべてバックアッ�
 | 3.0.7 → 3.0.8        | なし                                                                                              |
 | 3.0.8 → 3.0.9        | app/console <br> cli-config.php <br> composer.json <br> composer.lock <br> eccube_install.sh      |
 | 3.0.9 → 3.0.10       | autoload.php                                                                                      |
-| 3.0.10 → 3.0.11      | 準備中                                                                                            |
+| 3.0.10 → 3.0.11      | autoload.php <br> composer.lock <br> composer.json <br> eccube_install.sh <br> web.config.sample <br> .htaccess.sample |
 
 ※ `3.0.8 → 3.0.10` のように複数バージョンをまたぐバージョンアップを行う場合は、`3.0.8 → 3.0.9`→`3.0.9 → 3.0.10` のように段階的なバージョンアップを行ってください。
 
@@ -71,10 +71,20 @@ EC-CUBEのインストールディレクトリ以下をすべてバックアッ�
 
 #### 3.0.10 → 3.0.11
 
+##### twigファイルの更新
+
 | 編集対象                                                         | 変更差分 |
 |------------------------------------------------------------------|----------|
-| 商品詳細ページ(Product/detail.twig)                              | ・javascriptコードの追加 【[追加差分](https://github.com/EC-CUBE/ec-cube/blob/92d4043993b89ffb85611e7ba889d53fef9a59d2/src/Eccube/Resource/template/default/Product/detail.twig#L79-L81)】 <br> ・idの変更 【[変更前](https://github.com/EC-CUBE/ec-cube/blob/3.0.10/src/Eccube/Resource/template/default/Product/detail.twig#L219)】【[変更後](https://github.com/EC-CUBE/ec-cube/blob/92d4043993b89ffb85611e7ba889d53fef9a59d2/src/Eccube/Resource/template/default/Product/detail.twig#L222)】 |
-| MYページ/お気に入り一覧(Mypage/favorite.twig)                    | ・twigのfor構文の変更 【[変更前](https://github.com/EC-CUBE/ec-cube/blob/3.0.10/src/Eccube/Resource/template/default/Mypage/favorite.twig#L40)】【[変更後](https://github.com/EC-CUBE/ec-cube/blob/7ba6375726065631803a82465f62f9ca48875d70/src/Eccube/Resource/template/default/Mypage/favorite.twig#L40-L41)】|
+| 商品詳細ページ(Product/detail.twig)                              | <a href="../documents/updatedoc/3.0.11/template-diff_Product_detail.twig.html" target = "_blank">差分を表示</a> |
+| MYページ/お気に入り一覧(Mypage/favorite.twig)                    | <a href="../documents/updatedoc/3.0.11/template-diff_Mypage_favorite.twig.html" target = "_blank">差分を表示</a> |
+  
+##### eccube.jsの置き換え
+
+`管理画面>オーナーズストア>テンプレート管理>テンプレート一覧`で、「デフォルト」以外のテンプレートを選択している場合は`eccube.js`の置き換えが必要です。  
+  
+`html/template/default/js/eccube.js`をコピーして、各テンプレートフォルダの`eccube.js`を置き換えてください。  
+  
+※テンプレートフォルダは、テンプレート一覧の「保存先」の列に表示してあります。　(例)  html/template/P3001
 
 ### 6. 不要ファイルの削除
 

@@ -160,6 +160,7 @@ public function index(Application $app, Request $request)
 ```
 
 __修正後__ ： Responsオブジェクトを生成するなど、必ずResponsをreturnしてください
+
 ```
 use Symfony\Component\HttpFoundation\Response;
 

@@ -110,4 +110,4 @@ EC-CUBEのバージョンアップ手順は以上です。
 | 3.0.7 → 3.0.8   | [https://github.com/EC-CUBE/ec-cube/compare/3.0.7...3.0.8](https://github.com/EC-CUBE/ec-cube/compare/3.0.7...3.0.8?w=1)   |
 | 3.0.8 → 3.0.9   | [https://github.com/EC-CUBE/ec-cube/compare/3.0.8...3.0.9](https://github.com/EC-CUBE/ec-cube/compare/3.0.8...3.0.9?w=1)   |
 | 3.0.9 → 3.0.10  | [https://github.com/EC-CUBE/ec-cube/compare/3.0.9...3.0.10](https://github.com/EC-CUBE/ec-cube/compare/3.0.9...3.0.10?w=1) |
-| 3.0.10 → 3.0.11 | 準備中                                                                                                                 |
+| 3.0.10 → 3.0.11 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.10...3.0.11](https://github.com/EC-CUBE/ec-cube/compare/3.0.10...3.0.11?w=1) |

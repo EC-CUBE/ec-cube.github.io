@@ -11,7 +11,7 @@ title: システム要件
 |---|-------|---|-------|
 |WebServer|IIS(windows系OS )| 8.0 以上| 8.0 |
 |WebServer|Apache |2.2.x, 2.4.x| 2.2.15 |
-|PHP | PHP   | >= 5.3.9 |5.4.39|
+|PHP | PHP   | 5.3.9 ～ 7.0 |5.4.39 / 7.0|
 |Database|PostgreSQL| 8.4.x以降  9.x以降 ※pg_settingsテーブルへの参照権限が必要です|8.4.20|
 |Database|MySQL|5.1.x以上、5.5.x 以降 ※InnoDBエンジンが必要です|5.1.73|
 

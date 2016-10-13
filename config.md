@@ -52,6 +52,36 @@ distの拡張子を外して`xxxx.yml`にすると利用できます。
 
 デフォルト設定ファイルの内容は変更したくないが、設定ファイルの値を変更したいという時はコピーしてご利用ください。
 
+設定ファイルが読み込まれる順番は、
+
+1. `ECCUBEROOT/app/config/eccube`にあるymlファイル
+1. `ECCUBEROOT/src/Eccube/Resource/config`にあるyml.distファイル
+
+の順番で読み込まれます。
+
+
+### 設定ファイルのコメント方法
+設定ファイルの内容を無効にするためにコメントアウトしたい場合、  
+各設定内容の前に`#`をつければコメントアウト状態になり読み込まれません。
+
+但しコメントアウトする場合、以下の注意が必要です。
+
+`ECCUBEROOT/app/config/eccube/config.yml`の内容にある`cookie_lifetime`をコメントアウトをしようとして、
+
+```
+# cookie_lifetime: 0
+```
+
+とコメントアウトを有効にしても、  
+`ECCUBEROOT/src/Eccube/Resource/config/config.yml.dist`にある
+
+```
+cookie_lifetime: 0
+```
+
+`config.yml.dist`ファイルの内容がコメントアウトされていなければその値が有効になるため、
+確実にコメントアウトをしたい場合、両方のファイルの設定内容をコメントアウトするようにしてください。
+
 #### PHP array 形式の設定ファイル
 
 EC-CUBE 3.0.11 より、 PHP array 形式の設定ファイルも使用可能です。

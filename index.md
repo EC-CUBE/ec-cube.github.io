@@ -56,7 +56,7 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 	- [開発作業全体概要](workflow-general-image.html)
 	- [コーディング規約](coding_style.html)
 	- [マイグレーションガイド](migration.html)
-	- <a href="http://qiita.com/nanasess/items/350e59b29cceb2f122b3" target="_blank">ログ設計指針</a>
+	- [EC-CUBE3でのログ設定](/log)
 	- [Gitを用いた開発手順](workflow.html)
 	- [カスタマイズリファレンス](customize-reference.html)
         1. カスタマイズ時に作成・変更するファイル

@@ -126,6 +126,8 @@ doctrine_cache:
     host:
     port:
     password:
+    lifetime: 3600
+    clear_cache: true
   hydration_cache:
     driver: filesystem
     path: /path/to/ec-cube/app/cache/doctrine/query
@@ -148,6 +150,17 @@ ORM から SQL の変換結果をキャッシュします。
 
 DQL の検索結果をキャッシュします。
 
+後述のドライバの設定のほか、以下の設定を利用可能です(3.0.12以降)
+
+- lifetime
+  - キャッシュの有効期限（秒）
+  - デフォルト値は3600
+- clear_cache
+  - キャッシュされたエンティティが更新される際に、キャッシュを削除するかどうか
+  - デフォルト値はtrue
+  - falseの場合、管理画面で編集を行った際にもキャッシュの削除を行いません
+  - キャッシュの削除タイミングをコントロールしたい場合に利用してください
+  
 ###### hydration_cache
 
 連想配列から、 Entity への変換結果をキャッシュします。

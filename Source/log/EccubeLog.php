@@ -1,6 +1,6 @@
 <?php
 
-if (version_compare(\Eccube\Common\Constant::VERSION, '3.0.12', '>=')) {
+if (class_exists('Eccube\Monolog\EccubeLogger')) {
     return;
 }
 
@@ -48,41 +48,73 @@ class EccubeLog
 
     public static function emergency($message, array $context = array())
     {
+        if (self::$initialized === false) {
+            return;
+        }
+        
         self::$logger->emergency($message, $context);
     }
 
     public static function alert($message, array $context = array())
     {
+        if (self::$initialized === false) {
+            return;
+        }
+        
         self::$logger->alert($message, $context);
     }
 
     public static function critical($message, array $context = array())
     {
+        if (self::$initialized === false) {
+            return;
+        }
+        
         self::$logger->critical($message, $context);
     }
 
     public static function error($message, array $context = array())
     {
+        if (self::$initialized === false) {
+            return;
+        }
+        
         self::$logger->error($message, $context);
     }
 
     public static function warning($message, array $context = array())
     {
+        if (self::$initialized === false) {
+            return;
+        }
+        
         self::$logger->warning($message, $context);
     }
 
     public static function notice($message, array $context = array())
     {
+        if (self::$initialized === false) {
+            return;
+        }
+        
         self::$logger->notice($message, $context);
     }
 
     public static function info($message, array $context = array())
     {
+        if (self::$initialized === false) {
+            return;
+        }
+        
         self::$logger->info($message, $context);
     }
 
     public static function debug($message, array $context = array())
     {
+        if (self::$initialized === false) {
+            return;
+        }
+        
         self::$logger->debug($message, $context);
     }
 }

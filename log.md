@@ -209,7 +209,7 @@ log:
 プラグインのServiceProvider内に
 
 ```php
-$app['monolog.logger.プラグインコード] = $app->share(function ($app) {
+$app['monolog.logger.プラグインコード'] = $app->share(function ($app) {
     $config = array(
         'name' => 'プラグインコード',
         'filename' => 'ログファイル名',
@@ -227,7 +227,7 @@ $app['monolog.logger.プラグインコード] = $app->share(function ($app) {
 と記述しプログラム内からは、
 
 ```
-$app['monolog.logger.プラグインコード]->info('ログ出力')
+$app['monolog.logger.プラグインコード']->info('ログ出力')
 ```
 と記述すれば`filename`で指定したファイルに出力されます。
 
@@ -249,82 +249,7 @@ PluginCode\EccubeLog.php
 
 以下の内容を`EccubeLog.php`に記述します。
 
-```php
-<?php
-
-if (version_compare(\Eccube\Common\Constant::VERSION, '3.0.12', '>=')) {
-    return;
-}
-
-if (version_compare(\Eccube\Common\Constant::VERSION, '3.0.9', '>=')) {
-
-    $app = \Eccube\Application::getInstance();
-
-    if (isset($app['eccube.monolog.factory'])) {
-        return;
-    }
-
-    EccubeLog::init($app);
-
-}
-
-class EccubeLog
-{
-
-    /** @var  \Monolog\Logger */
-    protected static $logger;
-
-    public static function init($app)
-    {
-        self::$logger = $app['monolog'];
-
-        $app['eccube.monolog.factory'] = $app->protect(function ($config) use ($app) {
-            return $app['monolog'];
-        });
-
-    }
-
-    public static function emergency($message, array $context = array())
-    {
-        self::$logger->emergency($message, $context);
-    }
-
-    public static function alert($message, array $context = array())
-    {
-        self::$logger->alert($message, $context);
-    }
-
-    public static function critical($message, array $context = array())
-    {
-        self::$logger->critical($message, $context);
-    }
-
-    public static function error($message, array $context = array())
-    {
-        self::$logger->error($message, $context);
-    }
-
-    public static function warning($message, array $context = array())
-    {
-        self::$logger->warning($message, $context);
-    }
-
-    public static function notice($message, array $context = array())
-    {
-        self::$logger->notice($message, $context);
-    }
-
-    public static function info($message, array $context = array())
-    {
-        self::$logger->info($message, $context);
-    }
-
-    public static function debug($message, array $context = array())
-    {
-        self::$logger->debug($message, $context);
-    }
-}
-```
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/log/EccubeLog.php"></script>
 
 ファイル作成後、`EccubeLog.php`ファイルを読み込む必要があるため、
 `EccubeLog`を利用している環境では、
@@ -340,11 +265,11 @@ EC-CUBE 3.0.8以下にも対応する場合、ServiceProvider内に`version_comp
 
 
 ```php
-if (version_compare(Constant::VERSION, '3.0.8', '<=')) {
+if (version_compare(\Eccube\Common\Constant::VERSION, '3.0.8', '<=')) {
     \EccubeLog::init($app);
 }
 
-$app['monolog.logger.プラグインコード] = $app->share(function ($app) {
+$app['monolog.logger.プラグインコード'] = $app->share(function ($app) {
     $config = array(
         'name' => 'プラグインコード',
         ・

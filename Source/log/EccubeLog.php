@@ -1,13 +1,16 @@
 <?php
 
+// 3.0.12以上の場合はreturn.
 if (class_exists('Eccube\Monolog\EccubeLogger')) {
     return;
 }
 
+// 下位互換用のEccubeLogクラスが初期済の場合はreturn.
 if (\EccubeLog::isInitialized()) {
     return;
 }
 
+// 3.0.9以上の場合は, 下位互換用のEccubeLogクラスの初期化を行う.
 if (method_exists('Eccube\Application', 'getInstance')) {
 
     $app = \Eccube\Application::getInstance();

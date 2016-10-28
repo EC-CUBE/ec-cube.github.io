@@ -5,13 +5,13 @@ title: EC-CUBE3でのログ設定
 
 ```
 対象バージョン : 3.0.12以降
-更新日 : 2016/10/20
+更新日 : 2016/10/27
 ```
 
 # {{ page.title }}
 
 
-EC-CUBE3のログ設計指針は以下の記事の内容を参考にしています。  
+EC-CUBE3のログ設計指針は以下の記事を参考にしています。  
 <a href="http://qiita.com/nanasess/items/350e59b29cceb2f122b3" target="_blank">ログ設計指針</a>
 
 ### ログフォーマット
@@ -46,8 +46,9 @@ EC-CUBE3で出力されるログフォーマット内容は以下の通りです
 ### ログ出力レベル
 
 - 本番環境  
-INFOログの内容が出力されてエラーが発生した場合、エラー発生直前のDEBUG情報の内容も出力されます。
-但し、実行環境により出力されるDEBUG情報はどこまで出力されるかは未定です。
+標準ではINFOログの内容が出力されます。  
+エラーが発生した場合、`log_level`のレベルに応じてエラー発生直前の情報の内容も出力されます。
+但し、実行環境により出力される情報はどこまで出力されるかは未定です。
 
 - 開発環境  
 開発者が自由に設定可能ですが、基本的にはdebugの内容が出力されます。  
@@ -57,17 +58,17 @@ index_dev.phpを実行時はDEBUGログが出力されます。
 
 ### ログローテーション
 
-標準では日付毎にログファイルが作成され90個のログファイルが保存されます。
-90個を超える場合、古いファイルから削除されます。
+標準では日付毎にログファイルが作成され、最大90個のログファイルが保存されます。
+ファイルが90個を超えた場合、一番古いファイルから削除されます。
 
-ログローテーションは`log.yml`で変更可能です。
+ログローテーション、ログファイルが作成される最大ファイル数は`log.yml`で変更可能です。
 
 ### アプリケーション内でのログ出力内容
 
 - INFOレベル
     - 関数開始ログ
     - 関数終了ログ
-    - 会員や受注、商品管理などでDBの登録、更新などが行われた形跡が分かるようなログ、メール送信時の成功/失敗時のログ
+    - 会員や受注、商品管理などでDBの登録、更新などが行われた形跡が分かるようなログ、メール送信時のログ
 
 - ERRORレベル
     - Exception発生時のエラー内容
@@ -101,20 +102,21 @@ app/log/site_YYYY_MM_DD.log
 
 アプリケーション内でログ出力する場合、ログ出力専用関数が用意されておりそれを利用することでログが出力されます。
 
-- ログ専用クラス
+- ログ専用関数
 
 ```
-src/Eccube/Monolog/EccubeLog
+src/Eccube/Resource/functions/log.php
 ```
 
 
 - ログ出力方法
-`EccubeLog`クラスはどのクラスからでも利用できるように実装されており、
+
+log関数はどのクラスからでも利用できるように実装されており、
 
 ```php
-\EccubeLog::info('ログ出力');
-\EccubeLog::info('ログ出力', array('a', 'b'));
-\EccubeLog::info('ログ出力', array('a' => 'b'));
+log_info('ログ出力');
+log_info('ログ出力', array('a', 'b'));
+log_info('ログ出力', array('a' => 'b'));
 ```
 
 とプログラム中に記述することで利用可能です。
@@ -123,7 +125,7 @@ src/Eccube/Monolog/EccubeLog
 DEBUGレベルでログを出力したい場合、
 
 ```php
-\EccubeLog::debug('ログ出力');
+log_debug('ログ出力');
 ```
 
 とレベルごとの関数を使用してください。
@@ -144,7 +146,8 @@ log:
     delimiter: _
     dateformat: Y-m-d
     log_level: INFO
-    action_level: DEBUG
+    action_level: ERROR
+    passthru_level: INFO
     max_files: 90
     log_dateformat: Y-m-d H:i:s,u
     log_format: '[%datetime%] %channel%.%level_name% [%session_id%] [%uid%] [%user_id%] [%class%:%function%:%line%] - %message% %context% %extra% [%method%, %url%, %ip%, %referrer%, %user_agent%]'
@@ -155,17 +158,19 @@ log:
             delimiter: _
             dateformat: Y-m-d
             log_level: INFO
-            action_level: DEBUG
+            action_level: ERROR
+            passthru_level: INFO
             max_files: 90
             log_dateformat: Y-m-d H:i:s,u
-            log_format: '[%datetime%] %channel%.%level_name% [%session_id%] [%uid%] [%user_id%] [%class%:%function%:%line%] - %message% %context% %extra% [%method%, %url%, %ip%, %referrer%]'
+            log_format: '[%datetime%] %channel%.%level_name% [%session_id%] [%uid%] [%user_id%] [%class%:%function%:%line%] - %message% %context% %extra% [%method%, %url%, %ip%, %referrer%, %user_agent%]'
         front:
             name: front
             filename: front_site
             delimiter: _
             dateformat: Y-m-d
             log_level: INFO
-            action_level: DEBUG
+            action_level: ERROR
+            passthru_level: INFO
             max_files: 90
             log_dateformat: Y-m-d H:i:s,u
             log_format: '[%datetime%] %channel%.%level_name% [%session_id%] [%uid%] [%user_id%] [%class%:%function%:%line%] - %message% %context% %extra% [%method%, %url%, %ip%, %referrer%, %user_agent%]'
@@ -175,17 +180,8 @@ log:
             delimiter: _
             dateformat: Y-m-d
             log_level: INFO
-            action_level: DEBUG
-            max_files: 90
-            log_dateformat: Y-m-d H:i:s,u
-            log_format: '[%datetime%] %channel%.%level_name% [%session_id%] [%uid%] [%user_id%] [%class%:%function%:%line%] - %message% %context% %extra% [%method%, %url%, %ip%, %referrer%, %user_agent%]'
-        plugin:
-            name: plugin
-            filename: plugin_site
-            delimiter: _
-            dateformat: Y-m-d
-            log_level: INFO
-            action_level: DEBUG
+            action_level: ERROR
+            passthru_level: INFO
             max_files: 90
             log_dateformat: Y-m-d H:i:s,u
             log_format: '[%datetime%] %channel%.%level_name% [%session_id%] [%uid%] [%user_id%] [%class%:%function%:%line%] - %message% %context% %extra% [%method%, %url%, %ip%, %referrer%, %user_agent%]'
@@ -195,16 +191,57 @@ log:
 ```
 
 
+### ログ出力のレベル指定方法、出力タイミングについて
+
+#### ログレベルの指定方法
+デフォルトではINFOで常にログ出力するように設定していますが、
+`log_level`、`action_level`、`passthru_level`の内容を変更する事でログ出力レベルを変更可能です。
+
+ログレベルの指定方法は、PSR-3のルールに則っています。  
+[http://www.php-fig.org/psr/psr-3/#5-psr-log-loglevel](http://www.php-fig.org/psr/psr-3/#5-psr-log-loglevel)
+
+- ログ出力で指定できるレベル  
+
+```
+EMERGENCY
+ALERT
+CRITICAL
+ERROR
+WARNING
+NOTICE
+INFO
+DEBUG
+```
+
+#### ログレベルの出力タイミング
+
+ログを出力するためには`log_level`、`action_level`、`passthru_level`で指定されたレベルで出力されますがそれぞれの内容は、
+
+- log_level  
+action_levelで指定したレベルのログが実行されればlog_levelで指定したログも一緒に出力
+
+- action_level  
+ログ出力するレベルを設定
+
+- passthru_level  
+常にログ出力するレベルを設定(log_levelとは関連しない)
+
+
+標準設定ではERRORレベルのログが実行された場合、エラー発生直前のINFOレベルのログ内容も出力されます。  
+また、passthuru_levelにINFOを設定しており、INFOレベルのログが常に出力されます。
+
+ERRORレベルのログが発生した時にDEBUGレベルの内容も出力したい場合、`log_level`に`DEBUG`を設定してください。  
+ただし、DEBUGレベルのログを出力するとセキュリティが弱くなる内容が出力される可能性もあるため、運用時は十分ご注意ください。
 
 ### プラグインからのログ出力方法
 
 プラグインからログ出力する場合、
 
 ```
-\EccubeLog::info('ログ出力');
+log_info('ログ出力');
 ```
 
-と同じ内容を記述することでログが出力されます。  
+と同じ関数を記述することでログが出力されます。  
 また、プラグイン独自のログファイルを出力したい場合、
 プラグインのServiceProvider内に
 
@@ -216,7 +253,8 @@ $app['monolog.logger.プラグインコード'] = $app->share(function ($app) {
         'delimiter' => '_',
         'dateformat' => 'Y-m-d',
         'log_level' => 'INFO',
-        'action_level' => 'DEBUG',
+        'action_level' => 'ERROR',
+        'passthru_level' => 'INFO',
         'max_files' => '90',
         'log_dateformat' => 'Y-m-d H:i:s,u',
         'log_format' => '[%datetime%] %channel%.%level_name% [%session_id%] [%uid%] [%user_id%] [%class%:%function%:%line%] - %message% %context% %extra% [%method%, %url%, %ip%, %referrer%, %user_agent%]',
@@ -229,44 +267,46 @@ $app['monolog.logger.プラグインコード'] = $app->share(function ($app) {
 ```
 $app['monolog.logger.プラグインコード']->info('ログ出力')
 ```
-と記述すれば`filename`で指定したファイルに出力されます。
+と記述すれば`filename`で指定したファイル名で`app/log`ディレクトリに出力されます。
 
 
 
 ### プラグインでの下位互換について
-ログ機能の仕組みはEC-CUBE 3.0.12から用意されたものですが、
+ログ機能の仕組みはEC-CUBE 3.0.12から用意されたものですが、  
 プラグイン側では以下のようにすれば下位互換が保たれたままログ出力が可能です。
 
 但し、ログ出力先は`$app['monolog']`で指定されているログ出力先となります。
 
 
 
-先ず、プラグインディレクトリ直下に`EccubeLog.php`ファイルを作成します。
+先ず、プラグインディレクトリ直下に`log.php`ファイルを作成します。
 
 ```
-PluginCode\EccubeLog.php
+PluginCode\log.php
 ```
 
-以下の内容を`EccubeLog.php`に記述します。
+以下の内容を`log.php`に記述します。
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/log/EccubeLog.php"></script>
+<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/log/log.php"></script>
 
-ファイル作成後、`EccubeLog.php`ファイルを読み込む必要があるため、
-`EccubeLog`を利用している環境では、
+ファイル作成後、`log.php`ファイルを読み込む必要があるため、
+`log_info`等を利用している環境では、
 
 ```
-require_once(__DIR__.'/../EccubeLog.php');
+require_once(__DIR__.'/../log.php');
 ```
 
-と利用しているプログラムから`EccubeLog.php`をrequireする必要があります。  
+と利用しているプログラムから`log.php`をrequireする必要があります。  
 読み込む位置はディレクトリの場所によって適宜変更してください。
+
+プラグインのServiceProviderに定義しておけば他のクラスに宣言しなくても読み込まれるようになります。
 
 EC-CUBE 3.0.8以下にも対応する場合、ServiceProvider内に`version_compare`部分のコードも記述してください。
 
 
 ```php
-if (version_compare(\Eccube\Common\Constant::VERSION, '3.0.8', '<=')) {
-    \EccubeLog::init($app);
+if (version_compare(Constant::VERSION, '3.0.8', '<=')) {
+    eccube_log_init($app);
 }
 
 $app['monolog.logger.プラグインコード'] = $app->share(function ($app) {

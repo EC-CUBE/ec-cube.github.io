@@ -58,6 +58,7 @@ EC-CUBEのインストールディレクトリ以下をすべてバックアッ�
 | 3.0.8 → 3.0.9        | app/console <br> cli-config.php <br> composer.json <br> composer.lock <br> eccube_install.sh      |
 | 3.0.9 → 3.0.10       | autoload.php                                                                                      |
 | 3.0.10 → 3.0.11      | autoload.php <br> composer.lock <br> composer.json <br> eccube_install.sh <br> web.config.sample <br> .htaccess.sample |
+| 3.0.11 → 3.0.12        | なし                                                                                              |
 
 ※ `3.0.8 → 3.0.10` のように複数バージョンをまたぐバージョンアップを行う場合は、`3.0.8 → 3.0.9`→`3.0.9 → 3.0.10` のように段階的なバージョンアップを行ってください。
 
@@ -113,3 +114,5 @@ EC-CUBEのバージョンアップ手順は以上です。
 | 3.0.8 → 3.0.9   | [https://github.com/EC-CUBE/ec-cube/compare/3.0.8...3.0.9](https://github.com/EC-CUBE/ec-cube/compare/3.0.8...3.0.9?w=1)   |
 | 3.0.9 → 3.0.10  | [https://github.com/EC-CUBE/ec-cube/compare/3.0.9...3.0.10](https://github.com/EC-CUBE/ec-cube/compare/3.0.9...3.0.10?w=1) |
 | 3.0.10 → 3.0.11 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.10...3.0.11](https://github.com/EC-CUBE/ec-cube/compare/3.0.10...3.0.11?w=1) |
+| 3.0.11 → 3.0.12 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.10...3.0.11](https://github.com/EC-CUBE/ec-cube/compare/3.0.11...3.0.12?w=1) |
+

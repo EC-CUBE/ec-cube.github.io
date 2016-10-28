@@ -301,11 +301,11 @@ require_once(__DIR__.'/../log.php');
 
 プラグインのServiceProviderに定義しておけば他のクラスに宣言しなくても読み込まれるようになります。
 
-EC-CUBE 3.0.8以下にも対応する場合、ServiceProvider内に`version_compare`部分のコードも記述してください。
+EC-CUBE 3.0.8以下にも対応する場合、ServiceProvider内に`method_exists`部分のコードも記述してください。
 
 
 ```php
-if (version_compare(Constant::VERSION, '3.0.8', '<=')) {
+if (!method_exists('Eccube\Application', 'getInstance')) {
     eccube_log_init($app);
 }
 

@@ -58,7 +58,7 @@ EC-CUBEのインストールディレクトリ以下をすべてバックアッ�
 | 3.0.8 → 3.0.9        | app/console <br> cli-config.php <br> composer.json <br> composer.lock <br> eccube_install.sh      |
 | 3.0.9 → 3.0.10       | autoload.php                                                                                      |
 | 3.0.10 → 3.0.11      | autoload.php <br> composer.lock <br> composer.json <br> eccube_install.sh <br> web.config.sample <br> .htaccess.sample |
-| 3.0.11 → 3.0.12        | なし                                                                                              |
+| 3.0.11 → 3.0.12      | composer.json <br> composer.lock <br> eccube_install.php <br> web.config.sample <br> .htaccess.sample |
 
 ※ `3.0.8 → 3.0.10` のように複数バージョンをまたぐバージョンアップを行う場合は、`3.0.8 → 3.0.9`→`3.0.9 → 3.0.10` のように段階的なバージョンアップを行ってください。
 
@@ -87,6 +87,29 @@ EC-CUBEのインストールディレクトリ以下をすべてバックアッ�
   
 `html/template/default/js/eccube.js`をコピーして、各テンプレートフォルダの`eccube.js`を置き換えてください。  
   
+※テンプレートフォルダは、テンプレート一覧の「保存先」の列に表示してあります。　(例)  html/template/P3001
+
+#### 3.0.11 → 3.0.12
+
+##### twigファイルの更新
+
+| 編集対象                                                         | 変更差分 |
+|-----------------------------------------------------------------|----------|
+| MYページ/ログイン(Mypage/login.twig)    | <a href="https://github.com/EC-CUBE/ec-cube/compare/3.0.11...3.0.12?w=1#diff-456fb9674d5c9c2912a57a8334441164" target="_blanl">変更差分を表示</a> |
+| 商品詳細ページ(Product/detail.twig)     | <a href="https://github.com/EC-CUBE/ec-cube/compare/3.0.11...3.0.12?w=1#diff-3e2e5d1f9ba985b3723f5e0e030658fd" target="_blanl">変更差分を表示</a> |
+| 商品購入/お届け先の複数指定(Shopping/shipping_multiple.twig)  |  <a href="https://github.com/EC-CUBE/ec-cube/compare/3.0.11...3.0.12?w=1#diff-60d2cc7d335953e2b9f32099bed48b59" target="_blanl">変更差分を表示</a> |
+| 商品購入ログイン(Shopping/login.twig)   | <a href="https://github.com/EC-CUBE/ec-cube/compare/3.0.11...3.0.12?w=1#diff-7ec450f2b624e21ef2d1f61793a6745e" target="_blanl">変更差分を表示</a> |
+
+##### その他のファイルの置き換え
+
+`管理画面>オーナーズストア>テンプレート管理>テンプレート一覧`で、「デフォルト」以外のテンプレートを選択している場合は以下のファイルの置き換えが必要です。  
+
+| 対象ファイル                                                   |  配置先   | 変更差分 |
+|----------------------------------------------------------------|-----------|----------|
+| src/Eccube/Resource/template/default/Form/form_layout.twig | app/template/[テンプレートコード]/Form/form_layout.twig | <a href="https://github.com/EC-CUBE/ec-cube/compare/3.0.11...3.0.12?w=1#diff-0098ed669424c10911733e643a0646dd" target="_blanl">変更差分を表示</a> |
+| src/Eccube/Resource/template/default/pagination.twig       | app/template/[テンプレートコード]/pagination.twig | <a href="https://github.com/EC-CUBE/ec-cube/compare/3.0.11...3.0.12?w=1#diff-6fef68f38234a15ce2570b56e36bbece" target="_blanl">変更差分を表示</a> |
+| html/template/default/css/style.css                        | html/template/[テンプレートコード]/css/style.css | <a href="https://github.com/EC-CUBE/ec-cube/compare/3.0.11...3.0.12?w=1#diff-5a6358cab0f1c0b89de8257c09313f4a" target="_blanl">変更差分を表示</a> |
+
 ※テンプレートフォルダは、テンプレート一覧の「保存先」の列に表示してあります。　(例)  html/template/P3001
 
 ### 6. 不要ファイルの削除

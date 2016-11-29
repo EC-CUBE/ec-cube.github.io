@@ -152,3 +152,10 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 # EC-CUBE3カスタマイズガイドライン
 
 - **[EC-CUBE3カスタマイズガイドライン](guideline)**
+
+
+## Supporters
+
++ JetBrains  
+![JetBrains](/images/logo_JetBrains_4.png)
+EC-CUBEは JetBrains のサポートを受けています。

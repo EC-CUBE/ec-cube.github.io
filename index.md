@@ -156,6 +156,6 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 
 ## Supporters
 
-+ JetBrains  
-![JetBrains](/images/logo_JetBrains_4.png)
++ [JetBrains](https://www.jetbrains.com/)  
+[![JetBrains](/images/logo_JetBrains_4.png)](https://www.jetbrains.com/)
 EC-CUBEは JetBrains のサポートを受けています。

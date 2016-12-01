@@ -20,7 +20,7 @@ title: ディレクトリ
 - ディレクトリ例
 
 ```
-[プラグイン名]
+[プラグインコード]
   ├── Controller
   │   └── XXXXController.php
   ├── Entity
@@ -33,18 +33,31 @@ title: ディレクトリ
   ├── Repository
   │   └── XXXXRepository.php
   ├── Resource
+  │   ├── assets
+  │   │   ├── css
+  │   │   │   └── xxxx.css
+  │   │   ├── img
+  │   │   │   ├── xxxx.gif
+  │   │   │   ├── xxxx.jpg
+  │   │   │   └── xxxx.png
+  │   │   └── js
+  │   │       └── xxxx.js
   │   ├── doctrine
   │   │   └── Plugin.XXXX.Entity.XXXX.dcm.yml
-  │   └── locale
-  │       └── message.ja.yml
+  │   │   └── migration
+  │   │       └── VersionYYYYMMDDHHMMSS.php
+  │   ├── locale
+  │   │   └── message.ja.yml
+  │   └── template
+  │           ├── Block
+  │           │   └── XXXX.twig
+  │           ├── admin
+  │           │   └── XXXX.twig
+  │           └── XXXX.twig
   ├── Service
   │   └── XXXXService.php
   ├── ServiceProvider
   │   └── XXXXServiceProvider.php
-  ├── View
-  │   ├── admin
-  │   │   └── XXXX.twig
-  │   └── XXXX.twig
   ├── PluginManager.php
   ├── LICENSE.txt
   ├── XXXXEvent.php
@@ -65,7 +78,4 @@ title: ディレクトリ
 
 本体側に存在しないようなものについては自由に作成しても問題ありません。
 
-
-
-
-
+本体側のディレクトリ構成は [ディレクトリ・ファイル構成](/spec-directory-structure) を参照してください。

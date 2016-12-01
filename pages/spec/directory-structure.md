@@ -75,4 +75,4 @@ permalink: spec_directory-structure
 
 ## 参照元
 
-- <a href="http://sssslide.com/speakerdeck.com/amidaike/ec-cube3kodorideingu-number-1" target="_blank">EC-CUBE 3コードリーディング #1</a>
+- <a href="https://speakerdeck.com/amidaike/ec-cube3kodorideingu-number-1" target="_blank">EC-CUBE 3コードリーディング #1</a>

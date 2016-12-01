@@ -34,9 +34,9 @@ event:
 orm.path:
     - /Resource/doctrine
 const:
-    AAAA_BBBB: true
-    CCCC_DDDD: 10000
-    EEEE_FFFF: 決済可能
+    aaaa: true
+    bbbb: 10000
+    cccc: 決済可能
 ```
 バージョンは数値(0.1や1.0.0等々)で定義します。
 
@@ -76,13 +76,13 @@ $app['translator']->addResource('yaml', $file, $app['locale']);
 
 ```
 const:
-    AAAA_BBBB: true
-    CCCC_DDDD: 10000
-    EEEE_FFFF: 決済可能
+    aaaa: true
+    bbbb: 10000
+    cccc: 決済可能
 ```
 
 プラグインからは、以下で呼び出すことが可能です。
 
 ```
-$hoge  = $app['config']['プラグインコード']['const']['AAAA_BBBB'];
+$hoge  = $app['config']['プラグインコード']['const']['aaaa'];
 ```

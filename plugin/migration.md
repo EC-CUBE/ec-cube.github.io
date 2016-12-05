@@ -3,11 +3,6 @@ layout: default
 title: マイグレーション
 ---
 
-```
-対象バージョン : 3.0.12以降
-更新日 : 2016/11/27
-```
-
 # {{ page.title }}
 
 プラグイン用のテーブル作成・削除を行う場合、マイグレーションという仕組みを使います。マイグレーションには極力テーブル追加、削除処理に止めておきます。  
@@ -28,7 +23,8 @@ title: マイグレーション
   │   │   └── migration
   │   │       └── VersionYYYYMMDDHHMMSS.php
 ```
-※本体ではマイグレーションファイルは  
+※本体ではマイグレーションファイルは
+
 ```
 php app/console migrations:generate
 ```
@@ -38,7 +34,7 @@ php app/console migrations:generate
 
 ### マイグレーションでのテーブル作成・削除
 
-プラグイン用テーブルの作成・削除の処理内容は(プラグイン仕様書)[http://downloads.ec-cube.net/src/manual/v3/plugin.pdf]の「3.プラグインを作る」の「マイグレーション」を参照してください。
+プラグイン用テーブルの作成・削除の処理内容は[プラグイン仕様書](http://downloads.ec-cube.net/src/manual/v3/plugin.pdf){:target="_blank"}の「3.プラグインを作る」の「マイグレーション」を参照してください。
 
 
 ### 項目の追加・削除

@@ -3,15 +3,10 @@ layout: default
 title: プラグインマネージャー
 ---
 
-```
-対象バージョン : 3.0.12以降
-更新日 : 2016/11/27
-```
-
 # {{ page.title }}
 
-プラグインのインストール、アンインストール、有効、無効、アップデートを行うときに呼び出される関数が定義されています。  
-プラグインをインストール時に行っておきたい処理はプラグインマネージャーで記述しておきます。
+プラグインのインストール、アンインストール、有効、無効、アップデートを行うときに必ず呼び出されるクラスがあります。  
+そのクラスは`PluginManager`であり、例えばプラグインをインストール時に行っておきたい処理は`PluginManager`に記述しておきます。
 
 ```
 [プラグインコード]
@@ -100,11 +95,11 @@ class PluginManager extends AbstractPluginManager
 ### アンインストール(uninstall)
 プラグインをアンインストール時に実行される関数です。ここで行う主な処理として、
 
-- アンインストール時に行いたい処理  
-`$this->migrationSchema($app, __DIR__.'/Resource/doctrine/migration', $config['code'], 0);`
+- アンインストール時に行いたい処理
 - ブロック削除
 - 画像やcssファイルなどプラグインで使用するリソースファイルの削除
-- DBマイグレーション処理(プラグインで利用するテーブル削除)
+- DBマイグレーション処理(プラグインで利用するテーブル削除)  
+`$this->migrationSchema($app, __DIR__.'/Resource/doctrine/migration', $config['code'], 0);`
 
 等を記述します。
 
@@ -255,5 +250,3 @@ class PluginManager extends AbstractPluginManager
     }
 }
 ```
-
-

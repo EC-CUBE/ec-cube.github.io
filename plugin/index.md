@@ -21,14 +21,13 @@ title: プラグインベストプラクティス
 - [プラグインで利用するリソースファイル](asset)
 - [マイグレーション](migration)
 - [エンティティ、リポジトリ](db)
-- [トランザクション](transaction)
-[plugin-update-for3.0.11]を参照
+- [トランザクション](/guideline/plugin-update-for3.0.11)
 - [ログ](log)
 - [セキュリティ](security)
 - [新規ページ、ブロック](new)
 - [テスト](test)
 - [ライセンス](license)
-
+- [その他](other)
 
 
 

@@ -3,11 +3,6 @@ layout: default
 title: サービスプロバイダー
 ---
 
-```
-対象バージョン : 3.0.12以降
-更新日 : 2016/11/27
-```
-
 # {{ page.title }}
 
 プラグイン側でルーティング定義やFormの定義等々プラグインに対しての設定を行う場合、`ServiceProvider`で行います。  
@@ -21,7 +16,7 @@ SampleTestServiceProvider.php
 ファイル名は`[プラグインコード]ServiceProvider.php`という命名規則で作成します。  
 厳密には`config.yml`で定義した`service`の値に合わせます。
 
-- 配置場所
+- サービスプロバイダーファイル配置場所
 
 ```
 SampleTest
@@ -30,7 +25,7 @@ SampleTest
 ```
 
 ### サービスプロバイダーの全体像
-プラグインをSampleというプラグインコードして作成しています。よく利用されるであろう内容を記載しています。
+よく利用されるであろう内容を記載しています。下記はプラグインを`Sample`というプラグインコードで作成しています。
 
 ```php
 <?php
@@ -80,7 +75,6 @@ class SampleServiceProvider implements ServiceProviderInterface
         }));
 
         // Form Extension
-        // @deprecated since 3.0.0, to be removed in 3.1
         $app['form.type.extensions'] = $app->share($app->extend('form.type.extensions', function ($extensions) use ($app) {
             $extensions[] = new EntryTypeExtension($app);
 
@@ -88,17 +82,17 @@ class SampleServiceProvider implements ServiceProviderInterface
         }));
 
         // Repository
-        $app['eccube.plugin.[プラグインコード].repository.[エンティティ]'] = $app->share(function () use ($app) {
-            return $app['orm.em']->getRepository('Plugin\Sample\Entity\XXXX');
+        $app['sample.repository.[エンティティ名]'] = $app->share(function () use ($app) {
+            return $app['orm.em']->getRepository('Plugin\Sample\Entity\[エンティティ]');
         });
 
         // 既存Repositoryを継承したRepository定義
-        $app['eccube.plugin.[プラグインコード].repository.xxxxx'] = $app->share(function () use ($app) {
+        $app['sample.repository.category'] = $app->share(function () use ($app) {
             return new XXXXRepository($app['orm.em'], $app['orm.em']->getMetadataFactory()->getMetadataFor('Eccube\Entity\Category'));
         });
 
         // Service
-        $app['eccube.plugin.[プラグインコード].service.[サービス名]'] = $app->share(function () use ($app) {
+        $app['sample.service.[サービス名]'] = $app->share(function () use ($app) {
             return new \Plugin\Sample\Service\XXXXService($app);
         });
 
@@ -118,7 +112,6 @@ class SampleServiceProvider implements ServiceProviderInterface
                 'name' => 'サンプル',
                 'has_child' => true,
                 'icon' => 'cb-shopping-cart',
-                // 'url' => 'plugin_Sample_hello',
                 'child' => array(
                     array(
                         'id' => 'sample3',
@@ -148,7 +141,7 @@ class SampleServiceProvider implements ServiceProviderInterface
                 'max_files' => '90',
                 'log_dateformat' => 'Y-m-d H:i:s,u',
                 'log_format' => '[%datetime%] %channel%.%level_name% [%session_id%] [%uid%] [%user_id%] [%class%:%function%:%line%] - %message% %context% %extra% [%method%, %url%, %ip%, %referrer%, %user_agent%]',
-            );
+            )
 
             return $app['eccube.monolog.factory']($config);
         });
@@ -161,5 +154,3 @@ class SampleServiceProvider implements ServiceProviderInterface
 
 }
 ```
-
-

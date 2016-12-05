@@ -3,11 +3,6 @@ layout: default
 title: コントローラー
 ---
 
-```
-対象バージョン : 3.0.12以降
-更新日 : 2016/11/27
-```
-
 # {{ page.title }}
 
 プラグインでもコントローラーを作成することで新たな画面を作成することが可能です。作成方法は基本的には本体側と同じです。
@@ -17,7 +12,9 @@ title: コントローラー
 本体側ではルーティング定義は`FrontControllerProvider`や`AdminControllerProvider`に記述しますが、プラグインでは`ServiceProvider`に定義します。  
 記述する内容は本体側と同じ内容となります。
 
-```
+```php
+<?php
+
 class XXXXServiceProvider implements ServiceProviderInterface
 {
 
@@ -58,6 +55,7 @@ class XXXXServiceProvider implements ServiceProviderInterface
 
 - ルーティング定義  
 $app->match('/plugin/[プラグインコード]/config',
+
 - コントローラー  
 Plugin/[プラグインコード]/Controller/ConfigController  
 
@@ -70,7 +68,7 @@ Plugin/[プラグインコード]/Controller/ConfigController
 $admin->match('/plugin/[プラグインコード]/config', 'Plugin\[プラグインコード]\Controller\ConfigController::index')->bind('plugin_[プラグインコード]_config');
 ```
 
-と定義してください。詳しくはプラグイン仕様書の「プラグインの設定画面の作成方法」を参照してください。
+と定義してください。詳しくは[プラグイン仕様書](http://downloads.ec-cube.net/src/manual/v3/plugin.pdf){:target="_blank"}の「プラグインの設定画面の作成方法」を参照してください。
 
 ### 画面を表示する必要がないコントローラーを作成する場合
 

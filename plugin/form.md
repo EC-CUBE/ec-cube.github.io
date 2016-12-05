@@ -3,23 +3,18 @@ layout: default
 title: フォーム
 ---
 
-```
-対象バージョン : 3.0.12以降
-更新日 : 2016/11/27
-```
-
 # {{ page.title }}
 
 プラグインではフォームとしての扱い方は2種類存在しており、
 - 既存のフォームに対しての拡張
 - 新規フォームの作成
 
-となります。新規フォームの作成については[/tutorial-4](/tutorial-4)を参照してください。
+となります。新規フォームの作成については[フォームを表示してみよう](/tutorial-4)を参照してください。
 
 ### 既存のフォームに対しての拡張
 
 EC-CUBE3.0.8までは`FormExtension`というイベントを使ってFormに対して拡張を行えましたが、  
-3.0.9からは新たなイベントが用意されたため、そのイベントでフォームの拡張
+3.0.9からは新たなイベントが用意されたため、そのイベントでフォームの拡張を行います。
 
 ```php
 /* admin.product.edit.initialize */
@@ -33,8 +28,8 @@ public function onAdminProductEditInitialize(EventArgs $event)
 }
 ```
 
-※$builder->add('nickname' 'text', array(の`nickname`部分に`plg_`とつけて定義するとテンプレートを拡張することなく画面にフォーム項目が表示されるようになります。  
-詳しくは[/guideline/plugin-form](/guideline/plugin-form)を参照してください。
+※`$builder->add('nickname' 'text', array(`の`nickname`部分に`plg_`とつけて定義するとテンプレートを拡張することなく画面にフォーム項目が表示されるようになります。  
+詳しくは[フォームの追加と拡張フォームの追加と拡張](/guideline/plugin-form)を参照してください。
 
 
 ### フォームの入力チェックについて
@@ -48,8 +43,8 @@ if ($form->isSubmitted() && $form->isValid()) {
 
 
 ### 拡張したフォームのDB保存処理
-フォーム要素を追加したのであれば、POST時に何かしらの処理(DBに保存など)が発生します。  
-その場合、`complete`イベントにて処理を行う必要があります。
+フォーム要素を追加したのであれば、POST時にDBに保存などの処理を行うことがよくあります。  
+その場合、`complete`イベントにて処理を行いフォームで入力された値を処理する必要があります。
 
 ```php
 /* admin.product.edit.complete */
@@ -59,8 +54,12 @@ public function onAdminProductEditComplete(EventArgs  $event)
 
     $nickname = $form->get('nickname')->getData();
 
-    $this->app['orm.em']->persist([Entity]);
-    $this->app['orm.em']->flush([Entity]);
+    $Profile = $this->app['xxxx.profile']->find(zzz);
+
+    $Profile->setNickname($nickname);
+
+    $this->app['orm.em']->persist($Profile);
+    $this->app['orm.em']->flush($Profile);
 }
 ```
 

@@ -1,0 +1,9 @@
+allowed-tags:
+  - quickstart
+  - spec
+  - api
+  - design
+  - plugin
+  - tutorial
+  - core
+  - guideline

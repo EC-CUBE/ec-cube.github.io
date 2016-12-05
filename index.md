@@ -1,161 +1,100 @@
 ---
 layout: default
-title: ホーム
-description: EC-CUBEのドキュメントサイトです。開発ガイドラインや要素技術の概念、本体開発やプラグイン開発のチュートリアル、Cookbookなどの情報を提供しています。
+title: EC-CUBE開発ドキュメント
+keywords: このサイトについて, QuickStart
+tags: [quickstart]
+sidebar: home_sidebar
+permalink: /
 ---
 
----
+# {{page.title}}
 
-# EC-CUBE 3 開発ドキュメント
-
-## GitHub
-
-- <a href="https://github.com/EC-CUBE/ec-cube" target="_blank">EC-CUBE 3 開発レポジトリ</a>
-- <a href="https://github.com/EC-CUBE/ec-cube.github.io" target="_blank">EC-CUBE 3 開発ドキュメントレポジトリ</a>
+ EC-CUBEのドキュメントサイトです。  
+ 開発ガイドラインや要素技術の概念、本体開発やプラグイン開発のチュートリアル、Cookbookなどの情報を提供しています。  
+ ドキュメントへの追記、記載内容の修正についてはEC-CUBE本体と同様に[GitHub](https://github.com/EC-CUBE/ec-cube.github.io/){:target="_blank"
+}で受け付けております。
 
 ## Quick Start
 
-- [システム要件](/requirement.html)
-- [開発環境の構築](development-environment.html)
-- [インストール方法](/install.html)
-- [バージョンアップ方法](/update.html)
++ [システム要件](/quickstart_requirement)
++ [インストール方法](/quickstart_install)
++ [urlからhtmlを無くす手順](/quickstart_remove-html)
++ [バージョンアップ方法](/quickstart_update)
 
-## EC-CUBE 3 仕様
 
-- [ディレクトリ・ファイル構成](/spec-directory-structure.html)
-  1. 主なディレクトリと役割
-  1. 定数
-  1. 2系・3系置き換え早見表
-- [テンプレート探索順序](/template.html)
-- <a href="https://github.com/EC-CUBE/eccube3-doc/blob/master/feature_list.xls" target="_blank">機能一覧</a>
-- <a href="https://github.com/EC-CUBE/eccube3-doc/tree/master/ER-D" target="_blank">テーブル・ER図</a>
-- <a href="https://github.com/EC-CUBE/eccube3-doc/tree/master/IntegrationTest" target="_blank">結合試験項目書</a>
-- [実験的な実装](/experimental.html)
-- [設定ファイル](/config)
-- [複数配送機能](/multi-shipping)
-- [税率機能](/tax)
+## 本体の仕様
 
-## プラグイン仕様
-
-- [プラグイン仕様・チュートリアル](/plugin.html)
-- [インストーラ仕様](/plugin_install.html)
-- [ハンドラによる優先制御仕様](/plugin_handler.html) 
-- [php app/console plugin:develop を利用したプラグイン開発](/plugin_console.html)
-- [プラグインのテスト](plugin-test.html)
-- [EC-CUBE 3.0.11 での変更内容に伴うプラグインへの影響について](guideline/plugin-update-for3.0.11.html)
++ [ディレクトリ構成](/spec_directory-stracture)
++ 設定ファイル
+	- [設定ファイルの概要](/spec_config)
+	- [doctrine_cacheの設定](/spec_doctrine-cache)
+	- [セッションハンドラの設定](/spec_session-handler)
++ 機能仕様
+	- [複数配送](/spec_multi-shipping)
+	- [税率設定](/spec_tax)
++ [パフォーマンス](/spec_performance)
++ [実験的実装](/spec_experimental)
++ [機能一覧](https://github.com/EC-CUBE/eccube3-doc/blob/master/feature_list.xls){:target="_blank"}
++ [テーブル・ER図](https://github.com/EC-CUBE/eccube3-doc/tree/master/ER-D){:target="_blank"}
++ [結合試験項目書](https://github.com/EC-CUBE/eccube3-doc/tree/master/IntegrationTest){:target="_blank"}
 
 ## Web API仕様
 
-- [Web API β版 プラグインスタートアップガイド](/web-api-doc.html)
-- [Web API開発指針](/api.html)
-- [Web API認証 ( Authorization ) ガイド](/api_authorization.html)
++ [Web API β版 プラグインスタートアップガイド](/api_startup-guide)
++ [Web API 開発指針](/api_policy)
++ [Web API認証(Authorization)ガイド](/api_authorization)
 
-## 開発ガイドライン
-- 開発を行う際の、主なフローと、前提知識を提供します。
+## 開発共通ガイドライン
 
-	- [開発作業全体概要](workflow-general-image.html)
-	- [コーディング規約](coding_style.html)
-	- [マイグレーションガイド](migration.html)
-	- [EC-CUBE3でのログ設定](/log)
-	- [Gitを用いた開発手順](workflow.html)
-	- [カスタマイズリファレンス](customize-reference.html)
-        1. カスタマイズ時に作成・変更するファイル
-        2. 外部コンポーネント
-
-## 開発の補助
-
-- [デバッグ・Tips](tips.html)
-
-## EC-CUBE 3で利用されている技術
-- EC-CUBE 3のコアとなる技術概要と、参考になるサイトの参照先を紹介しています。
-
-	- [技術一覧](/architecture.html)
-		1. Silex 
-		1. Symfony2
-		1. データーベース抽象化レイヤ 
-		1. テンプレートエンジン 
-		1. ライブラリ管理 
++ [開発環境の構築](/guideline_development)
++ [コーディング規約](/guideline_coding-style)
++ [ログ出力設定](/guideline_log)
++ [開発の補助:デバッグ・Tips](/guideline_tips)
++ [EC-CUBE 3の利用技術](/guideline_architecture)
 
 
-## チュートリアル
+## デザインカスタマイズ
 
-- チュートリアルで最終的に作るもの
++ [デザインテンプレートの基礎](/design_template)
++ [デザインのフレーム構成](/design_default-frame)
++ [フォームレイアウトの変更](/design_form)
++ [ブロックの利用](/design_block)
++ [例:GoogleAnalyticsタグの設置](/design_analyticsbloc)
 
-    - データーベースの「CRUD」を画面表示とあわせて作成します。
+## プラグインカスタマイズ
 
-    - 本チュートリアルの完成ソースは以下から入手できます。
-    
-        - <a href="https://github.com/geany-y/ec-cube/tree/documents/tutorial" target="_blank">GitHub</a>
++ [プラグインの導入方法](/plugin_install)
++ [プラグイン導入時のトラブルシューティング](/plugin_troubleshooting)
++ [プラグイン機構の仕様]
+	- [プラグイン仕様書](http://downloads.ec-cube.net/src/manual/v3/plugin.pdf){:target="_blank"}
+	- [インストーラーの仕様](/plugin_installer)
+	- [ハンドラによる優先順位の制御仕様](/plugin_handler)
+	- [プラグイン開発用コンソールコマンド](/plugin_console)
+	- [CIを利用したプラグインのテスト](/plugin_test)
+	- [EC-CUBE 3.0.11 の変更と影響](/plugin_update-for3011)
++ プラグインの開発方法
+	- [プラグインジェネレータの利用方法](/plugin_tutorial-generate)
+	- [新規ページの追加](/plugin_tutorial-pageadd)
+	- [利用しないページの削除](/plugin_tutorial-pagedelete)
+	- [フォームの追加、変更](/plugin_tutorial-form)
+	- [プラグイン用テーブルの追加](/plugin_tutorial-table)
+	- [チュートリアル](/plugin_tutorial)
++ [オーナーズストアへの公開](http://www.ec-cube.net/plugin/){:target="_blank"}
 
-### チュートリアル一覧
+## コアコードのカスタマイズ
 
-- **URLを設定しよう**
-    - [ルーティングとコントローラープロバイダー](tutorial-1.html)
++ [カスタマイズ指針](/customize_policy)
++ [例:会員管理へ項目の追加](/customize_example-adminadd)
 
-- **コントローラーからビューを表示してみよう**
-    - [ビューのレンダリング](tutorial-2.html)
+## 本体開発に参加する
 
-- **画面に変数を渡してみよう**
-    - [Twig構文とView変数](tutorial-3.html)
-
-- **フォームを表示してみよう**
-    - [Formとフォームビルダー](tutorial-4.html)
-
-- **フォーム情報を整理して入力値チェックも追加しよう**
-    - [FormType](tutorial-5.html)
-
-- **データーベースを作成しよう**
-    - 本章は「開発ガイドライン」で説明を行なっているために、本チュートリアルのテーブル定義のみ、記述します。
-    - 詳しい作成方法は以下を参照ください。
-        - [マイグレーションガイド](migration.html)
-        - [本チュートリアルのテーブル定義](tutorial-6.html)
-
-- **Doctrineのためにデーターベース構造を設定しよう**
-    - [データーベーススキーマ定義](tutorial-7.html)
-
-- **Doctrineのためにエンティティファイルを作成しよう**
-    - [エンティティ](tutorial-8.html)
-
-- **データーベースに登録してみよう**
-    - [エンティティマネージャーを利用した情報の登録](tutorial-9.html)
-
-- **データベースから情報を取り出してテーブルリストで表示してみよう**
-    - [データーベース情報の取得とViewのループ処理](tutorial-10.html)
-
-- **データーベース操作処理をレポジトリに整理しよう**
-    - [レポジトリとデータベース操作](tutorial-11.html)
-
-- **リストを編集しよう**
-    - [条件検索とアップデート処理](tutorial-12.html)
-
-- **いらない情報を削除してみよう**
-    - [レコードの削除](tutorial-13.html)
-
-
-# クックブック
-本クックブックではチュートリアルとは違い、より実践的なカスタマイズ方法を説明します。
-
-### インストール
-- [インストール時にURLからhtmlを無くす](remove_html)
-
-### 管理画面項目の追加
-
-- [管理画面項目の追加](cookbook-1-cube3-customize-admin-add)
-
-
-### タグの追加
-- [ブロック管理を利用したGoogleAnalyticsタグの設定](cookbook-2-cube3-customize-js)
-
-### パフォーマンス対応
-- [パフォーマンス対応](performance)
-
-# EC-CUBE3カスタマイズガイドライン
-
-- **[EC-CUBE3カスタマイズガイドライン](guideline)**
-
++ [開発作業全体概要](/collaboration_workflow)
++ [Gitを用いた開発手順](/collaboration_githubflow)
++ [マイグレーションガイド](/collaboration_migration)
++ [外部Componentの利用](/collaboration_component)
 
 ## Supporters
 
 + [JetBrains](https://www.jetbrains.com/)  
-[![JetBrains](/images/logo_JetBrains_4.png)](https://www.jetbrains.com/)
+[![JetBrains](/images/logo_JetBrains_4.png)](https://www.jetbrains.com/){:target="_blank"}  
 EC-CUBEは JetBrains のサポートを受けています。

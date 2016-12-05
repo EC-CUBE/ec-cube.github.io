@@ -1,0 +1,22 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+- title: Topnav
+  items:
+    - title: 公式サイト
+      external_url: http://www.ec-cube.net
+    - title: 開発コミュニティ
+      external_url: http://xoops.ec-cube.net
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+    - title: GitHub
+      folderitems:
+        - title: EC-CUBE 3.x Repo
+          external_url: https://github.com/EC-CUBE/ec-cube
+        - title: EC-CUBE 2.13 Repo
+          external_url: https://github.com/EC-CUBE/eccube-2_13
+        - title: Documents Site Repo
+          external_url: https://github.com/EC-CUBE/ec-cube.github.io
+    

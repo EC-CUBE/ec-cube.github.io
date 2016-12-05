@@ -3,11 +3,6 @@ layout: default
 title: テンプレート
 ---
 
-```
-対象バージョン : 3.0.12以降
-更新日 : 2016/11/27
-```
-
 # {{ page.title }}
 
 プラグインではテンプレートを差し込む場合、イベントを通じて差し込みます。  
@@ -65,9 +60,7 @@ public function onShoppingIndexRender(TemplateEvent $event)
 {
     $parameters = $event->getParameters();
     $form = $parameters['form'];
-    $parts = $this->app->renderView('[プログラムコード]/Resource/template/parts.twig', array(
-        'form' => $form,
-    ));
+    $parts = $app['twig']->getLoader()->getSource('[プログラムコード]/Resource/template/parts.twig');
     // twigコードに挿入
     // 要素箇所の取得
     $search = '<div id="xxxx">';

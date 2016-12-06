@@ -18,32 +18,12 @@ title: プラグインベストプラクティス
 - [コントローラー](controller)
 - [フォーム](form)
 - [テンプレート](template)
-- [プラグインで利用するリソースファイル](asset)
+- [リソースファイル、ブロック](asset)
 - [マイグレーション](migration)
 - [エンティティ、リポジトリ](db)
 - [トランザクション](/guideline/plugin-update-for3.0.11)
-- [ログ](log)
+- [ログ](/log)
 - [セキュリティ](security)
-- [新規ページ、ブロック](new)
-- [テスト](test)
+- [プラグインのテスト](/plugin-test)
 - [ライセンス](license)
 - [その他](other)
-
-
-
-constant.ymlではなくconfig.ymlに記述
-
-resourceファイルはapp->translatorを使う
-
-Symfony2のコーディング規約に従う
-
-テストを行う方法として
-
-画面への追加
-ロジックの追加
-
-フックポイントについて
-
-クラス名は極力あわせること
-
-

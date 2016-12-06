@@ -74,7 +74,7 @@ $admin->match('/plugin/[プラグインコード]/config', 'Plugin\[プラグイ
 
 プラグインによっては画面を表示する必要がない処理の時でも必ずResponsを返すようにしてください。
 
-- __NG__ : 下記のような実装では、`exit`で終了するため、EC-CUBE側に処理が戻りません。
+- **NG** : 下記のような実装では、`exit`で終了するため、EC-CUBE側に処理が戻りません。
 
 ```php
 <?php
@@ -101,7 +101,7 @@ class TopController extends AbstractController
 }
 ```
 
-- __OK__ ： Responsオブジェクトを生成し必ずResponseをreturnしてください。
+- **OK** ： Responsオブジェクトを生成し必ずResponseをreturnしてください。
 
 ```php
 <?php

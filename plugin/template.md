@@ -80,3 +80,29 @@ public function onShoppingIndexRender(TemplateEvent $event)
 {% endhighlight %}
 
 XXXXEvent.phpにparts.twigの内容も記述しても良いのですが、twigファイルとEvent部分を分離することで可読性がよくなります。
+
+また、JavaSciptタグを追加したい場合、
+
+- XXXXEvent.php
+{% highlight php %}
+public function onShoppingIndexRender(TemplateEvent $event)
+{
+    $source = $event->getSource();
+
+    $tag = <<< EOT
+{% raw %}{% block javascript %}
+<script>
+    $(function() {
+        alert("hoge");
+    });
+</script>
+{% endblock javascript %}{% endraw %}
+EOT;
+
+    $event->setSource($source . $tag);
+}
+{% endhighlight %}
+
+
+
+と記述すると追加可能です。

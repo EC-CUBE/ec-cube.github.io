@@ -20,8 +20,10 @@ title: ディレクトリ
   ├── Entity
   │   └── XXXX.php
   ├── Form
+  │   ├── Extension
+  │   │   └── XXXXTypeExtension.php
   │   └── Type
-  │       └── XXXXType.php
+  │           └── XXXXType.php
   ├── Repository
   │   └── XXXXRepository.php
   ├── Resource
@@ -61,6 +63,8 @@ title: ディレクトリ
 
 ```
 [プラグインコード]
+  ├── Event
+  │   └── XXXXEvent.php
   ├── Common
   │   └── XXXX.php
   ├── Util

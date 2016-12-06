@@ -34,6 +34,8 @@ namespace Plugin\Sample\ServiceProvider;
 
 use Eccube\Common\Constant;
 use Plugin\Sample\Form\Type\SampleConfigType;
+use Plugin\Sample\Form\Type\Extension\EntryTypeExtension;
+use Plugin\Sample\Service\XXXXService;
 use Silex\Application as BaseApplication;
 use Silex\ServiceProviderInterface;
 
@@ -93,7 +95,7 @@ class SampleServiceProvider implements ServiceProviderInterface
 
         // Service
         $app['sample.service.[サービス名]'] = $app->share(function () use ($app) {
-            return new \Plugin\Sample\Service\XXXXService($app);
+            return new XXXXService($app);
         });
 
         // メッセージ登録

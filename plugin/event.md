@@ -92,6 +92,17 @@ class XXXXEvent
 }
 ```
 
+### イベント関数名について
+定義しているイベントと極力同じ名前になるように関数名をつけることを推奨しています。
+
+- contorollerイベントの場合  
+onRouteXXXXController
+
+- テンプレートイベントの場合  
+onXxxxxIndexRenderやonXxxxxCompleteRender
+
+- フックポイントイベントの場合  
+onXxxxxInitializeやonXxxxxComplete
 
 ### 本体のバージョンチェック
 

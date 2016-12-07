@@ -26,4 +26,3 @@ title: プラグインベストプラクティス
 - [セキュリティ](security)
 - [プラグインのテスト](/plugin-test)
 - [ライセンス](license)
-- [その他](other)

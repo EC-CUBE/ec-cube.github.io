@@ -48,23 +48,32 @@ class XXXXServiceProvider implements ServiceProviderInterface
 
 - 管理画面のルーティング定義をする場合、必ず`'/'.$app['config']['admin_route']`を記述
 - URLやバインド名は必ずユニーク  
-→基本的にURLやバインド名はプラグインコードをつけておけばユニークになります。
-- プラグインの設定画面を定義する場合、
+
+基本的にURLやバインド名はプラグインコードをつけておけばユニークになります。  
+将来的な他プラグインとの重複を防ぐために、バインド名は 
+
+- plugin_[プラグインコード]_xxxxx
+
+という組み合わせが無難です。また、URLは管理画面に関しては、
+
+- plugin/[プラグインコード]/xxxxx  
+→URLなのでプラグインコードは小文字で
+
+が望ましいです。フロント側に関しては被らないようなURLをつけるようにしてください。
 
 プラグインの設定画面を定義する場合、
 
-- ルーティング定義  
+```
+- ルーティング定義
 $app->match('/plugin/[プラグインコード]/config',
 
-- コントローラー  
-Plugin/[プラグインコード]/Controller/ConfigController  
+- コントローラー
+Plugin/[プラグインコード]/Controller/ConfigController
 
-- バインド名  
+- バインド名
 ->bind('plugin_[プラグインコード]_config');
 
 - 設定画面の定義
-
-```
 $admin->match('/plugin/[プラグインコード]/config', 'Plugin\[プラグインコード]\Controller\ConfigController::index')->bind('plugin_[プラグインコード]_config');
 ```
 

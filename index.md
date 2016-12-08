@@ -151,7 +151,8 @@ description: EC-CUBEのドキュメントサイトです。開発ガイドライ
 
 # EC-CUBE3カスタマイズガイドライン
 
-- **[EC-CUBE3カスタマイズガイドライン](guideline)**
+- [EC-CUBE3カスタマイズガイドライン](guideline)
+- [プラグインベストプラクティス](plugin)
 
 
 ## Supporters

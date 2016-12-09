@@ -214,7 +214,7 @@ entries:
             url: /plugin_bp_template
             output: web, pdf
           - title: リソースファイル、ブロック
-            url: plugin_bp_asset
+            url: /plugin_bp_asset
             output: web, pdf
           - title: マイグレーション
             url: /plugin_bp_migration

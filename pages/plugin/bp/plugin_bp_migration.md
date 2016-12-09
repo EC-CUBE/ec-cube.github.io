@@ -3,7 +3,7 @@ title: マイグレーション
 keywords: plugin 
 tags: [plugin]
 sidebar: home_sidebar
-permalink: plugin_bp_asset
+permalink: plugin_bp_migration
 ---
 
 # {{ page.title }}

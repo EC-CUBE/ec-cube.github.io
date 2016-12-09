@@ -3,10 +3,8 @@ title: ライセンス
 keywords: plugin 
 tags: [plugin]
 sidebar: home_sidebar
-permalink: plugin_bp_asset
+permalink: plugin_bp_license
 ---
-
-# {{ page.title }}
 
 EC-CUBE3はGPLv2ライセンスですがプラグインに限りその制約から外れます。
 

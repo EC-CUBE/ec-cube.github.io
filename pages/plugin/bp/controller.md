@@ -1,9 +1,10 @@
 ---
-layout: default
 title: コントローラー
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_controller
 ---
-
-# {{ page.title }}
 
 プラグインでもコントローラーを作成することで新たな画面を作成することが可能です。作成方法は基本的には本体側と同じです。
 

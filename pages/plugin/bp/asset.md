@@ -1,9 +1,10 @@
 ---
-layout: default
 title: リソースファイル、ブロック
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_asset
 ---
-
-# {{ page.title }}
 
 プラグインで画像ファイルやCSSファイルなどのリソースファイルを利用する場合、EC-CUBE本体の公開ディレクトリへリソースファイルをコピーする必要があります。
 

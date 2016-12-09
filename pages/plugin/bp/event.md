@@ -1,9 +1,10 @@
 ---
-layout: default
 title: イベント
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_event
 ---
-
-# {{ page.title }}
 
 プラグインを作成する時に理解する内容の一つにイベントがあります。
 

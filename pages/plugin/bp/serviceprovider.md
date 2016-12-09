@@ -1,9 +1,10 @@
 ---
-layout: default
 title: サービスプロバイダー
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_serviceprovider
 ---
-
-# {{ page.title }}
 
 プラグイン側でルーティング定義やFormの定義等々プラグインに対しての設定を行う場合、`ServiceProvider`で行います。  
 プラグインコードが`SampleTest`とした場合、サービスプバイダーのファイル名とディレクトリの配置はconfig.ymlへの定義は以下の通りです。

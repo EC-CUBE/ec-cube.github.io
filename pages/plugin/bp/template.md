@@ -1,9 +1,12 @@
 ---
-layout: default
 title: テンプレート
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_template
+folder: plugin/bp
 ---
 
-# {{ page.title }}
 
 プラグインではテンプレートを差し込む場合、イベントを通じて差し込みます。  
 

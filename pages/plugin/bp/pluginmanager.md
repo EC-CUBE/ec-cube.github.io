@@ -1,9 +1,11 @@
 ---
-layout: default
 title: プラグインマネージャー
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_pluginmanager
 ---
 
-# {{ page.title }}
 
 プラグインのインストール、アンインストール、有効、無効、アップデートを行うときに必ず呼び出されるクラスがあります。  
 そのクラスは`PluginManager`であり、例えばプラグインをインストール時に行っておきたい処理は`PluginManager`に記述しておきます。

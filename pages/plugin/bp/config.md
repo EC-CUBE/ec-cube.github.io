@@ -1,9 +1,10 @@
 ---
-layout: default
 title: プラグインの設定、定義
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_config
 ---
-
-# {{ page.title }}
 
 プラグインを動作させるためには最低限必要な設定ファイルが存在し、そのファイルにプラグインの設定を記述します。
 

@@ -1,9 +1,11 @@
 ---
-layout: default
 title: フォーム
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_asset
 ---
 
-# {{ page.title }}
 
 プラグインではフォームとしての扱い方は2種類存在しており、
 - 既存のフォームに対しての拡張

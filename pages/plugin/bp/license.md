@@ -1,6 +1,9 @@
 ---
-layout: default
 title: ライセンス
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_asset
 ---
 
 # {{ page.title }}

@@ -1,9 +1,11 @@
 ---
-layout: default
 title: セキュリティ
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_security
 ---
 
-# {{ page.title }}
 
 イベントを使って拡張を行った場合、画面によりセキュリティ制御を行う必要があります。
 EC-CUBE3では管理画面及びマイページに関してはログインが必須となっており、利用するイベントによってログイン状態を判断する必要があります。

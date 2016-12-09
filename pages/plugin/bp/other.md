@@ -1,9 +1,10 @@
 ---
-layout: default
 title: プラグインで推奨していないこと
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_other
 ---
-
-# {{ page.title }}
 
 プラグインでは基本的には何を行っても良いのですが、本体に影響を与えたりして推奨していないものがあります。
 

@@ -1,9 +1,10 @@
 ---
-layout: default
 title: ディレクトリ
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_directory
 ---
-
-# {{ page.title }}
 
 プラグインのディレクトリ構成ですが、極力EC-CUBE3本体のディレクトリ構成に合わせる事を推奨します。但し、全てのディレクトリが必要ではなく必要に応じてディレクトリをプラグイン側に作成してください。
 

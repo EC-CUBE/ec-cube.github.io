@@ -183,6 +183,60 @@ entries:
           - title: ベストプラクティスとは
             url: /plugin_bp_about
             output: web, pdf
+          - title: プラグインベストプラクティスとは
+            url: /plugin_bp_about
+            output: web, pdf
+          - title: バージョン違いによる動作
+            url: /plugin_bp_version
+            output: web, pdf
+          - title: ディレクトリ構成について
+            url: /plugin_bp_directory
+            output: web, pdf
+          - title: プラグインの設定、定義
+            url: /plugin_bp_config
+            output: web, pdf
+          - title: プラグインマネージャー
+            url: /plugin_bp_pluginmanager
+            output: web, pdf
+          - title: イベント
+            url: /plugin_bp_event
+            output: web, pdf
+          - title: サービスプロバイダー
+            url: /plugin_bp_serviceprovider
+            output: web, pdf
+          - title: コントローラー
+            url: /plugin_bp_controller
+            output: web, pdf
+          - title: フォーム
+            url: /plugin_bp_form
+            output: web, pdf
+          - title: テンプレート
+            url: /plugin_bp_template
+            output: web, pdf
+          - title: リソースファイル、ブロック
+            url: plugin_bp_asset
+            output: web, pdf
+          - title: マイグレーション
+            url: /plugin_bp_migration
+            output: web, pdf
+          - title: エンティティ、リポジトリ
+            url: /plugin_bp_db
+            output: web, pdf
+          - title: トランザクション
+            url: /plugin_update-for3011
+            output: web, pdf
+          - title: ログ
+            url: /guideline_log
+            output: web, pdf
+          - title: セキュリティ
+            url: /plugin_bp_security
+            output: web, pdf
+          - title: プラグインのテスト
+            url: /plugin_test
+            output: web, pdf
+          - title: ライセンス
+            url: /plugin_bp_license
+            output: web, pdf
     - title: オーナーズストアへの公開
       external_url: http://www.ec-cube.net/plugin/
       output: web, pdf

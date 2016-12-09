@@ -1,9 +1,11 @@
 ---
-layout: default
 title: EC-CUBE3のバージョン違いによる動作
+keywords: plugin 
+tags: [plugin]
+sidebar: home_sidebar
+permalink: plugin_bp_version
 ---
 
-# {{ page.title }}
 
 EC-CUBE3.0.8までとEC-CUBE3.0.9以上からプラグイン機構(プラグインの実装)が変わっており、古いバージョンもサポートされていますがサポートするEC-CUBEのバージョンにより対応するイベントが異なります。また本体側でサポートされた機能も存在します。
 
@@ -20,7 +22,7 @@ EC-CUBE3.0.8までとEC-CUBE3.0.9以上からプラグイン機構(プラグイ�
 
 #### EC-CUBE3.0.11から
 トランザクション管理が本体側でサポートされ、それに伴いプラグイン側も考慮する必要があります。  
-詳しくは、 [EC-CUBE 3.0.11 変更内容に伴うプラグインへの影響](/guideline/plugin-update-for3.0.11){:target="_blank"} を参照してください。
+詳しくは、 [EC-CUBE 3.0.11 変更内容に伴うプラグインへの影響](/plugin_update-for3011){:target="_blank"} を参照してください。
 
 #### EC-CUBE3.0.12から
 本体側にログ機能が用意され、プラグインからログを簡単に出力する事ができるようになりました。

@@ -65,7 +65,7 @@ permalink: /
 
 + [プラグインの導入方法](/plugin_install)
 + [プラグイン導入時のトラブルシューティング](/plugin_troubleshooting)
-+ [プラグイン機構の仕様]
++ プラグイン機構の仕様
 	- [プラグイン仕様書](http://downloads.ec-cube.net/src/manual/v3/plugin.pdf){:target="_blank"}
 	- [インストーラーの仕様](/plugin_installer)
 	- [ハンドラによる優先順位の制御仕様](/plugin_handler)
@@ -79,6 +79,27 @@ permalink: /
 	- [フォームの追加、変更](/plugin_tutorial-form)
 	- [プラグイン用テーブルの追加](/plugin_tutorial-table)
 	- [チュートリアル](/plugin_tutorial)
++ プラグインベストプラクティス
+	- [プラグインベストプラクティスとは](plugin_bp_about)
+	- [バージョン違いによる動作](plugin_bp_version)
+	- [ディレクトリ構成について](plugin_bp_directory)
+	- [プラグインの設定、定義](plugin_bp_config)
+	- [プラグインマネージャー](plugin_bp_pluginmanager)
+	- [イベント](plugin_bp_event)
+	- [サービスプロバイダー](plugin_bp_serviceprovider)
+	- [コントローラー](plugin_bp_controller)
+	- [フォーム](plugin_bp_form)
+	- [テンプレート](plugin_bp_template)
+	- [リソースファイル、ブロック](plugin_bp_asset)
+	- [マイグレーション](plugin_bp_migration)
+	- [エンティティ、リポジトリ](plugin_bp_db)
+	- [トランザクション](/plugin_update-for3011)
+	- [ログ](/guideline_log)
+	- [セキュリティ](/plugin_bp_security)
+	- [プラグインのテスト](/plugin_test)
+	- [ライセンス](/plugin_bp_license)
+	- [非推奨な方法](/plugin_bp_other)
+
 + [オーナーズストアへの公開](http://www.ec-cube.net/plugin/){:target="_blank"}
 
 ## コアコードのカスタマイズ

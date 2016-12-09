@@ -177,7 +177,12 @@ entries:
           - title: チュートリアル
             url: /plugin_tutorial
             output: web, pdf
-            
+      - title: ベストプラクティス
+        output: web, pdf
+        subfolderitems:
+          - title: ベストプラクティスとは
+            url: /plugin_bp_about
+            output: web, pdf
     - title: オーナーズストアへの公開
       external_url: http://www.ec-cube.net/plugin/
       output: web, pdf

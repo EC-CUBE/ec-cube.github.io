@@ -1,9 +1,10 @@
 ---
-layout: default
-title: プラグインとは
+title: プラグインベストプラクティスとは
+keywords: plugin handler spec
+tags: [plugin, spec]
+sidebar: home_sidebar
+permalink: plugin_bp_about
 ---
-
-# {{ page.title }}
 
 EC-CUBE3では標準機能では存在しない機能を拡張できるようにプラグイン機構を用意しています。
 

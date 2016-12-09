@@ -11,7 +11,7 @@ site_title: EC-CUBE 開発ドキュメント
 company_name: Lockon co,.ltd.
 # this appears in the footer
 
-github_editme_path: ec-cube/ec-cube.github.io/blob/pages/
+github_editme_path: ec-cube/ec-cube.github.io/blob/master/pages/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 disqus_shortname: ec-cube

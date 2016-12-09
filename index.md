@@ -79,6 +79,7 @@ permalink: /
 	- [フォームの追加、変更](/plugin_tutorial-form)
 	- [プラグイン用テーブルの追加](/plugin_tutorial-table)
 	- [チュートリアル](/plugin_tutorial)
++ [app/console向けプラグイン](/plugin_console-plugin)
 + プラグインベストプラクティス
 	- [プラグインベストプラクティスとは](plugin_bp_about)
 	- [バージョン違いによる動作](plugin_bp_version)

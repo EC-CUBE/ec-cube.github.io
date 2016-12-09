@@ -156,6 +156,7 @@ entries:
           - title: EC-CUBE 3.0.11 の変更と影響
             url: /plugin_update-for3011
             output: web, pdf
+
       - title: プラグインの開発方法
         output: web, pdf
         subfolderitems:
@@ -177,6 +178,7 @@ entries:
           - title: チュートリアル
             url: /plugin_tutorial
             output: web, pdf
+    
       - title: ベストプラクティス
         output: web, pdf
         subfolderitems:
@@ -237,6 +239,9 @@ entries:
           - title: ライセンス
             url: /plugin_bp_license
             output: web, pdf
+    - title: app/console向けプラグイン
+      url: /plugin_console-plugin
+      output: web, pdf
     - title: オーナーズストアへの公開
       external_url: http://www.ec-cube.net/plugin/
       output: web, pdf

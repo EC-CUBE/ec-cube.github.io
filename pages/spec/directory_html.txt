@@ -1,0 +1,61 @@
+・・続き
+│
+├── ■html（Document Rootとなるフォルダ。外部から直接参照する物のみ配置) 
+│   ├── index.php
+│   ├── index_dev.php
+│   ├── install.php
+│   ├── plugin
+│   ├── robots.txt
+│   ├── template
+│   │   ├── admin ■管理画面用リソースファイル
+│   │   │   └── assets
+│   │   │       ├── css
+│   │   │       │   └── *.css
+│   │   │       ├── fonts
+│   │   │       │   └── WEBフォント
+│   │   │       ├── img 
+│   │   │       │   └── svg/ico/画像
+│   │   │       └── js
+│   │   │           ├── *.js（EC-CUBE独自）
+│   │   │           └── vendor（ライブラリ）
+│   │   │               └── *.js
+│   │   ├── default ■フロント画面用リソースファイル
+│   │   │   ├── css
+│   │   │   │   └── *.css
+│   │   │   ├── img
+│   │   │   │   ├── common
+│   │   │   │   │   └── svg/ico
+│   │   │   │   └── top
+│   │   │   │       └── 画像
+│   │   │   └── js
+│   │   │       ├──  *.js（EC-CUBE独自）
+│   │   │       └── vendor（ライブラリ）
+│   │   │           └── *.js
+│   │   └── install ■インストール画面用リソースファイル
+│   │       ├── assets
+│   │       │   ├── css
+│   │       │   │   └── *.css
+│   │       │   ├── img 
+│   │       │   │   └── svg/画像
+│   │       │   └── js
+│   │       │       └── *.js（EC-CUBE独自）
+│   │       ├── css
+│   │       │   └── admin_contents.css (管理画面用共通CSS)
+│   │       ├── dist（ライブラリ/BootStrapなど）
+│   │       │   ├── css
+│   │       │   │   └── *.css
+│   │       │   ├── fonts
+│   │       │   │   └── WEBフォント
+│   │       │   └── js
+│   │       │       └── *.js
+│   │       └── img
+│   │           └── common
+│   │               └── favicon.ico
+│   ├── upload ■アップロードファイル保存
+│   │   ├── save_image
+│   │   │   └── 画像
+│   │   └── temp_image ■アップロードファイル一時保存
+│   ├── user_data
+│   └── web.config
+│
+・・続く

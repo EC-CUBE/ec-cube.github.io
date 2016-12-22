@@ -4,6 +4,7 @@ keywords: howto install
 tags: [quickstart, getting_started]
 sidebar: home_sidebar
 permalink: quickstart_install
+forder: quickstart
 ---
 
 ## 事前準備
@@ -12,7 +13,7 @@ permalink: quickstart_install
 - サイトのDocumentRootが、EC-CUBEのhtmlのフォルダとなるように設定してください  
 
 ※DocumentRootが変更できない場合は、トップページのURLは「http://サイトURL/html/」となります。  
-※ただし、3.0.11以降では[こちらの手順](/remove_html.html)を行うことで、URLからhtmlを無くした状態でインストールできるようになりました。
+※ただし、3.0.11以降では[こちらの手順](/quickstart_remove-html)を行うことで、URLからhtmlを無くした状態でインストールできるようになりました。
 
 
 ## インストール方法

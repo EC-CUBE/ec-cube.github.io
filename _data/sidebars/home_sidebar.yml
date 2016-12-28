@@ -72,7 +72,7 @@ entries:
 
   - title: Web API仕様
     output: web, pdf
-    folderitems: 
+    folderitems:
       - title: Web API β版 プラグインスタートアップガイド
         url: /api_startup-guide
         output: web, pdf
@@ -86,7 +86,7 @@ entries:
   - title: 開発共通ガイドライン
     output: web, pdf
     folderitems:
-    
+
     - title: 開発環境の構築
       url: guideline_development
       output: web, pdf
@@ -133,7 +133,7 @@ entries:
     - title: 導入時のトラブルシューティング
       url: /plugin_troubleshooting
       output: web, pdf
-    
+
       subfolders:
       - title: プラグイン機構の仕様
         output: web
@@ -178,7 +178,7 @@ entries:
           - title: チュートリアル
             url: /plugin_tutorial
             output: web, pdf
-    
+
       - title: ベストプラクティス
         output: web, pdf
         subfolderitems:
@@ -238,6 +238,9 @@ entries:
             output: web, pdf
           - title: ライセンス
             url: /plugin_bp_license
+            output: web, pdf
+          - title: プラグイン注意点
+            url: /plugin_bp_badknowhow
             output: web, pdf
     - title: app/console向けプラグイン
       url: /plugin_console-plugin

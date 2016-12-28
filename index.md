@@ -99,7 +99,7 @@ permalink: /
 	- [セキュリティ](/plugin_bp_security)
 	- [プラグインのテスト](/plugin_test)
 	- [ライセンス](/plugin_bp_license)
-	- [非推奨な方法](/plugin_bp_other)
+	- [プラグイン注意点](/plugin_bp_badknowhow)
 
 + [オーナーズストアへの公開](http://www.ec-cube.net/plugin/){:target="_blank"}
 

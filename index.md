@@ -117,6 +117,10 @@ permalink: /
 
 ## Supporters
 
+EC-CUBEは以下のサポートを受けています。
+
 + [JetBrains](https://www.jetbrains.com/)  
 [![JetBrains](/images/logo_JetBrains_4.png)](https://www.jetbrains.com/){:target="_blank"}  
-EC-CUBEは JetBrains のサポートを受けています。
+
++ [SAKURA internet](https://www.sakura.ad.jp/)  
+[![SAKURA internet](/images/3-1-2line-rgb-whiteback.png)](https://www.sakura.ad.jp/){:target="_blank"}  

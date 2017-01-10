@@ -1,0 +1,2663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Entity\CustomerAddress | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Entity_CustomerAddress" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../Eccube/Entity.html">Entity</a></li>
+    
+                <li>CustomerAddress</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            CustomerAddress
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>CustomerAddress</strong>        extends <a href="../../Eccube/Entity/AbstractEntity.html"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>CustomerAddress</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetExists">offsetExists</a>($offset)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetExists"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetSet">offsetSet</a>($offset, $value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetSet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetGet">offsetGet</a>($offset)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetGet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetUnset">offsetUnset</a>($offset)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetUnset"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPropertiesFromArray">setPropertiesFromArray</a>(array $arrProps, array $excludeAttribute = array(), <a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a> $parentClass = null)
+        
+                                            <p>引数の連想配列を元にプロパティを設定します.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_setPropertiesFromArray"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toArray">toArray</a>(array $excludeAttribute = array(), <a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a> $parentClass = null)
+        
+                                            <p>プロパティの値を連想配列で返します.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_toArray"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copyProperties">copyProperties</a>(object $srcObject, array $excludeAttribute = array())
+        
+                                            <p>コピー元のオブジェクトのフィールド名を指定して、同名のフィールドに値をコピー</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_copyProperties"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShippingMultipleDefaultName">getShippingMultipleDefaultName</a>()
+        
+                                            <p>getShippingMultipleDefaultName</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFromCustomer">setFromCustomer</a>(<a href="../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a> $Customer)
+        
+                                            <p>Set from customer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFromShipping">setFromShipping</a>(<a href="../../Eccube/Entity/Shipping.html"><abbr title="Eccube\Entity\Shipping">Shipping</abbr></a> $Shipping)
+        
+                                            <p>Set from Shipping.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getId">getId</a>()
+        
+                                            <p>Get id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setName01">setName01</a>(string $name01)
+        
+                                            <p>Set name01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName01">getName01</a>()
+        
+                                            <p>Get name01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setName02">setName02</a>(string $name02)
+        
+                                            <p>Set name02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName02">getName02</a>()
+        
+                                            <p>Get name02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setKana01">setKana01</a>(string $kana01)
+        
+                                            <p>Set kana01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getKana01">getKana01</a>()
+        
+                                            <p>Get kana01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setKana02">setKana02</a>(string $kana02)
+        
+                                            <p>Set kana02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getKana02">getKana02</a>()
+        
+                                            <p>Get kana02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCompanyName">setCompanyName</a>(string $companyName)
+        
+                                            <p>Set company_name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCompanyName">getCompanyName</a>()
+        
+                                            <p>Get company_name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setZip01">setZip01</a>(string $zip01)
+        
+                                            <p>Set zip01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getZip01">getZip01</a>()
+        
+                                            <p>Get zip01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setZip02">setZip02</a>(string $zip02)
+        
+                                            <p>Set zip02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getZip02">getZip02</a>()
+        
+                                            <p>Get zip02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setZipcode">setZipcode</a>(string $zipcode)
+        
+                                            <p>Set zipcode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getZipcode">getZipcode</a>()
+        
+                                            <p>Get zipcode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAddr01">setAddr01</a>(string $addr01)
+        
+                                            <p>Set addr01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAddr01">getAddr01</a>()
+        
+                                            <p>Get addr01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAddr02">setAddr02</a>(string $addr02)
+        
+                                            <p>Set addr02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAddr02">getAddr02</a>()
+        
+                                            <p>Get addr02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTel01">setTel01</a>(string $tel01)
+        
+                                            <p>Set tel01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTel01">getTel01</a>()
+        
+                                            <p>Get tel01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTel02">setTel02</a>(string $tel02)
+        
+                                            <p>Set tel02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTel02">getTel02</a>()
+        
+                                            <p>Get tel02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTel03">setTel03</a>(string $tel03)
+        
+                                            <p>Set tel03</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTel03">getTel03</a>()
+        
+                                            <p>Get tel03</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFax01">setFax01</a>(string $fax01)
+        
+                                            <p>Set fax01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFax01">getFax01</a>()
+        
+                                            <p>Get fax01</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFax02">setFax02</a>(string $fax02)
+        
+                                            <p>Set fax02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFax02">getFax02</a>()
+        
+                                            <p>Get fax02</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFax03">setFax03</a>(string $fax03)
+        
+                                            <p>Set fax03</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFax03">getFax03</a>()
+        
+                                            <p>Get fax03</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCreateDate">setCreateDate</a>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $createDate)
+        
+                                            <p>Set create_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCreateDate">getCreateDate</a>()
+        
+                                            <p>Get create_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUpdateDate">setUpdateDate</a>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $updateDate)
+        
+                                            <p>Set update_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUpdateDate">getUpdateDate</a>()
+        
+                                            <p>Get update_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDelFlg">setDelFlg</a>(integer $delFlg)
+        
+                                            <p>Set del_lfg</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDelFlg">getDelFlg</a>()
+        
+                                            <p>Get del_flg</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCustomer">setCustomer</a>(<a href="../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a> $customer)
+        
+                                            <p>Set Customer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCustomer">getCustomer</a>()
+        
+                                            <p>Get Customer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCountry">setCountry</a>(<a href="../../Eccube/Entity/Master/Country.html"><abbr title="Eccube\Entity\Master\Country">Country</abbr></a> $country = null)
+        
+                                            <p>Set Country</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Master/Country.html"><abbr title="Eccube\Entity\Master\Country">Country</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCountry">getCountry</a>()
+        
+                                            <p>Get Country</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPref">setPref</a>(<a href="../../Eccube/Entity/Master/Pref.html"><abbr title="Eccube\Entity\Master\Pref">Pref</abbr></a> $pref = null)
+        
+                                            <p>Set Pref</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Master/Pref.html"><abbr title="Eccube\Entity\Master\Pref">Pref</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPref">getPref</a>()
+        
+                                            <p>Get Pref</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetExists"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 32</div>
+        <code>                    
+    <strong>offsetExists</strong>($offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetSet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 39</div>
+        <code>                    
+    <strong>offsetSet</strong>($offset, $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetGet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 43</div>
+        <code>                    
+    <strong>offsetGet</strong>($offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetUnset"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 54</div>
+        <code>                    
+    <strong>offsetUnset</strong>($offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPropertiesFromArray">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_setPropertiesFromArray"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 66</div>
+        <code>                    
+    <strong>setPropertiesFromArray</strong>(array $arrProps, array $excludeAttribute = array(), <a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a> $parentClass = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>引数の連想配列を元にプロパティを設定します.</p>                    <p>DBから取り出した連想配列を, プロパティへ設定する際に使用します.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrProps</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$excludeAttribute</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a></td>
+                <td>$parentClass</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_toArray"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 99</div>
+        <code>                    array
+    <strong>toArray</strong>(array $excludeAttribute = array(), <a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a> $parentClass = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>プロパティの値を連想配列で返します.</p>                    <p>DBを更新する場合などで, 連想配列の値を取得したい場合に使用します.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$excludeAttribute</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a></td>
+                <td>$parentClass</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>連想配列のプロパティの値</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copyProperties">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_copyProperties"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 139</div>
+        <code>                    object
+    <strong>copyProperties</strong>(object $srcObject, array $excludeAttribute = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>コピー元のオブジェクトのフィールド名を指定して、同名のフィールドに値をコピー</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$srcObject</td>
+                <td>コピー元のオブジェクト</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$excludeAttribute</td>
+                <td>除外したいフィールド名の配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 149</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShippingMultipleDefaultName">
+        <div class="location">at         line 159</div>
+        <code>                    string
+    <strong>getShippingMultipleDefaultName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>getShippingMultipleDefaultName</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFromCustomer">
+        <div class="location">at         line 170</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setFromCustomer</strong>(<a href="../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a> $Customer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set from customer.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a></td>
+                <td>$Customer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFromShipping">
+        <div class="location">at         line 201</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setFromShipping</strong>(<a href="../../Eccube/Entity/Shipping.html"><abbr title="Eccube\Entity\Shipping">Shipping</abbr></a> $Shipping)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set from Shipping.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/Shipping.html"><abbr title="Eccube\Entity\Shipping">Shipping</abbr></a></td>
+                <td>$Shipping</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getId">
+        <div class="location">at         line 230</div>
+        <code>                    integer
+    <strong>getId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get id</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setName01">
+        <div class="location">at         line 241</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setName01</strong>(string $name01)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set name01</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name01</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName01">
+        <div class="location">at         line 253</div>
+        <code>                    string
+    <strong>getName01</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get name01</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setName02">
+        <div class="location">at         line 264</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setName02</strong>(string $name02)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set name02</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name02</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName02">
+        <div class="location">at         line 276</div>
+        <code>                    string
+    <strong>getName02</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get name02</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKana01">
+        <div class="location">at         line 287</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setKana01</strong>(string $kana01)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set kana01</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$kana01</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getKana01">
+        <div class="location">at         line 299</div>
+        <code>                    string
+    <strong>getKana01</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get kana01</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKana02">
+        <div class="location">at         line 310</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setKana02</strong>(string $kana02)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set kana02</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$kana02</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getKana02">
+        <div class="location">at         line 322</div>
+        <code>                    string
+    <strong>getKana02</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get kana02</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCompanyName">
+        <div class="location">at         line 333</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setCompanyName</strong>(string $companyName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set company_name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$companyName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCompanyName">
+        <div class="location">at         line 345</div>
+        <code>                    string
+    <strong>getCompanyName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get company_name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setZip01">
+        <div class="location">at         line 356</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setZip01</strong>(string $zip01)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set zip01</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$zip01</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getZip01">
+        <div class="location">at         line 368</div>
+        <code>                    string
+    <strong>getZip01</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get zip01</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setZip02">
+        <div class="location">at         line 379</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setZip02</strong>(string $zip02)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set zip02</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$zip02</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getZip02">
+        <div class="location">at         line 391</div>
+        <code>                    string
+    <strong>getZip02</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get zip02</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setZipcode">
+        <div class="location">at         line 402</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setZipcode</strong>(string $zipcode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set zipcode</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$zipcode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getZipcode">
+        <div class="location">at         line 414</div>
+        <code>                    string
+    <strong>getZipcode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get zipcode</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAddr01">
+        <div class="location">at         line 425</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setAddr01</strong>(string $addr01)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set addr01</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$addr01</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAddr01">
+        <div class="location">at         line 437</div>
+        <code>                    string
+    <strong>getAddr01</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get addr01</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAddr02">
+        <div class="location">at         line 448</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setAddr02</strong>(string $addr02)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set addr02</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$addr02</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAddr02">
+        <div class="location">at         line 460</div>
+        <code>                    string
+    <strong>getAddr02</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get addr02</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTel01">
+        <div class="location">at         line 471</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setTel01</strong>(string $tel01)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set tel01</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tel01</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTel01">
+        <div class="location">at         line 483</div>
+        <code>                    string
+    <strong>getTel01</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get tel01</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTel02">
+        <div class="location">at         line 494</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setTel02</strong>(string $tel02)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set tel02</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tel02</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTel02">
+        <div class="location">at         line 506</div>
+        <code>                    string
+    <strong>getTel02</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get tel02</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTel03">
+        <div class="location">at         line 517</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setTel03</strong>(string $tel03)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set tel03</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tel03</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTel03">
+        <div class="location">at         line 529</div>
+        <code>                    string
+    <strong>getTel03</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get tel03</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFax01">
+        <div class="location">at         line 540</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setFax01</strong>(string $fax01)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set fax01</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fax01</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFax01">
+        <div class="location">at         line 552</div>
+        <code>                    string
+    <strong>getFax01</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get fax01</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFax02">
+        <div class="location">at         line 563</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setFax02</strong>(string $fax02)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set fax02</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fax02</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFax02">
+        <div class="location">at         line 575</div>
+        <code>                    string
+    <strong>getFax02</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get fax02</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFax03">
+        <div class="location">at         line 586</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setFax03</strong>(string $fax03)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set fax03</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fax03</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFax03">
+        <div class="location">at         line 598</div>
+        <code>                    string
+    <strong>getFax03</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get fax03</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCreateDate">
+        <div class="location">at         line 609</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setCreateDate</strong>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $createDate)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set create_date</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+                <td>$createDate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCreateDate">
+        <div class="location">at         line 621</div>
+        <code>                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+    <strong>getCreateDate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get create_date</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUpdateDate">
+        <div class="location">at         line 632</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setUpdateDate</strong>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $updateDate)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set update_date</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+                <td>$updateDate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpdateDate">
+        <div class="location">at         line 644</div>
+        <code>                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+    <strong>getUpdateDate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get update_date</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDelFlg">
+        <div class="location">at         line 655</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setDelFlg</strong>(integer $delFlg)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set del_lfg</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$delFlg</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDelFlg">
+        <div class="location">at         line 667</div>
+        <code>                    integer
+    <strong>getDelFlg</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get del_flg</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCustomer">
+        <div class="location">at         line 678</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setCustomer</strong>(<a href="../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a> $customer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Customer</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a></td>
+                <td>$customer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomer">
+        <div class="location">at         line 690</div>
+        <code>                    <a href="../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a>
+    <strong>getCustomer</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Customer</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCountry">
+        <div class="location">at         line 701</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setCountry</strong>(<a href="../../Eccube/Entity/Master/Country.html"><abbr title="Eccube\Entity\Master\Country">Country</abbr></a> $country = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Country</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/Master/Country.html"><abbr title="Eccube\Entity\Master\Country">Country</abbr></a></td>
+                <td>$country</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCountry">
+        <div class="location">at         line 713</div>
+        <code>                    <a href="../../Eccube/Entity/Master/Country.html"><abbr title="Eccube\Entity\Master\Country">Country</abbr></a>
+    <strong>getCountry</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Country</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Master/Country.html"><abbr title="Eccube\Entity\Master\Country">Country</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPref">
+        <div class="location">at         line 724</div>
+        <code>                    <a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>setPref</strong>(<a href="../../Eccube/Entity/Master/Pref.html"><abbr title="Eccube\Entity\Master\Pref">Pref</abbr></a> $pref = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Pref</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/Master/Pref.html"><abbr title="Eccube\Entity\Master\Pref">Pref</abbr></a></td>
+                <td>$pref</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPref">
+        <div class="location">at         line 736</div>
+        <code>                    <a href="../../Eccube/Entity/Master/Pref.html"><abbr title="Eccube\Entity\Master\Pref">Pref</abbr></a>
+    <strong>getPref</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Pref</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Master/Pref.html"><abbr title="Eccube\Entity\Master\Pref">Pref</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

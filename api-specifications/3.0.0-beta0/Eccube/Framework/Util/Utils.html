@@ -1,0 +1,5451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Framework\Util\Utils | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Framework_Util_Utils" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../../Eccube/Framework.html">Framework</a></li>
+                                        <li><a href="../../../Eccube/Framework/Util.html">Util</a></li>
+    
+                <li>Utils</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            Utils
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Utils</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>各種ユーティリティクラス.</p>            <p>主に static 参照するユーティリティ系の関数群</p>
+
+<p>:XXX: 内部でインスタンスを生成している関数は, Helper クラスへ移動するべき...</p>        </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfInitInstall">sfInitInstall</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInstallerPath">getInstallerPath</a>()
+        
+                                            <p>インストーラーの URL を返す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRealURL">getRealURL</a>(string $url)
+        
+                                            <p>相対パスで記述された URL から絶対パスの URL を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfErrorHeader">sfErrorHeader</a>($mess, $print = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfDispError">sfDispError</a>($type)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfDispSiteError">sfDispSiteError</a>($type, $objSiteSess = &#039;&#039;, $return_top = false, $err_msg = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfDispException">sfDispException</a>($debugMsg = null)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>前方互換用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfIsSuccess">sfIsSuccess</a>(<a href="../../../Eccube/Framework/Session.html"><abbr title="Eccube\Framework\Session">Session</abbr></a> $objSess, bool $disp_error = true)
+        
+                                            <p>認証の可否判定</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfPassLen">sfPassLen</a>(string $passlen)
+        
+                                            <p>文字列をアスタリスクへ変換する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfIsHTTPS">sfIsHTTPS</a>()
+        
+                                            <p>HTTPSかどうかを判定</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfIsValidTransition">sfIsValidTransition</a>(<abbr title="Eccube\Framework\Util\obj">obj</abbr> $objSess)
+        
+                                            <p>正規の遷移がされているかを判定
+ 前画面でuniqidを埋め込んでおく必要がある</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetTimestamp">sfGetTimestamp</a>($year, $month, $day, $last = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetTimestampistime">sfGetTimestampistime</a>($year, $month, $day, $hour, $minutes, $last = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfIsInt">sfIsInt</a>($value)
+        
+                                            <p>INT型の数値チェック
+ ・FIXME: マイナス値の扱いが不明確
+ ・XXX: INT_LENには収まるが、INT型の範囲を超えるケースに対応できないのでは?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfIsZeroFilling">sfIsZeroFilling</a>(string $value)
+        
+                                            <p>桁が0で埋められているかを判定する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetCSVData">sfGetCSVData</a>($data, $prefix = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfUpDirName">sfUpDirName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfMergeCBValue">sfMergeCBValue</a>($keyname, $max)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfMergeCheckBoxes">sfMergeCheckBoxes</a>($array, $max)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfMergeParamCheckBoxes">sfMergeParamCheckBoxes</a>($array)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfSearchCheckBoxes">sfSearchCheckBoxes</a>($array)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfSplitCheckBoxes">sfSplitCheckBoxes</a>($val)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfMergeCBSearchValue">sfMergeCBSearchValue</a>($keyname, $max)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfSplitCBValue">sfSplitCBValue</a>($val, $keyname = &#039;&#039;)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfArrKeyValue">sfArrKeyValue</a>($arrList, $keyname, $valname, $len_max = &#039;&#039;, $keysize = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfArrKeyValues">sfArrKeyValues</a>($arrList, $keyname, $valname, $len_max = &#039;&#039;, $keysize = &#039;&#039;, $connect = &#039;&#039;)
+        
+                                            <p>キーと値をセットした配列を取得(値が複数の場合)
+使用されていない</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetCommaList">sfGetCommaList</a>($array, $space = true, $arrPop = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetCSVList">sfGetCSVList</a>($array)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfCheckSetTerm">sfCheckSetTerm</a>($start_year, $start_month, $start_day, $end_year, $end_month, $end_day)
+        
+                                            <p>check<em>set</em>term
+   年月日に別れた2つの期間の妥当性をチェックし、整合性と期間を返す
+　引数 (開始年,開始月,開始日,終了年,終了月,終了日)
+　戻値 array(１，２，３）
+         １．開始年月日 (YYYY/MM/DD 000000)
+           ２．終了年月日 (YYYY/MM/DD 235959)
+           ３．エラー (0 = OK, 1 = NG)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfSetErrorStyle">sfSetErrorStyle</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfSearchKey">sfSearchKey</a>($array, $word, $default)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetErrorColor">sfGetErrorColor</a>($val)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetEnabled">sfGetEnabled</a>($val)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetChecked">sfGetChecked</a>($param, $value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfTrim">sfTrim</a>($str)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;double
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfTax">sfTax</a>(integer $price, integer $tax, integer $tax_rule)
+        
+                                            <p>税金額を返す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;double
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfCalcIncTax">sfCalcIncTax</a>(integer $price, integer $tax, integer $tax_rule)
+        
+                                            <p>税金付与した金額を返す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfRound">sfRound</a>($value, $pow)
+        
+                                            <p>桁数を指定して四捨五入</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;double
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfPrePoint">sfPrePoint</a>(int $price, float $point_rate, int $rule = POINT_RULE)
+        
+                                            <p>ポイント付与
+$product_id が使われていない。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetClassCatCount">sfGetClassCatCount</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetProductClassId">sfGetProductClassId</a>(int $product_id, int $classcategory_id1, int $classcategory_id2)
+        
+                                            <p>商品IDとカテゴリIDから商品規格IDを取得する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfTrimURL">sfTrimURL</a>($url)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfDispDBDate">sfDispDBDate</a>($dbdate, $time = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfSwapArray">sfSwapArray</a>(array $array, bool $isColumnName = true)
+        
+                                            <p>配列をキー名ごとの配列に変更する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHash2Array">getHash2Array</a>(array $hash, array $requires = array())
+        
+                                            <p>連想配列から新たな配列を生成して返す.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfMultiply">sfMultiply</a>($num1, $num2)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAddPoint">getAddPoint</a>(integer $totalpoint, integer $use_point, integer $point_rate)
+        
+                                            <p>加算ポイントの計算</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetUniqRandomId">sfGetUniqRandomId</a>($head = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfRmDupSlash">sfRmDupSlash</a>(string $istr)
+        
+                                            <p>二回以上繰り返されているスラッシュ[/]を一つに変換する。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfEncodeFile">sfEncodeFile</a>(string $filepath, string $enc_type, string $out_dir)
+        
+                                            <p>テキストファイルの文字エンコーディングを変換する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfCutString">sfCutString</a>($str, $len, $byte = true, $commadisp = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfTermMonth">sfTermMonth</a>($year, $month, $close_day)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfMakeHiddenArray">sfMakeHiddenArray</a>($arrSrc, $arrDst = array(), $parent_key = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfDBDatetoTime">sfDBDatetoTime</a>($db_date)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfMbConvertEncoding">sfMbConvertEncoding</a>($str, $encode = CHAR_CODE)
+        
+                                            <p>PHPのmb<em>convert</em>encoding関数をSmartyでも使えるようにする</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfArrCombine">sfArrCombine</a>($arrKeys, $arrValues)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetUnderChildrenArray">sfGetUnderChildrenArray</a>($arrData, $pid_name, $id_name, $parent)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfQuoteSmart">sfQuoteSmart</a>($in)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>SQLシングルクォート対応</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfMakeDir">sfMakeDir</a>($path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfCopyDir">sfCopyDir</a>($src, $des, $mess = &#039;&#039;, $override = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfFlush">sfFlush</a>(boolean|string $output = false, int $sleep)
+        
+                                            <p>ブラウザに強制的に送出する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetFileVersion">sfGetFileVersion</a>($path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mbConvertKanaWithArray">mbConvertKanaWithArray</a>(array $array, array $arrConvList)
+        
+                                            <p>$array の要素を $arrConvList で指定した方式で mb<em>convert</em>kana を適用する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_arrayDefineIndexes">arrayDefineIndexes</a>(array $array, string[] $defineIndexes)
+        
+                                            <p>配列の添字が未定義の場合は空文字を代入して定義する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfArrayIntersectKeys">sfArrayIntersectKeys</a>(array $arrSrc, array $arrKey)
+        
+                                            <p>$arrSrc のうち、キーが $arrKey に含まれるものを返す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_printXMLDeclaration">printXMLDeclaration</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>前方互換用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTableTag">getTableTag</a>(array $array)
+        
+                                            <p>配列をテーブルタグで出力する。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSaveImagePath">getSaveImagePath</a>($filename)
+        
+                                            <p>指定の画像のパスを返す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfNoImageMainList">sfNoImageMainList</a>(string $filename = &#039;&#039;)
+        
+                                            <p>一覧-メイン画像のファイル指定がない場合、専用の画像ファイルに書き換える。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfNoImageMain">sfNoImageMain</a>(string $filename = &#039;&#039;)
+        
+                                            <p>詳細-メイン画像のファイル指定がない場合、専用の画像ファイルに書き換える。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfPrintR">sfPrintR</a>(mixed $obj)
+        
+                                            <p>デバッグ用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetRandomString">sfGetRandomString</a>(integer $length = 1)
+        
+                                            <p>ランダムな文字列を取得する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetUrl">sfGetUrl</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>前方互換用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfBacktraceToString">sfBacktraceToString</a>($arrBacktrace)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>前方互換用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfIsAdminFunction">sfIsAdminFunction</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>前方互換用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfIsFrontFunction">sfIsFrontFunction</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>前方互換用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfIsInstallFunction">sfIsInstallFunction</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>前方互換用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetAddress">sfGetAddress</a>(string $zipcode)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfMicrotimeFloat">sfMicrotimeFloat</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>前方互換用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isBlank">isBlank</a>(mixed $val, boolean $greedy = true)
+        
+                                            <p>変数が空白かどうかをチェックする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfIsInternalDomain">sfIsInternalDomain</a>(string $url)
+        
+                                            <p>指定されたURLのドメインが一致するかを返す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetHashString">sfGetHashString</a>(string $str, string $salt)
+        
+                                            <p>パスワードのハッシュ化</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfIsMatchHashPassword">sfIsMatchHashPassword</a>(string $pass, string $hashpass, string $salt)
+        
+                                            <p>パスワード文字列のハッシュ一致判定</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfGetSearchPageMax">sfGetSearchPageMax</a>(string $search_page_max)
+        
+                                            <p>検索結果の1ページあたりの最大表示件数を取得する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_jsonEncode">jsonEncode</a>(mixed $value)
+        
+                                            <p>値を JSON 形式にして返す.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_jsonDecode">jsonDecode</a>(string $json)
+        
+                                            <p>JSON 文字列をデコードする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAbsoluteRealPath">isAbsoluteRealPath</a>(string $path)
+        
+                                            <p>パスが絶対パスかどうかをチェックする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_recursiveMkdir">recursiveMkdir</a>($path, $mode = 0777)
+        
+                                            <p>ディレクトリを再帰的に作成する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAppInnerUrl">isAppInnerUrl</a>($url)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extendTimeOut">extendTimeOut</a>(integer $seconds = null)
+        
+                                            <p>PHP のタイムアウトを延長する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearCompliedTemplate">clearCompliedTemplate</a>()
+        
+                                            <p>コンパイルファイルを削除します.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copyDirectory">copyDirectory</a>(string $source_path, string $dest_path)
+        
+                                            <p>指定されたパスの配下を再帰的にコピーします.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_repeatStrWithSeparator">repeatStrWithSeparator</a>(string $input, string $multiplier, string $separator = &#039;,&#039;)
+        
+                                            <p>文字列を区切り文字を挟み反復する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeRFC3986">encodeRFC3986</a>(string $str)
+        
+                                            <p>RFC3986に準拠したURIエンコード
+MEMO: PHP5.3.0未満では、~のエンコードをしてしまうための処理</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_trim">trim</a>(string $str, string $charlist = null)
+        
+                                            <p>マルチバイト対応の trim</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ltrim">ltrim</a>(string $str, string $charlist = null)
+        
+                                            <p>マルチバイト対応の ltrim</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rtrim">rtrim</a>(string $str, string $charlist = null)
+        
+                                            <p>マルチバイト対応の rtrim</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTrimPregPattern">getTrimPregPattern</a>(string $charlist = null)
+        
+                                            <p>文字列のトリム処理で使用する PCRE のパターン</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUnitDataSize">getUnitDataSize</a>(int $data)
+        
+                                            <p>データ量の単位を付与する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildTree">buildTree</a>(string $primary_key, string $glue_key, integer $max_depth, array $correction = array(), integer $root_id)
+        
+                                            <p>カテゴリーツリー状の配列を作成.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addChild">addChild</a>(array $target, string $primary_key, integer $level, integer $max_depth, array $children = array())
+        
+                                            <p>ツリーの親子をつなげるルーチン.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_makeArrayIDToKey">makeArrayIDToKey</a>(string $ID_name, array $correction = array())
+        
+                                            <p>配列のキーをIDにした配列を作成.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTreeTrail">getTreeTrail</a>(integer $start_id, string $primary_key, string $glue_key, array $correction = array(), boolean $cid_is_key = FALSE, integer $root_id, boolean $id_only = TRUE)
+        
+                                            <p>階層情報が含まれている配列から親ID配列を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkFileExistsWithInBasePath">checkFileExistsWithInBasePath</a>(string $file, string $base_path)
+        
+                                            <p>ベースとなるパスと相対パスを比較してファイルが存在する事をチェックする</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFormattedDateWithMicroSecond">getFormattedDateWithMicroSecond</a>()
+        
+                                            <p>マイクロ秒付きの時間文字列を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_sfInitInstall">
+        <div class="location">at         line 38</div>
+        <code>        static            
+    <strong>sfInitInstall</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInstallerPath">
+        <div class="location">at         line 59</div>
+        <code>        static            string
+    <strong>getInstallerPath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>インストーラーの URL を返す</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>インストーラーの URL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRealURL">
+        <div class="location">at         line 92</div>
+        <code>        static            string
+    <strong>getRealURL</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>相対パスで記述された URL から絶対パスの URL を取得する.</p>                    <p>この関数は, http(s):// から始まる URL を解析し, 相対パスで記述されていた
+場合, 絶対パスに変換して返す</p>
+
+<p>例)
+http://www.example.jp/aaa/../index.php
+↓
+http://www.example.jp/index.php</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>http(s):// から始まる URL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>$url を絶対パスに変換した URL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfErrorHeader">
+        <div class="location">at         line 117</div>
+        <code>        static            
+    <strong>sfErrorHeader</strong>($mess, $print = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$mess</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$print</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfDispError">
+        <div class="location">at         line 129</div>
+        <code>        static            
+    <strong>sfDispError</strong>($type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfDispSiteError">
+        <div class="location">at         line 139</div>
+        <code>        static            
+    <strong>sfDispSiteError</strong>($type, $objSiteSess = &#039;&#039;, $return_top = false, $err_msg = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$objSiteSess</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$return_top</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$err_msg</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfDispException">
+        <div class="location">at         line 157</div>
+        <code>                    
+    <strong>sfDispException</strong>($debugMsg = null)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>trigger_error($debugMsg, E_USER_ERROR) を使用すること</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>前方互換用</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$debugMsg</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfIsSuccess">
+        <div class="location">at         line 170</div>
+        <code>        static            bool
+    <strong>sfIsSuccess</strong>(<a href="../../../Eccube/Framework/Session.html"><abbr title="Eccube\Framework\Session">Session</abbr></a> $objSess, bool $disp_error = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>認証の可否判定</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Eccube/Framework/Session.html"><abbr title="Eccube\Framework\Session">Session</abbr></a></td>
+                <td>$objSess</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$disp_error</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfPassLen">
+        <div class="location">at         line 208</div>
+        <code>        static            string
+    <strong>sfPassLen</strong>(string $passlen)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>文字列をアスタリスクへ変換する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$passlen</td>
+                <td>変換する文字列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>アスタリスクへ変換した文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfIsHTTPS">
+        <div class="location">at         line 224</div>
+        <code>        static            bool
+    <strong>sfIsHTTPS</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>HTTPSかどうかを判定</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfIsValidTransition">
+        <div class="location">at         line 244</div>
+        <code>                    
+    <strong>sfIsValidTransition</strong>(<abbr title="Eccube\Framework\Util\obj">obj</abbr> $objSess)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>正規の遷移がされているかを判定
+ 前画面でuniqidを埋め込んでおく必要がある</p>                    <p>使用されていない.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Eccube\Framework\Util\obj">obj</abbr></td>
+                <td>$objSess</td>
+                <td>Session, SiteSession
+ @return bool</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetTimestamp">
+        <div class="location">at         line 256</div>
+        <code>        static            
+    <strong>sfGetTimestamp</strong>($year, $month, $day, $last = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$year</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$month</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$day</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$last</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetTimestampistime">
+        <div class="location">at         line 280</div>
+        <code>        static            
+    <strong>sfGetTimestampistime</strong>($year, $month, $day, $hour, $minutes, $last = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$year</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$month</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$day</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$hour</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$minutes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$last</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfIsInt">
+        <div class="location">at         line 304</div>
+        <code>        static            bool
+    <strong>sfIsInt</strong>($value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>INT型の数値チェック
+ ・FIXME: マイナス値の扱いが不明確
+ ・XXX: INT_LENには収まるが、INT型の範囲を超えるケースに対応できないのでは?</p>                    <p>@param mixed $value</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfIsZeroFilling">
+        <div class="location">at         line 319</div>
+        <code>        static            boolean
+    <strong>sfIsZeroFilling</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>桁が0で埋められているかを判定する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>検査対象</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>0で埋められている</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetCSVData">
+        <div class="location">at         line 331</div>
+        <code>        static            
+    <strong>sfGetCSVData</strong>($data, $prefix = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfUpDirName">
+        <div class="location">at         line 350</div>
+        <code>        static            
+    <strong>sfUpDirName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfMergeCBValue">
+        <div class="location">at         line 363</div>
+        <code>                    
+    <strong>sfMergeCBValue</strong>($keyname, $max)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$keyname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$max</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfMergeCheckBoxes">
+        <div class="location">at         line 382</div>
+        <code>                    
+    <strong>sfMergeCheckBoxes</strong>($array, $max)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$max</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfMergeParamCheckBoxes">
+        <div class="location">at         line 406</div>
+        <code>                    
+    <strong>sfMergeParamCheckBoxes</strong>($array)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfSearchCheckBoxes">
+        <div class="location">at         line 428</div>
+        <code>                    
+    <strong>sfSearchCheckBoxes</strong>($array)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfSplitCheckBoxes">
+        <div class="location">at         line 446</div>
+        <code>                    
+    <strong>sfSplitCheckBoxes</strong>($val)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$val</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfMergeCBSearchValue">
+        <div class="location">at         line 463</div>
+        <code>                    
+    <strong>sfMergeCBSearchValue</strong>($keyname, $max)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$keyname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$max</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfSplitCBValue">
+        <div class="location">at         line 482</div>
+        <code>                    
+    <strong>sfSplitCBValue</strong>($val, $keyname = &#039;&#039;)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$val</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$keyname</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfArrKeyValue">
+        <div class="location">at         line 505</div>
+        <code>        static            
+    <strong>sfArrKeyValue</strong>($arrList, $keyname, $valname, $len_max = &#039;&#039;, $keysize = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrList</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$keyname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$valname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$len_max</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$keysize</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfArrKeyValues">
+        <div class="location">at         line 535</div>
+        <code>                    
+    <strong>sfArrKeyValues</strong>($arrList, $keyname, $valname, $len_max = &#039;&#039;, $keysize = &#039;&#039;, $connect = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>キーと値をセットした配列を取得(値が複数の場合)
+使用されていない</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrList</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$keyname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$valname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$len_max</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$keysize</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$connect</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetCommaList">
+        <div class="location">at         line 563</div>
+        <code>        static            
+    <strong>sfGetCommaList</strong>($array, $space = true, $arrPop = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$space</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrPop</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetCSVList">
+        <div class="location">at         line 590</div>
+        <code>        static            
+    <strong>sfGetCSVList</strong>($array)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfCheckSetTerm">
+        <div class="location">at         line 617</div>
+        <code>                    
+    <strong>sfCheckSetTerm</strong>($start_year, $start_month, $start_day, $end_year, $end_month, $end_day)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>check<em>set</em>term
+   年月日に別れた2つの期間の妥当性をチェックし、整合性と期間を返す
+　引数 (開始年,開始月,開始日,終了年,終了月,終了日)
+　戻値 array(１，２，３）
+         １．開始年月日 (YYYY/MM/DD 000000)
+           ２．終了年月日 (YYYY/MM/DD 235959)
+           ３．エラー (0 = OK, 1 = NG)</p>                    <p>使用されていない</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$start_year</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$start_month</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$start_day</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$end_year</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$end_month</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$end_day</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfSetErrorStyle">
+        <div class="location">at         line 641</div>
+        <code>                    
+    <strong>sfSetErrorStyle</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfSearchKey">
+        <div class="location">at         line 647</div>
+        <code>                    
+    <strong>sfSearchKey</strong>($array, $word, $default)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$word</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetErrorColor">
+        <div class="location">at         line 658</div>
+        <code>                    
+    <strong>sfGetErrorColor</strong>($val)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$val</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetEnabled">
+        <div class="location">at         line 667</div>
+        <code>                    
+    <strong>sfGetEnabled</strong>($val)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$val</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetChecked">
+        <div class="location">at         line 676</div>
+        <code>                    
+    <strong>sfGetChecked</strong>($param, $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfTrim">
+        <div class="location">at         line 685</div>
+        <code>                    
+    <strong>sfTrim</strong>($str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$str</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfTax">
+        <div class="location">at         line 704</div>
+        <code>        static            double
+    <strong>sfTax</strong>(integer $price, integer $tax, integer $tax_rule)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>税金額を返す</p>                    <p>・店舗基本情報に基づいた計算は \Eccube\Helper\Application::alias('eccube.helper.db')->tax() を使用する</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$price</td>
+                <td>計算対象の金額</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$tax</td>
+                <td>税率(%単位)
+    XXX integer のみか不明</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$tax_rule</td>
+                <td>端数処理</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>double</td>
+            <td>税金額</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfCalcIncTax">
+        <div class="location">at         line 724</div>
+        <code>        static            double
+    <strong>sfCalcIncTax</strong>(integer $price, integer $tax, integer $tax_rule)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>税金付与した金額を返す</p>                    <p>・店舗基本情報に基づいた計算は \Eccube\Helper\Application::alias('eccube.helper.db')->tax() を使用する</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$price</td>
+                <td>計算対象の金額</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$tax</td>
+                <td>税率(%単位)
+    XXX integer のみか不明</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$tax_rule</td>
+                <td>端数処理</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>double</td>
+            <td>税金付与した金額</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfRound">
+        <div class="location">at         line 734</div>
+        <code>                    
+    <strong>sfRound</strong>($value, $pow)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>桁数を指定して四捨五入</p>                    <p>使用されていない</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$pow</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfPrePoint">
+        <div class="location">at         line 756</div>
+        <code>        static            double
+    <strong>sfPrePoint</strong>(int $price, float $point_rate, int $rule = POINT_RULE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ポイント付与
+$product_id が使われていない。</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$price</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$point_rate</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$rule</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>double</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetClassCatCount">
+        <div class="location">at         line 766</div>
+        <code>        static            
+    <strong>sfGetClassCatCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetProductClassId">
+        <div class="location">at         line 789</div>
+        <code>        static            int
+    <strong>sfGetProductClassId</strong>(int $product_id, int $classcategory_id1, int $classcategory_id2)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品IDとカテゴリIDから商品規格IDを取得する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$product_id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$classcategory_id1</td>
+                <td>デフォルト値0</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$classcategory_id2</td>
+                <td>デフォルト値0</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfTrimURL">
+        <div class="location">at         line 806</div>
+        <code>        static            
+    <strong>sfTrimURL</strong>($url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfDispDBDate">
+        <div class="location">at         line 814</div>
+        <code>                    
+    <strong>sfDispDBDate</strong>($dbdate, $time = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$dbdate</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$time</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfSwapArray">
+        <div class="location">at         line 838</div>
+        <code>        static            array
+    <strong>sfSwapArray</strong>(array $array, bool $isColumnName = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配列をキー名ごとの配列に変更する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isColumnName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHash2Array">
+        <div class="location">at         line 865</div>
+        <code>        static            array
+    <strong>getHash2Array</strong>(array $hash, array $requires = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>連想配列から新たな配列を生成して返す.</p>                    <p>$requires が指定された場合, $requires に含まれるキーの値のみを返す.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$hash</td>
+                <td>連想配列</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$requires</td>
+                <td>必須キーの配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>連想配列の値のみの配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfMultiply">
+        <div class="location">at         line 885</div>
+        <code>                    
+    <strong>sfMultiply</strong>($num1, $num2)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$num1</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$num2</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAddPoint">
+        <div class="location">at         line 900</div>
+        <code>        static            integer
+    <strong>getAddPoint</strong>(integer $totalpoint, integer $use_point, integer $point_rate)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>加算ポイントの計算</p>                    <p>・店舗基本情報に基づいた計算は \Eccube\Helper\Application::alias('eccube.helper.db')->getAddPoint() を使用する</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$totalpoint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$use_point</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$point_rate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>加算ポイント</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetUniqRandomId">
+        <div class="location">at         line 913</div>
+        <code>        static            
+    <strong>sfGetUniqRandomId</strong>($head = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$head</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfRmDupSlash">
+        <div class="location">at         line 929</div>
+        <code>        static            string
+    <strong>sfRmDupSlash</strong>(string $istr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>二回以上繰り返されているスラッシュ[/]を一つに変換する。</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$istr</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfEncodeFile">
+        <div class="location">at         line 964</div>
+        <code>        static            string
+    <strong>sfEncodeFile</strong>(string $filepath, string $enc_type, string $out_dir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>テキストファイルの文字エンコーディングを変換する.</p>                    <p>$filepath に存在するテキストファイルの文字エンコーディングを変換する.
+変換前の文字エンコーディングは, mb<em>detect</em>order で設定した順序で自動検出する.
+変換後は, 変換前のファイル名に「enc<em>」というプレフィクスを付与し,
+$out</em>dir で指定したディレクトリへ出力する</p>
+
+<p>TODO $filepath のファイルがバイナリだった場合の扱い
+TODO fwrite などでのエラーハンドリング</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filepath</td>
+                <td>変換するテキストファイルのパス</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$enc_type</td>
+                <td>変換後のファイルエンコーディングの種類を表す文字列</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$out_dir</td>
+                <td>変換後のファイルを出力するディレクトリを表す文字列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>変換後のテキストファイルのパス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfCutString">
+        <div class="location">at         line 992</div>
+        <code>                    
+    <strong>sfCutString</strong>($str, $len, $byte = true, $commadisp = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$str</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$len</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$byte</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$commadisp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfTermMonth">
+        <div class="location">at         line 1042</div>
+        <code>        static            
+    <strong>sfTermMonth</strong>($year, $month, $close_day)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$year</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$month</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$close_day</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfMakeHiddenArray">
+        <div class="location">at         line 1085</div>
+        <code>        static            
+    <strong>sfMakeHiddenArray</strong>($arrSrc, $arrDst = array(), $parent_key = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrSrc</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrDst</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$parent_key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfDBDatetoTime">
+        <div class="location">at         line 1106</div>
+        <code>        static            
+    <strong>sfDBDatetoTime</strong>($db_date)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$db_date</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfMbConvertEncoding">
+        <div class="location">at         line 1119</div>
+        <code>                    
+    <strong>sfMbConvertEncoding</strong>($str, $encode = CHAR_CODE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>PHPのmb<em>convert</em>encoding関数をSmartyでも使えるようにする</p>                    <p>XXX この関数を使っている箇所は、ほぼ設計誤りと思われる。変数にフェッチするか、出力時のエンコーディングで対応すべきと見受ける。</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$str</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$encode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfArrCombine">
+        <div class="location">at         line 1125</div>
+        <code>                    
+    <strong>sfArrCombine</strong>($arrKeys, $arrValues)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrKeys</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrValues</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetUnderChildrenArray">
+        <div class="location">at         line 1147</div>
+        <code>        static            
+    <strong>sfGetUnderChildrenArray</strong>($arrData, $pid_name, $id_name, $parent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrData</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$pid_name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id_name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfQuoteSmart">
+        <div class="location">at         line 1166</div>
+        <code>        static            
+    <strong>sfQuoteSmart</strong>($in)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>Query::quote()</td>
+                    <td>を使用すること</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>SQLシングルクォート対応</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$in</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfMakeDir">
+        <div class="location">at         line 1180</div>
+        <code>        static            
+    <strong>sfMakeDir</strong>($path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfCopyDir">
+        <div class="location">at         line 1214</div>
+        <code>        static            
+    <strong>sfCopyDir</strong>($src, $des, $mess = &#039;&#039;, $override = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$src</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$des</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$mess</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$override</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfFlush">
+        <div class="location">at         line 1275</div>
+        <code>        static            void
+    <strong>sfFlush</strong>(boolean|string $output = false, int $sleep)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ブラウザに強制的に送出する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean|string</td>
+                <td>$output</td>
+                <td>半角スペース256文字+改行を出力するか。または、送信する文字列を指定。</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$sleep</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetFileVersion">
+        <div class="location">at         line 1302</div>
+        <code>                    
+    <strong>sfGetFileVersion</strong>($path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mbConvertKanaWithArray">
+        <div class="location">at         line 1331</div>
+        <code>                    array
+    <strong>mbConvertKanaWithArray</strong>(array $array, array $arrConvList)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>$array の要素を $arrConvList で指定した方式で mb<em>convert</em>kana を適用する.</p>                    <p>使用されていない</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td>変換する文字列の配列</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrConvList</td>
+                <td>mb<em>convert</em>kana の適用ルール</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>変換後の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mb_convert_kana</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_arrayDefineIndexes">
+        <div class="location">at         line 1349</div>
+        <code>        static            array
+    <strong>arrayDefineIndexes</strong>(array $array, string[] $defineIndexes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配列の添字が未定義の場合は空文字を代入して定義する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td>添字をチェックする配列</td>
+            </tr>
+                    <tr>
+                <td>string[]</td>
+                <td>$defineIndexes</td>
+                <td>チェックする添字</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>添字を定義した配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfArrayIntersectKeys">
+        <div class="location">at         line 1367</div>
+        <code>        static            array
+    <strong>sfArrayIntersectKeys</strong>(array $arrSrc, array $arrKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>$arrSrc のうち、キーが $arrKey に含まれるものを返す</p>                    <p>$arrSrc に含まない要素は返されない。</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrSrc</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_printXMLDeclaration">
+        <div class="location">at         line 1382</div>
+        <code>                    
+    <strong>printXMLDeclaration</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>GcUtils::printXMLDeclaration を使用すること</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>前方互換用</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTableTag">
+        <div class="location">at         line 1396</div>
+        <code>                    string
+    <strong>getTableTag</strong>(array $array)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配列をテーブルタグで出力する。</p>                    <p>使用されていない</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSaveImagePath">
+        <div class="location">at         line 1424</div>
+        <code>        static            string
+    <strong>getSaveImagePath</strong>($filename)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>指定の画像のパスを返す</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>$file 画像のパス、画像が存在しない場合、NO<em>IMAGE</em>REALFILEを返す</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfNoImageMainList">
+        <div class="location">at         line 1442</div>
+        <code>                    string
+    <strong>sfNoImageMainList</strong>(string $filename = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>一覧-メイン画像のファイル指定がない場合、専用の画像ファイルに書き換える。</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td>&amp;$filename ファイル名</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfNoImageMain">
+        <div class="location">at         line 1457</div>
+        <code>        static            string
+    <strong>sfNoImageMain</strong>(string $filename = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>詳細-メイン画像のファイル指定がない場合、専用の画像ファイルに書き換える。</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td>&amp;$filename ファイル名</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfPrintR">
+        <div class="location">at         line 1472</div>
+        <code>        static            void
+    <strong>sfPrintR</strong>(mixed $obj)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>デバッグ用</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$obj</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetRandomString">
+        <div class="location">at         line 1488</div>
+        <code>        static            string
+    <strong>sfGetRandomString</strong>(integer $length = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ランダムな文字列を取得する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$length</td>
+                <td>文字数</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>ランダムな文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetUrl">
+        <div class="location">at         line 1498</div>
+        <code>                    
+    <strong>sfGetUrl</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>GcUtils::getUrl を使用すること</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>前方互換用</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfBacktraceToString">
+        <div class="location">at         line 1510</div>
+        <code>                    
+    <strong>sfBacktraceToString</strong>($arrBacktrace)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>GcUtils::toStringBacktrace を使用すること</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>前方互換用</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrBacktrace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfIsAdminFunction">
+        <div class="location">at         line 1522</div>
+        <code>                    
+    <strong>sfIsAdminFunction</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>GcUtils::isAdminFunction を使用すること</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>前方互換用</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfIsFrontFunction">
+        <div class="location">at         line 1534</div>
+        <code>                    
+    <strong>sfIsFrontFunction</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>GcUtils::isFrontFunction を使用すること</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>前方互換用</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfIsInstallFunction">
+        <div class="location">at         line 1546</div>
+        <code>                    
+    <strong>sfIsInstallFunction</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>GcUtils::isInstallFunction を使用すること</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>前方互換用</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetAddress">
+        <div class="location">at         line 1558</div>
+        <code>        static            
+    <strong>sfGetAddress</strong>(string $zipcode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$zipcode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfMicrotimeFloat">
+        <div class="location">at         line 1605</div>
+        <code>                    
+    <strong>sfMicrotimeFloat</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>microtime(true) を使用する。</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>前方互換用</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isBlank">
+        <div class="location">at         line 1633</div>
+        <code>        static            boolean
+    <strong>isBlank</strong>(mixed $val, boolean $greedy = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>変数が空白かどうかをチェックする.</p>                    <p>引数 $val が空白かどうかをチェックする. 空白の場合は true.
+以下の文字は空白と判断する.
+- ' ' (ASCII 32 (0x20)), 通常の空白
+- "\t" (ASCII 9 (0x09)), タブ
+- "\n" (ASCII 10 (0x0A)), リターン
+- "\r" (ASCII 13 (0x0D)), 改行
+- "\0" (ASCII 0 (0x00)), NULバイト
+- "\x0B" (ASCII 11 (0x0B)), 垂直タブ</p>
+
+<p>引数 $val が配列の場合は, 空の配列の場合 true を返す.</p>
+
+<p>引数 $greedy が true の場合は, 全角スペース, ネストした空の配列も
+空白と判断する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$val</td>
+                <td>チェック対象の変数</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$greedy</td>
+                <td>'貧欲'にチェックを行う場合 true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>$val が空白と判断された場合 true</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfIsInternalDomain">
+        <div class="location">at         line 1678</div>
+        <code>        static            boolean
+    <strong>sfIsInternalDomain</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>指定されたURLのドメインが一致するかを返す</p>                    <p>戻り値：一致(true) 不一致(false)</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetHashString">
+        <div class="location">at         line 1701</div>
+        <code>        static            string
+    <strong>sfGetHashString</strong>(string $str, string $salt)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>パスワードのハッシュ化</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>暗号化したい文言</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$salt</td>
+                <td>salt</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>ハッシュ暗号化された文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfIsMatchHashPassword">
+        <div class="location">at         line 1723</div>
+        <code>        static            boolean
+    <strong>sfIsMatchHashPassword</strong>(string $pass, string $hashpass, string $salt)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>パスワード文字列のハッシュ一致判定</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pass</td>
+                <td>確認したいパスワード文字列</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$hashpass</td>
+                <td>確認したいパスワードハッシュ文字列</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$salt</td>
+                <td>salt</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>一致判定</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfGetSearchPageMax">
+        <div class="location">at         line 1756</div>
+        <code>        static            integer
+    <strong>sfGetSearchPageMax</strong>(string $search_page_max)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>検索結果の1ページあたりの最大表示件数を取得する</p>                    <p>フォームの入力値から最大表示件数を取得する
+取得できなかった場合は, 定数 SEARCH_PMAX の値を返す</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$search_page_max</td>
+                <td>表示件数の選択値</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>1ページあたりの最大表示件数</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonEncode">
+        <div class="location">at         line 1779</div>
+        <code>        static            string
+    <strong>jsonEncode</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>値を JSON 形式にして返す.</p>                    <p>この関数は, json<em>encode() 又は Services</em>JSON::encode() のラッパーです.
+json<em>encode() 関数が使用可能な場合は json</em>encode() 関数を使用する.
+使用できない場合は, Services_JSON::encode() 関数を使用する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>JSON 形式にエンコードする値</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>JSON 形式にした文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>json_encode()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>Services_JSON::encode()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonDecode">
+        <div class="location">at         line 1804</div>
+        <code>        static            mixed
+    <strong>jsonDecode</strong>(string $json)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>JSON 文字列をデコードする.</p>                    <p>この関数は, json<em>decode() 又は Services</em>JSON::decode() のラッパーです.
+json<em>decode() 関数が使用可能な場合は json</em>decode() 関数を使用する.
+使用できない場合は, Services_JSON::decode() 関数を使用する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$json</td>
+                <td>JSON 形式にエンコードされた文字列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>デコードされた PHP の型</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>json_decode()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>Services_JSON::decode()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAbsoluteRealPath">
+        <div class="location">at         line 1829</div>
+        <code>        static            boolean
+    <strong>isAbsoluteRealPath</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>パスが絶対パスかどうかをチェックする.</p>                    <p>引数のパスが絶対パスの場合は true を返す.
+この関数は, パスの存在チェックを行なわないため注意すること.</p>
+
+<p>use File<em>Util::isAbsolute
+http://pear.php.net/package/File</em>Util/</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>チェック対象のパス</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>絶対パスの場合 true</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_recursiveMkdir">
+        <div class="location">at         line 1848</div>
+        <code>        static            boolean
+    <strong>recursiveMkdir</strong>($path, $mode = 0777)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ディレクトリを再帰的に作成する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>作成に成功した場合 true; 失敗した場合 false</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://jp.php.net/mkdir</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAppInnerUrl">
+        <div class="location">at         line 1854</div>
+        <code>        static            
+    <strong>isAppInnerUrl</strong>($url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extendTimeOut">
+        <div class="location">at         line 1869</div>
+        <code>        static            boolean
+    <strong>extendTimeOut</strong>(integer $seconds = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>PHP のタイムアウトを延長する</p>                    <p>ループの中で呼び出すことを意図している。
+暴走スレッドが残留する確率を軽減するため、set<em>time</em>limit(0) とはしていない。</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$seconds</td>
+                <td>最大実行時間を延長する秒数。</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>成功=true, 失敗=false</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearCompliedTemplate">
+        <div class="location">at         line 1891</div>
+        <code>        static            void
+    <strong>clearCompliedTemplate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>コンパイルファイルを削除します.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copyDirectory">
+        <div class="location">at         line 1906</div>
+        <code>        static            void
+    <strong>copyDirectory</strong>(string $source_path, string $dest_path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>指定されたパスの配下を再帰的にコピーします.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$source_path</td>
+                <td>コピー元ディレクトリのパス</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dest_path</td>
+                <td>コピー先ディレクトリのパス</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_repeatStrWithSeparator">
+        <div class="location">at         line 1932</div>
+        <code>        static            string
+    <strong>repeatStrWithSeparator</strong>(string $input, string $multiplier, string $separator = &#039;,&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>文字列を区切り文字を挟み反復する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$input</td>
+                <td>繰り返す文字列。</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$multiplier</td>
+                <td>input を繰り返す回数。</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$separator</td>
+                <td>区切り文字</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeRFC3986">
+        <div class="location">at         line 1944</div>
+        <code>        static            string
+    <strong>encodeRFC3986</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>RFC3986に準拠したURIエンコード
+MEMO: PHP5.3.0未満では、~のエンコードをしてしまうための処理</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>文字列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>RFC3986エンコード文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_trim">
+        <div class="location">at         line 1956</div>
+        <code>        static            string
+    <strong>trim</strong>(string $str, string $charlist = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>マルチバイト対応の trim</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>入力文字列</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$charlist</td>
+                <td>削除する文字を指定</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>変更後の文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ltrim">
+        <div class="location">at         line 1970</div>
+        <code>        static            string
+    <strong>ltrim</strong>(string $str, string $charlist = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>マルチバイト対応の ltrim</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>入力文字列</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$charlist</td>
+                <td>削除する文字を指定</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>変更後の文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rtrim">
+        <div class="location">at         line 1984</div>
+        <code>        static            string
+    <strong>rtrim</strong>(string $str, string $charlist = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>マルチバイト対応の rtrim</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>入力文字列</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$charlist</td>
+                <td>削除する文字を指定</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>変更後の文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTrimPregPattern">
+        <div class="location">at         line 1997</div>
+        <code>        static            string
+    <strong>getTrimPregPattern</strong>(string $charlist = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>文字列のトリム処理で使用する PCRE のパターン</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$charlist</td>
+                <td>削除する文字を指定</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>パターン</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUnitDataSize">
+        <div class="location">at         line 2012</div>
+        <code>        static            string
+    <strong>getUnitDataSize</strong>(int $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>データ量の単位を付与する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildTree">
+        <div class="location">at         line 2035</div>
+        <code>        static            array
+    <strong>buildTree</strong>(string $primary_key, string $glue_key, integer $max_depth, array $correction = array(), integer $root_id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>カテゴリーツリー状の配列を作成.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$primary_key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$glue_key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$max_depth</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$correction</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$root_id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>ツリーの配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addChild">
+        <div class="location">at         line 2059</div>
+        <code>        static            void
+    <strong>addChild</strong>(array $target, string $primary_key, integer $level, integer $max_depth, array $children = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ツリーの親子をつなげるルーチン.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$target</td>
+                <td>親</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$primary_key</td>
+                <td>主キーの識別子</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$level</td>
+                <td>親の階層</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$max_depth</td>
+                <td>階層の深さの最大値</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$children</td>
+                <td>子の配列（キーが親ID）</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeArrayIDToKey">
+        <div class="location">at         line 2078</div>
+        <code>        static            array
+    <strong>makeArrayIDToKey</strong>(string $ID_name, array $correction = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配列のキーをIDにした配列を作成.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ID_name</td>
+                <td>IDが格納されているキー名</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$correction</td>
+                <td>元の配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTreeTrail">
+        <div class="location">at         line 2102</div>
+        <code>        static            array
+    <strong>getTreeTrail</strong>(integer $start_id, string $primary_key, string $glue_key, array $correction = array(), boolean $cid_is_key = FALSE, integer $root_id, boolean $id_only = TRUE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>階層情報が含まれている配列から親ID配列を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$start_id</td>
+                <td>取得起点</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$primary_key</td>
+                <td>主キー名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$glue_key</td>
+                <td>親IDキー名</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$correction</td>
+                <td>階層構造が含まれている配列</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$cid_is_key</td>
+                <td>キーがIDの配列の場合はtrue</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$root_id</td>
+                <td>ルートID</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$id_only</td>
+                <td>IDだけの配列を返す場合はtrue</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>親ID配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkFileExistsWithInBasePath">
+        <div class="location">at         line 2134</div>
+        <code>        static            bool
+    <strong>checkFileExistsWithInBasePath</strong>(string $file, string $base_path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ベースとなるパスと相対パスを比較してファイルが存在する事をチェックする</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$base_path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>true = exists / false does not exist</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormattedDateWithMicroSecond">
+        <div class="location">at         line 2147</div>
+        <code>        static            string
+    <strong>getFormattedDateWithMicroSecond</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>マイクロ秒付きの時間文字列を取得する.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

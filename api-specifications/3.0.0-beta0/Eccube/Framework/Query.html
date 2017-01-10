@@ -1,0 +1,3104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Framework\Query | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Framework_Query" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../Eccube/Framework.html">Framework</a></li>
+    
+                <li>Query</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            Query
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Query</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>SQLの構築・実行を行う</p>            <p>TODO エラーハンドリング, ロギング方法を見直す</p>        </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_option">
+                                                                                
+                </td>
+                <td>$option</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_where">
+                                                                                
+                </td>
+                <td>$where</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrWhereVal">
+                                                                                
+                </td>
+                <td>$arrWhereVal</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_conn">
+                                                                                
+                </td>
+                <td>$conn</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_groupby">
+                                                                                
+                </td>
+                <td>$groupby</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_order">
+                                                                                
+                </td>
+                <td>$order</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_force_run">
+                                                                                
+                </td>
+                <td>$force_run</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrPoolInstance">
+                    static                                                            
+                </td>
+                <td>$arrPoolInstance</td>
+                <td class="last">シングルトン動作のためのインスタンスプール配列。キーは DSN の識別情報。</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $dsn = &#039;&#039;, boolean $force_run = false, boolean $new = false)
+        
+                                            <p>コンストラクタ.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSingletonInstance">getSingletonInstance</a>(string $dsn = &#039;&#039;, boolean $force_run = false, boolean $new = false)
+        
+                                            <p>シングルトンの Query インスタンスを取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isError">isError</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>エラー判定を行う.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>(string $table, string $where = &#039;&#039;, array $arrWhereVal = array())
+        
+                                            <p>COUNT文を実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exists">exists</a>(string $table, string $where = &#039;&#039;, array $arrWhereVal = array())
+        
+                                            <p>EXISTS文を実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_select">select</a>(string $cols, string $from = &#039;&#039;, string $where = &#039;&#039;, array $arrWhereVal = array(), integer $fetchmode = \MDB2_FETCHMODE_ASSOC)
+        
+                                            <p>SELECT文を実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLastQuery">getLastQuery</a>(boolean $disp = true)
+        
+                                            <p>直前に実行されたSQL文を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    MDB2_OK
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_commit">commit</a>()
+        
+                                            <p>トランザクションをコミットする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    MDB2_OK
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_begin">begin</a>()
+        
+                                            <p>トランザクションを開始する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    MDB2_OK
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rollback">rollback</a>()
+        
+                                            <p>トランザクションをロールバックする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_inTransaction">inTransaction</a>()
+        
+                                            <p>トランザクションが開始されているかチェックする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exec">exec</a>($str, $arrVal = array())
+        
+                                            <p>更新系の SQL を実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_doCallbackAll">doCallbackAll</a>($cbFunc, $sql, $arrVal = array(), $fetchmode = \MDB2_FETCHMODE_ASSOC)
+        
+                                            <p>クエリを実行し、結果行毎にコールバック関数を適用する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAll">getAll</a>(string $sql, array $arrVal = array(), integer $fetchmode = \MDB2_FETCHMODE_ASSOC)
+        
+                                            <p>クエリを実行し、全ての行を返す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSql">getSql</a>(string $cols, string $from = &#039;&#039;, string $where = &#039;&#039;, mixed $arrWhereVal = null)
+        
+                                            <p>構築した SELECT 文を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOption">setOption</a>(string $str)
+        
+                                            <p>SELECT 文の末尾に付与する SQL を設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLimitOffset">setLimitOffset</a>(integer $limit, integer $offset)
+        
+                                            <p>SELECT 文に付与する LIMIT, OFFSET 句を設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setGroupBy">setGroupBy</a>(string $str)
+        
+                                            <p>SELECT 文に付与する GROUP BY 句を設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_andWhere">andWhere</a>(string $str)
+        
+                                            <p>SELECT 文の WHERE 句に付与する AND 条件を設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orWhere">orWhere</a>(string $str)
+        
+                                            <p>SELECT 文の WHERE 句に付与する OR 条件を設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setWhere">setWhere</a>(string $where = &#039;&#039;, mixed $arrWhereVal = array())
+        
+                                            <p>SELECT 文に付与する WHERE 句を設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOrder">setOrder</a>(string $str)
+        
+                                            <p>SELECT 文に付与する ORDER BY 句を設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLimit">setLimit</a>(integer $limit)
+        
+                                            <p>SELECT 文に付与する LIMIT 句を設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOffset">setOffset</a>(integer $offset)
+        
+                                            <p>SELECT 文に付与する OFFSET 句を設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer|<abbr title="Eccube\Framework\DB_Error">DB_Error</abbr>|boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insert">insert</a>(string $table, array $arrVal, array $arrSql = array(), array $arrSqlVal = array(), string $from = &#039;&#039;, string $arrFromVal = array())
+        
+                                            <p>INSERT文を実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_update">update</a>(string $table, array $arrVal, string $where = &#039;&#039;, array $arrWhereVal = array(), array $arrRawSql = array(), array $arrRawSqlVal = array())
+        
+                                            <p>UPDATE文を実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_max">max</a>($col, $table, $where = &#039;&#039;, $arrWhereVal = array())
+        
+                                            <p>MAX文を実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_min">min</a>($col, $table, $where = &#039;&#039;, $arrWhereVal = array())
+        
+                                            <p>MIN文を実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>($col, $table = &#039;&#039;, $where = &#039;&#039;, $arrWhereVal = array())
+        
+                                            <p>SQL を構築して, 特定のカラムの値を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOne">getOne</a>(string $sql, array $arrVal = array())
+        
+                                            <p>SQL を指定して, 特定のカラムの値を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRow">getRow</a>($col, $table = &#039;&#039;, $where = &#039;&#039;, $arrWhereVal = array(), $fetchmode = \MDB2_FETCHMODE_ASSOC)
+        
+                                            <p>一行をカラム名をキーとした連想配列として取得</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCol">getCol</a>($col, $table = &#039;&#039;, $where = &#039;&#039;, $arrWhereVal = array())
+        
+                                            <p>SELECT 文の実行結果を 1列のみ取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>(string $table, string $where = &#039;&#039;, array $arrWhereVal = array())
+        
+                                            <p>レコードの削除</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nextVal">nextVal</a>($seq_name)
+        
+                                            <p>次のシーケンス値を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_currVal">currVal</a>(string $seq_name)
+        
+                                            <p>現在のシーケンス値を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    MDB2_OK
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setVal">setVal</a>(string $seq_name, integer $start)
+        
+                                            <p>シーケンス値を設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_query">query</a>(string $n, array $arr = array(), boolean $ignore_err = false, mixed $types = null, mixed $result_types = \MDB2_PREPARE_RESULT)
+        
+                                            <p>SQL を実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listSequences">listSequences</a>()
+        
+                                            <p>シーケンスの一覧を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listTables">listTables</a>()
+        
+                                            <p>テーブル一覧を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listTableFields">listTableFields</a>(string $table)
+        
+                                            <p>テーブルのカラム一覧を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listTableIndexes">listTableIndexes</a>(string $table)
+        
+                                            <p>テーブルのインデックス一覧を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createIndex">createIndex</a>(string $table, string $name, array $definition)
+        
+                                            <p>テーブルにインデックスを付与する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropIndex">dropIndex</a>(string $table, string $name)
+        
+                                            <p>テーブルにインデックスを破棄する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTableInfo">getTableInfo</a>(string $table)
+        
+                                            <p>テーブルの詳細情報を取得する。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_quote">quote</a>(string $val)
+        
+                                            <p>値を適切にクォートする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extractOnlyColsOf">extractOnlyColsOf</a>(string $table, array $arrParams)
+        
+                                            <p>パラメーターの連想配列から, テーブルに存在する列のみを取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    MDB2_Statement_Common
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepare">prepare</a>(string $sql, mixed $types = null, mixed $result_types = \MDB2_PREPARE_RESULT)
+        
+                                            <p>プリペアドステートメントを構築する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    MDB2_Result
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_execute">execute</a>(MDB2_Statement_Common $sth, array $arrVal = array())
+        
+                                            <p>プリペアドクエリを実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_traceError">traceError</a>(PEAR::Error $error, string $sql = &#039;&#039;, array $arrVal = false)
+        
+                                            <p>エラーの内容をトレースする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_error">error</a>($msg)
+        
+                                            <p>エラー処理</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQueryDefsFields">getQueryDefsFields</a>(string $n, array $arr = array(), boolean $ignore_err = false, mixed $types = null, mixed $result_types = \MDB2_PREPARE_RESULT)
+        
+                                            <p>SQLクエリの結果セットのカラム名だけを取得する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPoolInstance">setPoolInstance</a>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objThis, string $dsn = &#039;&#039;)
+        
+                                            <p>インスタンスをプールする</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPoolInstance">getPoolInstance</a>(string $dsn = &#039;&#039;)
+        
+                                            <p>プールしているインスタンスを取得する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 44</div>
+        <code>                    
+    <strong>__construct</strong>(string $dsn = &#039;&#039;, boolean $force_run = false, boolean $new = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>コンストラクタ.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$dsn</td>
+                <td>データソース名</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$force_run</td>
+                <td>エラーが発生しても処理を続行する場合 true</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$new</td>
+                <td>新規に接続を行うかどうか</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSingletonInstance">
+        <div class="location">at         line 94</div>
+        <code>        static            <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+    <strong>getSingletonInstance</strong>(string $dsn = &#039;&#039;, boolean $force_run = false, boolean $new = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>シングルトンの Query インスタンスを取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$dsn</td>
+                <td>データソース名</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$force_run</td>
+                <td>エラーが発生しても処理を続行する場合 true</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$new</td>
+                <td>新規に接続を行うかどうか</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+            <td>シングルトンの Query インスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isError">
+        <div class="location">at         line 116</div>
+        <code>                    boolean
+    <strong>isError</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>\PEAR::isError()</td>
+                    <td>を使用して下さい</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>エラー判定を行う.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">at         line 133</div>
+        <code>                    integer
+    <strong>count</strong>(string $table, string $where = &#039;&#039;, array $arrWhereVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>COUNT文を実行する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>テーブル名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$where</td>
+                <td>where句</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrWhereVal</td>
+                <td>プレースホルダ</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>件数</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exists">
+        <div class="location">at         line 146</div>
+        <code>                    boolean
+    <strong>exists</strong>(string $table, string $where = &#039;&#039;, array $arrWhereVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>EXISTS文を実行する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>テーブル名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$where</td>
+                <td>where句</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrWhereVal</td>
+                <td>プレースホルダ</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>有無</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_select">
+        <div class="location">at         line 165</div>
+        <code>                    array|null
+    <strong>select</strong>(string $cols, string $from = &#039;&#039;, string $where = &#039;&#039;, array $arrWhereVal = array(), integer $fetchmode = \MDB2_FETCHMODE_ASSOC)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SELECT文を実行する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cols</td>
+                <td>カラム名. 複数カラムの場合はカンマ区切りで書く</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td>テーブル名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$where</td>
+                <td>WHERE句</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrWhereVal</td>
+                <td>プレースホルダ</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$fetchmode</td>
+                <td>使用するフェッチモード。デフォルトは \MDB2<em>FETCHMODE</em>ASSOC。</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastQuery">
+        <div class="location">at         line 178</div>
+        <code>                    string
+    <strong>getLastQuery</strong>(boolean $disp = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>直前に実行されたSQL文を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$disp</td>
+                <td>trueの場合、画面出力を行う.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>SQL文</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commit">
+        <div class="location">at         line 194</div>
+        <code>                    MDB2_OK
+    <strong>commit</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>トランザクションをコミットする.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>MDB2_OK</td>
+            <td>成功した場合は \MDB2_OK;
+        失敗した場合は \PEAR::Error オブジェクト</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_begin">
+        <div class="location">at         line 209</div>
+        <code>                    MDB2_OK
+    <strong>begin</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>トランザクションを開始する.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>MDB2_OK</td>
+            <td>成功した場合は \MDB2_OK;
+        失敗した場合は \PEAR::Error オブジェクト</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rollback">
+        <div class="location">at         line 220</div>
+        <code>                    MDB2_OK
+    <strong>rollback</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>トランザクションをロールバックする.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>MDB2_OK</td>
+            <td>成功した場合は \MDB2_OK;
+        失敗した場合は \PEAR::Error オブジェクト</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inTransaction">
+        <div class="location">at         line 234</div>
+        <code>                    boolean
+    <strong>inTransaction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>トランザクションが開始されているかチェックする.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>トランザクションが開始されている場合 true</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exec">
+        <div class="location">at         line 246</div>
+        <code>                    
+    <strong>exec</strong>($str, $arrVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>更新系の SQL を実行する.</p>                    <p>この関数は Query::query() のエイリアスです.</p>
+
+<p>FIXME \MDB2::exec() の実装であるべき</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$str</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrVal</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doCallbackAll">
+        <div class="location">at         line 260</div>
+        <code>                    boolean
+    <strong>doCallbackAll</strong>($cbFunc, $sql, $arrVal = array(), $fetchmode = \MDB2_FETCHMODE_ASSOC)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>クエリを実行し、結果行毎にコールバック関数を適用する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$cbFunc</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$sql</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrVal</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fetchmode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>結果</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAll">
+        <div class="location">at         line 293</div>
+        <code>                    array
+    <strong>getAll</strong>(string $sql, array $arrVal = array(), integer $fetchmode = \MDB2_FETCHMODE_ASSOC)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>クエリを実行し、全ての行を返す</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>SQL クエリ</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrVal</td>
+                <td>プリペアドステートメントの実行時に使用される配列。配列の要素数は、クエリ内のプレースホルダの数と同じでなければなりません。</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$fetchmode</td>
+                <td>使用するフェッチモード。デフォルトは DB<em>FETCHMODE</em>ASSOC。</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>データを含む2次元配列。失敗した場合に 0 または DB_Error オブジェクトを返します。</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSql">
+        <div class="location">at         line 326</div>
+        <code>                    string
+    <strong>getSql</strong>(string $cols, string $from = &#039;&#039;, string $where = &#039;&#039;, mixed $arrWhereVal = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>構築した SELECT 文を取得する.</p>                    <p>クラス変数から WHERE 句を組み立てる場合、$arrWhereVal を経由してプレースホルダもクラス変数のもので上書きする。</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cols</td>
+                <td>SELECT 文に含めるカラム名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td>SELECT 文に含めるテーブル名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$where</td>
+                <td>SELECT 文に含める WHERE 句</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$arrWhereVal</td>
+                <td>プレースホルダ(参照)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>構築済みの SELECT 文</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOption">
+        <div class="location">at         line 363</div>
+        <code>                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+    <strong>setOption</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SELECT 文の末尾に付与する SQL を設定する.</p>                    <p>この関数で設定した値は Query::getSql() で使用されます.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>付与する SQL 文</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+            <td>自分自身のインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLimitOffset">
+        <div class="location">at         line 379</div>
+        <code>                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+    <strong>setLimitOffset</strong>(integer $limit, integer $offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SELECT 文に付与する LIMIT, OFFSET 句を設定する.</p>                    <p>この関数で設定した値は Query::getSql() で使用されます.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$limit</td>
+                <td>LIMIT 句に付与する値</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td>OFFSET 句に付与する値</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+            <td>自分自身のインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setGroupBy">
+        <div class="location">at         line 396</div>
+        <code>                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+    <strong>setGroupBy</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SELECT 文に付与する GROUP BY 句を設定する.</p>                    <p>この関数で設定した値は Query::getSql() で使用されます.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>GROUP BY 句に付与する文字列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+            <td>自分自身のインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_andWhere">
+        <div class="location">at         line 415</div>
+        <code>                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+    <strong>andWhere</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SELECT 文の WHERE 句に付与する AND 条件を設定する.</p>                    <p>この関数で設定した値は Query::getSql() で使用されます.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>WHERE 句に付与する AND 条件の文字列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+            <td>自分自身のインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orWhere">
+        <div class="location">at         line 434</div>
+        <code>                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+    <strong>orWhere</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SELECT 文の WHERE 句に付与する OR 条件を設定する.</p>                    <p>この関数で設定した値は Query::getSql() で使用されます.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>WHERE 句に付与する OR 条件の文字列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+            <td>自分自身のインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setWhere">
+        <div class="location">at         line 454</div>
+        <code>                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+    <strong>setWhere</strong>(string $where = &#039;&#039;, mixed $arrWhereVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SELECT 文に付与する WHERE 句を設定する.</p>                    <p>この関数で設定した値は Query::getSql() で使用されます.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$where</td>
+                <td>WHERE 句に付与する文字列</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$arrWhereVal</td>
+                <td>プレースホルダ</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+            <td>自分自身のインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOrder">
+        <div class="location">at         line 470</div>
+        <code>                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+    <strong>setOrder</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SELECT 文に付与する ORDER BY 句を設定する.</p>                    <p>この関数で設定した値は Query::getSql() で使用されます.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>ORDER BY 句に付与する文字列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+            <td>自分自身のインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLimit">
+        <div class="location">at         line 489</div>
+        <code>                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+    <strong>setLimit</strong>(integer $limit)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SELECT 文に付与する LIMIT 句を設定する.</p>                    <p>この関数で設定した値は Query::getSql() で使用されます.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$limit</td>
+                <td>LIMIT 句に設定する値</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+            <td>自分自身のインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOffset">
+        <div class="location">at         line 506</div>
+        <code>                    <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+    <strong>setOffset</strong>(integer $offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SELECT 文に付与する OFFSET 句を設定する.</p>                    <p>この関数で設定した値は Query::getSql() で使用されます.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td>OFFSET 句に設定する値</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+            <td>自分自身のインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insert">
+        <div class="location">at         line 526</div>
+        <code>                    integer|<abbr title="Eccube\Framework\DB_Error">DB_Error</abbr>|boolean
+    <strong>insert</strong>(string $table, array $arrVal, array $arrSql = array(), array $arrSqlVal = array(), string $from = &#039;&#039;, string $arrFromVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>INSERT文を実行する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>テーブル名</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrVal</td>
+                <td>array('カラム名' => '値', ...)の連想配列</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrSql</td>
+                <td>array('カラム名' => 'SQL文', ...)の連想配列</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrSqlVal</td>
+                <td>SQL文の中で使用するプレースホルダ配列</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td>FROM 句・WHERE 句</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$arrFromVal</td>
+                <td>FROM 句・WHERE 句で使用するプレースホルダ配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer|<abbr title="Eccube\Framework\DB_Error">DB_Error</abbr>|boolean</td>
+            <td>挿入件数またはエラー(DB_Error, false)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_update">
+        <div class="location">at         line 584</div>
+        <code>                    
+    <strong>update</strong>(string $table, array $arrVal, string $where = &#039;&#039;, array $arrWhereVal = array(), array $arrRawSql = array(), array $arrRawSqlVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>UPDATE文を実行する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>テーブル名</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrVal</td>
+                <td>array('カラム名' => '値', ...)の連想配列</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$where</td>
+                <td>WHERE句</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrWhereVal</td>
+                <td>WHERE句用のプレースホルダ配列 (従来は追加カラム用も兼ねていた)</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrRawSql</td>
+                <td>追加カラム</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrRawSqlVal</td>
+                <td>追加カラム用のプレースホルダ配列</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_max">
+        <div class="location">at         line 640</div>
+        <code>                    integer
+    <strong>max</strong>($col, $table, $where = &#039;&#039;, $arrWhereVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>MAX文を実行する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrWhereVal</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>MAX文の実行結果</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_min">
+        <div class="location">at         line 656</div>
+        <code>                    integer
+    <strong>min</strong>($col, $table, $where = &#039;&#039;, $arrWhereVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>MIN文を実行する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrWhereVal</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>MIN文の実行結果</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at         line 672</div>
+        <code>                    mixed
+    <strong>get</strong>($col, $table = &#039;&#039;, $where = &#039;&#039;, $arrWhereVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SQL を構築して, 特定のカラムの値を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrWhereVal</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>SQL の実行結果</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOne">
+        <div class="location">at         line 688</div>
+        <code>                    mixed
+    <strong>getOne</strong>(string $sql, array $arrVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SQL を指定して, 特定のカラムの値を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>実行する SQL</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrVal</td>
+                <td>プレースホルダに挿入する値</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>SQL の実行結果</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRow">
+        <div class="location">at         line 721</div>
+        <code>                    array
+    <strong>getRow</strong>($col, $table = &#039;&#039;, $where = &#039;&#039;, $arrWhereVal = array(), $fetchmode = \MDB2_FETCHMODE_ASSOC)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>一行をカラム名をキーとした連想配列として取得</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrWhereVal</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fetchmode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>array('カラム名' => '値', ...)の連想配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCol">
+        <div class="location">at         line 754</div>
+        <code>                    array
+    <strong>getCol</strong>($col, $table = &#039;&#039;, $where = &#039;&#039;, $arrWhereVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SELECT 文の実行結果を 1列のみ取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrWhereVal</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>SQL の実行結果の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at         line 786</div>
+        <code>                    
+    <strong>delete</strong>(string $table, string $where = &#039;&#039;, array $arrWhereVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>レコードの削除</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>テーブル名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$where</td>
+                <td>WHERE句</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrWhereVal</td>
+                <td>プレースホルダ</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextVal">
+        <div class="location">at         line 804</div>
+        <code>                    
+    <strong>nextVal</strong>($seq_name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>次のシーケンス値を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$seq_name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currVal">
+        <div class="location">at         line 815</div>
+        <code>                    integer
+    <strong>currVal</strong>(string $seq_name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>現在のシーケンス値を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$seq_name</td>
+                <td>取得するシーケンス名</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>現在のシーケンス値</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setVal">
+        <div class="location">at         line 827</div>
+        <code>                    MDB2_OK
+    <strong>setVal</strong>(string $seq_name, integer $start)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>シーケンス値を設定する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$seq_name</td>
+                <td>シーケンス名</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$start</td>
+                <td>設定するシーケンス値</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>MDB2_OK</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_query">
+        <div class="location">at         line 857</div>
+        <code>                    array
+    <strong>query</strong>(string $n, array $arr = array(), boolean $ignore_err = false, mixed $types = null, mixed $result_types = \MDB2_PREPARE_RESULT)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SQL を実行する.</p>                    <p>FIXME $ignore_errが無視されるようになっているが互換性として問題が無いか確認が必要</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$n</td>
+                <td>実行する SQL 文</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arr</td>
+                <td>プレースホルダに挿入する値</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$ignore_err</td>
+                <td>\MDB2切替で無効化されている (エラーが発生しても処理を続行する場合 true)</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$types</td>
+                <td>プレースホルダの型指定 デフォルトnull = string</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$result_types</td>
+                <td>返値の型指定またはDML実行(MDB2<em>PREPARE</em>MANIP)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>SQL の実行結果の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listSequences">
+        <div class="location">at         line 882</div>
+        <code>                    array
+    <strong>listSequences</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>シーケンスの一覧を取得する.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>シーケンス名の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listTables">
+        <div class="location">at         line 894</div>
+        <code>                    array
+    <strong>listTables</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>テーブル一覧を取得する.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>テーブル名の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listTableFields">
+        <div class="location">at         line 905</div>
+        <code>                    array
+    <strong>listTableFields</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>テーブルのカラム一覧を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>テーブル名</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>指定のテーブルのカラム名の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listTableIndexes">
+        <div class="location">at         line 918</div>
+        <code>                    array
+    <strong>listTableIndexes</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>テーブルのインデックス一覧を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>テーブル名</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>指定のテーブルのインデックス一覧</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createIndex">
+        <div class="location">at         line 933</div>
+        <code>                    
+    <strong>createIndex</strong>(string $table, string $name, array $definition)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>テーブルにインデックスを付与する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>テーブル名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>インデックス名</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$definition</td>
+                <td>フィールド名など　通常のフィールド指定時は、$definition=array('fields' => array('フィールド名' => array()));
+              MySQLのtext型フィールドを指定する場合は $definition['length'] = 'text_field(NNN)' が必要</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropIndex">
+        <div class="location">at         line 947</div>
+        <code>                    
+    <strong>dropIndex</strong>(string $table, string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>テーブルにインデックスを破棄する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>テーブル名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>インデックス名</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTableInfo">
+        <div class="location">at         line 960</div>
+        <code>                    array
+    <strong>getTableInfo</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>テーブルの詳細情報を取得する。</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>テーブル名</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>テーブル情報の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_quote">
+        <div class="location">at         line 978</div>
+        <code>                    string
+    <strong>quote</strong>(string $val)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>値を適切にクォートする.</p>                    <p>TODO \MDB2 に対応するための暫定的な措置.
+     プレースホルダが使用できない実装があるため.
+     本来であれば, \MDB2::prepare() を適切に使用するべき</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$val</td>
+                <td>クォートを行う文字列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>クォートされた文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\MDB2::quote()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractOnlyColsOf">
+        <div class="location">at         line 990</div>
+        <code>                    array
+    <strong>extractOnlyColsOf</strong>(string $table, array $arrParams)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>パラメーターの連想配列から, テーブルに存在する列のみを取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>テーブル名</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrParams</td>
+                <td>プレースホルダの連想配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>テーブルに存在する列のみ抽出した連想配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepare">
+        <div class="location">at         line 1012</div>
+        <code>                    MDB2_Statement_Common
+    <strong>prepare</strong>(string $sql, mixed $types = null, mixed $result_types = \MDB2_PREPARE_RESULT)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>プリペアドステートメントを構築する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>プリペアドステートメントを構築する SQL</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$types</td>
+                <td>プレースホルダの型指定 デフォルト null</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$result_types</td>
+                <td>返値の型指定またはDML実行(MDB2<em>PREPARE</em>MANIP)、nullは指定無し</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>MDB2_Statement_Common</td>
+            <td>プリペアドステートメントインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_execute">
+        <div class="location">at         line 1031</div>
+        <code>                    MDB2_Result
+    <strong>execute</strong>(MDB2_Statement_Common $sth, array $arrVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>プリペアドクエリを実行する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>MDB2_Statement_Common</td>
+                <td>$sth</td>
+                <td>プリペアドステートメントインスタンス</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrVal</td>
+                <td>プレースホルダに挿入する配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>MDB2_Result</td>
+            <td>結果セットのインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_traceError">
+        <div class="location">at         line 1067</div>
+        <code>                    string
+    <strong>traceError</strong>(PEAR::Error $error, string $sql = &#039;&#039;, array $arrVal = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>エラーの内容をトレースする.</p>                    <p>XXX trigger_error で処理する場合、1024文字以内に抑える必要がある。
+XXX 重要な情報を先頭に置き、冗長になりすぎないように留意する。</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>PEAR::Error</td>
+                <td>$error</td>
+                <td>\PEAR::Error インスタンス</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>エラーの発生した SQL 文</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrVal</td>
+                <td>プレースホルダ</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>トレースしたエラー文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_error">
+        <div class="location">at         line 1084</div>
+        <code>                    
+    <strong>error</strong>($msg)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>エラー処理</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$msg</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueryDefsFields">
+        <div class="location">at         line 1104</div>
+        <code>                    array
+    <strong>getQueryDefsFields</strong>(string $n, array $arr = array(), boolean $ignore_err = false, mixed $types = null, mixed $result_types = \MDB2_PREPARE_RESULT)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SQLクエリの結果セットのカラム名だけを取得する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$n</td>
+                <td>実行する SQL 文</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arr</td>
+                <td>プレースホルダに挿入する値</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$ignore_err</td>
+                <td>エラーが発生しても処理を続行する場合 true</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$types</td>
+                <td>プレースホルダの型指定 デフォルトnull = string</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$result_types</td>
+                <td>返値の型指定またはDML実行(MDB2<em>PREPARE</em>MANIP)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>実行結果の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPoolInstance">
+        <div class="location">at         line 1203</div>
+        <code>        static            <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>
+    <strong>setPoolInstance</strong>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objThis, string $dsn = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>インスタンスをプールする</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+                <td>$objThis</td>
+                <td>プールするインスタンス</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dsn</td>
+                <td>データソース名</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+            <td>プールしたインスタンス</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPoolInstance">
+        <div class="location">at         line 1216</div>
+        <code>        static            <a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>|null
+    <strong>getPoolInstance</strong>(string $dsn = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>プールしているインスタンスを取得する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$dsn</td>
+                <td>データソース名</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

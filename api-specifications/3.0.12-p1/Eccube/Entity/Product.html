@@ -1,0 +1,3258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Entity\Product | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Entity_Product" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../Eccube/Entity.html">Entity</a></li>
+    
+                <li>Product</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            Product
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Product</strong>        extends <a href="../../Eccube/Entity/AbstractEntity.html"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Product</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetExists">offsetExists</a>($offset)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetExists"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetSet">offsetSet</a>($offset, $value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetSet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetGet">offsetGet</a>($offset)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetGet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetUnset">offsetUnset</a>($offset)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetUnset"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPropertiesFromArray">setPropertiesFromArray</a>(array $arrProps, array $excludeAttribute = array(), <a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a> $parentClass = null)
+        
+                                            <p>引数の連想配列を元にプロパティを設定します.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_setPropertiesFromArray"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toArray">toArray</a>(array $excludeAttribute = array(), <a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a> $parentClass = null)
+        
+                                            <p>プロパティの値を連想配列で返します.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_toArray"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copyProperties">copyProperties</a>(object $srcObject, array $excludeAttribute = array())
+        
+                                            <p>コピー元のオブジェクトのフィールド名を指定して、同名のフィールドに値をコピー</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_copyProperties"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__calc">_calc</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isEnable">isEnable</a>()
+        
+                                            <p>Is Enable</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getClassName1">getClassName1</a>()
+        
+                                            <p>Get ClassName1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getClassName2">getClassName2</a>()
+        
+                                            <p>Get ClassName2</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getClassCategories1">getClassCategories1</a>()
+        
+                                            <p>Get getClassCategories1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getClassCategories2">getClassCategories2</a>($class_category1)
+        
+                                            <p>Get getClassCategories2</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStockFind">getStockFind</a>()
+        
+                                            <p>Get StockFind</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStockMin">getStockMin</a>()
+        
+                                            <p>Get Stock min</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStockMax">getStockMax</a>()
+        
+                                            <p>Get Stock max</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStockUnlimitedMin">getStockUnlimitedMin</a>()
+        
+                                            <p>Get StockUnlimited min</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStockUnlimitedMax">getStockUnlimitedMax</a>()
+        
+                                            <p>Get StockUnlimited max</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrice01Min">getPrice01Min</a>()
+        
+                                            <p>Get Price01 min</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrice01Max">getPrice01Max</a>()
+        
+                                            <p>Get Price01 max</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrice02Min">getPrice02Min</a>()
+        
+                                            <p>Get Price02 min</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrice02Max">getPrice02Max</a>()
+        
+                                            <p>Get Price02 max</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrice01IncTaxMin">getPrice01IncTaxMin</a>()
+        
+                                            <p>Get Price01IncTax min</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrice01IncTaxMax">getPrice01IncTaxMax</a>()
+        
+                                            <p>Get Price01IncTax max</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrice02IncTaxMin">getPrice02IncTaxMin</a>()
+        
+                                            <p>Get Price02IncTax min</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrice02IncTaxMax">getPrice02IncTaxMax</a>()
+        
+                                            <p>Get Price02IncTax max</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCodeMin">getCodeMin</a>()
+        
+                                            <p>Get Product_code min</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCodeMax">getCodeMax</a>()
+        
+                                            <p>Get Product_code max</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getClassCategories">getClassCategories</a>()
+        
+                                            <p>Get ClassCategories</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMainListImage">getMainListImage</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___clone">__clone</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copy">copy</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getId">getId</a>()
+        
+                                            <p>Get id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setName">setName</a>(string $name)
+        
+                                            <p>Set name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p>Get name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setNote">setNote</a>(string $note)
+        
+                                            <p>Set note</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNote">getNote</a>()
+        
+                                            <p>Get note</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDescriptionList">setDescriptionList</a>(string $descriptionList)
+        
+                                            <p>Set description_list</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDescriptionList">getDescriptionList</a>()
+        
+                                            <p>Get description_list</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDescriptionDetail">setDescriptionDetail</a>(string $descriptionDetail)
+        
+                                            <p>Set description_detail</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDescriptionDetail">getDescriptionDetail</a>()
+        
+                                            <p>Get description_detail</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSearchWord">setSearchWord</a>(string $searchWord)
+        
+                                            <p>Set search_word</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSearchWord">getSearchWord</a>()
+        
+                                            <p>Get search_word</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFreeArea">setFreeArea</a>(string $freeArea)
+        
+                                            <p>Set free_area</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFreeArea">getFreeArea</a>()
+        
+                                            <p>Get free_area</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDelFlg">setDelFlg</a>(integer $delFlg)
+        
+                                            <p>Set del_flg</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDelFlg">getDelFlg</a>()
+        
+                                            <p>Get del_flg</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCreateDate">setCreateDate</a>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $createDate)
+        
+                                            <p>Set create_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCreateDate">getCreateDate</a>()
+        
+                                            <p>Get create_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUpdateDate">setUpdateDate</a>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $updateDate)
+        
+                                            <p>Set update_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUpdateDate">getUpdateDate</a>()
+        
+                                            <p>Get update_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addProductCategory">addProductCategory</a>(<a href="../../Eccube/Entity/ProductCategory.html"><abbr title="Eccube\Entity\ProductCategory">ProductCategory</abbr></a> $productCategories)
+        
+                                            <p>Add ProductCategories</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeProductCategory">removeProductCategory</a>(<a href="../../Eccube/Entity/ProductCategory.html"><abbr title="Eccube\Entity\ProductCategory">ProductCategory</abbr></a> $productCategories)
+        
+                                            <p>Remove ProductCategories</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductCategories">getProductCategories</a>()
+        
+                                            <p>Get ProductCategories</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addProductClass">addProductClass</a>(<a href="../../Eccube/Entity/ProductClass.html"><abbr title="Eccube\Entity\ProductClass">ProductClass</abbr></a> $productClasses)
+        
+                                            <p>Add ProductClasses</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeProductClass">removeProductClass</a>(<a href="../../Eccube/Entity/ProductClass.html"><abbr title="Eccube\Entity\ProductClass">ProductClass</abbr></a> $productClasses)
+        
+                                            <p>Remove ProductClasses</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductClasses">getProductClasses</a>()
+        
+                                            <p>Get ProductClasses</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasProductClass">hasProductClass</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addCustomerFavoriteProduct">addCustomerFavoriteProduct</a>(<a href="../../Eccube/Entity/CustomerFavoriteProduct.html"><abbr title="Eccube\Entity\CustomerFavoriteProduct">CustomerFavoriteProduct</abbr></a> $customerFavoriteProducts)
+        
+                                            <p>Add CustomerFavoriteProducts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeCustomerFavoriteProduct">removeCustomerFavoriteProduct</a>(<a href="../../Eccube/Entity/CustomerFavoriteProduct.html"><abbr title="Eccube\Entity\CustomerFavoriteProduct">CustomerFavoriteProduct</abbr></a> $customerFavoriteProducts)
+        
+                                            <p>Remove CustomerFavoriteProducts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCustomerFavoriteProducts">getCustomerFavoriteProducts</a>()
+        
+                                            <p>Get CustomerFavoriteProducts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCreator">setCreator</a>(<a href="../../Eccube/Entity/Member.html"><abbr title="Eccube\Entity\Member">Member</abbr></a> $creator)
+        
+                                            <p>Set Creator</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Member.html"><abbr title="Eccube\Entity\Member">Member</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCreator">getCreator</a>()
+        
+                                            <p>Get Creator</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setStatus">setStatus</a>(<a href="../../Eccube/Entity/Master/Disp.html"><abbr title="Eccube\Entity\Master\Disp">Disp</abbr></a> $status = null)
+        
+                                            <p>Set Status</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Master/Disp.html"><abbr title="Eccube\Entity\Master\Disp">Disp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStatus">getStatus</a>()
+        
+                                            <p>Get Status</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addProductImage">addProductImage</a>(<a href="../../Eccube/Entity/ProductImage.html"><abbr title="Eccube\Entity\ProductImage">ProductImage</abbr></a> $productImage)
+        
+                                            <p>Add ProductImage</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeProductImage">removeProductImage</a>(<a href="../../Eccube/Entity/ProductImage.html"><abbr title="Eccube\Entity\ProductImage">ProductImage</abbr></a> $productImage)
+        
+                                            <p>Remove ProductImage</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductImage">getProductImage</a>()
+        
+                                            <p>Get ProductImage</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMainFileName">getMainFileName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addProductTag">addProductTag</a>(<a href="../../Eccube/Entity/ProductTag.html"><abbr title="Eccube\Entity\ProductTag">ProductTag</abbr></a> $productTag)
+        
+                                            <p>Add ProductTag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeProductTag">removeProductTag</a>(<a href="../../Eccube/Entity/ProductTag.html"><abbr title="Eccube\Entity\ProductTag">ProductTag</abbr></a> $productTag)
+        
+                                            <p>Remove ProductTag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductTag">getProductTag</a>()
+        
+                                            <p>Get ProductTag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetExists"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 32</div>
+        <code>                    
+    <strong>offsetExists</strong>($offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetSet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 39</div>
+        <code>                    
+    <strong>offsetSet</strong>($offset, $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetGet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 43</div>
+        <code>                    
+    <strong>offsetGet</strong>($offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetUnset"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 54</div>
+        <code>                    
+    <strong>offsetUnset</strong>($offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPropertiesFromArray">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_setPropertiesFromArray"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 66</div>
+        <code>                    
+    <strong>setPropertiesFromArray</strong>(array $arrProps, array $excludeAttribute = array(), <a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a> $parentClass = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>引数の連想配列を元にプロパティを設定します.</p>                    <p>DBから取り出した連想配列を, プロパティへ設定する際に使用します.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrProps</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$excludeAttribute</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a></td>
+                <td>$parentClass</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_toArray"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 99</div>
+        <code>                    array
+    <strong>toArray</strong>(array $excludeAttribute = array(), <a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a> $parentClass = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>プロパティの値を連想配列で返します.</p>                    <p>DBを更新する場合などで, 連想配列の値を取得したい場合に使用します.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$excludeAttribute</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ReflectionClass">ReflectionClass</a></td>
+                <td>$parentClass</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>連想配列のプロパティの値</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copyProperties">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_copyProperties"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 139</div>
+        <code>                    object
+    <strong>copyProperties</strong>(object $srcObject, array $excludeAttribute = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>コピー元のオブジェクトのフィールド名を指定して、同名のフィールドに値をコピー</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$srcObject</td>
+                <td>コピー元のオブジェクト</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$excludeAttribute</td>
+                <td>除外したいフィールド名の配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at         line 51</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__calc">
+        <div class="location">at         line 56</div>
+        <code>                    
+    <strong>_calc</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEnable">
+        <div class="location">at         line 120</div>
+        <code>                    bool
+    <strong>isEnable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is Enable</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClassName1">
+        <div class="location">at         line 130</div>
+        <code>                    bool
+    <strong>getClassName1</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get ClassName1</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClassName2">
+        <div class="location">at         line 142</div>
+        <code>                    bool
+    <strong>getClassName2</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get ClassName2</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClassCategories1">
+        <div class="location">at         line 154</div>
+        <code>                    bool
+    <strong>getClassCategories1</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get getClassCategories1</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClassCategories2">
+        <div class="location">at         line 166</div>
+        <code>                    bool
+    <strong>getClassCategories2</strong>($class_category1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get getClassCategories2</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$class_category1</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStockFind">
+        <div class="location">at         line 178</div>
+        <code>                    bool
+    <strong>getStockFind</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get StockFind</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStockMin">
+        <div class="location">at         line 190</div>
+        <code>                    integer
+    <strong>getStockMin</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Stock min</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStockMax">
+        <div class="location">at         line 202</div>
+        <code>                    integer
+    <strong>getStockMax</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Stock max</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStockUnlimitedMin">
+        <div class="location">at         line 214</div>
+        <code>                    integer
+    <strong>getStockUnlimitedMin</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get StockUnlimited min</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStockUnlimitedMax">
+        <div class="location">at         line 226</div>
+        <code>                    integer
+    <strong>getStockUnlimitedMax</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get StockUnlimited max</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrice01Min">
+        <div class="location">at         line 238</div>
+        <code>                    integer
+    <strong>getPrice01Min</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Price01 min</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrice01Max">
+        <div class="location">at         line 254</div>
+        <code>                    integer
+    <strong>getPrice01Max</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Price01 max</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrice02Min">
+        <div class="location">at         line 270</div>
+        <code>                    integer
+    <strong>getPrice02Min</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Price02 min</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrice02Max">
+        <div class="location">at         line 282</div>
+        <code>                    integer
+    <strong>getPrice02Max</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Price02 max</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrice01IncTaxMin">
+        <div class="location">at         line 294</div>
+        <code>                    integer
+    <strong>getPrice01IncTaxMin</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Price01IncTax min</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrice01IncTaxMax">
+        <div class="location">at         line 306</div>
+        <code>                    integer
+    <strong>getPrice01IncTaxMax</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Price01IncTax max</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrice02IncTaxMin">
+        <div class="location">at         line 318</div>
+        <code>                    integer
+    <strong>getPrice02IncTaxMin</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Price02IncTax min</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrice02IncTaxMax">
+        <div class="location">at         line 330</div>
+        <code>                    integer
+    <strong>getPrice02IncTaxMax</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Price02IncTax max</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCodeMin">
+        <div class="location">at         line 342</div>
+        <code>                    integer
+    <strong>getCodeMin</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Product_code min</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCodeMax">
+        <div class="location">at         line 360</div>
+        <code>                    integer
+    <strong>getCodeMax</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Product_code max</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClassCategories">
+        <div class="location">at         line 378</div>
+        <code>                    array
+    <strong>getClassCategories</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get ClassCategories</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMainListImage">
+        <div class="location">at         line 420</div>
+        <code>                    
+    <strong>getMainListImage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 503</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___clone">
+        <div class="location">at         line 513</div>
+        <code>                    
+    <strong>__clone</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copy">
+        <div class="location">at         line 518</div>
+        <code>                    
+    <strong>copy</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getId">
+        <div class="location">at         line 563</div>
+        <code>                    integer
+    <strong>getId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get id</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setName">
+        <div class="location">at         line 574</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>setName</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">at         line 586</div>
+        <code>                    string
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setNote">
+        <div class="location">at         line 597</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>setNote</strong>(string $note)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set note</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$note</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNote">
+        <div class="location">at         line 609</div>
+        <code>                    string
+    <strong>getNote</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get note</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDescriptionList">
+        <div class="location">at         line 620</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>setDescriptionList</strong>(string $descriptionList)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set description_list</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$descriptionList</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDescriptionList">
+        <div class="location">at         line 632</div>
+        <code>                    string
+    <strong>getDescriptionList</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get description_list</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDescriptionDetail">
+        <div class="location">at         line 643</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>setDescriptionDetail</strong>(string $descriptionDetail)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set description_detail</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$descriptionDetail</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDescriptionDetail">
+        <div class="location">at         line 655</div>
+        <code>                    string
+    <strong>getDescriptionDetail</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get description_detail</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSearchWord">
+        <div class="location">at         line 666</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>setSearchWord</strong>(string $searchWord)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set search_word</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$searchWord</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchWord">
+        <div class="location">at         line 678</div>
+        <code>                    string
+    <strong>getSearchWord</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get search_word</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFreeArea">
+        <div class="location">at         line 689</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>setFreeArea</strong>(string $freeArea)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set free_area</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$freeArea</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFreeArea">
+        <div class="location">at         line 701</div>
+        <code>                    string
+    <strong>getFreeArea</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get free_area</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDelFlg">
+        <div class="location">at         line 713</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>setDelFlg</strong>(integer $delFlg)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set del_flg</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$delFlg</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDelFlg">
+        <div class="location">at         line 725</div>
+        <code>                    integer
+    <strong>getDelFlg</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get del_flg</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCreateDate">
+        <div class="location">at         line 736</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>setCreateDate</strong>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $createDate)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set create_date</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+                <td>$createDate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCreateDate">
+        <div class="location">at         line 748</div>
+        <code>                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+    <strong>getCreateDate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get create_date</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUpdateDate">
+        <div class="location">at         line 759</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>setUpdateDate</strong>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $updateDate)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set update_date</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+                <td>$updateDate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpdateDate">
+        <div class="location">at         line 771</div>
+        <code>                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+    <strong>getUpdateDate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get update_date</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addProductCategory">
+        <div class="location">at         line 782</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>addProductCategory</strong>(<a href="../../Eccube/Entity/ProductCategory.html"><abbr title="Eccube\Entity\ProductCategory">ProductCategory</abbr></a> $productCategories)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add ProductCategories</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/ProductCategory.html"><abbr title="Eccube\Entity\ProductCategory">ProductCategory</abbr></a></td>
+                <td>$productCategories</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeProductCategory">
+        <div class="location">at         line 794</div>
+        <code>                    
+    <strong>removeProductCategory</strong>(<a href="../../Eccube/Entity/ProductCategory.html"><abbr title="Eccube\Entity\ProductCategory">ProductCategory</abbr></a> $productCategories)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove ProductCategories</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/ProductCategory.html"><abbr title="Eccube\Entity\ProductCategory">ProductCategory</abbr></a></td>
+                <td>$productCategories</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductCategories">
+        <div class="location">at         line 804</div>
+        <code>                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+    <strong>getProductCategories</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get ProductCategories</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\Common\Collections\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addProductClass">
+        <div class="location">at         line 815</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>addProductClass</strong>(<a href="../../Eccube/Entity/ProductClass.html"><abbr title="Eccube\Entity\ProductClass">ProductClass</abbr></a> $productClasses)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add ProductClasses</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/ProductClass.html"><abbr title="Eccube\Entity\ProductClass">ProductClass</abbr></a></td>
+                <td>$productClasses</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeProductClass">
+        <div class="location">at         line 827</div>
+        <code>                    
+    <strong>removeProductClass</strong>(<a href="../../Eccube/Entity/ProductClass.html"><abbr title="Eccube\Entity\ProductClass">ProductClass</abbr></a> $productClasses)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove ProductClasses</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/ProductClass.html"><abbr title="Eccube\Entity\ProductClass">ProductClass</abbr></a></td>
+                <td>$productClasses</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductClasses">
+        <div class="location">at         line 837</div>
+        <code>                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+    <strong>getProductClasses</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get ProductClasses</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\Common\Collections\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasProductClass">
+        <div class="location">at         line 842</div>
+        <code>                    
+    <strong>hasProductClass</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCustomerFavoriteProduct">
+        <div class="location">at         line 859</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>addCustomerFavoriteProduct</strong>(<a href="../../Eccube/Entity/CustomerFavoriteProduct.html"><abbr title="Eccube\Entity\CustomerFavoriteProduct">CustomerFavoriteProduct</abbr></a> $customerFavoriteProducts)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add CustomerFavoriteProducts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/CustomerFavoriteProduct.html"><abbr title="Eccube\Entity\CustomerFavoriteProduct">CustomerFavoriteProduct</abbr></a></td>
+                <td>$customerFavoriteProducts</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeCustomerFavoriteProduct">
+        <div class="location">at         line 871</div>
+        <code>                    
+    <strong>removeCustomerFavoriteProduct</strong>(<a href="../../Eccube/Entity/CustomerFavoriteProduct.html"><abbr title="Eccube\Entity\CustomerFavoriteProduct">CustomerFavoriteProduct</abbr></a> $customerFavoriteProducts)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove CustomerFavoriteProducts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/CustomerFavoriteProduct.html"><abbr title="Eccube\Entity\CustomerFavoriteProduct">CustomerFavoriteProduct</abbr></a></td>
+                <td>$customerFavoriteProducts</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomerFavoriteProducts">
+        <div class="location">at         line 881</div>
+        <code>                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+    <strong>getCustomerFavoriteProducts</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get CustomerFavoriteProducts</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\Common\Collections\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCreator">
+        <div class="location">at         line 892</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>setCreator</strong>(<a href="../../Eccube/Entity/Member.html"><abbr title="Eccube\Entity\Member">Member</abbr></a> $creator)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Creator</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/Member.html"><abbr title="Eccube\Entity\Member">Member</abbr></a></td>
+                <td>$creator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCreator">
+        <div class="location">at         line 904</div>
+        <code>                    <a href="../../Eccube/Entity/Member.html"><abbr title="Eccube\Entity\Member">Member</abbr></a>
+    <strong>getCreator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Creator</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Member.html"><abbr title="Eccube\Entity\Member">Member</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setStatus">
+        <div class="location">at         line 915</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>setStatus</strong>(<a href="../../Eccube/Entity/Master/Disp.html"><abbr title="Eccube\Entity\Master\Disp">Disp</abbr></a> $status = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Status</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/Master/Disp.html"><abbr title="Eccube\Entity\Master\Disp">Disp</abbr></a></td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatus">
+        <div class="location">at         line 927</div>
+        <code>                    <a href="../../Eccube/Entity/Master/Disp.html"><abbr title="Eccube\Entity\Master\Disp">Disp</abbr></a>
+    <strong>getStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Status</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Master/Disp.html"><abbr title="Eccube\Entity\Master\Disp">Disp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addProductImage">
+        <div class="location">at         line 949</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>addProductImage</strong>(<a href="../../Eccube/Entity/ProductImage.html"><abbr title="Eccube\Entity\ProductImage">ProductImage</abbr></a> $productImage)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add ProductImage</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/ProductImage.html"><abbr title="Eccube\Entity\ProductImage">ProductImage</abbr></a></td>
+                <td>$productImage</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeProductImage">
+        <div class="location">at         line 961</div>
+        <code>                    
+    <strong>removeProductImage</strong>(<a href="../../Eccube/Entity/ProductImage.html"><abbr title="Eccube\Entity\ProductImage">ProductImage</abbr></a> $productImage)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove ProductImage</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/ProductImage.html"><abbr title="Eccube\Entity\ProductImage">ProductImage</abbr></a></td>
+                <td>$productImage</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductImage">
+        <div class="location">at         line 971</div>
+        <code>                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+    <strong>getProductImage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get ProductImage</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\Common\Collections\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMainFileName">
+        <div class="location">at         line 976</div>
+        <code>                    
+    <strong>getMainFileName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addProductTag">
+        <div class="location">at         line 991</div>
+        <code>                    <a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>addProductTag</strong>(<a href="../../Eccube/Entity/ProductTag.html"><abbr title="Eccube\Entity\ProductTag">ProductTag</abbr></a> $productTag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add ProductTag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/ProductTag.html"><abbr title="Eccube\Entity\ProductTag">ProductTag</abbr></a></td>
+                <td>$productTag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeProductTag">
+        <div class="location">at         line 1003</div>
+        <code>                    
+    <strong>removeProductTag</strong>(<a href="../../Eccube/Entity/ProductTag.html"><abbr title="Eccube\Entity\ProductTag">ProductTag</abbr></a> $productTag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove ProductTag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/ProductTag.html"><abbr title="Eccube\Entity\ProductTag">ProductTag</abbr></a></td>
+                <td>$productTag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductTag">
+        <div class="location">at         line 1013</div>
+        <code>                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+    <strong>getProductTag</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get ProductTag</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\Common\Collections\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

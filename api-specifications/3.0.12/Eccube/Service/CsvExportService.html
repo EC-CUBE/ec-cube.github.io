@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Service\CsvExportService | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Service_CsvExportService" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../Eccube/Service.html">Service</a></li>
+    
+                <li>CsvExportService</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            CsvExportService
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>CsvExportService</strong>
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_fp">
+                                        protected                                        
+                </td>
+                <td>$fp</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_closed">
+                                        protected                                        
+                </td>
+                <td>$closed</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_convertEncodingCallBack">
+                                        protected                                        <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </td>
+                <td>$convertEncodingCallBack</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_em">
+                                        protected                                        <abbr title="Doctrine\ORM\EntityManager">EntityManager</abbr>
+                </td>
+                <td>$em</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_qb">
+                                        protected                                        <abbr title="Doctrine\ORM\QueryBuilder;">QueryBuilder;</abbr>
+                </td>
+                <td>$qb</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        array
+                </td>
+                <td>$config</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_CsvType">
+                                        protected                                        <a href="../../Eccube/Entity/Master/CsvType.html"><abbr title="Eccube\Entity\Master\CsvType">CsvType</abbr></a>
+                </td>
+                <td>$CsvType</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_Csvs">
+                                        protected                                        <a href="../../Eccube/Entity/Csv.html"><abbr title="Eccube\Entity\Csv">Csv</abbr></a>[]
+                </td>
+                <td>$Csvs</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_csvRepository">
+                                        protected                                        <a href="../../Eccube/Repository/CsvRepository.html"><abbr title="Eccube\Repository\CsvRepository">CsvRepository</abbr></a>
+                </td>
+                <td>$csvRepository</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_csvTypeRepository">
+                                        protected                                        <a href="../../Eccube/Repository/Master/CsvTypeRepository.html"><abbr title="Eccube\Repository\Master\CsvTypeRepository">CsvTypeRepository</abbr></a>
+                </td>
+                <td>$csvTypeRepository</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_orderRepository">
+                                        protected                                        <a href="../../Eccube/Repository/OrderRepository.html"><abbr title="Eccube\Repository\OrderRepository">OrderRepository</abbr></a>
+                </td>
+                <td>$orderRepository</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_customerRepository">
+                                        protected                                        <a href="../../Eccube/Repository/CustomerRepository.html"><abbr title="Eccube\Repository\CustomerRepository">CustomerRepository</abbr></a>
+                </td>
+                <td>$customerRepository</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_productRepository">
+                                        protected                                        <a href="../../Eccube/Repository/ProductRepository.html"><abbr title="Eccube\Repository\ProductRepository">ProductRepository</abbr></a>
+                </td>
+                <td>$productRepository</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setConfig">setConfig</a>($config)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCsvRepository">setCsvRepository</a>(<a href="../../Eccube/Repository/CsvRepository.html"><abbr title="Eccube\Repository\CsvRepository">CsvRepository</abbr></a> $csvRepository)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCsvTypeRepository">setCsvTypeRepository</a>(<a href="../../Eccube/Repository/Master/CsvTypeRepository.html"><abbr title="Eccube\Repository\Master\CsvTypeRepository">CsvTypeRepository</abbr></a> $csvTypeRepository)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOrderRepository">setOrderRepository</a>(<a href="../../Eccube/Repository/OrderRepository.html"><abbr title="Eccube\Repository\OrderRepository">OrderRepository</abbr></a> $orderRepository)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCustomerRepository">setCustomerRepository</a>(<a href="../../Eccube/Repository/CustomerRepository.html"><abbr title="Eccube\Repository\CustomerRepository">CustomerRepository</abbr></a> $customerRepository)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setProductRepository">setProductRepository</a>(<a href="../../Eccube/Repository/ProductRepository.html"><abbr title="Eccube\Repository\ProductRepository">ProductRepository</abbr></a> $productRepository)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEntityManager">setEntityManager</a>(<abbr title="Doctrine\ORM\EntityManager">EntityManager</abbr> $em)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\ORM\EntityManager">EntityManager</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEntityManager">getEntityManager</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setExportQueryBuilder">setExportQueryBuilder</a>(<abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr> $qb)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initCsvType">initCsvType</a>($CsvType)
+        
+                                            <p>Csv種別からServiceの初期化を行う.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Csv.html"><abbr title="Eccube\Entity\Csv">Csv</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCsvs">getCsvs</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exportHeader">exportHeader</a>()
+        
+                                            <p>ヘッダ行を出力する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exportData">exportData</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
+        
+                                            <p>クエリビルダにもとづいてデータ行を出力する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null|string|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getData">getData</a>(<a href="../../Eccube/Entity/Csv.html"><abbr title="Eccube\Entity\Csv">Csv</abbr></a> $Csv, $entity)
+        
+                                            <p>CSV出力項目と比較し, 合致するデータを返す.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConvertEncodhingCallback">getConvertEncodhingCallback</a>()
+        
+                                            <p>文字エンコーディングの変換を行うコールバック関数を返す.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fopen">fopen</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fputcsv">fputcsv</a>($row)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fclose">fclose</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOrderQueryBuilder">getOrderQueryBuilder</a>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request)
+        
+                                            <p>受注検索用のクエリビルダを返す.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCustomerQueryBuilder">getCustomerQueryBuilder</a>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request)
+        
+                                            <p>会員検索用のクエリビルダを返す.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductQueryBuilder">getProductQueryBuilder</a>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request)
+        
+                                            <p>商品検索用のクエリビルダを返す.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_findDeserializeObjects">findDeserializeObjects</a>(array $searchData)
+        
+                                            <p>セッションでシリアライズされた Doctrine のオブジェクトを取得し直す.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">at         line 103</div>
+        <code>                    
+    <strong>setConfig</strong>($config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCsvRepository">
+        <div class="location">at         line 111</div>
+        <code>                    
+    <strong>setCsvRepository</strong>(<a href="../../Eccube/Repository/CsvRepository.html"><abbr title="Eccube\Repository\CsvRepository">CsvRepository</abbr></a> $csvRepository)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Repository/CsvRepository.html"><abbr title="Eccube\Repository\CsvRepository">CsvRepository</abbr></a></td>
+                <td>$csvRepository</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCsvTypeRepository">
+        <div class="location">at         line 119</div>
+        <code>                    
+    <strong>setCsvTypeRepository</strong>(<a href="../../Eccube/Repository/Master/CsvTypeRepository.html"><abbr title="Eccube\Repository\Master\CsvTypeRepository">CsvTypeRepository</abbr></a> $csvTypeRepository)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Repository/Master/CsvTypeRepository.html"><abbr title="Eccube\Repository\Master\CsvTypeRepository">CsvTypeRepository</abbr></a></td>
+                <td>$csvTypeRepository</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOrderRepository">
+        <div class="location">at         line 127</div>
+        <code>                    
+    <strong>setOrderRepository</strong>(<a href="../../Eccube/Repository/OrderRepository.html"><abbr title="Eccube\Repository\OrderRepository">OrderRepository</abbr></a> $orderRepository)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Repository/OrderRepository.html"><abbr title="Eccube\Repository\OrderRepository">OrderRepository</abbr></a></td>
+                <td>$orderRepository</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCustomerRepository">
+        <div class="location">at         line 135</div>
+        <code>                    
+    <strong>setCustomerRepository</strong>(<a href="../../Eccube/Repository/CustomerRepository.html"><abbr title="Eccube\Repository\CustomerRepository">CustomerRepository</abbr></a> $customerRepository)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Repository/CustomerRepository.html"><abbr title="Eccube\Repository\CustomerRepository">CustomerRepository</abbr></a></td>
+                <td>$customerRepository</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setProductRepository">
+        <div class="location">at         line 143</div>
+        <code>                    
+    <strong>setProductRepository</strong>(<a href="../../Eccube/Repository/ProductRepository.html"><abbr title="Eccube\Repository\ProductRepository">ProductRepository</abbr></a> $productRepository)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Repository/ProductRepository.html"><abbr title="Eccube\Repository\ProductRepository">ProductRepository</abbr></a></td>
+                <td>$productRepository</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEntityManager">
+        <div class="location">at         line 151</div>
+        <code>                    
+    <strong>setEntityManager</strong>(<abbr title="Doctrine\ORM\EntityManager">EntityManager</abbr> $em)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Doctrine\ORM\EntityManager">EntityManager</abbr></td>
+                <td>$em</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEntityManager">
+        <div class="location">at         line 159</div>
+        <code>                    <abbr title="Doctrine\ORM\EntityManager">EntityManager</abbr>
+    <strong>getEntityManager</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\ORM\EntityManager">EntityManager</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setExportQueryBuilder">
+        <div class="location">at         line 167</div>
+        <code>                    
+    <strong>setExportQueryBuilder</strong>(<abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr> $qb)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr></td>
+                <td>$qb</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initCsvType">
+        <div class="location">at         line 177</div>
+        <code>                    
+    <strong>initCsvType</strong>($CsvType)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Csv種別からServiceの初期化を行う.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$CsvType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCsvs">
+        <div class="location">at         line 198</div>
+        <code>                    <a href="../../Eccube/Entity/Csv.html"><abbr title="Eccube\Entity\Csv">Csv</abbr></a>[]
+    <strong>getCsvs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Csv.html"><abbr title="Eccube\Entity\Csv">Csv</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exportHeader">
+        <div class="location">at         line 207</div>
+        <code>                    
+    <strong>exportHeader</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ヘッダ行を出力する.</p>                    <p>このメソッドを使う場合は, 事前にinitCsvType($CsvType)で初期化しておく必要がある.</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exportData">
+        <div class="location">at         line 229</div>
+        <code>                    
+    <strong>exportData</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $closure)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>クエリビルダにもとづいてデータ行を出力する.</p>                    <p>このメソッドを使う場合は, 事前にsetExportQueryBuilder($qb)で出力対象のクエリビルダをわたしておく必要がある.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$closure</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getData">
+        <div class="location">at         line 255</div>
+        <code>                    mixed|null|string|void
+    <strong>getData</strong>(<a href="../../Eccube/Entity/Csv.html"><abbr title="Eccube\Entity\Csv">Csv</abbr></a> $Csv, $entity)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>CSV出力項目と比較し, 合致するデータを返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/Csv.html"><abbr title="Eccube\Entity\Csv">Csv</abbr></a></td>
+                <td>$Csv</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$entity</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null|string|void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConvertEncodhingCallback">
+        <div class="location">at         line 307</div>
+        <code>                    <a target="_blank" href="http://php.net/Closure">Closure</a>
+    <strong>getConvertEncodhingCallback</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>文字エンコーディングの変換を行うコールバック関数を返す.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fopen">
+        <div class="location">at         line 321</div>
+        <code>                    
+    <strong>fopen</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fputcsv">
+        <div class="location">at         line 332</div>
+        <code>                    
+    <strong>fputcsv</strong>($row)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$row</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fclose">
+        <div class="location">at         line 344</div>
+        <code>                    
+    <strong>fclose</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrderQueryBuilder">
+        <div class="location">at         line 358</div>
+        <code>                    <abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr>
+    <strong>getOrderQueryBuilder</strong>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注検索用のクエリビルダを返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomerQueryBuilder">
+        <div class="location">at         line 381</div>
+        <code>                    <abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr>
+    <strong>getCustomerQueryBuilder</strong>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>会員検索用のクエリビルダを返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductQueryBuilder">
+        <div class="location">at         line 404</div>
+        <code>                    <abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr>
+    <strong>getProductQueryBuilder</strong>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品検索用のクエリビルダを返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\ORM\QueryBuilder">QueryBuilder</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findDeserializeObjects">
+        <div class="location">at         line 429</div>
+        <code>            protected        
+    <strong>findDeserializeObjects</strong>(array $searchData)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>セッションでシリアライズされた Doctrine のオブジェクトを取得し直す.</p>                    <p>XXX self::setExportQueryBuilder() をコールする前に EntityManager を取得したいので、引数で渡している</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$searchData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

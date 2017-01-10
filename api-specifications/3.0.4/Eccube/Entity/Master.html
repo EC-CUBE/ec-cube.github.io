@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Entity\Master | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="namespace" data-name="namespace:Eccube_Entity_Master" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                                                        <li><a href="../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../Eccube/Entity.html">Entity</a></li>
+                                        <li><a href="../../Eccube/Entity/Master.html">Master</a></li>
+    
+        </ol>
+    </div>
+                <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>Eccube\Entity\Master</h1>
+    </div>
+
+    
+            <h2>Classes</h2>
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/AllowedTag.html"><abbr title="Eccube\Entity\Master\AllowedTag">AllowedTag</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    AllowedTag
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/AuthExclude.html"><abbr title="Eccube\Entity\Master\AuthExclude">AuthExclude</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    AuthExclude
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Authority.html"><abbr title="Eccube\Entity\Master\Authority">Authority</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Authority
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Constant.html"><abbr title="Eccube\Entity\Master\Constant">Constant</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Constant
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Country.html"><abbr title="Eccube\Entity\Master\Country">Country</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Country
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/CustomerOrderStatus.html"><abbr title="Eccube\Entity\Master\CustomerOrderStatus">CustomerOrderStatus</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    CustomerOrderStatus
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/CustomerStatus.html"><abbr title="Eccube\Entity\Master\CustomerStatus">CustomerStatus</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    CustomerStatus
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Db.html"><abbr title="Eccube\Entity\Master\Db">Db</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Db
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/DeliveryDate.html"><abbr title="Eccube\Entity\Master\DeliveryDate">DeliveryDate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    DeliveryDate
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/DeviceType.html"><abbr title="Eccube\Entity\Master\DeviceType">DeviceType</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    DeviceType
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/DisableLogout.html"><abbr title="Eccube\Entity\Master\DisableLogout">DisableLogout</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    DisableLogout
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Disp.html"><abbr title="Eccube\Entity\Master\Disp">Disp</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Disp
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Job.html"><abbr title="Eccube\Entity\Master\Job">Job</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Job
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/MagazineType.html"><abbr title="Eccube\Entity\Master\MagazineType">MagazineType</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    MagazineType
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/MailMagazineType.html"><abbr title="Eccube\Entity\Master\MailMagazineType">MailMagazineType</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    MailMagazineType
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/MailTemplate.html"><abbr title="Eccube\Entity\Master\MailTemplate">MailTemplate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    MailTemplate
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/MailTplPath.html"><abbr title="Eccube\Entity\Master\MailTplPath">MailTplPath</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    MailTplPath
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/MailType.html"><abbr title="Eccube\Entity\Master\MailType">MailType</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    MailType
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/MobileDomain.html"><abbr title="Eccube\Entity\Master\MobileDomain">MobileDomain</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    MobileDomain
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/OrderStatus.html"><abbr title="Eccube\Entity\Master\OrderStatus">OrderStatus</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    OrderStatus
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/OrderStatusColor.html"><abbr title="Eccube\Entity\Master\OrderStatusColor">OrderStatusColor</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    OrderStatusColor
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/OwnersstoreErr.html"><abbr title="Eccube\Entity\Master\OwnersstoreErr">OwnersstoreErr</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    OwnersstoreErr
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/PageMax.html"><abbr title="Eccube\Entity\Master\PageMax">PageMax</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    PageMax
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Permission.html"><abbr title="Eccube\Entity\Master\Permission">Permission</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Permission
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Pref.html"><abbr title="Eccube\Entity\Master\Pref">Pref</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Pref
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/ProductListMax.html"><abbr title="Eccube\Entity\Master\ProductListMax">ProductListMax</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    ProductListMax
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/ProductStatusColor.html"><abbr title="Eccube\Entity\Master\ProductStatusColor">ProductStatusColor</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    ProductStatusColor
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/ProductType.html"><abbr title="Eccube\Entity\Master\ProductType">ProductType</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    ProductType
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Recommend.html"><abbr title="Eccube\Entity\Master\Recommend">Recommend</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Recommend
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Reminder.html"><abbr title="Eccube\Entity\Master\Reminder">Reminder</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Reminder
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/ReviewDenyUrl.html"><abbr title="Eccube\Entity\Master\ReviewDenyUrl">ReviewDenyUrl</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    ReviewDenyUrl
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Sex.html"><abbr title="Eccube\Entity\Master\Sex">Sex</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Sex
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Status.html"><abbr title="Eccube\Entity\Master\Status">Status</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Status
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/StatusImage.html"><abbr title="Eccube\Entity\Master\StatusImage">StatusImage</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    StatusImage
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Target.html"><abbr title="Eccube\Entity\Master\Target">Target</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Target
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Taxrule.html"><abbr title="Eccube\Entity\Master\Taxrule">Taxrule</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Taxrule
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Wday.html"><abbr title="Eccube\Entity\Master\Wday">Wday</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Wday
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Work.html"><abbr title="Eccube\Entity\Master\Work">Work</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Work
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Entity/Master/Zip.html"><abbr title="Eccube\Entity\Master\Zip">Zip</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Zip
+                </div>
+            </div>
+            </div>
+    
+    
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

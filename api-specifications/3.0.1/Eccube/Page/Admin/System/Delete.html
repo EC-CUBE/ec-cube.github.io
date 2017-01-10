@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Page\Admin\System\Delete | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Page_Admin_System_Delete" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../../../Eccube/Page.html">Page</a></li>
+                                        <li><a href="../../../../Eccube/Page/Admin.html">Admin</a></li>
+                                        <li><a href="../../../../Eccube/Page/Admin/System.html">System</a></li>
+    
+                <li>Delete</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            Delete
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Delete</strong>        extends <a href="../../../../Eccube/Page/Admin/AbstractAdminPage.html"><abbr title="Eccube\Page\Admin\AbstractAdminPage">AbstractAdminPage</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>メンバー削除 のページクラス.</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_tpl_mainpage">
+                                                                                
+                </td>
+                <td>$tpl_mainpage</td>
+                <td class="last">メインテンプレート</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_tpl_mainpage"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tpl_column_num">
+                                                                                
+                </td>
+                <td>$tpl_column_num</td>
+                <td class="last">テンプレートのカラム数</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_tpl_column_num"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tpl_mainno">
+                                                                                
+                </td>
+                <td>$tpl_mainno</td>
+                <td class="last">メインナンバー</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_tpl_mainno"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tpl_css">
+                                                                                
+                </td>
+                <td>$tpl_css</td>
+                <td class="last">CSS のパス</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_tpl_css"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tpl_javascript">
+                                                                                
+                </td>
+                <td>$tpl_javascript</td>
+                <td class="last">JavaScript</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_tpl_javascript"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tpl_title">
+                                                                                
+                </td>
+                <td>$tpl_title</td>
+                <td class="last">タイトル</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_tpl_title"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tpl_login_email">
+                                                                                
+                </td>
+                <td>$tpl_login_email</td>
+                <td class="last">ログインメールアドレス</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_tpl_login_email"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tpl_onload">
+                                                                                
+                </td>
+                <td>$tpl_onload</td>
+                <td class="last">HTML ロード後に実行する JavaScript コード</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_tpl_onload"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_transactionid">
+                                                                                
+                </td>
+                <td>$transactionid</td>
+                <td class="last">トランザクションID</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_transactionid"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_template">
+                                                                                
+                </td>
+                <td>$template</td>
+                <td class="last">メインテンプレート名</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_template"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrSiteInfo">
+                                                                                
+                </td>
+                <td>$arrSiteInfo</td>
+                <td class="last">店舗基本情報</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_arrSiteInfo"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_plugin_activate_flg">
+                                                                                
+                </td>
+                <td>$plugin_activate_flg</td>
+                <td class="last">プラグインを実行フラグ</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_plugin_activate_flg"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrLimitPostMode">
+                                                                                
+                </td>
+                <td>$arrLimitPostMode</td>
+                <td class="last">POST に限定する mode</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_arrLimitPostMode"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_skip_load_page_layout">
+                                                                                
+                </td>
+                <td>$skip_load_page_layout</td>
+                <td class="last">ページレイアウトを読み込むか</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_skip_load_page_layout"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_load_legacy_js">
+                                                                                
+                </td>
+                <td>$load_legacy_js</td>
+                <td class="last">2.12.x 以前のJavaScript関数を読み込むかどうか</td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_load_legacy_js"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tpl_page_class_name">
+                                                                                
+                </td>
+                <td>$tpl_page_class_name</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_tpl_page_class_name"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrForm">
+                                                                                
+                </td>
+                <td>$arrForm</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_arrForm"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrErr">
+                                                                                
+                </td>
+                <td>$arrErr</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#property_arrErr"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_objDisplay">
+                                                                                <a href="../../../../Eccube/Framework/Display.html"><abbr title="Eccube\Framework\Display">Display</abbr></a>
+                </td>
+                <td>$objDisplay</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/Admin/AbstractAdminPage.html#property_objDisplay"><abbr title="Eccube\Page\Admin\AbstractAdminPage">AbstractAdminPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tpl_subno">
+                                                                                
+                </td>
+                <td>$tpl_subno</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/Admin/AbstractAdminPage.html#property_tpl_subno"><abbr title="Eccube\Page\Admin\AbstractAdminPage">AbstractAdminPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tpl_maintitle">
+                                                                                
+                </td>
+                <td>$tpl_maintitle</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/Admin/AbstractAdminPage.html#property_tpl_maintitle"><abbr title="Eccube\Page\Admin\AbstractAdminPage">AbstractAdminPage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tpl_subtitle">
+                                                                                
+                </td>
+                <td>$tpl_subtitle</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Eccube/Page/Admin/AbstractAdminPage.html#property_tpl_subtitle"><abbr title="Eccube\Page\Admin\AbstractAdminPage">AbstractAdminPage</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>($app = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method___construct"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Page を初期化する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_process">process</a>()
+        
+                                            <p>Page のプロセス.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendResponse">sendResponse</a>()
+        
+                                            <p>Page のレスポンス送信.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/Admin/AbstractAdminPage.html#method_sendResponse"><abbr title="Eccube\Page\Admin\AbstractAdminPage">AbstractAdminPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendResponseCSV">sendResponseCSV</a>(string $file_name, string $data)
+        
+                                            <p>Page のレスポンス送信(ダウンロード).</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_sendResponseCSV"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+        
+                                            <p>デストラクタ</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method___destruct"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_doLocalHookpointBefore">doLocalHookpointBefore</a>(<a href="../../../../Eccube/Framework/Helper/PluginHelper.html"><abbr title="Eccube\Framework\Helper\PluginHelper">PluginHelper</abbr></a> $objPlugin)
+        
+                                            <p>ローカルフックポイントを生成し、実行します.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_doLocalHookpointBefore"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_doLocalHookpointAfter">doLocalHookpointAfter</a>(<a href="../../../../Eccube/Framework/Helper/PluginHelper.html"><abbr title="Eccube\Framework\Helper\PluginHelper">PluginHelper</abbr></a> $objPlugin)
+        
+                                            <p>ローカルフックポイントを生成し、実行します.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_doLocalHookpointAfter"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTemplate">getTemplate</a>()
+        
+                                            <p>テンプレート取得</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_getTemplate"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTemplate">setTemplate</a>($template)
+        
+                                            <p>テンプレート設定(ポップアップなどの場合)</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_setTemplate"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLocation">getLocation</a>(string $path, array $param = array(), mixed $useSSL = &#039;escape&#039;)
+        
+                                            <p>$path から URL を取得する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_getLocation"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRootPath">getRootPath</a>(string $path)
+        
+                                            <p>EC-CUBE のWEBルート(/html/)を / としたパスを返す</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_getRootPath"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_allowClientCache">allowClientCache</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>互換性確保用メソッド</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_allowClientCache"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_httpCacheControl">httpCacheControl</a>(string $mode = &#039;&#039;)
+        
+                                            <p>クライアント・プロキシのキャッシュを制御する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_httpCacheControl"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMode">getMode</a>()
+        
+                                            <p>リクエストパラメーター 'mode' を取得する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_getMode"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_doValidToken">doValidToken</a>(boolean $is_admin = false)
+        
+                                            <p>POST アクセスの妥当性を検証する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_doValidToken"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTokenTo">setTokenTo</a>()
+        
+                                            <p>トランザクショントークンを取得し, 設定する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_setTokenTo"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_log">log</a>($mess, $log_level = &#039;Info&#039;)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>前方互換用</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/Admin/AbstractAdminPage.html#method_log"><abbr title="Eccube\Page\Admin\AbstractAdminPage">AbstractAdminPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_p">p</a>(mixed $val)
+        
+                                            <p>デバック出力を行う.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_p"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkLimitPostMode">checkLimitPostMode</a>()
+        
+                                            <p>POST に限定された mode か検証する。</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Eccube/Page/AbstractPage.html#method_checkLimitPostMode"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_action">action</a>()
+        
+                                            <p>Page のアクション.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initParam">initParam</a>(<a href="../../../../Eccube/Framework/FormParam.html"><abbr title="Eccube\Framework\FormParam">FormParam</abbr></a> $objFormParam, array $arrParams)
+        
+                                            <p>パラメーター初期化.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteMember">deleteMember</a>(integer $id)
+        
+                                            <p>メンバー情報削除の為の制御.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void|<abbr title="Eccube\Page\Admin\System\UPDATE">UPDATE</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renumberRank">renumberRank</a>(<a href="../../../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, integer $id)
+        
+                                            <p>ランキングの振り直し.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void|<abbr title="Eccube\Page\Admin\System\UPDATE">UPDATE</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteRecode">deleteRecode</a>(<a href="../../../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, integer $id)
+        
+                                            <p>レコードの削除(削除フラグをONにする).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method___construct"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 102</div>
+        <code>                    
+    <strong>__construct</strong>($app = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 48</div>
+        <code>                    void
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Page を初期化する.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_process">
+        <div class="location">at         line 58</div>
+        <code>                    void
+    <strong>process</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Page のプロセス.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendResponse">
+        <div class="location">in <a href="../../../../Eccube/Page/Admin/AbstractAdminPage.html#method_sendResponse"><abbr title="Eccube\Page\Admin\AbstractAdminPage">AbstractAdminPage</abbr></a> at         line 110</div>
+        <code>                    void
+    <strong>sendResponse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Page のレスポンス送信.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendResponseCSV">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_sendResponseCSV"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 190</div>
+        <code>                    void
+    <strong>sendResponseCSV</strong>(string $file_name, string $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Page のレスポンス送信(ダウンロード).</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file_name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method___destruct"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 209</div>
+        <code>                    void
+    <strong>__destruct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>デストラクタ</p>                    <p>・ブロックの基底クラス (Ecube&#92;Page&#92;Bloc) では、継承していない。</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doLocalHookpointBefore">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_doLocalHookpointBefore"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 229</div>
+        <code>                    void
+    <strong>doLocalHookpointBefore</strong>(<a href="../../../../Eccube/Framework/Helper/PluginHelper.html"><abbr title="Eccube\Framework\Helper\PluginHelper">PluginHelper</abbr></a> $objPlugin)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ローカルフックポイントを生成し、実行します.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Eccube/Framework/Helper/PluginHelper.html"><abbr title="Eccube\Framework\Helper\PluginHelper">PluginHelper</abbr></a></td>
+                <td>$objPlugin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doLocalHookpointAfter">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_doLocalHookpointAfter"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 250</div>
+        <code>                    void
+    <strong>doLocalHookpointAfter</strong>(<a href="../../../../Eccube/Framework/Helper/PluginHelper.html"><abbr title="Eccube\Framework\Helper\PluginHelper">PluginHelper</abbr></a> $objPlugin)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ローカルフックポイントを生成し、実行します.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Eccube/Framework/Helper/PluginHelper.html"><abbr title="Eccube\Framework\Helper\PluginHelper">PluginHelper</abbr></a></td>
+                <td>$objPlugin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTemplate">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_getTemplate"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 269</div>
+        <code>                    
+    <strong>getTemplate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>テンプレート取得</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTemplate">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_setTemplate"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 278</div>
+        <code>                    
+    <strong>setTemplate</strong>($template)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>テンプレート設定(ポップアップなどの場合)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLocation">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_getLocation"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 303</div>
+        <code>                    string
+    <strong>getLocation</strong>(string $path, array $param = array(), mixed $useSSL = &#039;escape&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>$path から URL を取得する.</p>                    <p>以下の順序で 引数 $path から URL を取得する.
+1. realpath($path) で $path の 絶対パスを取得
+2. $<em>SERVER['DOCUMENT</em>ROOT'] と一致する文字列を削除
+3. $useSSL の値に応じて, HTTP<em>URL 又は, HTTPS</em>URL を付与する.</p>
+
+<p>返り値に, QUERY_STRING を含めたい場合は, key => value 形式
+の配列を $param へ渡す.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>結果を取得するためのパス</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$param</td>
+                <td>URL に付与するパラメーターの配列</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$useSSL</td>
+                <td>結果に HTTPS<em>URL を使用する場合 true,
+                        HTTP</em>URL を使用する場合 false,
+                        デフォルト 'escape' 現在のスキーマを使用</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>$path の存在する http(s):// から始まる絶対パス</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Net_URL</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRootPath">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_getRootPath"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 337</div>
+        <code>                    string
+    <strong>getRootPath</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>EC-CUBE のWEBルート(/html/)を / としたパスを返す</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>結果を取得するためのパス</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>EC-CUBE のWEBルート(/html/)からのパス。</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allowClientCache">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_allowClientCache"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 367</div>
+        <code>                    void
+    <strong>allowClientCache</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>決済モジュール互換のため</td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>互換性確保用メソッド</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_httpCacheControl">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_httpCacheControl"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 379</div>
+        <code>                    void
+    <strong>httpCacheControl</strong>(string $mode = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>クライアント・プロキシのキャッシュを制御する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$mode</td>
+                <td>(nocache/private)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMode">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_getMode"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 414</div>
+        <code>                    string|null
+    <strong>getMode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>リクエストパラメーター 'mode' を取得する.</p>                    <p><ol>
+<li>$_REQUEST['mode'] の値を取得する.</li>
+<li>存在しない場合は null を返す.</li>
+</ol>
+
+<p>mode に, 半角英数字とアンダーバー(_) 以外の文字列が検出された場合は null を
+返す.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>$_REQUEST['mode'] の文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doValidToken">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_doValidToken"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 440</div>
+        <code>                    void
+    <strong>doValidToken</strong>(boolean $is_admin = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>POST アクセスの妥当性を検証する.</p>                    <p>生成されたトランザクショントークンの妥当性を検証し,
+不正な場合はエラー画面へ遷移する.</p>
+
+<p>この関数は, 基本的に init() 関数で呼び出され, POST アクセスの場合は自動的に
+トランザクショントークンを検証する.
+ページによって検証タイミングなどを制御する必要がある場合は, この関数を
+オーバーライドし, 個別に設定を行うこと.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$is_admin</td>
+                <td>管理画面でエラー表示をする場合 true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTokenTo">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_setTokenTo"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 460</div>
+        <code>                    void
+    <strong>setTokenTo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>トランザクショントークンを取得し, 設定する.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../../../Eccube/Page/Admin/AbstractAdminPage.html#method_log"><abbr title="Eccube\Page\Admin\AbstractAdminPage">AbstractAdminPage</abbr></a> at         line 136</div>
+        <code>                    
+    <strong>log</strong>($mess, $log_level = &#039;Info&#039;)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>GcUtils::gfPrintLog を使用すること</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>前方互換用</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$mess</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$log_level</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_p">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_p"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 491</div>
+        <code>                    void
+    <strong>p</strong>(mixed $val)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>デバック出力を行う.</p>                    <p>デバック用途のみに使用すること.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$val</td>
+                <td>デバックする要素</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkLimitPostMode">
+        <div class="location">in <a href="../../../../Eccube/Page/AbstractPage.html#method_checkLimitPostMode"><abbr title="Eccube\Page\AbstractPage">AbstractPage</abbr></a> at         line 502</div>
+        <code>                    void
+    <strong>checkLimitPostMode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>POST に限定された mode か検証する。</p>                    <p>POST 以外で、POST に限定された mode を実行しようとした場合、落とす。</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_action">
+        <div class="location">at         line 69</div>
+        <code>                    void
+    <strong>action</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Page のアクション.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initParam">
+        <div class="location">at         line 102</div>
+        <code>                    void
+    <strong>initParam</strong>(<a href="../../../../Eccube/Framework/FormParam.html"><abbr title="Eccube\Framework\FormParam">FormParam</abbr></a> $objFormParam, array $arrParams)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>パラメーター初期化.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Eccube/Framework/FormParam.html"><abbr title="Eccube\Framework\FormParam">FormParam</abbr></a></td>
+                <td>$objFormParam</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrParams</td>
+                <td>$_GET値</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteMember">
+        <div class="location">at         line 115</div>
+        <code>                    void
+    <strong>deleteMember</strong>(integer $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>メンバー情報削除の為の制御.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$id</td>
+                <td>削除対象のmember_id</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renumberRank">
+        <div class="location">at         line 133</div>
+        <code>                    void|<abbr title="Eccube\Page\Admin\System\UPDATE">UPDATE</abbr>
+    <strong>renumberRank</strong>(<a href="../../../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, integer $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ランキングの振り直し.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+                <td>$objQuery</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$id</td>
+                <td>削除対象のmember_id</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void|<abbr title="Eccube\Page\Admin\System\UPDATE">UPDATE</abbr></td>
+            <td>の結果フラグ</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteRecode">
+        <div class="location">at         line 153</div>
+        <code>                    void|<abbr title="Eccube\Page\Admin\System\UPDATE">UPDATE</abbr>
+    <strong>deleteRecode</strong>(<a href="../../../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, integer $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>レコードの削除(削除フラグをONにする).</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+                <td>$objQuery</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$id</td>
+                <td>削除対象のmember_id</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void|<abbr title="Eccube\Page\Admin\System\UPDATE">UPDATE</abbr></td>
+            <td>の結果フラグ</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

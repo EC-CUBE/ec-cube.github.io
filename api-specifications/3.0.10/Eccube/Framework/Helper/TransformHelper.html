@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Framework\Helper\TransformHelper | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Framework_Helper_TransformHelper" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../../Eccube/Framework.html">Framework</a></li>
+                                        <li><a href="../../../Eccube/Framework/Helper.html">Helper</a></li>
+    
+                <li>TransformHelper</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            TransformHelper
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>TransformHelper</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>テンプレートをDOM変形するためのヘルパークラス</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>ERR_TARGET_ELEMENT_NOT_FOUND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_objDOM">
+                                        protected                                        
+                </td>
+                <td>$objDOM</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrSmartyTagsOrg">
+                                        protected                                        
+                </td>
+                <td>$arrSmartyTagsOrg</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrSmartyTagsSub">
+                                        protected                                        
+                </td>
+                <td>$arrSmartyTagsSub</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_smarty_tags_idx">
+                                        protected                                        
+                </td>
+                <td>$smarty_tags_idx</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrErr">
+                                        protected                                        
+                </td>
+                <td>$arrErr</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrElementTree">
+                                        protected                                        
+                </td>
+                <td>$arrElementTree</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrSelectElements">
+                                        protected                                        
+                </td>
+                <td>$arrSelectElements</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_html_source">
+                                        protected                                        
+                </td>
+                <td>$html_source</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_header_source">
+                                        protected                                        
+                </td>
+                <td>$header_source</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_footer_source">
+                                        protected                                        
+                </td>
+                <td>$footer_source</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_search_depth">
+                                        protected                                        
+                </td>
+                <td>$search_depth</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $source)
+        
+                                            <p>SmartyのHTMLソースをDOMに変換しておく</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_select">select</a>(string $selector, integer $index = NULL, boolean $require = true, string $err_msg = NULL)
+        
+                                            <p>jQueryライクなセレクタを用いてエレメントを選択する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_find">find</a>(string $selector, integer $index = NULL, boolean $require = true, string $err_msg = NULL)
+        
+                                            <p>jQueryライクなセレクタを用いて、選択したエレメント内をさらに絞り込む</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_end">end</a>(int $back_num = 1)
+        
+                                            <p>選択状態を指定数戻す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insertBefore">insertBefore</a>(string $html_snip)
+        
+                                            <p>要素の前にHTMLを挿入</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insertAfter">insertAfter</a>(string $html_snip)
+        
+                                            <p>要素の後にHTMLを挿入</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendFirst">appendFirst</a>(string $html_snip)
+        
+                                            <p>要素の先頭にHTMLを挿入</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendChild">appendChild</a>(string $html_snip)
+        
+                                            <p>要素の末尾にHTMLを挿入</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_replaceElement">replaceElement</a>(string $html_snip)
+        
+                                            <p>要素を指定したHTMLに置換</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeElement">removeElement</a>()
+        
+                                            <p>要素を削除する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHTML">getHTML</a>()
+        
+                                            <p>HTMLに戻して、Transform用に付けたマーカーを削除し、Smartyのタグを復元する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfCaptureSmartyTags2Comment">lfCaptureSmartyTags2Comment</a>(array $arrMatches)
+        
+                                            <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfCaptureHeadTags2Comment">lfCaptureHeadTags2Comment</a>(array $arrMatches)
+        
+                                            <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfCaptureSmartyTagsInTag">lfCaptureSmartyTagsInTag</a>(array $arrMatches)
+        
+                                            <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfCaptureSmartyTags2Temptag">lfCaptureSmartyTags2Temptag</a>(array $arrMatches)
+        
+                                            <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfCaptureSmartyTagsInQuote">lfCaptureSmartyTagsInQuote</a>(array $arrMatches)
+        
+                                            <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfCaptureSmartyTags2Value">lfCaptureSmartyTags2Value</a>(array $arrMatches)
+        
+                                            <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfCaptureSmartyTags2Attr">lfCaptureSmartyTags2Attr</a>(array $arrMatches)
+        
+                                            <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfScanChild">lfScanChild</a>(<abbr title="Eccube\Framework\Helper\DOMNode">DOMNode</abbr> $objDOMElement, $parent_selector = &#039;&#039;)
+        
+                                            <p>DOM Element / Document を走査し、name、class別に分類する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfSelector2Regex">lfSelector2Regex</a>(string $selector, string $parent_index = NULL)
+        
+                                            <p>セレクタ文字列をツリー検索用の正規表現に変換する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfAddElement">lfAddElement</a>(integer $elementNo, array $arrElement)
+        
+                                            <p>見つかった要素をプロパティに登録</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfSetTransform">lfSetTransform</a>(string $mode, string $target_key, string $html_snip)
+        
+                                            <p>DOMを用いた変形を実行する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfSetError">lfSetError</a>(string $selector, integer $type, string $err_msg = NULL)
+        
+                                            <p>セレクタエラーを記録する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 56</div>
+        <code>                    void
+    <strong>__construct</strong>(string $source)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SmartyのHTMLソースをDOMに変換しておく</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td>変形対象のテンプレート</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_select">
+        <div class="location">at         line 138</div>
+        <code>                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+    <strong>select</strong>(string $selector, integer $index = NULL, boolean $require = true, string $err_msg = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>jQueryライクなセレクタを用いてエレメントを選択する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$selector</td>
+                <td>セレクタ</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$index</td>
+                <td>インデックス（指定がある場合）</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$require</td>
+                <td>エレメントが見つからなかった場合、エラーとするか</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$err_msg</td>
+                <td>エラーメッセージ</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_find">
+        <div class="location">at         line 178</div>
+        <code>                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+    <strong>find</strong>(string $selector, integer $index = NULL, boolean $require = true, string $err_msg = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>jQueryライクなセレクタを用いて、選択したエレメント内をさらに絞り込む</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$selector</td>
+                <td>セレクタ</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$index</td>
+                <td>インデックス（指定がある場合）</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$require</td>
+                <td>エレメントが見つからなかった場合、エラーとするか</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$err_msg</td>
+                <td>エラーメッセージ</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_end">
+        <div class="location">at         line 218</div>
+        <code>                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+    <strong>end</strong>(int $back_num = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>選択状態を指定数戻す</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$back_num</td>
+                <td>選択状態を戻す数</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insertBefore">
+        <div class="location">at         line 235</div>
+        <code>                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+    <strong>insertBefore</strong>(string $html_snip)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>要素の前にHTMLを挿入</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$html_snip</td>
+                <td>挿入するHTMLの断片</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insertAfter">
+        <div class="location">at         line 252</div>
+        <code>                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+    <strong>insertAfter</strong>(string $html_snip)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>要素の後にHTMLを挿入</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$html_snip</td>
+                <td>挿入するHTMLの断片</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendFirst">
+        <div class="location">at         line 269</div>
+        <code>                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+    <strong>appendFirst</strong>(string $html_snip)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>要素の先頭にHTMLを挿入</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$html_snip</td>
+                <td>挿入するHTMLの断片</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendChild">
+        <div class="location">at         line 286</div>
+        <code>                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+    <strong>appendChild</strong>(string $html_snip)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>要素の末尾にHTMLを挿入</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$html_snip</td>
+                <td>挿入するHTMLの断片</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replaceElement">
+        <div class="location">at         line 303</div>
+        <code>                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+    <strong>replaceElement</strong>(string $html_snip)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>要素を指定したHTMLに置換</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$html_snip</td>
+                <td>置換後のHTMLの断片</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeElement">
+        <div class="location">at         line 319</div>
+        <code>                    <a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+    <strong>removeElement</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>要素を削除する</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHTML">
+        <div class="location">at         line 335</div>
+        <code>                    string
+    <strong>getHTML</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>HTMLに戻して、Transform用に付けたマーカーを削除し、Smartyのタグを復元する</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>トランスフォーム済みHTML。まったくトランスフォームが行われなかった場合は元のHTMLを返す。。</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfCaptureSmartyTags2Comment">
+        <div class="location">at         line 381</div>
+        <code>            protected        string
+    <strong>lfCaptureSmartyTags2Comment</strong>(array $arrMatches)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                    <p>コメント形式への置換</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrMatches</td>
+                <td>マッチしたタグの情報</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>代わりの文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfCaptureHeadTags2Comment">
+        <div class="location">at         line 399</div>
+        <code>            protected        string
+    <strong>lfCaptureHeadTags2Comment</strong>(array $arrMatches)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                    <p>コメント形式への置換</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrMatches</td>
+                <td>マッチしたタグの情報</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>代わりの文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfCaptureSmartyTagsInTag">
+        <div class="location">at         line 422</div>
+        <code>            protected        string
+    <strong>lfCaptureSmartyTagsInTag</strong>(array $arrMatches)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                    <p>HTMLエレメント内部の処理</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrMatches</td>
+                <td>マッチしたタグの情報</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>代わりの文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfCaptureSmartyTags2Temptag">
+        <div class="location">at         line 440</div>
+        <code>            protected        string
+    <strong>lfCaptureSmartyTags2Temptag</strong>(array $arrMatches)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                    <p>ダミーへの置換実行</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrMatches</td>
+                <td>マッチしたタグの情報</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>代わりの文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfCaptureSmartyTagsInQuote">
+        <div class="location">at         line 458</div>
+        <code>            protected        string
+    <strong>lfCaptureSmartyTagsInQuote</strong>(array $arrMatches)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                    <p>クォート内（＝属性値）内にあるSmartyタグ（ダミーに置換済み）を、テキストに置換</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrMatches</td>
+                <td>マッチしたタグの情報</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>代わりの文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfCaptureSmartyTags2Value">
+        <div class="location">at         line 477</div>
+        <code>            protected        string
+    <strong>lfCaptureSmartyTags2Value</strong>(array $arrMatches)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                    <p>テキストへの置換実行</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrMatches</td>
+                <td>マッチしたタグの情報</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>代わりの文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfCaptureSmartyTags2Attr">
+        <div class="location">at         line 494</div>
+        <code>            protected        string
+    <strong>lfCaptureSmartyTags2Attr</strong>(array $arrMatches)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DOMの処理の邪魔になるSmartyのタグを代理文字に置換する preg<em>replace</em>callback のコールバック関数</p>                    <p>エレメント内部にあって、属性値ではないものを、ダミーの属性として置換</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrMatches</td>
+                <td>マッチしたタグの情報</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>代わりの文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfScanChild">
+        <div class="location">at         line 509</div>
+        <code>            protected        void
+    <strong>lfScanChild</strong>(<abbr title="Eccube\Framework\Helper\DOMNode">DOMNode</abbr> $objDOMElement, $parent_selector = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DOM Element / Document を走査し、name、class別に分類する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Eccube\Framework\Helper\DOMNode">DOMNode</abbr></td>
+                <td>$objDOMElement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$parent_selector</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfSelector2Regex">
+        <div class="location">at         line 545</div>
+        <code>            protected        string
+    <strong>lfSelector2Regex</strong>(string $selector, string $parent_index = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>セレクタ文字列をツリー検索用の正規表現に変換する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$selector</td>
+                <td>セレクタ</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$parent_index</td>
+                <td>セレクタ検索時の親要素の位置（子孫要素検索のため）</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>正規表現文字列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfAddElement">
+        <div class="location">at         line 580</div>
+        <code>            protected        void
+    <strong>lfAddElement</strong>(integer $elementNo, array $arrElement)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>見つかった要素をプロパティに登録</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$elementNo</td>
+                <td>エレメントのインデックス</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrElement</td>
+                <td>インデックスとDOMオブジェクトをペアとした配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfSetTransform">
+        <div class="location">at         line 597</div>
+        <code>            protected        boolean
+    <strong>lfSetTransform</strong>(string $mode, string $target_key, string $html_snip)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DOMを用いた変形を実行する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$mode</td>
+                <td>実行するメソッドの種類</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$target_key</td>
+                <td>対象のエレメントの完全なセレクタ</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$html_snip</td>
+                <td>HTMLコード</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfSetError">
+        <div class="location">at         line 661</div>
+        <code>            protected        void
+    <strong>lfSetError</strong>(string $selector, integer $type, string $err_msg = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>セレクタエラーを記録する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$selector</td>
+                <td>セレクタ</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$type</td>
+                <td>エラーの種類</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$err_msg</td>
+                <td>エラーメッセージ</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Framework\FormParam | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Framework_FormParam" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../Eccube/Framework.html">Framework</a></li>
+    
+                <li>FormParam</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            FormParam
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>FormParam</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>パラメーター管理クラス</p>            <p>:XXX: addParam と setParam で言う「パラメーター」が用語として競合しているように感じる。(2009/10/17 Seasoft 塚田)</p>        </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_arrValue">
+                                                                                
+                </td>
+                <td>$arrValue</td>
+                <td class="last">何も入力されていないときに表示する値
+キーはキー名</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_disp_name">
+                                                                                
+                </td>
+                <td>$disp_name</td>
+                <td class="last">表示名</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_keyname">
+                                                                                
+                </td>
+                <td>$keyname</td>
+                <td class="last">キー名</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_length">
+                                                                                
+                </td>
+                <td>$length</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_convert">
+                                                                                
+                </td>
+                <td>$convert</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrCheck">
+                                                                                
+                </td>
+                <td>$arrCheck</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrDefault">
+                                                                                
+                </td>
+                <td>$arrDefault</td>
+                <td class="last">何も入力されていないときに表示する値
+キーはキー名</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_input_db">
+                                                                                
+                </td>
+                <td>$input_db</td>
+                <td class="last">DBにそのまま挿入可能か否か</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_html_disp_name">
+                                                                                
+                </td>
+                <td>$html_disp_name</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>コンストラクタ</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initParam">initParam</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>前方互換用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addParam">addParam</a>($disp_name, $keyname, $length = &#039;&#039;, $convert = &#039;&#039;, $arrCheck = array(), $default = &#039;&#039;, $input_db = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParam">setParam</a>($arrVal, $seq = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHtmlDispNameArray">setHtmlDispNameArray</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHtmlDispNameArray">getHtmlDispNameArray</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParamList">setParamList</a>($arrVal2d, $keyname)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDBDate">setDBDate</a>($db_date, $year_key = &#039;year&#039;, $month_key = &#039;month&#039;, $day_key = &#039;day&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setValue">setValue</a>($key, $value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toLower">toLower</a>($key)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkError">checkError</a>($br = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_recursionCheck">recursionCheck</a>(string $disp_name, string $func, mixed $value, array $arrErr, integer $length)
+        
+                                            <p>CheckError::doFunc() を再帰的に実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convParam">convParam</a>()
+        
+                                            <p>フォームの入力パラメーターに応じて, 再帰的に mb<em>convert</em>kana 関数を実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_recursionConvParam">recursionConvParam</a>(mixed $value, string $convert)
+        
+                                            <p>再帰的に mb<em>convert</em>kana を実行する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHashArray">getHashArray</a>(array $arrKey = array())
+        
+                                            <p>連想配列で返す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDbArray">getDbArray</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSwapArray">getSwapArray</a>(array $arrKey = array())
+        
+                                            <p>配列の縦横を入れ替えて返す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTitleArray">getTitleArray</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCount">getCount</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFormParamList">getFormParamList</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getKeyList">getKeyList</a>()
+        
+                                            <p>キー名の一覧を返す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getValue">getValue</a>($keyname, $default = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_splitParamCheckBoxes">splitParamCheckBoxes</a>($keyname)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_trimParam">trimParam</a>(boolean $has_wide_space = true)
+        
+                                            <p>入力パラメーターの先頭及び末尾にある空白文字を削除する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_recursionTrim">recursionTrim</a>(mixed $value, boolean $has_wide_space = true)
+        
+                                            <p>再帰的に入力パラメーターの先頭及び末尾にある空白文字を削除する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSearchArray">getSearchArray</a>(string $prefix = &#039;search_&#039;)
+        
+                                            <p>検索結果引き継ぎ用の連想配列を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFormDispArray">getFormDispArray</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>前方互換用</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeParam">removeParam</a>(string $keyname)
+        
+                                            <p>パラメーターの削除</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_overwriteParam">overwriteParam</a>(string $keyname, string $target, mixed $value)
+        
+                                            <p>パラメーター定義の上書き</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParamSetting">getParamSetting</a>(string $keyname = null, string $target = null)
+        
+                                            <p>パラメーターの設定情報を取得</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 60</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>コンストラクタ</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initParam">
+        <div class="location">at         line 92</div>
+        <code>                    
+    <strong>initParam</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>#1702</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>前方互換用</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addParam">
+        <div class="location">at         line 104</div>
+        <code>                    
+    <strong>addParam</strong>($disp_name, $keyname, $length = &#039;&#039;, $convert = &#039;&#039;, $arrCheck = array(), $default = &#039;&#039;, $input_db = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$disp_name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$keyname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$convert</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrCheck</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$input_db</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParam">
+        <div class="location">at         line 119</div>
+        <code>                    
+    <strong>setParam</strong>($arrVal, $seq = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrVal</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$seq</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHtmlDispNameArray">
+        <div class="location">at         line 134</div>
+        <code>                    
+    <strong>setHtmlDispNameArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHtmlDispNameArray">
+        <div class="location">at         line 159</div>
+        <code>                    
+    <strong>getHtmlDispNameArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParamList">
+        <div class="location">at         line 165</div>
+        <code>                    
+    <strong>setParamList</strong>($arrVal2d, $keyname)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrVal2d</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$keyname</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDBDate">
+        <div class="location">at         line 176</div>
+        <code>                    
+    <strong>setDBDate</strong>($db_date, $year_key = &#039;year&#039;, $month_key = &#039;month&#039;, $day_key = &#039;day&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$db_date</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$year_key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$month_key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$day_key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setValue">
+        <div class="location">at         line 188</div>
+        <code>                    
+    <strong>setValue</strong>($key, $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toLower">
+        <div class="location">at         line 197</div>
+        <code>                    
+    <strong>toLower</strong>($key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkError">
+        <div class="location">at         line 205</div>
+        <code>                    
+    <strong>checkError</strong>($br = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$br</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_recursionCheck">
+        <div class="location">at         line 288</div>
+        <code>                    void
+    <strong>recursionCheck</strong>(string $disp_name, string $func, mixed $value, array $arrErr, integer $length)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>CheckError::doFunc() を再帰的に実行する.</p>                    <p>再帰実行した場合は, エラーメッセージを多次元配列で格納する</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$disp_name</td>
+                <td>表示名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$func</td>
+                <td>チェック種別</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>チェック対象の値
+                           配列の場合は再帰的にチェックする</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrErr</td>
+                <td>エラーメッセージを格納する配列(の一部)</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$length</td>
+                <td>チェック対象の値の長さ</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convParam">
+        <div class="location">at         line 318</div>
+        <code>                    void
+    <strong>convParam</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>フォームの入力パラメーターに応じて, 再帰的に mb<em>convert</em>kana 関数を実行する.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mb_convert_kana</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_recursionConvParam">
+        <div class="location">at         line 333</div>
+        <code>                    
+    <strong>recursionConvParam</strong>(mixed $value, string $convert)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>再帰的に mb<em>convert</em>kana を実行する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>変換する値. 配列の場合は再帰的に実行する.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$convert</td>
+                <td>mb<em>convert</em>kana の変換オプション</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHashArray">
+        <div class="location">at         line 352</div>
+        <code>                    array
+    <strong>getHashArray</strong>(array $arrKey = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>連想配列で返す</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrKey</td>
+                <td>対象のキー</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>連想配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDbArray">
+        <div class="location">at         line 365</div>
+        <code>                    
+    <strong>getDbArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSwapArray">
+        <div class="location">at         line 383</div>
+        <code>                    array
+    <strong>getSwapArray</strong>(array $arrKey = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配列の縦横を入れ替えて返す</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrKey</td>
+                <td>対象のキー</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>縦横を入れ替えた配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitleArray">
+        <div class="location">at         line 391</div>
+        <code>                    
+    <strong>getTitleArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCount">
+        <div class="location">at         line 397</div>
+        <code>                    
+    <strong>getCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormParamList">
+        <div class="location">at         line 405</div>
+        <code>                    
+    <strong>getFormParamList</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getKeyList">
+        <div class="location">at         line 427</div>
+        <code>                    array
+    <strong>getKeyList</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>キー名の一覧を返す</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>キー名の一覧</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getValue">
+        <div class="location">at         line 433</div>
+        <code>                    
+    <strong>getValue</strong>($keyname, $default = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$keyname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_splitParamCheckBoxes">
+        <div class="location">at         line 458</div>
+        <code>                    
+    <strong>splitParamCheckBoxes</strong>($keyname)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$keyname</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_trimParam">
+        <div class="location">at         line 475</div>
+        <code>                    void
+    <strong>trimParam</strong>(boolean $has_wide_space = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>入力パラメーターの先頭及び末尾にある空白文字を削除する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$has_wide_space</td>
+                <td>全角空白も削除する場合 true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_recursionTrim">
+        <div class="location">at         line 489</div>
+        <code>                    void
+    <strong>recursionTrim</strong>(mixed $value, boolean $has_wide_space = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>再帰的に入力パラメーターの先頭及び末尾にある空白文字を削除する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>変換する値. 配列の場合は再帰的に実行する.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$has_wide_space</td>
+                <td>全角空白も削除する場合 true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchArray">
+        <div class="location">at         line 514</div>
+        <code>                    array
+    <strong>getSearchArray</strong>(string $prefix = &#039;search_&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>検索結果引き継ぎ用の連想配列を取得する.</p>                    <p>引数で指定した文字列で始まるパラメーター名の入力値を連想配列で取得する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td>パラメーター名の接頭辞</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>検索結果引き継ぎ用の連想配列.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormDispArray">
+        <div class="location">at         line 532</div>
+        <code>                    
+    <strong>getFormDispArray</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>必要ならば getFormParamList メソッドに引数を追加するなどで実現可能</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>前方互換用</p>                    <p>1次キーが添字なのが特徴だったと思われる。</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeParam">
+        <div class="location">at         line 555</div>
+        <code>                    
+    <strong>removeParam</strong>(string $keyname)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>パラメーターの削除</p>                    <p>addParamの逆の関数</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$keyname</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_overwriteParam">
+        <div class="location">at         line 586</div>
+        <code>                    
+    <strong>overwriteParam</strong>(string $keyname, string $target, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>パラメーター定義の上書き</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$keyname</td>
+                <td>キー名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td>上書きしたい項目名(disp_name,length,convert等)</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>指定した内容に上書きする</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParamSetting">
+        <div class="location">at         line 606</div>
+        <code>                    mixed
+    <strong>getParamSetting</strong>(string $keyname = null, string $target = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>パラメーターの設定情報を取得</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$keyname</td>
+                <td>取得するキー名</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td>項目名(disp_name,length,convert等)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>パラメーターの設定情報</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

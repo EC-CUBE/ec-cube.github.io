@@ -37,6 +37,7 @@ permalink: /
 + [機能一覧](https://github.com/EC-CUBE/eccube3-doc/blob/master/feature_list.xls){:target="_blank"}
 + [テーブル・ER図](https://github.com/EC-CUBE/eccube3-doc/tree/master/ER-D){:target="_blank"}
 + [結合試験項目書](https://github.com/EC-CUBE/eccube3-doc/tree/master/IntegrationTest){:target="_blank"}
++ [APIリファレンス](/api-specifications/master/index.html){:target="_blank"}
 
 ## Web API仕様
 

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Framework\Helper | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="namespace" data-name="namespace:Eccube_Framework_Helper" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                                                        <li><a href="../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../Eccube/Framework.html">Framework</a></li>
+                                        <li><a href="../../Eccube/Framework/Helper.html">Helper</a></li>
+    
+        </ol>
+    </div>
+                <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>Eccube\Framework\Helper</h1>
+    </div>
+
+    
+            <h2>Classes</h2>
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/AddressHelper.html"><abbr title="Eccube\Framework\Helper\AddressHelper">AddressHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    会員の登録配送先を管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/BestProductsHelper.html"><abbr title="Eccube\Framework\Helper\BestProductsHelper">BestProductsHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    おすすめ商品を管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/BlocHelper.html"><abbr title="Eccube\Framework\Helper\BlocHelper">BlocHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    ブロックを管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/CategoryHelper.html"><abbr title="Eccube\Framework\Helper\CategoryHelper">CategoryHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    カテゴリーを管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/CsvHelper.html"><abbr title="Eccube\Framework\Helper\CsvHelper">CsvHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    CSV 関連 のヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/CustomerHelper.html"><abbr title="Eccube\Framework\Helper\CustomerHelper">CustomerHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    会員情報の登録・編集・検索ヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/DbHelper.html"><abbr title="Eccube\Framework\Helper\DbHelper">DbHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    DB関連のヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/DeliveryHelper.html"><abbr title="Eccube\Framework\Helper\DeliveryHelper">DeliveryHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    配送方法を管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/FileManagerHelper.html"><abbr title="Eccube\Framework\Helper\FileManagerHelper">FileManagerHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    ファイル管理 のヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/FpdiHelper.html"><abbr title="Eccube\Framework\Helper\FpdiHelper">FpdiHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/HandleErrorHelper.html"><abbr title="Eccube\Framework\Helper\HandleErrorHelper">HandleErrorHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    エラーハンドリングのクラス
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/HolidayHelper.html"><abbr title="Eccube\Framework\Helper\HolidayHelper">HolidayHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    休日を管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/KiyakuHelper.html"><abbr title="Eccube\Framework\Helper\KiyakuHelper">KiyakuHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    会員規約を管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/MailHelper.html"><abbr title="Eccube\Framework\Helper\MailHelper">MailHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    メール関連 のヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/MailtemplateHelper.html"><abbr title="Eccube\Framework\Helper\MailtemplateHelper">MailtemplateHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    メールテンプレートを管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/MakerHelper.html"><abbr title="Eccube\Framework\Helper\MakerHelper">MakerHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    メーカーを管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/MobileHelper.html"><abbr title="Eccube\Framework\Helper\MobileHelper">MobileHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    モバイルのヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/NewsHelper.html"><abbr title="Eccube\Framework\Helper\NewsHelper">NewsHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    ニュースを管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/PageLayoutHelper.html"><abbr title="Eccube\Framework\Helper\PageLayoutHelper">PageLayoutHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Webページのレイアウト情報を制御するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/PaymentHelper.html"><abbr title="Eccube\Framework\Helper\PaymentHelper">PaymentHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    支払方法を管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/PluginHelper.html"><abbr title="Eccube\Framework\Helper\PluginHelper">PluginHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    プラグインのヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/PurchaseHelper.html"><abbr title="Eccube\Framework\Helper\PurchaseHelper">PurchaseHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    商品購入関連のヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/SessionHelper.html"><abbr title="Eccube\Framework\Helper\SessionHelper">SessionHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    セッション関連のヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/TaxRuleHelper.html"><abbr title="Eccube\Framework\Helper\TaxRuleHelper">TaxRuleHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    税規約を管理するヘルパークラス.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Eccube/Framework/Helper/TransformHelper.html"><abbr title="Eccube\Framework\Helper\TransformHelper">TransformHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    テンプレートをDOM変形するためのヘルパークラス
+                </div>
+            </div>
+            </div>
+    
+    
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

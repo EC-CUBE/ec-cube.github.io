@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Entity\PageLayout | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Entity_PageLayout" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../Eccube/Entity.html">Entity</a></li>
+    
+                <li>PageLayout</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            PageLayout
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>PageLayout</strong>        extends <a href="../../Eccube/Entity/AbstractEntity.html"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>PageLayout</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>TARGET_ID_UNUSED</td>
+                <td class="last">
+                    <p><em>配置ID: 未使用</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TARGET_ID_LEFT</td>
+                <td class="last">
+                    <p><em>配置ID: LeftNavi</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TARGET_ID_MAIN_HEAD</td>
+                <td class="last">
+                    <p><em>配置ID: MainHead</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TARGET_ID_RIGHT</td>
+                <td class="last">
+                    <p><em>配置ID: RightNavi</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TARGET_ID_MAIN_FOOT</td>
+                <td class="last">
+                    <p><em>配置ID: MainFoot</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TARGET_ID_TOP</td>
+                <td class="last">
+                    <p><em>配置ID: TopNavi</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TARGET_ID_BOTTOM</td>
+                <td class="last">
+                    <p><em>配置ID: BottomNavi</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TARGET_ID_HEAD</td>
+                <td class="last">
+                    <p><em>配置ID: HeadNavi</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TARGET_ID_HEAD_TOP</td>
+                <td class="last">
+                    <p><em>配置ID: HeadTopNavi</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TARGET_ID_FOOTER_BOTTOM</td>
+                <td class="last">
+                    <p><em>配置ID: FooterBottomNavi</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TARGET_ID_HEADER_INTERNAL</td>
+                <td class="last">
+                    <p><em>配置ID: HeaderInternalNavi</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetExists">offsetExists</a>($offset)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetExists"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetSet">offsetSet</a>($offset, $value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetSet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetGet">offsetGet</a>($offset)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetGet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetUnset">offsetUnset</a>($offset)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Eccube/Entity/AbstractEntity.html#method_offsetUnset"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getColumnNum">getColumnNum</a>()
+        
+                                            <p>Get ColumnNum</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLeftNavi">getLeftNavi</a>()
+        
+                                            <p>Get LeftNavi</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMainHead">getMainHead</a>()
+        
+                                            <p>Get MainHead</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRightNavi">getRightNavi</a>()
+        
+                                            <p>Get RightNavi</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMainFoot">getMainFoot</a>()
+        
+                                            <p>Get MainFoot</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTopNavi">getTopNavi</a>()
+        
+                                            <p>Get TopNavi</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBottomNavi">getBottomNavi</a>()
+        
+                                            <p>Get BottomNavi</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHeadNavi">getHeadNavi</a>()
+        
+                                            <p>Get</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHeaderTopNavi">getHeaderTopNavi</a>()
+        
+                                            <p>Get HeaderTopNavi</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFooterBottomNavi">getFooterBottomNavi</a>()
+        
+                                            <p>Get FooterBottomNavi</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHeaderInternalNavi">getHeaderInternalNavi</a>()
+        
+                                            <p>Get HeaderInternalNavi</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBlocsByTargetId">getBlocsByTargetId</a>(integer $target_id)
+        
+                                            <p>Get BlocsByTargetId</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDeviceTypeId">setDeviceTypeId</a>(integer $deviceTypeId)
+        
+                                            <p>Set device<em>type</em>id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDeviceTypeId">getDeviceTypeId</a>()
+        
+                                            <p>Get device<em>type</em>id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPageId">setPageId</a>(integer $pageId)
+        
+                                            <p>Set page_id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageId">getPageId</a>()
+        
+                                            <p>Get page_id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setName">setName</a>(string $name)
+        
+                                            <p>Set name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p>Get name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUrl">setUrl</a>(string $url)
+        
+                                            <p>Set url</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUrl">getUrl</a>()
+        
+                                            <p>Get url</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFilename">setFilename</a>(string $filename)
+        
+                                            <p>Set filename</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilename">getFilename</a>()
+        
+                                            <p>Get filename</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHeaderChk">setHeaderChk</a>(integer $headerChk)
+        
+                                            <p>Set header_chk</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHeaderChk">getHeaderChk</a>()
+        
+                                            <p>Get header_chk</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFooterChk">setFooterChk</a>(integer $footerChk)
+        
+                                            <p>Set footer_chk</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFooterChk">getFooterChk</a>()
+        
+                                            <p>Get footer_chk</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEditFlg">setEditFlg</a>(integer $editFlg)
+        
+                                            <p>Set edit_flg</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEditFlg">getEditFlg</a>()
+        
+                                            <p>Get edit_flg</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAuthor">setAuthor</a>(string $author)
+        
+                                            <p>Set author</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAuthor">getAuthor</a>()
+        
+                                            <p>Get author</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDescription">setDescription</a>(string $description)
+        
+                                            <p>Set description</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDescription">getDescription</a>()
+        
+                                            <p>Get description</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setKeyword">setKeyword</a>(string $keyword)
+        
+                                            <p>Set keyword</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getKeyword">getKeyword</a>()
+        
+                                            <p>Get keyword</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUpdateUrl">setUpdateUrl</a>(string $updateUrl)
+        
+                                            <p>Set update_url</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUpdateUrl">getUpdateUrl</a>()
+        
+                                            <p>Get update_url</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCreateDate">setCreateDate</a>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $createDate)
+        
+                                            <p>Set create_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCreateDate">getCreateDate</a>()
+        
+                                            <p>Get create_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUpdateDate">setUpdateDate</a>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $updateDate)
+        
+                                            <p>Set update_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUpdateDate">getUpdateDate</a>()
+        
+                                            <p>Get update_date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMetaRobots">setMetaRobots</a>(string $metaRobots)
+        
+                                            <p>Set meta_robots</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMetaRobots">getMetaRobots</a>()
+        
+                                            <p>Get meta_robots</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addBlocPosition">addBlocPosition</a>(<a href="../../Eccube/Entity/BlocPosition.html"><abbr title="Eccube\Entity\BlocPosition">BlocPosition</abbr></a> $blocPositions)
+        
+                                            <p>Add BlocPositions</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeBlocPosition">removeBlocPosition</a>(<a href="../../Eccube/Entity/BlocPosition.html"><abbr title="Eccube\Entity\BlocPosition">BlocPosition</abbr></a> $blocPositions)
+        
+                                            <p>Remove BlocPositions</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBlocPositions">getBlocPositions</a>()
+        
+                                            <p>Get BlocPositions</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetExists"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 32</div>
+        <code>                    
+    <strong>offsetExists</strong>($offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetSet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 39</div>
+        <code>                    
+    <strong>offsetSet</strong>($offset, $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetGet"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 43</div>
+        <code>                    
+    <strong>offsetGet</strong>($offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location">in <a href="../../Eccube/Entity/AbstractEntity.html#method_offsetUnset"><abbr title="Eccube\Entity\AbstractEntity">AbstractEntity</abbr></a> at         line 54</div>
+        <code>                    
+    <strong>offsetUnset</strong>($offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumnNum">
+        <div class="location">at         line 61</div>
+        <code>                    integer
+    <strong>getColumnNum</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get ColumnNum</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLeftNavi">
+        <div class="location">at         line 71</div>
+        <code>                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+    <strong>getLeftNavi</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get LeftNavi</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMainHead">
+        <div class="location">at         line 81</div>
+        <code>                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+    <strong>getMainHead</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get MainHead</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRightNavi">
+        <div class="location">at         line 91</div>
+        <code>                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+    <strong>getRightNavi</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get RightNavi</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMainFoot">
+        <div class="location">at         line 101</div>
+        <code>                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+    <strong>getMainFoot</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get MainFoot</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTopNavi">
+        <div class="location">at         line 111</div>
+        <code>                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+    <strong>getTopNavi</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get TopNavi</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBottomNavi">
+        <div class="location">at         line 121</div>
+        <code>                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+    <strong>getBottomNavi</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get BottomNavi</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeadNavi">
+        <div class="location">at         line 131</div>
+        <code>                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+    <strong>getHeadNavi</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeaderTopNavi">
+        <div class="location">at         line 141</div>
+        <code>                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+    <strong>getHeaderTopNavi</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get HeaderTopNavi</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFooterBottomNavi">
+        <div class="location">at         line 151</div>
+        <code>                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+    <strong>getFooterBottomNavi</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get FooterBottomNavi</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeaderInternalNavi">
+        <div class="location">at         line 161</div>
+        <code>                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+    <strong>getHeaderInternalNavi</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get HeaderInternalNavi</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBlocsByTargetId">
+        <div class="location">at         line 172</div>
+        <code>                    <a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]
+    <strong>getBlocsByTargetId</strong>(integer $target_id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get BlocsByTargetId</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$target_id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/Bloc.html"><abbr title="Eccube\Entity\Bloc">Bloc</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 267</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDeviceTypeId">
+        <div class="location">at         line 278</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setDeviceTypeId</strong>(integer $deviceTypeId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set device<em>type</em>id</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$deviceTypeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDeviceTypeId">
+        <div class="location">at         line 290</div>
+        <code>                    integer
+    <strong>getDeviceTypeId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get device<em>type</em>id</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPageId">
+        <div class="location">at         line 301</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setPageId</strong>(integer $pageId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set page_id</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$pageId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageId">
+        <div class="location">at         line 313</div>
+        <code>                    integer
+    <strong>getPageId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get page_id</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setName">
+        <div class="location">at         line 324</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setName</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">at         line 336</div>
+        <code>                    string
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUrl">
+        <div class="location">at         line 347</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setUrl</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set url</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrl">
+        <div class="location">at         line 359</div>
+        <code>                    string
+    <strong>getUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get url</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFilename">
+        <div class="location">at         line 370</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setFilename</strong>(string $filename)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set filename</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilename">
+        <div class="location">at         line 382</div>
+        <code>                    string
+    <strong>getFilename</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get filename</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHeaderChk">
+        <div class="location">at         line 393</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setHeaderChk</strong>(integer $headerChk)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set header_chk</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$headerChk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeaderChk">
+        <div class="location">at         line 405</div>
+        <code>                    integer
+    <strong>getHeaderChk</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get header_chk</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFooterChk">
+        <div class="location">at         line 416</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setFooterChk</strong>(integer $footerChk)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set footer_chk</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$footerChk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFooterChk">
+        <div class="location">at         line 428</div>
+        <code>                    integer
+    <strong>getFooterChk</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get footer_chk</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEditFlg">
+        <div class="location">at         line 439</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setEditFlg</strong>(integer $editFlg)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set edit_flg</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$editFlg</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEditFlg">
+        <div class="location">at         line 451</div>
+        <code>                    integer
+    <strong>getEditFlg</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get edit_flg</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAuthor">
+        <div class="location">at         line 462</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setAuthor</strong>(string $author)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set author</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$author</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAuthor">
+        <div class="location">at         line 474</div>
+        <code>                    string
+    <strong>getAuthor</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get author</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDescription">
+        <div class="location">at         line 485</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setDescription</strong>(string $description)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set description</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDescription">
+        <div class="location">at         line 497</div>
+        <code>                    string
+    <strong>getDescription</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get description</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKeyword">
+        <div class="location">at         line 508</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setKeyword</strong>(string $keyword)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set keyword</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$keyword</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getKeyword">
+        <div class="location">at         line 520</div>
+        <code>                    string
+    <strong>getKeyword</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get keyword</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUpdateUrl">
+        <div class="location">at         line 531</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setUpdateUrl</strong>(string $updateUrl)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set update_url</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$updateUrl</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpdateUrl">
+        <div class="location">at         line 543</div>
+        <code>                    string
+    <strong>getUpdateUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get update_url</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCreateDate">
+        <div class="location">at         line 554</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setCreateDate</strong>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $createDate)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set create_date</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+                <td>$createDate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCreateDate">
+        <div class="location">at         line 566</div>
+        <code>                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+    <strong>getCreateDate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get create_date</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUpdateDate">
+        <div class="location">at         line 577</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setUpdateDate</strong>(<a target="_blank" href="http://php.net/DateTime">DateTime</a> $updateDate)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set update_date</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+                <td>$updateDate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpdateDate">
+        <div class="location">at         line 589</div>
+        <code>                    <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+    <strong>getUpdateDate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get update_date</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMetaRobots">
+        <div class="location">at         line 600</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>setMetaRobots</strong>(string $metaRobots)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set meta_robots</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$metaRobots</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMetaRobots">
+        <div class="location">at         line 612</div>
+        <code>                    string
+    <strong>getMetaRobots</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get meta_robots</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addBlocPosition">
+        <div class="location">at         line 623</div>
+        <code>                    <a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a>
+    <strong>addBlocPosition</strong>(<a href="../../Eccube/Entity/BlocPosition.html"><abbr title="Eccube\Entity\BlocPosition">BlocPosition</abbr></a> $blocPositions)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add BlocPositions</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/BlocPosition.html"><abbr title="Eccube\Entity\BlocPosition">BlocPosition</abbr></a></td>
+                <td>$blocPositions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Eccube/Entity/PageLayout.html"><abbr title="Eccube\Entity\PageLayout">PageLayout</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeBlocPosition">
+        <div class="location">at         line 635</div>
+        <code>                    
+    <strong>removeBlocPosition</strong>(<a href="../../Eccube/Entity/BlocPosition.html"><abbr title="Eccube\Entity\BlocPosition">BlocPosition</abbr></a> $blocPositions)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove BlocPositions</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Entity/BlocPosition.html"><abbr title="Eccube\Entity\BlocPosition">BlocPosition</abbr></a></td>
+                <td>$blocPositions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBlocPositions">
+        <div class="location">at         line 645</div>
+        <code>                    <abbr title="Doctrine\Common\Collections\Collection">Collection</abbr>
+    <strong>getBlocPositions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get BlocPositions</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\Common\Collections\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

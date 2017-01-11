@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Tests\Web\Admin\Setting\System\LogControllerTest | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/sami.css">
+        <script src="../../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Tests_Web_Admin_Setting_System_LogControllerTest" data-root-path="../../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../../../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../../../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../../../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../../../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../../../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../../../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../../../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../../../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../../../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../../../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../../../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../../../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../../../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../../../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../../../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../../../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../../../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../../../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../../../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../../../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../../../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../../../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../../../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../../../../../Eccube/Tests.html">Tests</a></li>
+                                        <li><a href="../../../../../../Eccube/Tests/Web.html">Web</a></li>
+                                        <li><a href="../../../../../../Eccube/Tests/Web/Admin.html">Admin</a></li>
+                                        <li><a href="../../../../../../Eccube/Tests/Web/Admin/Setting.html">Setting</a></li>
+                                        <li><a href="../../../../../../Eccube/Tests/Web/Admin/Setting/System.html">System</a></li>
+    
+                <li>LogControllerTest</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            LogControllerTest
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>LogControllerTest</strong>        extends <a href="../../../../../../Eccube/Tests/Web/Admin/AbstractAdminWebTestCase.html"><abbr title="Eccube\Tests\Web\Admin\AbstractAdminWebTestCase">AbstractAdminWebTestCase</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class LogControllerTest</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>MAILCATCHER_URL</td>
+                <td class="last">
+                    <p><em>MailCatcher の URL.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_actual">
+                                        protected                                        
+                </td>
+                <td>$actual</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#property_actual"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_expected">
+                                        protected                                        
+                </td>
+                <td>$expected</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#property_expected"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_client">
+                                        protected                                        
+                </td>
+                <td>$client</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../../Eccube/Tests/Web/AbstractWebTestCase.html#property_client"><abbr title="Eccube\Tests\Web\AbstractWebTestCase">AbstractWebTestCase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_logTest">
+                                        protected                                        
+                </td>
+                <td>$logTest</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p>Applicaiton を生成しトランザクションを開始する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/Web/Admin/AbstractAdminWebTestCase.html#method_setUp"><abbr title="Eccube\Tests\Web\Admin\AbstractAdminWebTestCase">AbstractAdminWebTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tearDown">tearDown</a>()
+        
+                                            <p>rollback</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initializeDatabase">initializeDatabase</a>()
+        
+                                            <p>データベースを初期化する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_initializeDatabase"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Faker\Factory\Generator">Generator</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFaker">getFaker</a>(string $locale = &#039;ja_JP&#039;)
+        
+                                            <p>Faker を生成する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_getFaker"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_verify">verify</a>(string $message = &#039;&#039;)
+        
+                                            <p>Expected と Actual を比較する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_verify"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Eccube/Entity/Member.html"><abbr title="Eccube\Entity\Member">Member</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createMember">createMember</a>($username = null)
+        
+                                            <p>Member オブジェクトを生成して返す.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createMember"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createCustomer">createCustomer</a>(string $email = null)
+        
+                                            <p>Customer オブジェクトを生成して返す.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createCustomer"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createCustomerAddress">createCustomerAddress</a>(<a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a> $Customer, boolean $is_nonmember = false)
+        
+                                            <p>CustomerAddress を生成して返す.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createCustomerAddress"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createNonMember">createNonMember</a>(string $email = null)
+        
+                                            <p>非会員の Customer オブジェクトを生成して返す.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createNonMember"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createProduct">createProduct</a>(string $product_name = null, integer $product_class_num = 3)
+        
+                                            <p>Product オブジェクトを生成して返す.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createProduct"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Eccube/Entity/Order.html"><abbr title="Eccube\Entity\Order">Order</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createOrder">createOrder</a>(<a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a> $Customer)
+        
+                                            <p>Order オブジェクトを生成して返す.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createOrder"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Eccube/Entity/Payment.html"><abbr title="Eccube\Entity\Payment">Payment</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createPayment">createPayment</a>(<a href="../../../../../../Eccube/Entity/Delivery.html"><abbr title="Eccube\Entity\Delivery">Delivery</abbr></a> $Delivery, string $method, integer $charge, integer $rule_min, integer $rule_max = 999999999)
+        
+                                            <p>Payment オプジェクトを生成して返す.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createPayment"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteAllRows">deleteAllRows</a>(array $tables)
+        
+                                            <p>テーブルのデータを全て削除する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_deleteAllRows"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createApplication">createApplication</a>()
+        
+                                            <p>{@inheritdoc}</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createApplication"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cleanUpProperties">cleanUpProperties</a>()
+        
+                                            <p>PHPUnit_* インスタンスのプロパティを初期化する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_cleanUpProperties"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initializeMailCatcher">initializeMailCatcher</a>()
+        
+                                            <p>MailCatcher を初期化する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_initializeMailCatcher"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkMailCatcherStatus">checkMailCatcherStatus</a>()
+        
+                                            <p>MailCatcher の起動状態をチェックする.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_checkMailCatcherStatus"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cleanUpMailCatcherMessages">cleanUpMailCatcherMessages</a>()
+        
+                                            <p>MailCatcher のメッセージをすべて削除する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_cleanUpMailCatcherMessages"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMailCatcherMessages">getMailCatcherMessages</a>()
+        
+                                            <p>MailCatcher のメッセージをすべて取得する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_getMailCatcherMessages"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMailCatcherMessage">getMailCatcherMessage</a>(integer $id)
+        
+                                            <p>MailCatcher のメッセージを ID を指定して取得する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_getMailCatcherMessage"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseMailCatcherSource">parseMailCatcherSource</a>(object $Message)
+        
+                                            <p>MailCatcher のメッセージソースをデコードする.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_parseMailCatcherSource"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isSqliteInMemory">isSqliteInMemory</a>()
+        
+                                            <p>in the case of sqlite in-memory database.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_isSqliteInMemory"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_logIn">logIn</a>($user = null)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/Web/Admin/AbstractAdminWebTestCase.html#method_logIn"><abbr title="Eccube\Tests\Web\Admin\AbstractAdminWebTestCase">AbstractAdminWebTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Eccube\Tests\Web\Symfony\Component\HttpKernel\Client">Client</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loginTo">loginTo</a>(<abbr title="Symfony\Component\Security\Core\User\UserInterface">UserInterface</abbr> $User)
+        
+                                            <p>User をログインさせてHttpKernel\Client を返す.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Eccube/Tests/Web/AbstractWebTestCase.html#method_loginTo"><abbr title="Eccube\Tests\Web\AbstractWebTestCase">AbstractWebTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testRoutingAdminSettingSystemLog">testRoutingAdminSettingSystemLog</a>()
+        
+                                            <p>routing</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testSystemLogSubmit">testSystemLogSubmit</a>()
+        
+                                            <p>change log</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/Web/Admin/AbstractAdminWebTestCase.html#method_setUp"><abbr title="Eccube\Tests\Web\Admin\AbstractAdminWebTestCase">AbstractAdminWebTestCase</abbr></a> at         line 33</div>
+        <code>                    
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Applicaiton を生成しトランザクションを開始する.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tearDown">
+        <div class="location">at         line 39</div>
+        <code>                    
+    <strong>tearDown</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>rollback</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeDatabase">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_initializeDatabase"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 68</div>
+        <code>                    
+    <strong>initializeDatabase</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>データベースを初期化する.</p>                    <p>データベースを初期化し、マイグレーションを行なう.
+全てのデータが初期化されるため注意すること.</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFaker">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_getFaker"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 134</div>
+        <code>                    <abbr title="Faker\Factory\Generator">Generator</abbr>
+    <strong>getFaker</strong>(string $locale = &#039;ja_JP&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Faker を生成する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td>ロケールを指定する. デフォルト ja_JP</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Faker\Factory\Generator">Generator</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verify">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_verify"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 145</div>
+        <code>                    
+    <strong>verify</strong>(string $message = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Expected と Actual を比較する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>エラーメッセージ</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMember">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createMember"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 156</div>
+        <code>                    <a href="../../../../../../Eccube/Entity/Member.html"><abbr title="Eccube\Entity\Member">Member</abbr></a>
+    <strong>createMember</strong>($username = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Member オブジェクトを生成して返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$username</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Eccube/Entity/Member.html"><abbr title="Eccube\Entity\Member">Member</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createCustomer">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createCustomer"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 167</div>
+        <code>                    <a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a>
+    <strong>createCustomer</strong>(string $email = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Customer オブジェクトを生成して返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td>メールアドレス. null の場合は, ランダムなメールアドレスが生成される.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createCustomerAddress">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createCustomerAddress"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 179</div>
+        <code>                    <a href="../../../../../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a>
+    <strong>createCustomerAddress</strong>(<a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a> $Customer, boolean $is_nonmember = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>CustomerAddress を生成して返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a></td>
+                <td>$Customer</td>
+                <td>対象の Customer インスタンス</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$is_nonmember</td>
+                <td>非会員の場合 true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Eccube/Entity/CustomerAddress.html"><abbr title="Eccube\Entity\CustomerAddress">CustomerAddress</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createNonMember">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createNonMember"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 190</div>
+        <code>                    <a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a>
+    <strong>createNonMember</strong>(string $email = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>非会員の Customer オブジェクトを生成して返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td>メールアドレス. null の場合は, ランダムなメールアドレスが生成される.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createProduct">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createProduct"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 202</div>
+        <code>                    <a href="../../../../../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a>
+    <strong>createProduct</strong>(string $product_name = null, integer $product_class_num = 3)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Product オブジェクトを生成して返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$product_name</td>
+                <td>商品名. null の場合はランダムな文字列が生成される.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$product_class_num</td>
+                <td>商品規格の生成数</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Eccube/Entity/Product.html"><abbr title="Eccube\Entity\Product">Product</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createOrder">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createOrder"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 213</div>
+        <code>                    <a href="../../../../../../Eccube/Entity/Order.html"><abbr title="Eccube\Entity\Order">Order</abbr></a>
+    <strong>createOrder</strong>(<a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a> $Customer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Order オブジェクトを生成して返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Eccube/Entity/Customer.html"><abbr title="Eccube\Entity\Customer">Customer</abbr></a></td>
+                <td>$Customer</td>
+                <td>Customer インスタンス</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Eccube/Entity/Order.html"><abbr title="Eccube\Entity\Order">Order</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createPayment">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createPayment"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 231</div>
+        <code>                    <a href="../../../../../../Eccube/Entity/Payment.html"><abbr title="Eccube\Entity\Payment">Payment</abbr></a>
+    <strong>createPayment</strong>(<a href="../../../../../../Eccube/Entity/Delivery.html"><abbr title="Eccube\Entity\Delivery">Delivery</abbr></a> $Delivery, string $method, integer $charge, integer $rule_min, integer $rule_max = 999999999)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Payment オプジェクトを生成して返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Eccube/Entity/Delivery.html"><abbr title="Eccube\Entity\Delivery">Delivery</abbr></a></td>
+                <td>$Delivery</td>
+                <td>デフォルトで設定する配送オブジェクト</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>支払い方法名称</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$charge</td>
+                <td>手数料</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$rule_min</td>
+                <td>下限金額</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$rule_max</td>
+                <td>上限金額</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Eccube/Entity/Payment.html"><abbr title="Eccube\Entity\Payment">Payment</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteAllRows">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_deleteAllRows"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 244</div>
+        <code>                    
+    <strong>deleteAllRows</strong>(array $tables)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>テーブルのデータを全て削除する.</p>                    <p>このメソッドは、参照制約の関係で、 Doctrine ORM ではデータ削除できない場合に使用する.
+通常は、 EntityManager::remove() を使用して削除すること.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tables</td>
+                <td>削除対象のテーブル名の配列</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createApplication">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_createApplication"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 257</div>
+        <code>                    
+    <strong>createApplication</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>{@inheritdoc}</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cleanUpProperties">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_cleanUpProperties"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 282</div>
+        <code>            protected        
+    <strong>cleanUpProperties</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>PHPUnit_* インスタンスのプロパティを初期化する.</p>                    <p>このメソッドは、PHPUnit のメモリリーク解消のため、 tearDown() メソッドでコールされる.</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeMailCatcher">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_initializeMailCatcher"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 304</div>
+        <code>            protected        
+    <strong>initializeMailCatcher</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>MailCatcher を初期化する.</p>                    <p>このメソッドは主に setUp() メソッドでコールされる.
+MailCatcher が起動してない場合は, テストをスキップする.
+MailCatcher については \Eccube\Tests\Service\MailServiceTest のコメントを参照してください</p>            </div>
+                <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Eccube\Tests\Service\MailServiceTest</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMailCatcherStatus">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_checkMailCatcherStatus"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 325</div>
+        <code>            protected        
+    <strong>checkMailCatcherStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>MailCatcher の起動状態をチェックする.</p>                    <p>MailCatcher が起動していない場合は, テストをスキップする.</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cleanUpMailCatcherMessages">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_cleanUpMailCatcherMessages"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 346</div>
+        <code>            protected        
+    <strong>cleanUpMailCatcherMessages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>MailCatcher のメッセージをすべて削除する.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMailCatcherMessages">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_getMailCatcherMessages"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 362</div>
+        <code>            protected        array
+    <strong>getMailCatcherMessages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>MailCatcher のメッセージをすべて取得する.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>MailCatcher のメッセージの配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMailCatcherMessage">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_getMailCatcherMessage"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 376</div>
+        <code>            protected        object
+    <strong>getMailCatcherMessage</strong>(integer $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>MailCatcher のメッセージを ID を指定して取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$id</td>
+                <td>メッセージの ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td>MailCatcher のメッセージ</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseMailCatcherSource">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_parseMailCatcherSource"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 390</div>
+        <code>            protected        string
+    <strong>parseMailCatcherSource</strong>(object $Message)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>MailCatcher のメッセージソースをデコードする.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$Message</td>
+                <td>MailCatcher のメッセージ</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>デコードされた eml 形式のソース</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSqliteInMemory">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/EccubeTestCase.html#method_isSqliteInMemory"><abbr title="Eccube\Tests\EccubeTestCase">EccubeTestCase</abbr></a> at         line 398</div>
+        <code>            protected        
+    <strong>isSqliteInMemory</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>in the case of sqlite in-memory database.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logIn">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/Web/Admin/AbstractAdminWebTestCase.html#method_logIn"><abbr title="Eccube\Tests\Web\Admin\AbstractAdminWebTestCase">AbstractAdminWebTestCase</abbr></a> at         line 42</div>
+        <code>                    
+    <strong>logIn</strong>($user = null)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>\Eccube\Tests\Web\AbstractWebTestCase::loginTo()</td>
+                    <td>を使用してください.</td>
+                </tr>
+                    </p>
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loginTo">
+        <div class="location">in <a href="../../../../../../Eccube/Tests/Web/AbstractWebTestCase.html#method_loginTo"><abbr title="Eccube\Tests\Web\AbstractWebTestCase">AbstractWebTestCase</abbr></a> at         line 69</div>
+        <code>                    <abbr title="Eccube\Tests\Web\Symfony\Component\HttpKernel\Client">Client</abbr>
+    <strong>loginTo</strong>(<abbr title="Symfony\Component\Security\Core\User\UserInterface">UserInterface</abbr> $User)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>User をログインさせてHttpKernel\Client を返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Symfony\Component\Security\Core\User\UserInterface">UserInterface</abbr></td>
+                <td>$User</td>
+                <td>ログインさせる User</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Eccube\Tests\Web\Symfony\Component\HttpKernel\Client">Client</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testRoutingAdminSettingSystemLog">
+        <div class="location">at         line 50</div>
+        <code>                    
+    <strong>testRoutingAdminSettingSystemLog</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>routing</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSystemLogSubmit">
+        <div class="location">at         line 62</div>
+        <code>                    
+    <strong>testSystemLogSubmit</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>change log</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

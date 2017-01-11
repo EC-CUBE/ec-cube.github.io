@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Framework\Product | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Framework_Product" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../Eccube/Framework.html">Framework</a></li>
+    
+                <li>Product</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            Product
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Product</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>商品を扱うサービスクラス.</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_arrClassName">
+                                                                                
+                </td>
+                <td>$arrClassName</td>
+                <td class="last">規格名一覧</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrClassCatName">
+                                                                                
+                </td>
+                <td>$arrClassCatName</td>
+                <td class="last">規格分類名一覧</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_classCategories">
+                                                                                
+                </td>
+                <td>$classCategories</td>
+                <td class="last">このプロパティが保持する price01 及び price02 は、税金付与した金額である。</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_stock_find">
+                                                                                
+                </td>
+                <td>$stock_find</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_className1">
+                                                                                
+                </td>
+                <td>$className1</td>
+                <td class="last">規格1クラス名</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_className2">
+                                                                                
+                </td>
+                <td>$className2</td>
+                <td class="last">規格2クラス名</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_classCat1_find">
+                                                                                
+                </td>
+                <td>$classCat1_find</td>
+                <td class="last">規格1が設定されている</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_classCat2_find">
+                                                                                
+                </td>
+                <td>$classCat2_find</td>
+                <td class="last">規格2が設定されている</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_classCats1">
+                                                                                
+                </td>
+                <td>$classCats1</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrOrderData">
+                                                                                
+                </td>
+                <td>$arrOrderData</td>
+                <td class="last">検索用並び替え条件配列</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setProductsOrder">setProductsOrder</a>(string $col, string $table = &#039;dtb_products&#039;, string $order = &#039;ASC&#039;)
+        
+                                            <p>商品検索結果の並び順を指定する。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_findProductIdsOrder">findProductIdsOrder</a>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, array $arrVal = array())
+        
+                                            <p>Queryインスタンスに設定された検索条件を元に並び替え済みの検索結果商品IDの配列を取得する。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_findProductCount">findProductCount</a>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, array $arrVal = array())
+        
+                                            <p>Queryインスタンスに設定された検索条件をもとに対象商品数を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lists">lists</a>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery)
+        
+                                            <p>Queryインスタンスに設定された検索条件をもとに商品一覧の配列を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getListByProductIds">getListByProductIds</a>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, array $arrProductId = array())
+        
+                                            <p>商品IDを指定し、商品一覧を取得する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDetail">getDetail</a>(integer $product_id)
+        
+                                            <p>商品詳細を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDetailAndProductsClass">getDetailAndProductsClass</a>(integer $productClassId)
+        
+                                            <p>商品詳細情報と商品規格を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setProductsClassByProductIds">setProductsClassByProductIds</a>(array $arrProductId, boolean $has_deleted = false)
+        
+                                            <p>商品IDに紐づく商品規格を自分自身に設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductsClassByQuery">getProductsClassByQuery</a>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, array $params)
+        
+                                            <p>Query インスタンスに設定された検索条件を使用して商品規格を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductsClass">getProductsClass</a>(integer $productClassId)
+        
+                                            <p>商品規格IDから商品規格を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductsClassByProductIds">getProductsClassByProductIds</a>(array $productIds = array(), boolean $has_deleted = false)
+        
+                                            <p>複数の商品IDに紐づいた, 商品規格を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductsClassFullByProductId">getProductsClassFullByProductId</a>(array $productId, boolean $has_deleted = false)
+        
+                                            <p>商品IDに紐づいた, 商品規格を全ての組み合わせごとに取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductStatus">getProductStatus</a>(array $productIds)
+        
+                                            <p>商品IDをキーにした, 商品ステータスIDの配列を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setProductStatus">setProductStatus</a>(integer $productId, array $productStatusIds)
+        
+                                            <p>商品ステータスを設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBuyLimit">getBuyLimit</a>(array $p)
+        
+                                            <p>商品詳細の結果から, 販売制限数を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reduceStock">reduceStock</a>(integer $productClassId, integer $quantity)
+        
+                                            <p>在庫を減少させる.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPriceTaxTo">setPriceTaxTo</a>(array $arrProducts)
+        
+                                            <p>商品情報の配列に, 税込金額を設定して返す.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setIncTaxToProducts">setIncTaxToProducts</a>(array $arrProducts)
+        
+                                            <p>商品情報の配列に税込金額を設定する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setIncTaxToProduct">setIncTaxToProduct</a>(array $arrProduct)
+        
+                                            <p>商品情報の配列に税込金額を設定する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_alldtlSQL">alldtlSQL</a>(string $where_products_class = &#039;&#039;)
+        
+                                            <p>商品詳細の SQL を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prdclsSQL">prdclsSQL</a>(string $where = &#039;&#039;)
+        
+                                            <p>商品規格詳細の SQL を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductDispConditions">getProductDispConditions</a>(string $tablename = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCategoryIds">getCategoryIds</a>(int $product_id, bool $include_hidden = false)
+        
+                                            <p>商品が属しているカテゴリーIDを取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isValidProductId">isValidProductId</a>(int $product_id, bool $include_hidden = false, bool $include_deleted = false)
+        
+                                            <p>有効な商品IDかチェックする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setProductsOrder">
+        <div class="location">at         line 59</div>
+        <code>                    void
+    <strong>setProductsOrder</strong>(string $col, string $table = &#039;dtb_products&#039;, string $order = &#039;ASC&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品検索結果の並び順を指定する。</p>                    <p>ただし指定できるテーブルはproduct_idを持っているテーブルであることが必要.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$col</td>
+                <td>並び替えの基準とするフィールド</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>並び替えの基準とするフィールドがあるテーブル</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$order</td>
+                <td>並び替えの順序 ASC / DESC</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findProductIdsOrder">
+        <div class="location">at         line 73</div>
+        <code>                    array
+    <strong>findProductIdsOrder</strong>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, array $arrVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Queryインスタンスに設定された検索条件を元に並び替え済みの検索結果商品IDの配列を取得する。</p>                    <p>検索条件は, Query::setWhere() 関数で設定しておく必要があります.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+                <td>$objQuery</td>
+                <td>Query インスタンス</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrVal</td>
+                <td>検索パラメーターの配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>商品IDの配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findProductCount">
+        <div class="location">at         line 101</div>
+        <code>                    integer
+    <strong>findProductCount</strong>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, array $arrVal = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Queryインスタンスに設定された検索条件をもとに対象商品数を取得する.</p>                    <p>検索条件は, Query::setWhere() 関数で設定しておく必要があります.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+                <td>$objQuery</td>
+                <td>Query インスタンス</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrVal</td>
+                <td>検索パラメーターの配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>対象商品ID数</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lists">
+        <div class="location">at         line 118</div>
+        <code>                    array
+    <strong>lists</strong>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Queryインスタンスに設定された検索条件をもとに商品一覧の配列を取得する.</p>                    <p>主に Application::alias('eccube.product')->findProductIds() で取得した商品IDを検索条件にし,
+Query::setOrder() や Query::setLimitOffset() を設定して, 商品一覧
+の配列を取得する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+                <td>$objQuery</td>
+                <td>Query インスタンス</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>商品一覧の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getListByProductIds">
+        <div class="location">at         line 160</div>
+        <code>                    array
+    <strong>getListByProductIds</strong>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, array $arrProductId = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品IDを指定し、商品一覧を取得する</p>                    <p>Query::setOrder() や Query::setLimitOffset() を設定して, 商品一覧
+の配列を取得する.
+FIXME: 呼び出し元で設定した、Query::setWhere() も有効に扱いたい。</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+                <td>$objQuery</td>
+                <td>Query インスタンス</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrProductId</td>
+                <td>商品ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>商品一覧の配列 (キー: 商品ID)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDetail">
+        <div class="location">at         line 197</div>
+        <code>                    array
+    <strong>getDetail</strong>(integer $product_id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品詳細を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$product_id</td>
+                <td>商品ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>商品詳細情報の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDetailAndProductsClass">
+        <div class="location">at         line 219</div>
+        <code>                    array
+    <strong>getDetailAndProductsClass</strong>(integer $productClassId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品詳細情報と商品規格を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$productClassId</td>
+                <td>商品規格ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>商品詳細情報と商品規格の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setProductsClassByProductIds">
+        <div class="location">at         line 237</div>
+        <code>                    void
+    <strong>setProductsClassByProductIds</strong>(array $arrProductId, boolean $has_deleted = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品IDに紐づく商品規格を自分自身に設定する.</p>                    <p>引数の商品IDの配列に紐づく商品規格を取得し, 自分自身のフィールドに
+設定する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrProductId</td>
+                <td>商品ID の配列</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$has_deleted</td>
+                <td>削除された商品規格も含む場合 true; 初期値 false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductsClassByQuery">
+        <div class="location">at         line 340</div>
+        <code>                    array
+    <strong>getProductsClassByQuery</strong>(<a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a> $objQuery, array $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Query インスタンスに設定された検索条件を使用して商品規格を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Eccube/Framework/Query.html"><abbr title="Eccube\Framework\Query">Query</abbr></a></td>
+                <td>$objQuery</td>
+                <td>Queryインスタンス</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>検索パラメーターの配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>商品規格の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductsClass">
+        <div class="location">at         line 395</div>
+        <code>                    array
+    <strong>getProductsClass</strong>(integer $productClassId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品規格IDから商品規格を取得する.</p>                    <p>削除された商品規格は取得しない.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$productClassId</td>
+                <td>商品規格ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>商品規格の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductsClassByProductIds">
+        <div class="location">at         line 422</div>
+        <code>                    array
+    <strong>getProductsClassByProductIds</strong>(array $productIds = array(), boolean $has_deleted = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>複数の商品IDに紐づいた, 商品規格を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$productIds</td>
+                <td>商品IDの配列</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$has_deleted</td>
+                <td>削除された商品規格も含む場合 true; 初期値 false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>商品規格の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductsClassFullByProductId">
+        <div class="location">at         line 445</div>
+        <code>                    array
+    <strong>getProductsClassFullByProductId</strong>(array $productId, boolean $has_deleted = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品IDに紐づいた, 商品規格を全ての組み合わせごとに取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$productId</td>
+                <td>商品ID</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$has_deleted</td>
+                <td>削除された商品規格も含む場合 true; 初期値 false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>全ての組み合わせの商品規格の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductStatus">
+        <div class="location">at         line 458</div>
+        <code>                    array
+    <strong>getProductStatus</strong>(array $productIds)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品IDをキーにした, 商品ステータスIDの配列を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$productIds</td>
+                <td>商品ID の配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>商品IDをキーにした商品ステータスIDの配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setProductStatus">
+        <div class="location">at         line 485</div>
+        <code>                    
+    <strong>setProductStatus</strong>(integer $productId, array $productStatusIds)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品ステータスを設定する.</p>                    <p>TODO 現在は DELETE/INSERT だが, UPDATE を検討する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$productId</td>
+                <td>商品ID</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$productStatusIds</td>
+                <td>ON にする商品ステータスIDの配列</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBuyLimit">
+        <div class="location">at         line 512</div>
+        <code>                    integer
+    <strong>getBuyLimit</strong>(array $p)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品詳細の結果から, 販売制限数を取得する.</p>                    <p>getDetailAndProductsClass() の結果から, 販売制限数を取得する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$p</td>
+                <td>商品詳細の検索結果の配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>商品詳細の結果から求めた販売制限数.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>getDetailAndProductsClass()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reduceStock">
+        <div class="location">at         line 538</div>
+        <code>                    boolean
+    <strong>reduceStock</strong>(integer $productClassId, integer $quantity)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>在庫を減少させる.</p>                    <p>指定の在庫数まで, 在庫を減少させる.
+減少させた結果, 在庫数が 0 未満になった場合, 引数 $quantity が 0 の場合は,
+在庫の減少を中止し, false を返す.
+在庫の減少に成功した場合は true を返す.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$productClassId</td>
+                <td>商品規格ID</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$quantity</td>
+                <td>減少させる在庫数</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>在庫の減少に成功した場合 true; 失敗した場合 false</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPriceTaxTo">
+        <div class="location">at         line 567</div>
+        <code>                    array
+    <strong>setPriceTaxTo</strong>(array $arrProducts)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品情報の配列に, 税込金額を設定して返す.</p>                    <p>この関数は, 主にスマートフォンで使用します.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrProducts</td>
+                <td>商品情報の配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>旧バージョン互換用のデータ</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIncTaxToProducts">
+        <div class="location">at         line 602</div>
+        <code>                    void
+    <strong>setIncTaxToProducts</strong>(array $arrProducts)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品情報の配列に税込金額を設定する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrProducts</td>
+                <td>商品情報の配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIncTaxToProduct">
+        <div class="location">at         line 615</div>
+        <code>                    void
+    <strong>setIncTaxToProduct</strong>(array $arrProduct)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品情報の配列に税込金額を設定する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrProduct</td>
+                <td>商品情報の配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_alldtlSQL">
+        <div class="location">at         line 629</div>
+        <code>                    string
+    <strong>alldtlSQL</strong>(string $where_products_class = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品詳細の SQL を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$where_products_class</td>
+                <td>商品規格情報の WHERE 句</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>商品詳細の SQL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prdclsSQL">
+        <div class="location">at         line 645</div>
+        <code>                    string
+    <strong>prdclsSQL</strong>(string $where = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品規格詳細の SQL を取得する.</p>                    <p>MEMO: 2.4系 vw<em>product</em>classに相当(?)するイメージ</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$where</td>
+                <td>商品詳細の WHERE 句</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>商品規格詳細の SQL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductDispConditions">
+        <div class="location">at         line 691</div>
+        <code>                    
+    <strong>getProductDispConditions</strong>(string $tablename = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tablename</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCategoryIds">
+        <div class="location">at         line 705</div>
+        <code>                    array
+    <strong>getCategoryIds</strong>(int $product_id, bool $include_hidden = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>商品が属しているカテゴリーIDを取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$product_id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$include_hidden</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isValidProductId">
+        <div class="location">at         line 726</div>
+        <code>                    bool
+    <strong>isValidProductId</strong>(int $product_id, bool $include_hidden = false, bool $include_deleted = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>有効な商品IDかチェックする.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$product_id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$include_hidden</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$include_deleted</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

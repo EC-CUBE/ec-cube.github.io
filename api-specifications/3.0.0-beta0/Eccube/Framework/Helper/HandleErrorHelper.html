@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Framework\Helper\HandleErrorHelper | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Framework_Helper_HandleErrorHelper" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../../Eccube/Framework.html">Framework</a></li>
+                                        <li><a href="../../../Eccube/Framework/Helper.html">Helper</a></li>
+    
+                <li>HandleErrorHelper</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            HandleErrorHelper
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>HandleErrorHelper</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>エラーハンドリングのクラス</p>            <p>依存するクラスに構文エラーがあると、捕捉できない。よって、依存は最小に留めること。
+現状 Eccube\Framework\Util\GcUtils に依存しているため、その中で構文エラーは捕捉できない。</p>        </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_under_error_handling">
+                    static                                                            
+                </td>
+                <td>$under_error_handling</td>
+                <td class="last">エラー処理中か</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_load">load</a>()
+        
+                                            <p>処理の読み込みを行う</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void|boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handle_warning">handle_warning</a>(integer $errno, string $errstr, string $errfile, integer $errline)
+        
+                                            <p>警告や E<em>USER</em>ERROR を捕捉した場合にエラー画面を表示させるエラーハンドラ関数.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__fatal_error_handler">_fatal_error_handler</a>(string $buffer)
+        
+                                            <p>エラーを捕捉するための関数. (for PHP &lt; 5.2.0)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handle_error">handle_error</a>()
+        
+                                            <p>エラー捕捉時のエラーハンドラ関数 (for PHP >= 5.2.0)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_displaySystemError">displaySystemError</a>(string|null $errstr = null)
+        
+                                            <p>エラー画面を表示する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_load">
+        <div class="location">at         line 34</div>
+        <code>        static            void
+    <strong>load</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>処理の読み込みを行う</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handle_warning">
+        <div class="location">at         line 74</div>
+        <code>        static            void|boolean
+    <strong>handle_warning</strong>(integer $errno, string $errstr, string $errfile, integer $errline)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>警告や E<em>USER</em>ERROR を捕捉した場合にエラー画面を表示させるエラーハンドラ関数.</p>                    <p>この関数は, set<em>error</em>handler() 関数に登録するための関数である.
+trigger<em>error にて E</em>USER<em>ERROR が生成されると, エラーログを出力した後,
+エラー画面を表示させる.
+E</em>WARNING, E<em>USER</em>WARNING が発生した場合、ログを記録して、true を返す。
+(エラー画面・エラー文言は表示させない。)</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$errno</td>
+                <td>エラーコード</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errstr</td>
+                <td>エラーメッセージ</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errfile</td>
+                <td>エラーが発生したファイル名</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$errline</td>
+                <td>エラーが発生した行番号</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void|boolean</td>
+            <td>E<em>USER</em>ERROR が発生した場合は, エラーページへリダイレクト;
+                     E<em>WARNING, E</em>USER_WARNING が発生した場合、true を返す</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__fatal_error_handler">
+        <div class="location">at         line 119</div>
+        <code>        static            string|void
+    <strong>_fatal_error_handler</strong>(string $buffer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>エラーを捕捉するための関数. (for PHP &lt; 5.2.0)</p>                    <p>PHP4 では, try/catch が使用できず, かつ set<em>error</em>handler で Fatal Error は
+捕捉できないため, ob<em>start にこの関数を定義し, Fatal Error が発生した場合
+に出力される HTML 出力を捕捉する.
+この関数が実行され, エラーが捕捉されると, DEBUG</em>MODE が無効な場合,
+エラーページへリダイレクトする.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$buffer</td>
+                <td>出力バッファリングの内容</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|void</td>
+            <td>エラーが捕捉された場合は, エラーページへリダイレクトする;
+                    エラーが捕捉されない場合は, 出力バッファリングの内容を返す</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handle_error">
+        <div class="location">at         line 145</div>
+        <code>        static            void
+    <strong>handle_error</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>エラー捕捉時のエラーハンドラ関数 (for PHP >= 5.2.0)</p>                    <p>この関数は, register<em>shutdown</em>function() 関数に登録するための関数である。
+PHP 5.1 対応処理との互換運用ため E<em>USER</em>ERROR は handle_warning で捕捉する。</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_displaySystemError">
+        <div class="location">at         line 183</div>
+        <code>        static            void
+    <strong>displaySystemError</strong>(string|null $errstr = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>エラー画面を表示する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$errstr</td>
+                <td>エラーメッセージ</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

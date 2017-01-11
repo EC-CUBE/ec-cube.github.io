@@ -1,0 +1,2548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Framework\Helper\PurchaseHelper | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Framework_Helper_PurchaseHelper" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../../Eccube/Framework.html">Framework</a></li>
+                                        <li><a href="../../../Eccube/Framework/Helper.html">Helper</a></li>
+    
+                <li>PurchaseHelper</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            PurchaseHelper
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>PurchaseHelper</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>商品購入関連のヘルパークラス.</p>            <p>TODO 購入時強制会員登録機能(#521)の実装を検討
+TODO dtb<em>customer.buy</em>times, dtb<em>customer.buy</em>total の更新</p>        </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_arrShippingKey">
+                                                                                
+                </td>
+                <td>$arrShippingKey</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_completeOrder">completeOrder</a>(integer $orderStatus = ORDER_NEW)
+        
+                                            <p>受注を完了する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cancelOrder">cancelOrder</a>(integer $order_id, integer $orderStatus = ORDER_CANCEL, boolean $is_delete = false)
+        
+                                            <p>受注をキャンセルする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rollbackOrder">rollbackOrder</a>(integer $order_id, integer $orderStatus = ORDER_CANCEL, boolean $is_delete = false)
+        
+                                            <p>受注をキャンセルし, カートをロールバックして, 受注一時IDを返す.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_verifyChangeCart">verifyChangeCart</a>(string $uniqId, <a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a> $objCartSession)
+        
+                                            <p>カートに変化が無いか検証する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOrderTemp">getOrderTemp</a>(integer $uniqId)
+        
+                                            <p>受注一時情報を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOrderTempByOrderId">getOrderTempByOrderId</a>(integer $order_id)
+        
+                                            <p>受注IDをキーにして受注一時情報を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveOrderTemp">saveOrderTemp</a>(integer $uniqId, array $params, <a href="../../../Eccube/Framework/Customer.html"><abbr title="Eccube\Framework\Customer">Customer</abbr></a> $objCustomer = NULL)
+        
+                                            <p>受注一時情報を保存する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShippingTemp">getShippingTemp</a>(bool $has_shipment_item = false)
+        
+                                            <p>配送情報をセッションから取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearShipmentItemTemp">clearShipmentItemTemp</a>(integer $shipping_id = null)
+        
+                                            <p>配送商品をクリア(消去)する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setShipmentItemTemp">setShipmentItemTemp</a>(integer $shipping_id, integer $product_class_id, integer $quantity)
+        
+                                            <p>配送商品を設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShippingPref">getShippingPref</a>(boolean $is_multiple)
+        
+                                            <p>配送先都道府県の配列を返す.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isMultiple">isMultiple</a>()
+        
+                                            <p>複数配送指定の購入かどうか.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveShippingTemp">saveShippingTemp</a>(array $arrSrc, integer $shipping_id)
+        
+                                            <p>配送情報をセッションに保存する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsetShippingTemp">unsetShippingTemp</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>セッションの配送情報を破棄する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsetAllShippingTemp">unsetAllShippingTemp</a>(bool $multiple_temp = false)
+        
+                                            <p>セッションの配送情報を全て破棄する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsetOneShippingTemp">unsetOneShippingTemp</a>(integer $shipping_id)
+        
+                                            <p>セッションの配送情報を個別に破棄する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copyFromCustomer">copyFromCustomer</a>(array $dest, <a href="../../../Eccube/Framework/Customer.html"><abbr title="Eccube\Framework\Customer">Customer</abbr></a> $objCustomer, string $prefix = &#039;order&#039;, array $keys = array(&#039;name01&#039;, &#039;name02&#039;, &#039;kana01&#039;, &#039;kana02&#039;, &#039;company_name&#039;, &#039;sex&#039;, &#039;zip01&#039;, &#039;zip02&#039;, &#039;country_id&#039;, &#039;zipcode&#039;, &#039;pref&#039;, &#039;addr01&#039;, &#039;addr02&#039;, &#039;tel01&#039;, &#039;tel02&#039;, &#039;tel03&#039;, &#039;fax01&#039;, &#039;fax02&#039;, &#039;fax03&#039;, &#039;job&#039;, &#039;birth&#039;, &#039;email&#039;))
+        
+                                            <p>会員情報を受注情報にコピーする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copyFromOrder">copyFromOrder</a>($dest, $src, $prefix = &#039;shipping&#039;, $src_prefix = &#039;order&#039;, $arrKey = null)
+        
+                                            <p>受注情報を配送情報にコピーする.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extractShipping">extractShipping</a>(string $arrSrc)
+        
+                                            <p>配送情報のみ抜き出す。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultPurchase">setDefaultPurchase</a>($uniqId, $cartKey, $objCustomer, $objCartSess)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSelectablePayment">getSelectablePayment</a>($objCartSess, $deliv_id, $is_list = false)
+        
+                                            <p>配送業者IDから, 支払い方法, お届け時間の配列を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDelivDate">getDelivDate</a>(<a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a> $objCartSess, integer $productTypeId)
+        
+                                            <p>お届け日一覧を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDateArray">getDateArray</a>($start_day, $end_day)
+        
+                                            <p>お届け可能日のスタート値から, お届け日の配列を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerShipping">registerShipping</a>(integer $order_id, array $arrParams, boolean $convert_shipping_date = true)
+        
+                                            <p>配送情報の登録を行う.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerShipmentItem">registerShipmentItem</a>(integer $order_id, integer $shipping_id, array $arrParams)
+        
+                                            <p>配送商品を登録する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerOrderComplete">registerOrderComplete</a>($orderParams, $objCartSession, $cartKey)
+        
+                                            <p>受注登録を完了する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerOrder">registerOrder</a>(integer $order_id, array $arrParams)
+        
+                                            <p>受注情報を登録する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerOrderDetail">registerOrderDetail</a>(integer $order_id, array $arrParams)
+        
+                                            <p>受注詳細情報を登録する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOrder">getOrder</a>(integer $order_id, integer $customer_id = null)
+        
+                                            <p>受注情報を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOrderDetail">getOrderDetail</a>(integer $order_id, boolean $has_order_status = true)
+        
+                                            <p>受注詳細を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDownloadableFlgTo">setDownloadableFlgTo</a>(array $arrOrderDetail)
+        
+                                            <p>ダウンロード可能フラグを, 受注詳細に設定する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShippings">getShippings</a>(integer $order_id, boolean $has_items = true)
+        
+                                            <p>配送情報を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShipmentItems">getShipmentItems</a>(integer $order_id, integer $shipping_id, boolean $has_detail = true)
+        
+                                            <p>配送商品を取得する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendOrderMail">sendOrderMail</a>(integer $order_id, object $objPage = NULL)
+        
+                                            <p>注文受付メールを送信する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfUpdateOrderStatus">sfUpdateOrderStatus</a>(integer $orderId, integer|null $newStatus = null, integer|null $newAddPoint = null, integer|null $newUsePoint = null, array $sqlval = array())
+        
+                                            <p>受注.対応状況の更新</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sfUpdateOrderNameCol">sfUpdateOrderNameCol</a>(integer $order_id, boolean $temp_table = false)
+        
+                                            <p>受注の名称列を更新する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isUsePoint">isUsePoint</a>(integer $status)
+        
+                                            <p>ポイント使用するかの判定</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAddPoint">isAddPoint</a>(integer $status)
+        
+                                            <p>ポイント加算するかの判定</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cleanupSession">cleanupSession</a>(integer $orderId, <a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a> $objCartSession, <a href="../../../Eccube/Framework/Customer.html"><abbr title="Eccube\Framework\Customer">Customer</abbr></a> $objCustomer, integer $cartKey)
+        
+                                            <p>セッションに保持している情報を破棄する.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setShipmentItemTempForSole">setShipmentItemTempForSole</a>(<a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a> $objCartSession, integer $shipping_id)
+        
+                                            <p>単一配送指定用に配送商品を設定する</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNextOrderID">getNextOrderID</a>()
+        
+                                            <p>新規受注の注文IDを返す</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cancelPendingOrder">cancelPendingOrder</a>(bool $cancel_flg)
+        
+                                            <p>決済処理中スタータスの受注データのキャンセル処理</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkDbAllPendingOrder">checkDbAllPendingOrder</a>()
+        
+                                            <p>決済処理中スタータスの全受注検索</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkDbMyPendignOrder">checkDbMyPendignOrder</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkSessionPendingOrder">checkSessionPendingOrder</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_completeOrder">
+        <div class="location">at         line 81</div>
+        <code>                    void
+    <strong>completeOrder</strong>(integer $orderStatus = ORDER_NEW)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注を完了する.</p>                    <p>下記のフローで受注を完了する.</p>
+
+<ol>
+<li>トランザクションを開始する</li>
+<li>カートの内容を検証する.</li>
+<li>受注一時テーブルから受注データを読み込む</li>
+<li>ユーザーがログインしている場合はその他の発送先へ登録する</li>
+<li>受注データを受注テーブルへ登録する</li>
+<li>トランザクションをコミットする</li>
+</ol>
+
+<p>実行中に, 何らかのエラーが発生した場合, 処理を中止しエラーページへ遷移する</p>
+
+<p>決済モジュールを使用する場合は対応状況を「決済処理中」に設定し,
+決済完了後「新規受付」に変更すること</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$orderStatus</td>
+                <td>受注処理を完了する際に設定する対応状況</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancelOrder">
+        <div class="location">at         line 140</div>
+        <code>                    void
+    <strong>cancelOrder</strong>(integer $order_id, integer $orderStatus = ORDER_CANCEL, boolean $is_delete = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注をキャンセルする.</p>                    <p>受注完了後の受注をキャンセルする.
+この関数は, 主に決済モジュールにて, 受注をキャンセルする場合に使用する.</p>
+
+<p>対応状況を引数 $orderStatus で指定した値に変更する.
+(デフォルト ORDER<em>CANCEL)
+引数 $is</em>delete が true の場合は, 受注データを論理削除する.
+商品の在庫数は, 受注前の在庫数に戻される.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$orderStatus</td>
+                <td>対応状況</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$is_delete</td>
+                <td>受注データを論理削除する場合 true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rollbackOrder">
+        <div class="location">at         line 183</div>
+        <code>                    string
+    <strong>rollbackOrder</strong>(integer $order_id, integer $orderStatus = ORDER_CANCEL, boolean $is_delete = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注をキャンセルし, カートをロールバックして, 受注一時IDを返す.</p>                    <p>受注完了後の受注をキャンセルし, カートの状態を受注前の状態へ戻す.
+この関数は, 主に, 決済モジュールに遷移した後, 購入確認画面へ戻る場合に使用する.</p>
+
+<p>対応状況を引数 $orderStatus で指定した値に変更する.
+(デフォルト ORDER<em>CANCEL)
+引数 $is</em>delete が true の場合は, 受注データを論理削除する.
+商品の在庫数, カートの内容は受注前の状態に戻される.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$orderStatus</td>
+                <td>対応状況</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$is_delete</td>
+                <td>受注データを論理削除する場合 true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>受注一時ID</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verifyChangeCart">
+        <div class="location">at         line 230</div>
+        <code>                    void
+    <strong>verifyChangeCart</strong>(string $uniqId, <a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a> $objCartSession)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>カートに変化が無いか検証する.</p>                    <p>ユニークIDとセッションのユニークIDを比較し, 異なる場合は
+エラー画面を表示する.</p>
+
+<p>カートが空の場合, 購入ボタン押下後にカートが変更された場合は
+カート画面へ遷移する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uniqId</td>
+                <td>ユニークID</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a></td>
+                <td>$objCartSession</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrderTemp">
+        <div class="location">at         line 266</div>
+        <code>                    array
+    <strong>getOrderTemp</strong>(integer $uniqId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注一時情報を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$uniqId</td>
+                <td>受注一時情報ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>受注一時情報の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrderTempByOrderId">
+        <div class="location">at         line 279</div>
+        <code>                    array
+    <strong>getOrderTempByOrderId</strong>(integer $order_id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注IDをキーにして受注一時情報を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>受注一時情報の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveOrderTemp">
+        <div class="location">at         line 296</div>
+        <code>                    void
+    <strong>saveOrderTemp</strong>(integer $uniqId, array $params, <a href="../../../Eccube/Framework/Customer.html"><abbr title="Eccube\Framework\Customer">Customer</abbr></a> $objCustomer = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注一時情報を保存する.</p>                    <p>既存のデータが存在しない場合は新規保存. 存在する場合は更新する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$uniqId</td>
+                <td>受注一時情報ID</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>登録する受注情報の配列</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Eccube/Framework/Customer.html"><abbr title="Eccube\Framework\Customer">Customer</abbr></a></td>
+                <td>$objCustomer</td>
+                <td>Customer インスタンス</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShippingTemp">
+        <div class="location">at         line 336</div>
+        <code>                    
+    <strong>getShippingTemp</strong>(bool $has_shipment_item = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配送情報をセッションから取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$has_shipment_item</td>
+                <td>配送商品を保有している配送先のみ返す。</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearShipmentItemTemp">
+        <div class="location">at         line 359</div>
+        <code>                    void
+    <strong>clearShipmentItemTemp</strong>(integer $shipping_id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配送商品をクリア(消去)する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$shipping_id</td>
+                <td>配送先ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setShipmentItemTemp">
+        <div class="location">at         line 380</div>
+        <code>                    void
+    <strong>setShipmentItemTemp</strong>(integer $shipping_id, integer $product_class_id, integer $quantity)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配送商品を設定する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$shipping_id</td>
+                <td>配送先ID</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$product_class_id</td>
+                <td>商品規格ID</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$quantity</td>
+                <td>数量</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShippingPref">
+        <div class="location">at         line 414</div>
+        <code>                    
+    <strong>getShippingPref</strong>(boolean $is_multiple)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配送先都道府県の配列を返す.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$is_multiple</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMultiple">
+        <div class="location">at         line 429</div>
+        <code>                    boolean
+    <strong>isMultiple</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>複数配送指定の購入かどうか.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>複数配送指定の購入の場合 true</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveShippingTemp">
+        <div class="location">at         line 442</div>
+        <code>                    void
+    <strong>saveShippingTemp</strong>(array $arrSrc, integer $shipping_id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配送情報をセッションに保存する.</p>                    <p>XXX マージする理由が不明(なんとなく便利な気はするけど)。分かる方コメントに残してください。</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrSrc</td>
+                <td>配送情報の連想配列</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$shipping_id</td>
+                <td>配送先ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsetShippingTemp">
+        <div class="location">at         line 460</div>
+        <code>                    void
+    <strong>unsetShippingTemp</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>2.12.0</td>
+                    <td>から EC-CUBE 本体では使用していない。</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>セッションの配送情報を破棄する.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsetAllShippingTemp">
+        <div class="location">at         line 471</div>
+        <code>        static            void
+    <strong>unsetAllShippingTemp</strong>(bool $multiple_temp = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>セッションの配送情報を全て破棄する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$multiple_temp</td>
+                <td>複数お届け先の画面戻り処理用の情報も破棄するか</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsetOneShippingTemp">
+        <div class="location">at         line 485</div>
+        <code>        static            void
+    <strong>unsetOneShippingTemp</strong>(integer $shipping_id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>セッションの配送情報を個別に破棄する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$shipping_id</td>
+                <td>配送先ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copyFromCustomer">
+        <div class="location">at         line 503</div>
+        <code>                    void
+    <strong>copyFromCustomer</strong>(array $dest, <a href="../../../Eccube/Framework/Customer.html"><abbr title="Eccube\Framework\Customer">Customer</abbr></a> $objCustomer, string $prefix = &#039;order&#039;, array $keys = array(&#039;name01&#039;, &#039;name02&#039;, &#039;kana01&#039;, &#039;kana02&#039;, &#039;company_name&#039;, &#039;sex&#039;, &#039;zip01&#039;, &#039;zip02&#039;, &#039;country_id&#039;, &#039;zipcode&#039;, &#039;pref&#039;, &#039;addr01&#039;, &#039;addr02&#039;, &#039;tel01&#039;, &#039;tel02&#039;, &#039;tel03&#039;, &#039;fax01&#039;, &#039;fax02&#039;, &#039;fax03&#039;, &#039;job&#039;, &#039;birth&#039;, &#039;email&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>会員情報を受注情報にコピーする.</p>                    <p>ユーザーがログインしていない場合は何もしない.
+会員情報を $dest の order<em>* へコピーする.
+customer</em>id は強制的にコピーされる.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$dest</td>
+                <td>コピー先の配列</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Eccube/Framework/Customer.html"><abbr title="Eccube\Framework\Customer">Customer</abbr></a></td>
+                <td>$objCustomer</td>
+                <td>Customer インスタンス</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td>コピー先の接頭辞. デフォルト order</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>コピー対象のキー</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copyFromOrder">
+        <div class="location">at         line 547</div>
+        <code>                    void
+    <strong>copyFromOrder</strong>($dest, $src, $prefix = &#039;shipping&#039;, $src_prefix = &#039;order&#039;, $arrKey = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注情報を配送情報にコピーする.</p>                    <p>受注情報($src)を $dest の order_* へコピーする.</p>
+
+<p>TODO 汎用的にして \Eccube\Framework\Util\Utils へ移動</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$dest</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$src</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$src_prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractShipping">
+        <div class="location">at         line 571</div>
+        <code>                    void
+    <strong>extractShipping</strong>(string $arrSrc)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配送情報のみ抜き出す。</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$arrSrc</td>
+                <td>元となる配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultPurchase">
+        <div class="location">at         line 581</div>
+        <code>                    
+    <strong>setDefaultPurchase</strong>($uniqId, $cartKey, $objCustomer, $objCartSess)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$uniqId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cartKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$objCustomer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$objCartSess</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSelectablePayment">
+        <div class="location">at         line 619</div>
+        <code>                    array
+    <strong>getSelectablePayment</strong>($objCartSess, $deliv_id, $is_list = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配送業者IDから, 支払い方法, お届け時間の配列を取得する.</p>                    <p>結果の連想配列の添字の値は以下の通り
+- 'arrDelivTime' - お届け時間の配列
+- 'arrPayment' - 支払い方法の配列
+- 'img_show' - 支払い方法の画像の有無</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$objCartSess</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$deliv_id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$is_list</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>支払い方法, お届け時間を格納した配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDelivDate">
+        <div class="location">at         line 645</div>
+        <code>                    
+    <strong>getDelivDate</strong>(<a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a> $objCartSess, integer $productTypeId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>お届け日一覧を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a></td>
+                <td>$objCartSess</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$productTypeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDateArray">
+        <div class="location">at         line 705</div>
+        <code>                    
+    <strong>getDateArray</strong>($start_day, $end_day)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>お届け可能日のスタート値から, お届け日の配列を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$start_day</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$end_day</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerShipping">
+        <div class="location">at         line 740</div>
+        <code>                    void
+    <strong>registerShipping</strong>(integer $order_id, array $arrParams, boolean $convert_shipping_date = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配送情報の登録を行う.</p>                    <p>$arrParam のうち, dtb_shipping テーブルに存在するカラムのみを登録する.</p>
+
+<p>TODO UPDATE/INSERT にする</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrParams</td>
+                <td>配送情報の連想配列</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$convert_shipping_date</td>
+                <td>yyyy/mm/dd(EEE) 形式の配送日付を変換する場合 true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerShipmentItem">
+        <div class="location">at         line 783</div>
+        <code>                    void
+    <strong>registerShipmentItem</strong>(integer $order_id, integer $shipping_id, array $arrParams)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配送商品を登録する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$shipping_id</td>
+                <td>配送先ID</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrParams</td>
+                <td>配送商品の配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerOrderComplete">
+        <div class="location">at         line 841</div>
+        <code>                    
+    <strong>registerOrderComplete</strong>($orderParams, $objCartSession, $cartKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注登録を完了する.</p>                    <p>引数の受注情報を受注テーブル及び受注詳細テーブルに登録する.
+登録後, 受注一時テーブルに削除フラグを立てる.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$orderParams</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$objCartSession</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cartKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerOrder">
+        <div class="location">at         line 914</div>
+        <code>                    integer
+    <strong>registerOrder</strong>(integer $order_id, array $arrParams)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注情報を登録する.</p>                    <p>既に受注IDが存在する場合は, 受注情報を更新する.
+引数の受注IDが, 空白又は null の場合は, 新しく受注IDを発行して登録する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrParams</td>
+                <td>受注情報の連想配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>受注ID</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerOrderDetail">
+        <div class="location">at         line 968</div>
+        <code>                    void
+    <strong>registerOrderDetail</strong>(integer $order_id, array $arrParams)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注詳細情報を登録する.</p>                    <p>既に, 該当の受注が存在する場合は, 受注情報を削除し, 登録する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arrParams</td>
+                <td>受注情報の連想配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrder">
+        <div class="location">at         line 990</div>
+        <code>                    array
+    <strong>getOrder</strong>(integer $order_id, integer $customer_id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注情報を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$customer_id</td>
+                <td>会員ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>受注情報の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrderDetail">
+        <div class="location">at         line 1010</div>
+        <code>                    array
+    <strong>getOrderDetail</strong>(integer $order_id, boolean $has_order_status = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注詳細を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$has_order_status</td>
+                <td>対応状況, 入金日も含める場合 true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>受注詳細の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDownloadableFlgTo">
+        <div class="location">at         line 1069</div>
+        <code>                    void
+    <strong>setDownloadableFlgTo</strong>(array $arrOrderDetail)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ダウンロード可能フラグを, 受注詳細に設定する.</p>                    <p>ダウンロード可能と判断されるのは, 以下の通り.</p>
+
+<ol>
+<li>ダウンロード可能期限が期限内かつ, 入金日が入力されている</li>
+<li>販売価格が 0 円である</li>
+</ol>
+
+<p>受注詳細行には, is_downloadable という真偽値が設定される.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrOrderDetail</td>
+                <td>受注詳細の配列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShippings">
+        <div class="location">at         line 1092</div>
+        <code>                    array
+    <strong>getShippings</strong>(integer $order_id, boolean $has_items = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配送情報を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$has_items</td>
+                <td>結果に配送商品も含める場合 true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>配送情報の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShipmentItems">
+        <div class="location">at         line 1124</div>
+        <code>                    array
+    <strong>getShipmentItems</strong>(integer $order_id, integer $shipping_id, boolean $has_detail = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>配送商品を取得する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$shipping_id</td>
+                <td>配送先ID</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$has_detail</td>
+                <td>商品詳細も取得する場合 true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>商品規格IDをキーにした配送商品の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendOrderMail">
+        <div class="location">at         line 1164</div>
+        <code>        static            boolean
+    <strong>sendOrderMail</strong>(integer $order_id, object $objPage = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>注文受付メールを送信する.</p>                    <p>端末種別IDにより, 携帯電話の場合は携帯用の文面,
+それ以外の場合は PC 用の文面でメールを送信する.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>受注ID</td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$objPage</td>
+                <td>LC_Page インスタンス</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>送信に成功したか。現状では、正確には取得できない。</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfUpdateOrderStatus">
+        <div class="location">at         line 1196</div>
+        <code>                    void
+    <strong>sfUpdateOrderStatus</strong>(integer $orderId, integer|null $newStatus = null, integer|null $newAddPoint = null, integer|null $newUsePoint = null, array $sqlval = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注.対応状況の更新</p>                    <p>必ず呼び出し元でトランザクションブロックを開いておくこと。</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$orderId</td>
+                <td>注文番号</td>
+            </tr>
+                    <tr>
+                <td>integer|null</td>
+                <td>$newStatus</td>
+                <td>対応状況 (null=変更無し)</td>
+            </tr>
+                    <tr>
+                <td>integer|null</td>
+                <td>$newAddPoint</td>
+                <td>加算ポイント (null=変更無し)</td>
+            </tr>
+                    <tr>
+                <td>integer|null</td>
+                <td>$newUsePoint</td>
+                <td>使用ポイント (null=変更無し)</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$sqlval</td>
+                <td>更新後の値をリファレンスさせるためのパラメーター</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sfUpdateOrderNameCol">
+        <div class="location">at         line 1304</div>
+        <code>                    
+    <strong>sfUpdateOrderNameCol</strong>(integer $order_id, boolean $temp_table = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>受注の名称列を更新する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$order_id</td>
+                <td>更新対象の注文番号</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$temp_table</td>
+                <td>更新対象は「受注_Temp」か</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isUsePoint">
+        <div class="location">at         line 1342</div>
+        <code>                    boolean
+    <strong>isUsePoint</strong>(integer $status)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ポイント使用するかの判定</p>                    <p>$status が null の場合は false を返す.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$status</td>
+                <td>対応状況</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>使用するか(会員テーブルから減算するか)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAddPoint">
+        <div class="location">at         line 1364</div>
+        <code>                    boolean
+    <strong>isAddPoint</strong>(integer $status)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ポイント加算するかの判定</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$status</td>
+                <td>対応状況</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>加算するか</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cleanupSession">
+        <div class="location">at         line 1403</div>
+        <code>                    
+    <strong>cleanupSession</strong>(integer $orderId, <a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a> $objCartSession, <a href="../../../Eccube/Framework/Customer.html"><abbr title="Eccube\Framework\Customer">Customer</abbr></a> $objCustomer, integer $cartKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>セッションに保持している情報を破棄する.</p>                    <p>通常、受注処理(completeOrder)完了後に呼び出され、
+セッション情報を破棄する.</p>
+
+<p>決済モジュール画面から確認画面に「戻る」場合を考慮し、
+セッション情報を破棄しないカスタマイズを、モジュール側で
+加える機会を与える.</p>
+
+<p>$orderId が使われていない。</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$orderId</td>
+                <td>注文番号</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a></td>
+                <td>$objCartSession</td>
+                <td>カート情報のインスタンス</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Eccube/Framework/Customer.html"><abbr title="Eccube\Framework\Customer">Customer</abbr></a></td>
+                <td>$objCustomer</td>
+                <td>Customer インスタンス</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$cartKey</td>
+                <td>登録を行うカート情報のキー</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setShipmentItemTempForSole">
+        <div class="location">at         line 1421</div>
+        <code>                    void
+    <strong>setShipmentItemTempForSole</strong>(<a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a> $objCartSession, integer $shipping_id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>単一配送指定用に配送商品を設定する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Eccube/Framework/CartSession.html"><abbr title="Eccube\Framework\CartSession">CartSession</abbr></a></td>
+                <td>$objCartSession</td>
+                <td>カート情報のインスタンス</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$shipping_id</td>
+                <td>配送先ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNextOrderID">
+        <div class="location">at         line 1440</div>
+        <code>                    integer
+    <strong>getNextOrderID</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>新規受注の注文IDを返す</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancelPendingOrder">
+        <div class="location">at         line 1452</div>
+        <code>                    void
+    <strong>cancelPendingOrder</strong>(bool $cancel_flg)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>決済処理中スタータスの受注データのキャンセル処理</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$cancel_flg</td>
+                <td>決済処理中ステータスのロールバックをするか(true:する false:しない)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkDbAllPendingOrder">
+        <div class="location">at         line 1464</div>
+        <code>                    
+    <strong>checkDbAllPendingOrder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>決済処理中スタータスの全受注検索</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkDbMyPendignOrder">
+        <div class="location">at         line 1484</div>
+        <code>                    
+    <strong>checkDbMyPendignOrder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkSessionPendingOrder">
+        <div class="location">at         line 1528</div>
+        <code>                    
+    <strong>checkSessionPendingOrder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

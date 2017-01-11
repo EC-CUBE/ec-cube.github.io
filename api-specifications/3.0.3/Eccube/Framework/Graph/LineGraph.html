@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Eccube\Framework\Graph\LineGraph | EC-CUBE3 API Specifications</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Eccube_Framework_Graph_LineGraph" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../3.0.0-beta0/index.html" data-version="3.0.0-beta0">3.0.0-beta0</option>
+                                            <option value="../../../../3.0.0-beta1/index.html" data-version="3.0.0-beta1">3.0.0-beta1</option>
+                                            <option value="../../../../3.0.0-beta2/index.html" data-version="3.0.0-beta2">3.0.0-beta2</option>
+                                            <option value="../../../../3.0.0-beta3/index.html" data-version="3.0.0-beta3">3.0.0-beta3</option>
+                                            <option value="../../../../3.0.0-beta4/index.html" data-version="3.0.0-beta4">3.0.0-beta4</option>
+                                            <option value="../../../../3.0.0/index.html" data-version="3.0.0">3.0.0</option>
+                                            <option value="../../../../3.0.1/index.html" data-version="3.0.1">3.0.1</option>
+                                            <option value="../../../../3.0.2/index.html" data-version="3.0.2">3.0.2</option>
+                                            <option value="../../../../3.0.3/index.html" data-version="3.0.3">3.0.3</option>
+                                            <option value="../../../../3.0.4/index.html" data-version="3.0.4">3.0.4</option>
+                                            <option value="../../../../3.0.5/index.html" data-version="3.0.5">3.0.5</option>
+                                            <option value="../../../../3.0.6/index.html" data-version="3.0.6">3.0.6</option>
+                                            <option value="../../../../3.0.7/index.html" data-version="3.0.7">3.0.7</option>
+                                            <option value="../../../../3.0.8-for-plugin-test/index.html" data-version="3.0.8-for-plugin-test">3.0.8-for-plugin-test</option>
+                                            <option value="../../../../3.0.8/index.html" data-version="3.0.8">3.0.8</option>
+                                            <option value="../../../../3.0.9/index.html" data-version="3.0.9">3.0.9</option>
+                                            <option value="../../../../3.0.10/index.html" data-version="3.0.10">3.0.10</option>
+                                            <option value="../../../../3.0.11/index.html" data-version="3.0.11">3.0.11</option>
+                                            <option value="../../../../3.0.11-pre/index.html" data-version="3.0.11-pre">3.0.11-pre</option>
+                                            <option value="../../../../3.0.12/index.html" data-version="3.0.12">3.0.12</option>
+                                            <option value="../../../../3.0.12-p1/index.html" data-version="3.0.12-p1">3.0.12-p1</option>
+                                            <option value="../../../../3.0.13/index.html" data-version="3.0.13">3.0.13</option>
+                                            <option value="../../../../3.0/index.html" data-version="3.0">3.0 branch</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">EC-CUBE3 API Specifications</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Eccube.html">Eccube</a></li>
+                                        <li><a href="../../../Eccube/Framework.html">Framework</a></li>
+                                        <li><a href="../../../Eccube/Framework/Graph.html">Graph</a></li>
+    
+                <li>LineGraph</li>
+            </ol>
+        </div>
+                    <div id="page-content">
+                    
+    <div class="page-header">
+        <h1>
+            LineGraph
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>LineGraph</strong>        extends <a href="../../../Eccube/Framework/Graph/AbstractGraph.html"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a>
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_arrRGB">
+                                                                                
+                </td>
+                <td>$arrRGB</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_arrRGB"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrColor">
+                                                                                
+                </td>
+                <td>$arrColor</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_arrColor"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrDarkColor">
+                                                                                
+                </td>
+                <td>$arrDarkColor</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_arrDarkColor"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_image">
+                                                                                
+                </td>
+                <td>$image</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_image"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_left">
+                                                                                
+                </td>
+                <td>$left</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_left"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_top">
+                                                                                
+                </td>
+                <td>$top</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_top"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shade_color">
+                                                                                
+                </td>
+                <td>$shade_color</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_shade_color"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_flame_color">
+                                                                                
+                </td>
+                <td>$flame_color</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_flame_color"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shade_on">
+                                                                                
+                </td>
+                <td>$shade_on</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_shade_on"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_text_color">
+                                                                                
+                </td>
+                <td>$text_color</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_text_color"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_labelbg_color">
+                                                                                
+                </td>
+                <td>$labelbg_color</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_labelbg_color"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bgw">
+                                                                                
+                </td>
+                <td>$bgw</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_bgw"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bgh">
+                                                                                
+                </td>
+                <td>$bgh</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_bgh"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_clabelbg_color">
+                                                                                
+                </td>
+                <td>$clabelbg_color</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_clabelbg_color"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_title_color">
+                                                                                
+                </td>
+                <td>$title_color</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_title_color"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_text_top">
+                                                                                
+                </td>
+                <td>$text_top</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_text_top"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mark_color">
+                                                                                
+                </td>
+                <td>$mark_color</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_mark_color"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrLegend">
+                                                                                
+                </td>
+                <td>$arrLegend</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_arrLegend"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ARR_GRAPH_RGB">
+                                                                                
+                </td>
+                <td>$ARR_GRAPH_RGB</td>
+                <td class="last">グラフ背景</td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_ARR_GRAPH_RGB"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ARR_BG_COLOR">
+                                                                                
+                </td>
+                <td>$ARR_BG_COLOR</td>
+                <td class="last">背景色</td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_ARR_BG_COLOR"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ARR_SHADE_COLOR">
+                                                                                
+                </td>
+                <td>$ARR_SHADE_COLOR</td>
+                <td class="last">影の色</td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_ARR_SHADE_COLOR"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ARR_FLAME_COLOR">
+                                                                                
+                </td>
+                <td>$ARR_FLAME_COLOR</td>
+                <td class="last">縁の色</td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_ARR_FLAME_COLOR"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ARR_TEXT_COLOR">
+                                                                                
+                </td>
+                <td>$ARR_TEXT_COLOR</td>
+                <td class="last">文字色</td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_ARR_TEXT_COLOR"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ARR_LABELBG_COLOR">
+                                                                                
+                </td>
+                <td>$ARR_LABELBG_COLOR</td>
+                <td class="last">ラベル背景</td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_ARR_LABELBG_COLOR"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ARR_LEGENDBG_COLOR">
+                                                                                
+                </td>
+                <td>$ARR_LEGENDBG_COLOR</td>
+                <td class="last">凡例背景</td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_ARR_LEGENDBG_COLOR"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ARR_TITLE_COLOR">
+                                                                                
+                </td>
+                <td>$ARR_TITLE_COLOR</td>
+                <td class="last">タイトル文字色</td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_ARR_TITLE_COLOR"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ARR_GRID_COLOR">
+                                                                                
+                </td>
+                <td>$ARR_GRID_COLOR</td>
+                <td class="last">グリッド線色</td>
+                <td><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#property_ARR_GRID_COLOR"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_area_width">
+                                                                                
+                </td>
+                <td>$area_width</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_area_height">
+                                                                                
+                </td>
+                <td>$area_height</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ygrid_on">
+                                                                                
+                </td>
+                <td>$ygrid_on</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_graph_max">
+                                                                                
+                </td>
+                <td>$graph_max</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrXLabel">
+                                                                                
+                </td>
+                <td>$arrXLabel</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_XLabelAngle">
+                                                                                
+                </td>
+                <td>$XLabelAngle</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_XTitle">
+                                                                                
+                </td>
+                <td>$XTitle</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_YTitle">
+                                                                                
+                </td>
+                <td>$YTitle</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrDataList">
+                                                                                
+                </td>
+                <td>$arrDataList</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_arrPointList">
+                                                                                
+                </td>
+                <td>$arrPointList</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_line_max">
+                                                                                
+                </td>
+                <td>$line_max</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_x_margin">
+                                                                                
+                </td>
+                <td>$x_margin</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_y_margin">
+                                                                                
+                </td>
+                <td>$y_margin</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>($bgw = BG_WIDTH, $bgh = BG_HEIGHT, $left = LINE_LEFT, $top = LINE_TOP, $area_width = LINE_AREA_WIDTH, $area_height = LINE_AREA_HEIGHT)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resampled">resampled</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_resampled"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setColorList">setColorList</a>($arrRGB)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_setColorList"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setShadeOn">setShadeOn</a>($shade_on)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_setShadeOn"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_outputGraph">outputGraph</a>($header = true, $filename = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_outputGraph"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTextWidth">getTextWidth</a>($text, $font_size)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_getTextWidth"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setText">setText</a>($font_size, $left, $top, $text, $color = NULL, $angle, $labelbg = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_setText"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawTitle">drawTitle</a>($text, $font_size = TITLE_FONT_SIZE)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_drawTitle"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_debugPrint">debugPrint</a>($text)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_debugPrint"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawLegend">drawLegend</a>($legend_max = &#039;&#039;, $clabelbg = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_drawLegend"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawClabelBG">drawClabelBG</a>($left, $top, $right, $bottom)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_drawClabelBG"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLegend">setLegend</a>($arrLegend)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_setLegend"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>クラスの初期化を行う.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_init"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    double[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfGetArcPos">lfGetArcPos</a>($cx, $cy, $cw, $ch, $e)
+        
+                                            <p>円の中心点と直径から弧の終端座標を算出する.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_lfGetArcPos"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfImageText">lfImageText</a>($dst_image, $text, $font_size, $left, $top, $font, $arrRGB)
+        
+                                            <p>画像にテキストを描画する</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_lfImageText"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfGetImageColor">lfGetImageColor</a>($image, $array)
+        
+                                            <p>表示色の取得</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_lfGetImageColor"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lfGetImageDarkColor">lfGetImageDarkColor</a>($image, $array)
+        
+                                            <p>影用表示色の取得</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_lfGetImageDarkColor"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setXLabelAngle">setXLabelAngle</a>(integer $Angle)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawYTitle">drawYTitle</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawXTitle">drawXTitle</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawYLine">drawYLine</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawXLine">drawXLine</a>($bar = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setYGridOn">setYGridOn</a>($ygrid_on)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMark">setMark</a>($line_no, $left, $top, $size = LINE_MARK_SIZE)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setYScale">setYScale</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMax">setMax</a>($arrData)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawGraph">drawGraph</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawLine">drawLine</a>(integer $line_no)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawMark">drawMark</a>(integer $line_no)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawLabel">drawLabel</a>(integer $line_no)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setData">setData</a>($arrData)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setXLabel">setXLabel</a>($arrXLabel)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setXTitle">setXTitle</a>(string $title)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setYTitle">setYTitle</a>(string $title)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 46</div>
+        <code>                    
+    <strong>__construct</strong>($bgw = BG_WIDTH, $bgh = BG_HEIGHT, $left = LINE_LEFT, $top = LINE_TOP, $area_width = LINE_AREA_WIDTH, $area_height = LINE_AREA_HEIGHT)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$bgw</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$bgh</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$left</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$top</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$area_width</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$area_height</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resampled">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_resampled"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 214</div>
+        <code>                    
+    <strong>resampled</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setColorList">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_setColorList"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 225</div>
+        <code>                    
+    <strong>setColorList</strong>($arrRGB)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrRGB</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setShadeOn">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_setShadeOn"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 240</div>
+        <code>                    
+    <strong>setShadeOn</strong>($shade_on)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$shade_on</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_outputGraph">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_outputGraph"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 246</div>
+        <code>                    
+    <strong>outputGraph</strong>($header = true, $filename = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$header</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTextWidth">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_getTextWidth"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 262</div>
+        <code>                    
+    <strong>getTextWidth</strong>($text, $font_size)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$font_size</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setText">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_setText"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 281</div>
+        <code>                    
+    <strong>setText</strong>($font_size, $left, $top, $text, $color = NULL, $angle, $labelbg = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$font_size</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$left</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$top</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$color</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$angle</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$labelbg</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawTitle">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_drawTitle"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 318</div>
+        <code>                    
+    <strong>drawTitle</strong>($text, $font_size = TITLE_FONT_SIZE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$font_size</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debugPrint">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_debugPrint"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 328</div>
+        <code>                    
+    <strong>debugPrint</strong>($text)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawLegend">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_drawLegend"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 340</div>
+        <code>                    
+    <strong>drawLegend</strong>($legend_max = &#039;&#039;, $clabelbg = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$legend_max</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$clabelbg</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawClabelBG">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_drawClabelBG"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 396</div>
+        <code>                    
+    <strong>drawClabelBG</strong>($left, $top, $right, $bottom)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$left</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$top</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$right</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$bottom</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLegend">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_setLegend"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 408</div>
+        <code>                    
+    <strong>setLegend</strong>($arrLegend)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrLegend</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_init"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 421</div>
+        <code>                    void
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>クラスの初期化を行う.</p>                    <p>表示色をメンバ変数にセットする.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfGetArcPos">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_lfGetArcPos"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 463</div>
+        <code>                    double[]
+    <strong>lfGetArcPos</strong>($cx, $cy, $cw, $ch, $e)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>円の中心点と直径から弧の終端座標を算出する.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$cx</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cy</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cw</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$ch</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>double[]</td>
+            <td>円の中心点と直径から弧の終端座標の配列</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfImageText">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_lfImageText"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 476</div>
+        <code>                    
+    <strong>lfImageText</strong>($dst_image, $text, $font_size, $left, $top, $font, $arrRGB)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>画像にテキストを描画する</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$dst_image</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$font_size</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$left</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$top</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$font</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$arrRGB</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfGetImageColor">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_lfGetImageColor"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 487</div>
+        <code>                    
+    <strong>lfGetImageColor</strong>($image, $array)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>表示色の取得</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$image</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lfGetImageDarkColor">
+        <div class="location">in <a href="../../../Eccube/Framework/Graph/AbstractGraph.html#method_lfGetImageDarkColor"><abbr title="Eccube\Framework\Graph\AbstractGraph">AbstractGraph</abbr></a> at         line 498</div>
+        <code>                    
+    <strong>lfGetImageDarkColor</strong>($image, $array)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>影用表示色の取得</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$image</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setXLabelAngle">
+        <div class="location">at         line 65</div>
+        <code>                    
+    <strong>setXLabelAngle</strong>(integer $Angle)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$Angle</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawYTitle">
+        <div class="location">at         line 71</div>
+        <code>                    
+    <strong>drawYTitle</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawXTitle">
+        <div class="location">at         line 83</div>
+        <code>                    
+    <strong>drawXTitle</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawYLine">
+        <div class="location">at         line 95</div>
+        <code>                    
+    <strong>drawYLine</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawXLine">
+        <div class="location">at         line 121</div>
+        <code>                    
+    <strong>drawXLine</strong>($bar = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$bar</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setYGridOn">
+        <div class="location">at         line 165</div>
+        <code>                    
+    <strong>setYGridOn</strong>($ygrid_on)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$ygrid_on</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMark">
+        <div class="location">at         line 175</div>
+        <code>                    
+    <strong>setMark</strong>($line_no, $left, $top, $size = LINE_MARK_SIZE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$line_no</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$left</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$top</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setYScale">
+        <div class="location">at         line 191</div>
+        <code>                    
+    <strong>setYScale</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMax">
+        <div class="location">at         line 208</div>
+        <code>                    
+    <strong>setMax</strong>($arrData)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawGraph">
+        <div class="location">at         line 225</div>
+        <code>                    
+    <strong>drawGraph</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawLine">
+        <div class="location">at         line 255</div>
+        <code>                    
+    <strong>drawLine</strong>(integer $line_no)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$line_no</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawMark">
+        <div class="location">at         line 276</div>
+        <code>                    
+    <strong>drawMark</strong>(integer $line_no)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$line_no</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawLabel">
+        <div class="location">at         line 292</div>
+        <code>                    
+    <strong>drawLabel</strong>(integer $line_no)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$line_no</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setData">
+        <div class="location">at         line 308</div>
+        <code>                    
+    <strong>setData</strong>($arrData)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setXLabel">
+        <div class="location">at         line 330</div>
+        <code>                    
+    <strong>setXLabel</strong>($arrXLabel)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$arrXLabel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setXTitle">
+        <div class="location">at         line 340</div>
+        <code>                    
+    <strong>setXTitle</strong>(string $title)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$title</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setYTitle">
+        <div class="location">at         line 350</div>
+        <code>                    
+    <strong>setYTitle</strong>(string $title)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$title</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+                </div>
+                    <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12978473-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+        </div>
+    </div>
+    </body>
+
+</html>

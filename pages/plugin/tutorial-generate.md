@@ -33,14 +33,14 @@ php app/console plugin:develop --help
 プラグインの雛形を作成するためのプラグインジェネレータコマンドは
 
 ```
-php app/console plugin:develop genereate
+php app/console plugin:develop generate
 ```
 
 を実行します。
 
 
 ## プラグインジェネレータコマンド実行時の内容について
-`genereate`コマンドを実行すると問い合わせ形式で、プラグイン作成時に必要となる情報が設定できます。
+`generate`コマンドを実行すると問い合わせ形式で、プラグイン作成時に必要となる情報が設定できます。
 
 問い合わせ内容を以下に説明します。途中で終わらせたい場合、quitを入力してください。  
 必須以外の箇所については何も入力せずにenterを押すとスキップします。

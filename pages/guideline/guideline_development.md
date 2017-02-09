@@ -24,20 +24,20 @@ GitHubからダウンロードした場合、開発に必要なライブラリ�
 composerを利用してライブラリをダウンロードします。  
 ダウンロードしたEC-CUBE3を解凍後、コマンドラインよりEC-CUBE3のディレクトリへ移動し、  
 
-```
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php --install-dir=.
-```  
+  ```
+  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  php composer-setup.php --install-dir=.
+  ```  
 
-もしくは、[https://getcomposer.org/download/](https://getcomposer.org/download/){:target="_blank"} よりcomposer.pharをダウンロードし、
-EC-CUBE3ディレクトリへコピーします。  
+  もしくは、[https://getcomposer.org/download/](https://getcomposer.org/download/){:target="_blank"} よりcomposer.pharをダウンロードし、
+  EC-CUBE3ディレクトリへコピーします。  
 
 1. composerの実行  
 ライブラリを取り込むため、以下のコマンドを実行します。  
 
-```
-php composer.phar install
-```
+  ```
+  php composer.phar install
+  ```
 
 以上で最新のEC-CUBE3が利用できる環境が整います。常にEC-CUBE3のバージョンへ追随したい場合、
 [http://qiita.com/chihiro-adachi/items/f31c9d90b1bcc3553c20](http://qiita.com/chihiro-adachi/items/f31c9d90b1bcc3553c20){:target="_blank"} を参考にしてください。

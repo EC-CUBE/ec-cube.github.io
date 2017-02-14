@@ -55,7 +55,7 @@ php ./composer.phar install --dev --no-interaction
 
 - Webインストーラーにアクセスする
 
-`http://{インストール先URL}/install/`にアクセスし、表示されるインストーラーの指示にしたがってインスールしてください。
+`http://{インストール先URL}/install/`にアクセスし、表示されるインストーラーの指示にしたがってインストールしてください。
 
 
 

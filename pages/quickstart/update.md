@@ -123,6 +123,67 @@ EC-CUBEのインストールディレクトリ以下をすべてバックアッ�
 EC-CUBEのバージョンアップ手順は以上です。
 
 
+
+### 7. 税率設定の不具合について
+
+EC-CUBE3.0.12からEC-CUBE3.0.13までのバージョンで、税率設定の課税規則に「切り捨て」「切り上げ」を設定されていた方は、共通税率設定により必ず「四捨五入」または「切り上げ」されるという不具合が発生しています。
+
+こちらの不具合はEC-CUBE3.0.14で修正されています。
+
+#### 影響があるEC-CUBEバージョン
+3.0.12、3.0.12-p1、3.0.13
+
+
+#### 不具合発生機能箇所
+- 商品購入時、管理画面の受注データ登録・更新時  
+確認画面以降（メール、受注データも含む）において、価格の（端数）税率計算が全て四捨五入で計算される。
+
+
+#### 現象内容
+課税規則に「切り捨て」、消費税率を8%と設定していた場合、
+商品A : 649円
+という商品を購入すると701円として購入されてしまう。
+
+例えば、
+649 * 1.08 = 700.92円となり切り捨てであれば700円だが、
+四捨五入されて701円になる。
+
+商品一覧、商品詳細、カート画面では700円として表示されているが、
+購入画面では701円で計算され、購入金額も701円で購入される。
+
+#### 原因
+[https://github.com/EC-CUBE/ec-cube/issues/2005](https://github.com/EC-CUBE/ec-cube/issues/2005)
+
+
+#### 対応方法
+本体の税率設定と異なる金額の受注明細データを抽出するプラグインが用意されています。
+
+[税率設定確認プラグイン](http://downloads.ec-cube.net/plugin/tax-rule-problem/TaxRuleProblem-CheckerPlugin-1.0.0.tar.gz)
+
+
+このプラグインは抽出のみ行っていますので、
+誤りのある受注データを修正する場合、手動にて修正を行うようにしてください。
+
+
+#### バージョンアップが出来ないとき
+
+EC-CUBE3.0.12、EC-CUBE3.0.12-p1、EC-CUBE3.0.13のそれぞれのバッチファイルを用意しています。
+
+[パッチファイル](http://downloads.ec-cube.net/plugin/tax-rule-problem/taxrule-patch.zip)
+
+解凍後、それぞれお使いのバージョンに合わせて下記の比較内容を元に修正をお願い致します。
+
+- EC-CUBE3.0.12、EC-CUBE3.0.12-p1  
+src/Eccube/Controller/Admin/Order/EditController.php  
+![課税規則](/images/img-tax3.0.12-controller.png)  
+src/Eccube/Service/ShoppingService.php  
+![課税規則](/images/img-tax3.0.12-service.png)
+
+- EC-CUBE3.0.13  
+src/Eccube/Service/ShoppingService.php  
+![課税規則](/images/img-tax3.0.13-service.png)
+
+
 ## 各バージョンでの変更差分
 
 バージョンごとの詳細な変更差分は、以下のリンク先で確認することができます。
@@ -141,3 +202,4 @@ EC-CUBEのバージョンアップ手順は以上です。
 | 3.0.11 → 3.0.12 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.11...3.0.12](https://github.com/EC-CUBE/ec-cube/compare/3.0.11...3.0.12?w=1) |
 | 3.0.12 → 3.0.12-p1 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.12...3.0.12-p1](https://github.com/EC-CUBE/ec-cube/compare/3.0.12...3.0.12-p1?w=1) |
 | 3.0.12-p1 → 3.0.13 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.12-p1...3.0.13](https://github.com/EC-CUBE/ec-cube/compare/3.0.12-p1...3.0.13?w=1) |
+

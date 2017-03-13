@@ -1,15 +1,13 @@
 ---
-title: プラグインジェネレータの利用方法
+title: プラグインジェネレータの利用方法(3.0.13)
 keywords: plugin generate spec
 tags: [plugin, tutorial]
 sidebar: home_sidebar
-permalink: plugin_tutorial-generate
+permalink: plugin_tutorial-generate3013
 summary: プラグインの雛型を簡単に作成できるプラグインジェネレータについて説明します。
 ---
 
 ## プラグインジェネレータについて
-
-EC-CUBE3.0.13をご利用の方は[こちら](plugin_tutorial-generate3013)をご確認ください。
 
 EC-CUBE3.0.13よりプラグインの雛形を生成するプラグインジェネレータが搭載され、プラグイン開発者にとって手間となっていたファイルやフォルダの準備をコンソールコマンドを使って簡単に生成できるようになります。
 
@@ -61,13 +59,13 @@ Input[1] :
 ```
 
 ### プラグインコードの入力
-作成するプラグインコードを入力します。英数字のみ入力可能で1文字目は必ず半角英字の大文字で入力してください。  
-同一のプラグインコードが存在していた場合、利用できません。
+作成するプラグインコードを入力します。英数字のみ入力可能で1文字目は必ず半角英字の大文字で入力してください。
 
 ```
-[+]Please enter Plugin Code (First letter is uppercase alphabet only. alphabet and numbers are allowed.)
+[+]Please enter Plugin Name (only pascal case letters numbers are allowed)
 Input[2] : 
 ```
+→「Please enter Plugin Name」となっていますが正しくは「Please enter Plugin Code」の誤りです。
 
 ### プラグインバージョン
 プラグインのバージョンを入力します。
@@ -141,17 +139,10 @@ Input[6] :
 フロント、管理画面で利用しているイベントを設定します。使い方は共通イベントと同様です。
 
 ```
-[+]Please enter hookpoint, sample：front.cart.up.initialize
+[+]Please enter hook point, sample：front.cart.up.initialize
 Input[7] : 
 ```
 
-### orm.pathの設定
-プラグインでデータベースを扱うための`orm.path`の設定を行います。 `y`を選ぶとorm.pathが追加されます。
-
-```
-[+]Would you like to use orm.path? [y/n]
-Input[8] : 
-```
 
 ### 確認
 入力した内容を確認します。問題なければ`y`を入力します。
@@ -159,16 +150,14 @@ Input[8] :
 
 ```
 ---Entry confirmation
-[+]Plugin Name:  テストプラグイン
-[+]Plugin Code:  TestPlugin
+[+]Plugin Name:  サンプルプラグイン
+[+]Plugin Code:  Sample
 [+]Version:  1.0.0
-[+]Author:  Test
+[+]Author:  lockon
 [+]Old version support:  No
-[+]SiteEvents: 
+[+]Site events: 
   eccube.event.app.request
-[+]hookpoint: 
-  front.cart.up.initialize
-[+]Use orm.path:  Yes
+[+]Hook points: 
 
 [confirm] Do you want to proceed? [y/n] : 
 ```
@@ -181,44 +170,36 @@ Input[8] :
 [+]File system
 
  this files and folders were created.
- - ECCUBEROOT/app/Plugin/TestPlugin
- - ECCUBEROOT/app/Plugin/TestPlugin/ServiceProvider
- - ECCUBEROOT/app/Plugin/TestPlugin/Controller
- - ECCUBEROOT/app/Plugin/TestPlugin/Form/Type
- - ECCUBEROOT/app/Plugin/TestPlugin/Resource/template/admin
- - ECCUBEROOT/app/Plugin/TestPlugin/config.yml
- - ECCUBEROOT/app/Plugin/TestPlugin/PluginManager.php
- - ECCUBEROOT/app/Plugin/TestPlugin/ServiceProvider/TestPluginServiceProvider.php
- - ECCUBEROOT/app/Plugin/TestPlugin/Controller/ConfigController.php
- - ECCUBEROOT/app/Plugin/TestPlugin/Controller/TestPluginController.php
- - ECCUBEROOT/app/Plugin/TestPlugin/Form/Type/TestPluginConfigType.php
- - ECCUBEROOT/app/Plugin/TestPlugin/Resource/template/admin/config.twig
- - ECCUBEROOT/app/Plugin/TestPlugin/Resource/template/index.twig
- - ECCUBEROOT/app/Plugin/TestPlugin/event.yml
- - ECCUBEROOT/app/Plugin/TestPlugin/TestPluginEvent.php
- - ECCUBEROOT/app/Plugin/TestPlugin/LICENSE
+ - ECCUBEROOT/app/Plugin/Sample
+ - ECCUBEROOT/app/Plugin/Sample/ServiceProvider
+ - ECCUBEROOT/app/Plugin/Sample/Controller
+ - ECCUBEROOT/app/Plugin/Sample/Form/Type
+ - ECCUBEROOT/app/Plugin/Sample/Resource/template/admin
+ - ECCUBEROOT/app/Plugin/Sample/config.yml
+ - ECCUBEROOT/app/Plugin/Sample/PluginManager.php
+ - ECCUBEROOT/app/Plugin/Sample/ServiceProvider/SampleServiceProvider.php
+ - ECCUBEROOT/app/Plugin/Sample/Controller/ConfigController.php
+ - ECCUBEROOT/app/Plugin/Sample/Controller/SampleController.php
+ - ECCUBEROOT/app/Plugin/Sample/Form/Type/SampleConfigType.php
+ - ECCUBEROOT/app/Plugin/Sample/Resource/template/admin/config.twig
+ - ECCUBEROOT/app/Plugin/Sample/Resource/template/index.twig
+ - ECCUBEROOT/app/Plugin/Sample/event.yml
+ - ECCUBEROOT/app/Plugin/Sample/SampleEvent.php
+ - ECCUBEROOT/app/Plugin/Sample/LICENSE
 
 [+]Database
- Plugin information was added to table [DB.Plugin] (id=5)
-
- Plugin information was added to table [DB.PluginEventHandler] (inserts number=1) 
+ Plugin information was added to table [DB.Plugin] (id=54)
 Plugin was created successfully
 ```
 
 以上でプラグインの雛形が完成します。
 
-プラグインの雛形を作成したら管理画面より、
-
-```
-[オーナーズストア]->[プラグイン]->[プラグイン一覧]
-```
-
-の「独自プラグイン」欄に作成したプラグインが表示されているか確認してください。
+プラグインの雛形を作成したら管理画面より、  
+[オーナーズストア]->[プラグイン]->[プラグイン一覧]の「独自プラグイン」に作成したプラグインが表示されているか確認してください。
 
 表示されていればプラグインが無事に完成されています。
 
 
-### EC-CUBE3.0.12以下をご利用の方
-EC-CUBE3.0.12以下をご利用の方にはプラグインジェネレータというプラグインの雛形を作成するプラグインもあります。  
+EC-CUBE3.0.13未満をご利用の方にはプラグインジェネレータというプラグインの雛形を作成するプラグインもあります。  
 そちらの説明は[こちら](plugin_tutorial-plugin-generate)を参照してください。
 

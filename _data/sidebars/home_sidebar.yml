@@ -163,6 +163,9 @@ entries:
           - title: プラグインジェネレータの利用方法
             url: /plugin_tutorial-generate
             output: web, pdf
+          - title: プラグインジェネレータエンティティの利用方法
+            url: /plugin_tutorial-generate-entity
+            output: web, pdf
           - title: 新規ページの追加
             url: /plugin_tutorial-pageadd
             output: web, pdf

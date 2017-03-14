@@ -180,13 +180,13 @@ EC-CUBE3.0.12、EC-CUBE3.0.12-p1、EC-CUBE3.0.13のそれぞれのバッチフ�
 
 - EC-CUBE3.0.12、EC-CUBE3.0.12-p1  
 src/Eccube/Controller/Admin/Order/EditController.php  
-![課税規則](/images/img-tax3.0.12-controller.png)  
+{% lightbox /images/img-tax3.0.12-controller.png --thumb="/images/img-tax3.0.12-controller.png" --data="gallery" %}
 src/Eccube/Service/ShoppingService.php  
-![課税規則](/images/img-tax3.0.12-service.png)
+{% lightbox /images/img-tax3.0.12-service.png --thumb="/images/img-tax3.0.12-service.png" --data="gallery" %}
 
 - EC-CUBE3.0.13  
 src/Eccube/Service/ShoppingService.php  
-![課税規則](/images/img-tax3.0.13-service.png)
+{% lightbox /images/img-tax3.0.13-service.png --thumb="/images/img-tax3.0.13-service.png" --data="gallery" %}
 
 
 ## 各バージョンでの変更差分

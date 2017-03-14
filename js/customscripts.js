@@ -53,3 +53,11 @@ $(function() {
         }
     });
 });
+
+$(function() {
+    lightbox.option({
+        'fadeDuration': 200,
+        'resizeDuration': 200,
+        'imageFadeDuration': 200
+    });
+});

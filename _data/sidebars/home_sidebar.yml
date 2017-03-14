@@ -17,6 +17,9 @@ entries:
     - title: インストール方法
       url: /quickstart_install
       output: web, pdf
+    - title: プロキシサーバの設定
+      url: /quickstart_proxy
+      output: web, pdf
     - title: urlからhtmlを無くす手順
       url: /quickstart_remove-html
       output: web, pdf

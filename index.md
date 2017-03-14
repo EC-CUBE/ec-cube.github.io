@@ -20,6 +20,7 @@ permalink: /
 
 + [システム要件](/quickstart_requirement)
 + [インストール方法](/quickstart_install)
++ [プロキシサーバの設定](/quickstart_proxy)
 + [urlからhtmlを無くす手順](/quickstart_remove-html)
 + [バージョンアップ方法](/quickstart_update)
 

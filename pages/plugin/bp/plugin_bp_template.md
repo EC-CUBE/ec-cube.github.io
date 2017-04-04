@@ -63,7 +63,7 @@ public function onShoppingIndexRender(TemplateEvent $event)
 {
     $parameters = $event->getParameters();
     $form = $parameters['form'];
-    $parts = $app['twig']->getLoader()->getSource('[プログラムコード]/Resource/template/parts.twig');
+    $parts = $app['twig']->getLoader()->getSource('[プラグインコード]/Resource/template/parts.twig');
     // twigコードに挿入
     // 要素箇所の取得
     $search = '<div id="xxxx">';

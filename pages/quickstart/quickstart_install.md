@@ -20,23 +20,46 @@ forder: quickstart
 
 EC-CUBEのインストールは、以下の2種類の方法があります。
 
-- シェルスクリプトインストーラー
-- Webインストーラー
+- インストールスクリプトでインストールする
+- Webインストーラでインストールする
 
-## シェルスクリプトインストーラーを利用したインストール方法
+## インストールスクリプトを利用したインストール方法
 
-`eccube_install.sh`の51行目付近、Configuration以下の設定内容を、環境に応じて修正し、実行してください。
+`eccube_install.php`で、コマンドラインからインストールすることができます。
 
-- PostgreSQLの場合
+以下のように実行してください。
+
+`php eccube_install.php [mysql|pgsql|sqlite3] [none] [options]`
+
+以下はコマンドの実行例です。
+
+PostgreSQLの場合
 
 ```
-eccube_install.sh pgsql
+php eccube_install.php pgsql
 ```
 
-- MySQLの場合
+MySQLの場合
 
 ```
-eccube_install.sh mysql
+php eccube_install.sh mysql
+```
+
+データベースのホストやデータベース名を変更する場合は、環境変数で指定します。
+
+以下は、DBSERVERとDBNAMEを設定する例です。
+
+```
+export DBSERVER=xxx.xxx.xxx.xxx
+export DBNAME=eccube_dev_db
+
+php eccube_install.php mysql
+```
+
+その他の設定やオプションは、`--help`で確認することができます
+
+```
+php eccube_install.php --help
 ```
 
 インストール完了後、 `http://{インストール先URL}/admin`にアクセス

@@ -144,7 +144,7 @@ class CustomizeServiceProvider implements ServiceProviderInterface
     {
         // Repository
         $app['plugin.customize.repository.sample'] = $app->share(function () use ($app) {
-            return $app['orm.em']->getRepository('Plugin\Customize.Entity\Sample');
+            return $app['orm.em']->getRepository('Plugin\Customize\Entity\Sample');
         });
 
 ```

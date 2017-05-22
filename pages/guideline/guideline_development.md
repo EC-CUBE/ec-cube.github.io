@@ -10,33 +10,30 @@ folder: guideline
 
 ## 開発用環境の構築
 
-### GitHubからダウンロードし開発を始める
+### GitHub からソースコードを取得して開発を始める
 GitHubからEC-CUBE3をダウンロードすると、ダウンロードした時点での最新状態のEC-CUBE3で開発が行えます。  
 こちらはリリースにまだ含まれていない機能追加・修正が含まれていることがあります。
 
-1. GitHubからダウンロード  
-[https://github.com/EC-CUBE/ec-cube](https://github.com/EC-CUBE/ec-cube){:target="_blank"} にブラウザよりアクセスし、`Clone or download`
- > `Download ZIP`をクリックしてEC-CUBEをダウンロードします。
+1. composer のインストール
 
-2. composer.pharのインストール  
-GitHubからダウンロードした場合、開発に必要なライブラリが存在していませんので、
-composerを利用してライブラリをダウンロードします。  
-ダウンロードしたEC-CUBE3を解凍後、コマンドラインよりEC-CUBE3のディレクトリへ移動し、  
+こちら [https://getcomposer.org/download/](https://getcomposer.org/download/){:target="_blank"} を参考に、 composer をインストールしておきます。
 
-```
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php --install-dir=.
-```  
+2. ソースコードの取得
 
-もしくは、[https://getcomposer.org/download/](https://getcomposer.org/download/){:target="_blank"} よりcomposer.pharをダウンロードし、
-EC-CUBE3ディレクトリへコピーします。  
-
-3. composerの実行  
-ライブラリを取り込むため、以下のコマンドを実行します。  
+以下のコマンドを実行します。
 
 ```
-php composer.phar install
+composer create-project ec-cube/ec-cube ec-cube "dev-master"
 ```
+
+最後に、
+
+```
+Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]? 
+```
+
+と聞かれるので、 n と入力します。
+
 
 以上で最新のEC-CUBE3が利用できる環境が整います。常にEC-CUBE3のバージョンへ追随したい場合、
 [http://qiita.com/chihiro-adachi/items/f31c9d90b1bcc3553c20](http://qiita.com/chihiro-adachi/items/f31c9d90b1bcc3553c20){:target="_blank"} を参考にしてください。

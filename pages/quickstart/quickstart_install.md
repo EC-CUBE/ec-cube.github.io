@@ -42,7 +42,7 @@ php eccube_install.php pgsql
 MySQLの場合
 
 ```
-php eccube_install.sh mysql
+php eccube_install.php mysql
 ```
 
 データベースのホストやデータベース名を変更する場合は、環境変数で指定します。
@@ -69,11 +69,11 @@ EC-CUBEの管理ログイン画面が表示されればインストール成功�
 
 ## Webインストーラーを利用したインストール方法
 
-- composerを利用して外部ライブラリをインスールする
+- composerを利用してソースコードを取得する
 
 ```
 curl -sS https://getcomposer.org/installer | php
-php ./composer.phar install --dev --no-interaction
+php composer.phar create-project ec-cube/ec-cube ec-cube "^3.0"
 ```
 
 - Webインストーラーにアクセスする

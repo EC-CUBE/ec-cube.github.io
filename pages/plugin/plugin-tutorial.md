@@ -664,7 +664,7 @@ class CategoryContentEvent
 
         // フォームの追加
         /** @var FormInterface $builder */
-        // FormBuildeの取得
+        // FormBuilderの取得
         $builder = $event->getArgument('builder');
         // 項目の追加
         $builder->add(

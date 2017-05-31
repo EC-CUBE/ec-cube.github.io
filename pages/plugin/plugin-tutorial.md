@@ -865,7 +865,7 @@ CategoryContentEvent.phpに以下を追記します。
         }
 
         // twigコードにカテゴリコンテンツを挿入
-        $snipet = '<div class="row">{{ CategoryContent.content | raw }}</div>';
+        $snipet = '<div class="row">{{ "{{ CategoryContent.content | raw " }}}}</div>';
         $search = '<div id="result_info_box"';
         $replace = $snipet.$search;
         $source = str_replace($search, $replace, $event->getSource());

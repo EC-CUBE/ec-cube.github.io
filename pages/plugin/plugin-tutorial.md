@@ -77,6 +77,8 @@ EC-CUBE3ルートディレクトリ
     1. **dcm.yml**をつくる
     1. **config.yml**を修正する 
     1. **エンティティ**をつくる
+    1. **サービスプロバイダ**をつくる
+    1. **config.yml**を修正
     1. **マイグレーションファイル**を作る
     1. **プラグインマネージャ**をつくる
     1. **テーブル**を作る ( マイグレーションファイルの実行 )  
@@ -94,8 +96,6 @@ EC-CUBE3ルートディレクトリ
         1. **フォーム**に項目追加する
         1. **event.yml**を修正
         1. **イベントクラス**を修正( 登録処理追加 )
-        1. **サービスプロバイダ**をつくる
-        1. **config.yml**を修正
         1. データの登録  
            - ※動作確認
 
@@ -389,6 +389,57 @@ class CategoryContent extends \Eccube\Entity\AbstractEntity
 ```
 テーブルの項目をプロパティ ( private ) として定義し、それに対するゲッター・セッターを記述します。  
 
+### サービスプロバイダをつくる
+
+レポジトリを利用してデータベースを操作するためには、
+サービスプロバイダ内で、レポジトリ定義を行う必要があります。  
+サービスプロバイダーに定義を追加しましょう。  
+
++ PHP:ServiceProvider/CategoryContentServiceProvider.php
+
+```php
+<?php
+
+namespace Plugin\CategoryContent\ServiceProvider;
+
+use Eccube\Application;
+use Silex\Application as BaseApplication;
+use Silex\ServiceProviderInterface;
+
+class CategoryContentServiceProvider implements ServiceProviderInterface
+{
+    public function register(BaseApplication $app)
+    {
+        // Repository
+        $app['category_content.repository.category_content'] = $app->share(function () use ($app) {
+            return $app['orm.em']->getRepository('Plugin\CategoryContent\Entity\CategoryContent');
+        });
+
+    }
+
+    public function boot(BaseApplication $app)
+    {
+    }
+}
+```
+
+### config.ymlの修正
+サービスプロバイダーにレポジトリの定義が終わったら、config.ymlにサービスプロバイダーのファイル名を定義します。  
+
+以下をconfig.ymlに追加してください。  
+
++ yaml:config.yml
+
+```yaml
+name: カテゴリコンテンツプラグイン
+code: CategoryContent
+version: 1.0.0
+orm.path:
+    - /Resource/doctrine
+service:                                ★ServiceProviderの定義を追加
+    - CategoryContentServiceProvider
+```
+
 ### マイグレーションの作成
 
 実際のデータベース上のテーブルの作成には、**マイグレーション**という機能を利用します。そのための、マイグレーションファイルを以下の様に定義しましょう。  
@@ -538,6 +589,8 @@ code: CategoryContent
 version: 1.0.0
 orm.path:
     - /Resource/doctrine
+service:
+    - CategoryContentServiceProvider
 event: CategoryContentEvent ★イベントクラスを指定
 ```
 
@@ -749,58 +802,6 @@ CategoryContentEvent.phpに対して以下を追加します。
         $app['orm.em']->persist($CategoryContent);
         $app['orm.em']->flush($CategoryContent);
     }
-```
-
-### サービスプロバイダをつくる
-
-イベントクラスで追加した登録処理内で、レポジトリを使用している箇所があります。  
-レポジトリを利用するためには、サービスプロバイダ内で、レポジトリ定義を行う必要があります。  
-さっそくサービスプロバイダーに定義を追加しましょう。  
-
-+ PHP:ServiceProvider/CategoryContentServiceProvider.php
-
-```php
-<?php
-
-namespace Plugin\CategoryContent\ServiceProvider;
-
-use Eccube\Application;
-use Silex\Application as BaseApplication;
-use Silex\ServiceProviderInterface;
-
-class CategoryContentServiceProvider implements ServiceProviderInterface
-{
-    public function register(BaseApplication $app)
-    {
-        // Repository
-        $app['category_content.repository.category_content'] = $app->share(function () use ($app) {
-            return $app['orm.em']->getRepository('Plugin\CategoryContent\Entity\CategoryContent');
-        });
-
-    }
-
-    public function boot(BaseApplication $app)
-    {
-    }
-}
-```
-
-### config.ymlの修正
-サービスプロバイダーにレポジトリの定義が終わったら、config.ymlにサービスプロバイダーのファイル名を定義します。  
-
-以下をconfig.ymlに追加してください。  
-
-+ yaml:config.yml
-
-```yaml
-name: カテゴリコンテンツプラグイン
-code: CategoryContent
-version: 1.0.0
-orm.path:
-    - /Resource/doctrine
-event: CategoryContentEvent
-service:                                ★ServiceProviderの定義を追加
-    - CategoryContentServiceProvider
 ```
 
 ### 登録確認

@@ -61,6 +61,7 @@ EC-CUBEのインストールディレクトリ以下をすべてバックアッ�
 | 3.0.12 → 3.0.12-p1      | なし |
 | 3.0.12-p1 → 3.0.13  	 | app/console <br> composer.json <br> composer.lock <br> eccube_install.php |
 | 3.0.13 → 3.0.14  	 | app/console <br> composer.json <br> composer.lock <br> eccube_install.sh |
+| 3.0.14 → 3.0.15    | composer.json <br> composer.lock <br> eccube_install.php <br> web.config.sample <br> html/index.php <br> html/index_dev.php <br> html/template/admin/assets/js/function.js <br> html/web.config |
 
 ※ `3.0.8 → 3.0.10` のように複数バージョンをまたぐバージョンアップを行う場合は、`3.0.8 → 3.0.9`→`3.0.9 → 3.0.10` のように段階的なバージョンアップを行ってください。
 

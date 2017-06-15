@@ -1,6 +1,6 @@
 ---
 title: Gitを用いた開発手順
-keywords: Githubflow 
+keywords: Githubflow
 tags: [collaboration, guideline]
 sidebar: home_sidebar
 permalink: collaboration_githubflow
@@ -125,6 +125,47 @@ $ git push origin admin_basis_point
 		- Travis			 : ユニットテスト
 		- AppVeyor		 : ユニットテスト( Win環境 )
 		- Scritinizer	: 静的コード解析
+
+### プルリクエストを送る際に行ってもらいたいこと
+
+不要なコミットログはまとめてください。
+対象は`git rebase`について把握している方ですので、必須ではありません。
+
+- 以下のようなコミットを行った場合は、`112233445`から`334455667`はまとめてください。
+```
+$ git log --pretty=format:"%h - %an : %s"
+334455667 - myself : 機能A修正
+223344556 - myself : 機能A修正
+112233445 - myself : 機能A追加
+001122334 - other_user : 別ユーザーのコミット
+```
+`git rebase`を実行し、まとめてください。
+```
+$ git rebase -i 001122334
+pick 112233445 機能A追加
+squash 223344556 機能A修正
+squash 334455667 機能A修正
+```
+以下のようになったらプルリクエストを上げてください。
+```
+$ git log --pretty=format:"%h - %an : %s"
+445566778 - myself : 機能A追加
+001122334 - other_user : 別ユーザーのコミット
+$ git push origin master
+$ ...
+```
+
+- ただし、コメントに対して修正を加えた場合は履歴がわかるようにするためにまとめすぎないようにしてください。
+```
+$ git log --pretty=format:"%h - %an : %s"
+667788990 - myself : 修正に間違いがあったため修正
+556677889 - myself : レビュー結果を反映
+445566778 - myself : 機能A追加
+001122334 - other_user : 別ユーザーのコミット
+```
+`445566778`のコミット後にプルリクエストを上げ、レビューされた内容を反映するために修正した場合、`556677889`と`667788990`はまとめますが、`445566778`はまとめないでください。
+
+- マージ済みのコミットはまとめないでください。
 
 ### 参照元
 

@@ -108,6 +108,29 @@ require __DIR__.'/../autoload.php';
 require __DIR__.'/autoload.php';
 ```
 
+index_dev.phpについては以下の部分も修正してください。
+```
+// Silex Web Profiler
+$app->register(new \Silex\Provider\WebProfilerServiceProvider(), array(
+    'profiler.cache_dir' => __DIR__.'/../app/cache/profiler',
+    'profiler.mount_prefix' => '/_profiler',
+));
+```
+
+↓  
+
+- cacheファイルディレクトリの指定場所を変更します。
+```
+// Silex Web Profiler
+$app->register(new \Silex\Provider\WebProfilerServiceProvider(), array(
+    'profiler.cache_dir' => __DIR__.'/app/cache/profiler',
+    'profiler.mount_prefix' => '/_profiler',
+));
+```
+
+
+
+
 ### 4. autoload.php の変更
 autoload.php で、以下のようにコメントアウトする行を変更します。  
 

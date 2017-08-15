@@ -39,7 +39,7 @@ folder: guideline
   + RequestMethodを限定したいときは`match()`ではなく適切なRequestMethodを指定する
     ex: getでのアクセスを許容したくない場合は`post()`を利用する、など
 
-* ディレクト名、ファイル名
+* ディレクトリ名、ファイル名
   + ディレクトリ名は単数形とする
     - ただし、`data`は例外として許容する
   + `DirName`
@@ -126,7 +126,7 @@ EC-CUBEのソースはすべて`src/Eccube`以下にある。
 | ServiceProvider | DIコンテナにつっこむものたち。Form\TypeとかRepositoryとかをここで格納する | SC_InitialとかRequire_base的なもの |
 | Resource/doctrine | doctrineの定義ファイル置き場。YAMLでかく | (なし) |
 | Entity | DoctrineによってマッピングされるObject。こいつをコネコネする | (なし) |
-| Repository | Entityをコネコネする郡。`findBy()`とかはこの中に | SC_Query |
+| Repository | Entityをコネコネする群。`findBy()`とかはこの中に | SC_Query |
 | Form/Type | Formを構成するパーツをかく。Validatorもいっしょに | SC_FormParam |
 | View | びゅー。Twigでかく | Xxx.tpl |
 

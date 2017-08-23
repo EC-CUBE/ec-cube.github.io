@@ -67,6 +67,12 @@ EC-CUBEの管理ログイン画面が表示されればインストール成功�
 
 `ID: admin PW: password`
 
+また、後述の Webインストーラーは不要なので削除してください。
+
+```
+rm html/install.php
+```
+
 ## Webインストーラーを利用したインストール方法
 
 - composerを利用してソースコードを取得する
@@ -78,7 +84,4 @@ php composer.phar create-project ec-cube/ec-cube ec-cube "^3.0"
 
 - Webインストーラーにアクセスする
 
-`http://{インストール先URL}/install/`にアクセスし、表示されるインストーラーの指示にしたがってインストールしてください。
-
-
-
+`http://{インストール先URL}/install.php`にアクセスし、表示されるインストーラーの指示にしたがってインストールしてください。

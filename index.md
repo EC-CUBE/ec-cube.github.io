@@ -30,7 +30,7 @@ permalink: /
 
 ## 本体の仕様
 
-+ [ディレクトリ構成](/spec_directory-stracture)
++ [ディレクトリ構成](/spec_directory-structure)
 + 設定ファイル
 	- [設定ファイルの概要](/spec_config)
 	- [doctrine_cacheの設定](/spec_doctrine-cache)

@@ -14,7 +14,10 @@ permalink: /
  ドキュメントへの追記、記載内容の修正についてはEC-CUBE本体と同様に[GitHub](https://github.com/EC-CUBE/ec-cube.github.io/){:target="_blank"
 }で受け付けております。
 
-運用者向けには、[EC-CUBE 3運用マニュアル（株式会社クロスキューブ様）](https://www.xross-cube.com/service/ec-cube%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/eccube3-manual/){:target="_blank"}を御覧ください。
+運用者向けには以下のサイトをご覧ください。
+
++ [EC-CUBE 3運用マニュアル（株式会社クロスキューブ様）](https://www.xross-cube.com/service/ec-cube%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/eccube3-manual/){:target="_blank"}
++ [EC-CUBE 3管理・運用 マニュアル（株式会社シロハチ様）](https://www.shiro8.net/manual/v30x/){:target="_blank"}
 
 ## Quick Start
 

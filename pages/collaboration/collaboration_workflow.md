@@ -20,7 +20,10 @@ folder: collaboration
 
 - <a href="http://qiita.com/tags/EC-CUBE3" target="_blank">Qiita</a>
     - 開発時のTIPSなどを公開しています。
-- <a href="https://gitter.im/" target="_blank">Gitter</a>
+- ~~<a href="https://gitter.im/" target="_blank">Gitter</a>~~
+    - ~~開発者同士のコミュニケーションツールとして活用しています。~~
+    - 現在はSlackをメインに運営しています。
+- <a href="https://ec-cube.slack.com/messages" target="_blank">Slack</a>
     - 開発者同士のコミュニケーションツールとして活用しています。
 - <a href="https://github.com/EC-CUBE/ec-cube/issues" target="_blank">GitHubのIssues</a>
     - 「改善要望・実装アイデア・バグ報告」など、開発の核となる、情報が集まっています。

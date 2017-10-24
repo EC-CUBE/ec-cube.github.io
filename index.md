@@ -131,3 +131,6 @@ EC-CUBEは以下のサポートを受けています。
 
 + [SAKURA internet](https://www.sakura.ad.jp/)  
 [![SAKURA internet](/images/3-1-2line-rgb-whiteback.png)](https://www.sakura.ad.jp/){:target="_blank"}  
+
++ [VAddy](https://vaddy.net/ja/)  
+[![VAddy](/images/VAddy_logo.png)](https://vaddy.net/ja/){:target="_blank"}  

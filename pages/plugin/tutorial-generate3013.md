@@ -14,14 +14,14 @@ EC-CUBE3.0.13よりプラグインの雛形を生成するプラグインジェ�
 ## プラグインの雛形を作成する
 
 ### プラグインジェネレータコマンドについて
-プラグイン開発する際に手助けをするために[プラグイン開発用コンソールコマンド](plugin_console)というものが用意されています。 プラグインジェネレータは
+プラグイン開発の手助けをするために[プラグイン開発用コンソールコマンド](plugin_console)というものが用意されています。 プラグインジェネレータは
 
 ```
 php app/console plugin:develop
 ```
 
 に対して新たにパラメータを用意しています。
-パラメータの種類    は`--help`で確認できます。
+パラメータの種類は`--help`で確認できます。
 
 ```
 php app/console plugin:develop --help
@@ -43,7 +43,7 @@ php app/console plugin:develop generate
 `generate`コマンドを実行すると問い合わせ形式で、プラグイン作成時に必要となる情報が設定できます。
 
 問い合わせ内容を以下に説明します。途中で終わらせたい場合、quitを入力してください。  
-必須以外の箇所については何も入力せずにenterを押すとスキップします。
+必須以外の箇所については何も入力せずにEnterを押すとスキップします。
 
 ### プラグイン名の入力
 作成するプラグイン名を入力します。
@@ -55,24 +55,23 @@ php app/console plugin:develop generate
 ------------------------------------------------------
 
 [+]Please enter Plugin Name
-Input[1] : 
+Input[1] :
 ```
 
 ### プラグインコードの入力
 作成するプラグインコードを入力します。英数字のみ入力可能で1文字目は必ず半角英字の大文字で入力してください。
 
 ```
-[+]Please enter Plugin Name (only pascal case letters numbers are allowed)
-Input[2] : 
+[+]Please enter Plugin Code (First letter is uppercase alphabet only. alphabet and numbers are allowed.)
+Input[2] :
 ```
-→「Please enter Plugin Name」となっていますが正しくは「Please enter Plugin Code」の誤りです。
 
 ### プラグインバージョン
 プラグインのバージョンを入力します。
 
 ```
 [+]Please enter version (correct format is x.y.z)
-Input[3] : 
+Input[3] :
 ```
 
 ### 作成者
@@ -80,7 +79,7 @@ Input[3] :
 
 ```
 [+]Please enter author name or company
-Input[4] : 
+Input[4] :
 ```
 
 ### EC-CUBE3のサポート有無
@@ -88,7 +87,7 @@ EC-CUBE3.0.8以下と3.0.9以上でプラグイン機構に改修が入りまし
 
 ```
 [+]Do you want to support old versions too? [y/n]
-Input[5] : 
+Input[5] :
 ```
 
 ### 共通イベント設定
@@ -98,7 +97,7 @@ EC-CUBE3で用意している共通イベント名を指定します。イベン
 
 ```
 [+]Please enter site events(you can find documentation here http://www.ec-cube.net/plugin/)
-Input[6] : 
+Input[6] :
 ```
 
 `app`のみを入力し、enterを押します。
@@ -115,7 +114,7 @@ Input[6] : app
  - eccube.event.app.terminate
 
 [+]Please enter site events(you can find documentation here http://www.ec-cube.net/plugin/)
-Input[6] : 
+Input[6] :
 ```
 
 イベント名にappが含まれているイベントが一覧表示されます。
@@ -131,7 +130,7 @@ Input[6] : eccube.event.app.request
 
 --- Press Enter to move to the next step ---
 [+]Please enter site events(you can find documentation here http://www.ec-cube.net/plugin/)
-Input[6] : 
+Input[6] :
 ```
 
 
@@ -139,8 +138,8 @@ Input[6] :
 フロント、管理画面で利用しているイベントを設定します。使い方は共通イベントと同様です。
 
 ```
-[+]Please enter hook point, sample：front.cart.up.initialize
-Input[7] : 
+[+]Please enter hookpoint, sample：front.cart.up.initialize
+Input[7] :
 ```
 
 
@@ -153,13 +152,13 @@ Input[7] :
 [+]Plugin Name:  サンプルプラグイン
 [+]Plugin Code:  Sample
 [+]Version:  1.0.0
-[+]Author:  lockon
+[+]Author:  Lockon co,.ltd.
 [+]Old version support:  No
-[+]Site events: 
+[+]Site events:
   eccube.event.app.request
-[+]Hook points: 
+[+]Hook points:
 
-[confirm] Do you want to proceed? [y/n] : 
+[confirm] Do you want to proceed? [y/n] :
 ```
 
 
@@ -201,5 +200,5 @@ Plugin was created successfully
 
 
 EC-CUBE3.0.13未満をご利用の方にはプラグインジェネレータというプラグインの雛形を作成するプラグインもあります。  
-そちらの説明は[こちら](plugin_tutorial-plugin-generate)を参照してください。
+詳細は[こちら](plugin_tutorial-plugin-generate)を参照してください。
 

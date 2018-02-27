@@ -54,31 +54,20 @@ EC-CUBE3の公式サイトからダウンロードして開発を始めるには
 ## 実行環境の構築
 
 ### ビルトインウェブサーバを利用した実行環境構築
-php5.4から[ビルトインウェブサーバ](http://php.net/manual/ja/features.commandline.webserver.php){:target="_blank"}と呼ばれる機能が提供されており、
-この機能を使用することで簡単にEC-CUBE3の実行環境が作成できます。
+
+php5.4から[ビルトインウェブサーバ](http://php.net/manual/ja/features.commandline.webserver.php){:target="_blank"}と呼ばれる機能が提供されており、この機能を使用することで簡単にEC-CUBE3の実行環境が作成できます。
 
 ビルトインウェブサーバを実行するには以下のコマンドを実行します。
 
 ```
-php -S localhost:8000
+php -S localhost:8000 -t html html/index.php
 ```
 
-これだけで、ブラウザから`http://localhost:8000/html`にアクセスするとEC-CUBE3が動作します。
+これだけで、ブラウザから`http://localhost:8000/`にアクセスするとEC-CUBE3が動作します。
 
-URLに`html`を含ませたくない場合、
-
-```
-php -S localhost:8000 -t html/
-```
-
-ドキュメントルートディレクトリにhtmlを指定すると、`http://localhost:8000/`としてアクセス可能です。
-
-
-また、MySQLやPostgreSQLを用意せずインストール時にSQLiteを利用することでDBを用意することなく開発環境が作成可能です。
-そのためビルトインウェブサーバを利用するだけで簡単にEC-CUBE3の動作環境がご利用できます。
+また、インストール時にデータベースとして SQLite を選択することで、MySQLやPostgreSQLを用意せず開発環境が作成可能です。
 
 ※ ビルトインウェブサーバやSQLLiteは本番環境では推奨されておらず、開発環境のみでご利用ください。
-
 
 ### 他の実行環境構築
 - MAMPを利用した環境構築  

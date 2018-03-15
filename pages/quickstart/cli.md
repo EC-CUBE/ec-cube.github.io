@@ -30,15 +30,15 @@ EC-CUBEが提供しているコマンドの一覧と概要です。
 
 | コマンド名               | 概要                                                               |
 |--------------------------|--------------------------------------------------------------------|
-| eccube:fixtures:generate | 商品や会員データのダミーデータを投入します。                       |
-| eccube:fixtures:load     | 初期データを投入します。                                           |
-| eccube:generate:proxies  | Entity拡張を利用している場合に、プロキシファイルの生成を行います。 |
 | eccube:install           | EC-CUBEのインストールを行います。                                  |
-| eccube:plugin:disable    | EC-CUBEのプラグインを無効化します。                                |
-| eccube:plugin:enable     | EC-CUBEのプラグインを有効化します。                                |
-| eccube:plugin:generate   | EC-CUBEのプラグインの雛形を生成します。                            |
 | eccube:plugin:install    | EC-CUBEのプラグインをインストールします。                          |
-| eccube:plugin:uninstall  | EC-CUBEのプラグインをアンインストールします。                      |
+| eccube:plugin:enable     | EC-CUBEのプラグインを有効化します。                                |
+| eccube:plugin:disable    | EC-CUBEのプラグインを無効化します。                                |
+| eccube:plugin:uninstall  | EC-CUBEのプラグインを削除します。                      |
+| eccube:plugin:generate   | EC-CUBEのプラグインの雛形を生成します。                            |
+| eccube:generate:proxies  | Entity拡張を利用している場合に、プロキシファイルの生成を行います。 |
+| eccube:fixtures:load     | 初期データを投入します。                                           |
+| eccube:fixtures:generate | 商品や会員データのダミーデータを投入します。                       |
 
 ## SymfonyやDoctrineが提供しているコマンド
 

@@ -12,8 +12,8 @@ permalink: quickstart_requirement
 | 分類 | ソフトウェア|Version|動作確認済み|
 |---|-------|---|-------|
 |WebServer|IIS | 8.x |*TBD*|
-|WebServer|Apache |2.2.x / 2.4.x <br> (mod_rewrite / mod_ssl 必須) |*TBD*|
-|PHP | PHP | 7.1.x 〜 |*TBD*|
+|WebServer|Apache |2.4.x <br> (mod_rewrite / mod_ssl 必須) |*TBD*|
+|PHP | PHP | 7.0.8 〜 |*TBD*|
 |Database|PostgreSQL| 9.2.x 〜 <br> (pg_settingsテーブルへの参照権限 必須) |*TBD*|
 |Database|MySQL|5.5.x / 5.6.x / 5.7.x <br> (InnoDBエンジン 必須) |*TBD*|
 |Database|SQLite(開発用途向け) |3.x |*TBD*|

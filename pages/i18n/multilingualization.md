@@ -93,6 +93,37 @@ var_dump($message);
 
 ```
 
+> FormTypeのラベルやエラーメッセージは自動で翻訳されるため、FormType内でtransする必要はありません。
+
+```php
+class TemplateType extends AbstractType
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+        
+            ...
+            
+            ->add('file', FileType::class, array(
+                // メッセージIDのみ指定する.
+                'label' => 'template.label.template_file',
+                'mapped' => false,
+                'required' => true,
+                'constraints' => array(
+                    // メッセージIDのみ指定する
+                    new Assert\NotBlank(array('message' => 'template.text.message.select_file')),
+                    new Assert\File(array(
+                        'mimeTypes' => array('application/zip', 'application/x-tar', 'application/x-gzip'),
+                        'mimeTypesMessage' => 'template.text.message.upload_files',
+                    )),
+                ),
+            ));
+    }
+            
+```
 ## transフィルタ
 
 twig内で翻訳する場合は、transフィルタを使用します。

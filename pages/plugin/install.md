@@ -43,9 +43,9 @@ bin/console eccube:plugin:disable            // 無効化
 1. 無効化  
 `bin/console eccube:plugin:disable --code=プラグインコード`
 1. 削除  
-`bin/console eccube:plugin:disable --code=プラグインコード`
+`bin/console eccube:plugin:uninstall --code=プラグインコード`
 1. 削除(プラグインのファイルも削除する場合)  
-`bin/console eccube:plugin:disable --code=プラグインコード --uninstall-force=true`
+`bin/console eccube:plugin:uninstall --code=プラグインコード --uninstall-force=true`
 
 
 ### 管理画面を利用してインストールする

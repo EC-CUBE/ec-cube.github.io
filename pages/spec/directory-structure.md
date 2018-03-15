@@ -9,70 +9,43 @@ permalink: spec_directory-structure
 
 ## 特徴
 
-1. EC-CUBE 3ではSilexフレームワークを採用しているため、**2系から大幅にディレクトリ構造が変化**しました。
-
-1. **Symfony2のディレクトリ構造を参考**に、EC-CUBE 3**独自構成**となっています。
-
-1. **公開ディレクトリについては２系をほぼ踏襲**しています。
-
+1. [Symfony3系のディレクトリ構造](https://symfony.com/doc/3.4/quick_tour/the_architecture.html)を参考に、EC-CUBE 3.n独自構成となっています。
 
 ## 主なディレクトリと役割
 
-- 以下に主なフォルダとディレクトリ構成を示します。
+### app/
 
-1. app : 主に環境によって変更が入るものを配置。
-1. html : Document Rootとなるフォルダ。外部から直接参照する物のみ配置。
-1. src : EC-CUBEのCOREとなるソースを配置。
+- 設定ファイルやプラグイン、EC-CUBEをカスタマイズするPHPコードなど、アプリケーションごとに変更されるファイルを配置
 
-下記に各ディレクトリの詳細を説明します。
+```
+app
+├── Acme      カスタマイズ用PHPコードを配置
+├── Plugin    インストールしたプラグインを配置
+├── config    設定ファイルを配置
+├── proxy     Entity拡張機能によって生成されたProxyクラスを配置
+└── template  上書きされたテンプレートファイルを配置
+```
 
+### bin/
 
-### app配下
+- `bin/console`など、開発に使用する実行ファイルを配置
 
-- **設定ファイル**や**ログ・ファイル等**が配置、**プラグインは「Plugin」ディレクトリ**配下に配置
+### html/
 
+- リソースファイル(jsやcssや画像ファイル）を配置
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/spec_directory_structure/directory_app.txt"></script>
+### src/
 
+- EC-CUBE本体となり、phpファイルやTwigファイルを配置
 
-### html配下
+### tests/
 
-- **公開ディレクトリ**となり、**リソースファイル**(cssや画像ファイル）を配置
+- テストコードを配置
 
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/spec_directory_structure/directory_html.txt"></script>
+### var/
 
+- キャッシュやログファイルなど、実行時に生成されるファイルを配置
 
-### src配下
+### vendor/
 
-- **アプリケーション本体**となり、phpファイルやTwigファイルを配置
-
-<script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/spec_directory_structure/directory_src.txt"></script>
-
-
-
-## 定数
-
-- EC-CUBE 3で利用される定数は以下に保存されています
-
-### 対象ファイル
-
-1. Common/**Constant.php**
-    - EC-CUBEのバージョンなど、基本情報の定数です。
-
-2. Resource/config/**constant.yml.dist**
-    - 主にプログラム上で利用する定数です。
-
-## 2系・3系置き換え早見表
-
-| 2系                    | 3系                                      |
-|------------------------|------------------------------------------|
-| SC_FormParam           | Eccube\Form\Type\                        |
-| SC_Query               | Doctrine Orm                              |
-| SC\_Helper\_Purchase     | Eccube\Service\PurchaseService           |
-| LC\_Page\_Products\_Class | Eccube\Controller\ProductClassController |
-| *.tpl                  | Eccube\Resouce\template\\*.twig                       |
-
-
-## 参照元
-
-- <a href="https://speakerdeck.com/amidaike/ec-cube3kodorideingu-number-1" target="_blank">EC-CUBE 3コードリーディング #1</a>
+- サードパーティの依存ライブラリを配置

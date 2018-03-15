@@ -11,4 +11,4 @@ folder: customize
 ---
 
 # Entityのカスタマイズ
-+ Entity拡張
++ Entity拡張 [#2267](https://github.com/EC-CUBE/ec-cube/pull/2267)

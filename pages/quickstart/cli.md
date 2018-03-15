@@ -1,87 +1,78 @@
 ---
-title: インストール方法
-keywords: howto install 
-tags: [quickstart, getting_started]
+title: コマンドラインインターフェイス
+keywords: CLI
+tags: [quickstart, cli]
 sidebar: home_sidebar
-permalink: quickstart_install
+permalink: quickstart_cli
 forder: quickstart
 ---
 
-## 事前準備
+## コマンドラインインターフェイス
 
-- 予めMySQLもしくはPostgreSQLでデータベースを作成しておいて下さい。
-- サイトのDocumentRootが、EC-CUBEのhtmlのフォルダとなるように設定してください  
+EC-CUBEでは、コマンドラインで実行できる各種ユーティリティコマンドを提供しています。
+以下のように実行することができます。
 
-※DocumentRootが変更できない場合は、トップページのURLは「http://サイトURL/html/」となります。  
-※ただし、3.0.11以降では[こちらの手順](/quickstart_remove-html)を行うことで、URLからhtmlを無くした状態でインストールできるようになりました。
-
-
-## インストール方法
-
-EC-CUBEのインストールは、以下の2種類の方法があります。
-
-- インストールスクリプトでインストールする
-- Webインストーラでインストールする
-
-## インストールスクリプトを利用したインストール方法
-
-`eccube_install.php`で、コマンドラインからインストールすることができます。
-
-以下のように実行してください。
-
-`php eccube_install.php [mysql|pgsql|sqlite3] [none] [options]`
-
-以下はコマンドの実行例です。
-
-PostgreSQLの場合
-
-```
-php eccube_install.php pgsql
+```bash
+$ cd [ec-cube ルートディレクトリ]
+$ bin/console eccube:install
 ```
 
-MySQLの場合
+コマンド名は省略することも可能です。
+コマンド名が`eccube:install`であれば、`e:i`でも実行できます。
 
-```
-php eccube_install.php mysql
-```
-
-データベースのホストやデータベース名を変更する場合は、環境変数で指定します。
-
-以下は、DBSERVERとDBNAMEを設定する例です。
-
-```
-export DBSERVER=xxx.xxx.xxx.xxx
-export DBNAME=eccube_dev_db
-
-php eccube_install.php mysql
+```bash
+$ bin/console e:i
 ```
 
-その他の設定やオプションは、`--help`で確認することができます
+## EC-CUBEが提供しているコマンド
 
+EC-CUBEが提供しているコマンドの一覧と概要です。
+
+| コマンド名               | 概要                                                               |
+|--------------------------|--------------------------------------------------------------------|
+| eccube:install           | EC-CUBEのインストールを行います。                                  |
+| eccube:plugin:install    | EC-CUBEのプラグインをインストールします。                          |
+| eccube:plugin:enable     | EC-CUBEのプラグインを有効化します。                                |
+| eccube:plugin:disable    | EC-CUBEのプラグインを無効化します。                                |
+| eccube:plugin:uninstall  | EC-CUBEのプラグインを削除します。                      |
+| eccube:plugin:generate   | EC-CUBEのプラグインの雛形を生成します。                            |
+| eccube:generate:proxies  | Entity拡張を利用している場合に、プロキシファイルの生成を行います。 |
+| eccube:fixtures:load     | 初期データを投入します。                                           |
+| eccube:fixtures:generate | 商品や会員データのダミーデータを投入します。                       |
+
+## SymfonyやDoctrineが提供しているコマンド
+
+SymfonyやDoctrineが提供しているコマンドの一覧と概要です。
+ここでは主要なコマンドを紹介します。
+
+| コマンド名               | 概要                                                            |
+|--------------------------|-----------------------------------------------------------------|
+| cache:clear              | キャッシュを削除します。--no-warmupを指定するのが望ましいです。 |
+| cache:warmup             | キャッシュの生成を行います。                                    |
+| server:run               | 開発用のWebサーバを立ち上げます。                               |
+| debug:router             | ルーティングの一覧を確認できます。                              |
+| doctrine:database:create | データベースの作成を行います。                                  |
+| doctrine:database:drop   | データベースの削除を行います。                                  |
+| doctrine:schema:create   | Entityのマッピング定義を元にテーブルの生成を行います。          |
+| doctrine:schema:drop     | Entityのマッピング定義を元にテーブルの削除を行います。          |
+| doctrine:schema:update   | Entityのマッピング定義を元にテーブルの更新を行います。          |
+
+## 参考
+
+上記で紹介したコマンドの他にも、たくさんのコマンドが存在します。
+
+コマンドの一覧は、
+
+```bash
+$ bin/console list
 ```
-php eccube_install.php --help
+
+で確認できます。
+
+また、
+
+```bash
+$ bin/console [command name] --help
 ```
 
-インストール完了後、 `http://{インストール先URL}/admin`にアクセス
-EC-CUBEの管理ログイン画面が表示されればインストール成功です。以下のID/Passwordにてログインしてください。
-
-`ID: admin PW: password`
-
-また、後述の Webインストーラーは不要なので削除してください。
-
-```
-rm html/install.php
-```
-
-## Webインストーラーを利用したインストール方法
-
-- composerを利用してソースコードを取得する
-
-```
-curl -sS https://getcomposer.org/installer | php
-php composer.phar create-project ec-cube/ec-cube ec-cube "^3.0"
-```
-
-- Webインストーラーにアクセスする
-
-`http://{インストール先URL}/install.php`にアクセスし、表示されるインストーラーの指示にしたがってインストールしてください。
+で使い方を確認できます。

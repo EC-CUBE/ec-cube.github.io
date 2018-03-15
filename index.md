@@ -16,38 +16,29 @@ permalink: /
 
 ## Quick Start
 
-+ [システム要件](/quickstart_requirement)
-+ [インストール方法](/quickstart_install)
-+ [コマンドラインインターフェイス](/quickstart_cli)
++ [システム要件](quickstart_requirement)
++ [インストール方法](quickstart_install)
++ [コマンドラインインターフェイス](quickstart_cli)
 
 ## 本体カスタマイズ
-+ [ディレクトリ構成](/spec_directory-structure)
-+ [Controllerのカスタマイズ](/customize_controller)
-+ [Entityのカスタマイズ]/customize_entity)
-+ [Repositoryのカスタマイズ](/customize_repository)
-+ FormTypeのカスタマイズ
-    + FormExtension
-    + Entityからフォームを生成する
-+ Serviceのカスタマイズ
-    + 購入フローのカスタマイズ
-+ テンプレートのカスタマイズ
-    + Twigの変更
-    + Twigユーザ定義関数
-+ Symfonyの機能を使った拡張
-    + EventSubscriber
-    + Command
++ [ディレクトリ構成](spec_directory-structure)
++ [Controllerのカスタマイズ](customize_controller)
++ [Entityのカスタマイズ](customize_entity)
++ [Repositoryのカスタマイズ](customize_repository)
++ [FormTypeのカスタマイズ](customize_formtype)
++ [Serviceのカスタマイズ](customize_service)
++ [テンプレートのカスタマイズ](customize_template)
++ [Symfonyの機能を使った拡張](customize_symfony)
 
 ### Cookbook
 
 ## プラグインカスタマイズ
-+ プラグイン仕様
-+ プラグインのインストール
-+ プラグインサンプル
++ [プラグイン仕様](plugin_spec)
++ [プラグインのインストール](plugin_install)
++ [プラグインサンプル](plugin_sample)
 
 ## 多言語化
-+ 言語の切り替え
-+ 言語ファイル
-+ trans関数
++ [多言語化仕様](multilingualization_spec)
 
 ## Supporters
 

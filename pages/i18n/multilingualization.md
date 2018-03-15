@@ -108,8 +108,6 @@ class TemplateType extends AbstractType
             ...
             
             ->add('file', FileType::class, array(
-                // メッセージIDのみ指定する.
-                'label' => 'template.label.template_file',
                 'mapped' => false,
                 'required' => true,
                 'constraints' => array(

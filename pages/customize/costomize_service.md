@@ -58,6 +58,16 @@ class ProductClassAndOptionComparator implements CartItemComparator
 
 ```
 
+CartItemComparator を有効にするには、 `app/config/eccube/packages/cart.yaml` を作成し、CartItemComparator の定義を追加します。
+
+```yaml
+services:
+    Eccube\Service\Cart\CartItemComparator:
+      class: Eccube\Service\Cart\ProductClassAndOptionComparator
+
+```
+
+
 ### 支払方法が異なる商品を同時にカートに入れられるようにする
 
 例えば、配送方法A/B、商品A/Bがそれぞれある場合、
@@ -105,6 +115,15 @@ class SaleTypeAndReserveCartAllocator implements CartItemAllocator
         throw new \InvalidArgumentException('ProductClass/SaleType not found');
     }
 }
+
+```
+
+CartItemAllocator を有効にするには、 `app/config/eccube/packages/cart.yaml` を作成し、CartItemAllocator の定義を追加します。
+
+```yaml
+services:
+    Eccube\Service\Cart\CartItemAllocator:
+      class: Eccube\Service\Cart\SaleTypeAndReserveCartAllocator
 
 ```
 
@@ -259,5 +278,19 @@ class ValidatableEmptyProcessor extends ValidatableItemProcessor
 
 ```
 
+独自に作成した Processor を有効にするには、 `app/config/eccube/packages/purchaseflow.yaml` の定義を修正します。
 
+```yaml
+    eccube.purchase.flow.cart.item_processors:
+        class: Doctrine\Common\Collections\ArrayCollection
+        arguments:
+            - #
+                - '@Plugin\PurchaseProcessors\Processor\EmptyProcessor' # 追加
+                - '@Eccube\Service\PurchaseFlow\Processor\DisplayStatusValidator'
+                - '@Eccube\Service\PurchaseFlow\Processor\SaleLimitValidator'
+                - '@Eccube\Service\PurchaseFlow\Processor\DeliverySettingValidator'
+                - '@Eccube\Service\PurchaseFlow\Processor\StockValidator'
+                - '@Eccube\Service\PurchaseFlow\Processor\ProductStatusValidator'
+                - '@Plugin\PurchaseProcessors\Processor\ValidatableEmptyProcessor' # 追加
 
+```

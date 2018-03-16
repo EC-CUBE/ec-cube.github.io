@@ -65,9 +65,11 @@ class AdminProductListCustomizer extends OrderByCustomizer
     }
 
     /**
-     * カスタマイズ対象のキーを返します。
+     * ProductRepository::getQueryBuilderBySearchDataForAdmin に適用する.
      *
      * @return string
+     * @see \Eccube\Repository\ProductRepository::getQueryBuilderBySearchDataForAdmin()
+     * @see QueryKey
      */
     public function getQueryKey()
     {

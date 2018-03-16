@@ -30,6 +30,13 @@ permalink: /
 + [テンプレートのカスタマイズ](customize_template)
 + [Symfonyの機能を使った拡張](customize_symfony)
 
+## デザインカスタマイズ
++ [デザインテンプレートの基礎](design_template)
++ [デザインのフレーム構成](design_default_frame)
++ [フォームレイアウトの変更](design_form)
++ [ブロックの利用](design_block)
++ [レイアウト管理の利用](design_layout)
+
 ### Cookbook
 
 ## プラグインカスタマイズ

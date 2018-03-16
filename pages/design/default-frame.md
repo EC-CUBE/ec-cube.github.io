@@ -13,215 +13,295 @@ EC-CUBEでは画面を構成するために基本となるテンプレートを�
 その基本となるテンプレートが **`default_frame.twig`**となります。
 
 default_frame.twigにはサイトで使う共通要素(headタグやヘッダー、フッター等)を記述し、このテンプレートを継承することでサイト共通となるデザインが作成できます。  
-フロントと管理画面のdefault_frame.twigの配置場所は以下です。  
+フロントと管理画面のdefault_frame.twigの配置場所は以下の通りです。  
 
 - フロント用のdefault_frame.twig  
-`ECCUBEROOT/src/Eccube/Resource/template/default/default_frame.twig`
+ECCUBEROOT/src/Eccube/Resource/template/default/default_frame.twig
 
 - 管理画面用のdefault_frame.twig  
-`ECCUBEROOT/src/Eccube/Resource/template/admin/default_frame.twig`
+ECCUBEROOT/src/Eccube/Resource/template/admin/default_frame.twig
+
+
+各ページからは、
+
+{% highlight twig  %}
+{% raw %}
+{% extends 'default_frame.twig' %}
+
+{% block main %}
+    <div class="ec-sliderRole">
+        <div class="main_visual">
+            <div class="item"><img src="{{ asset('img/top/mv01.jpg') }}"></div>
+            <div class="item"><img src="{{ asset('img/top/mv02.jpg') }}"></div>
+            <div class="item"><img src="{{ asset('img/top/mv03.jpg') }}"></div>
+        </div>
+    </div>
+{% endblock %}{% endraw %}
+{% endhighlight %}
+
+`{% raw %}{% extends 'default_frame.twig' %}{% endraw %}` を記述し、 `{% raw %}{% block main %}{% endraw %}` と `{% raw %}{% endblock %}{% endraw %}` の間へタグを記述することで表示されるようになります。
 
 
 ## default_frame.twigの構成
 
-フロント画面のレイアウト変更は管理画面の[コンテンツ管理] → [ページ管理] → [TOPページ] → [レイアウト編集]から可能ですが、
-この画面にある`head``#header``contents_top`・・・と枠で構成されている箇所はdefault_frame.twigに枠が定義されており、
-この枠内にブロックを配置することでフロントのレイアウト変更が可能です。
-
-`main`枠については各コンテンツが表示される枠となります。
-
-![レイアウト管理](/images/design/design-default-frame-01.png)
-
+`default_frame.twig` には各ブロックを配置できるようにブロック枠が定義されており、この枠内にブロックを配置することでフロントのレイアウト変更が可能です。  
+この枠に配置するブロックは[レイアウト管理](design_layout)で定義可能です。
 
 
 ## フロント用のdefault_frame.twigの内容
 
-- 51〜57行目  
-レイアウト管理での`head`枠の箇所となります。<head></head>タグ内に記述する必要のあるタグ等を扱うときに使用します。
+default_frame.twigに定義されている枠はそれぞれの枠毎で配置される場所が異なり、ブロックを設定するとその枠に表示されるようになります。
+
+### headセクション  
+`<head></head>`タグ内に記述する必要のあるタグを扱うときに使用します。
 
 {% highlight twig  %}
-・
-・{% raw %}
-<script>window.jQuery || document.write('<script src="{{ app.config.front_urlpath }}/js/vendor/jquery-1.11.3.min.js?v={{ constant('Eccube\\Common\\Constant::VERSION') }}"><\/script>')</script>
-
-{# ▼Head COLUMN #}
-{% if PageLayout.Head %}
-    {# ▼上ナビ #}
-    {{ include('block.twig', {'Blocks': PageLayout.Head}) }}
-    {# ▲上ナビ #}
+{% raw %}
+{# Layout: HEAD #}
+{% if Page.Head %}
+    {{ include('block.twig', {'Blocks': Page.Head}) }}
 {% endif %}
-{# ▲Head COLUMN #}
-
-</head>{% endraw %}
-・
-・
+{% endraw %}
 {% endhighlight %}
 
-- 64〜70行目  
-レイアウト管理での`#header`枠の箇所となります。ヘッダー部分を記述するときに使用します。
+### <body>タグ直後  
+`<body>`タグ直後に記述する必要のあるタグを扱うときに使用します。
 
 {% highlight twig  %}
-・
-・{% raw %}
-<header id="header">
-    <div class="container-fluid inner">
-        {# ▼HeaderInternal COLUMN #}
-        {% if PageLayout.Header %}
-            {# ▼上ナビ #}
-            {{ include('block.twig', {'Blocks': PageLayout.Header}) }}
-            {# ▲上ナビ #}
-        {% endif %}
-        {# ▲HeaderInternal COLUMN #}
-        <p id="btn_menu"><a class="nav-trigger" href="#nav">Menu<span></span></a></p>
-    </div>
-</header>{% endraw %}
-・
-・
+{% raw %}
+{# Layout: BodyAfter #}
+{% if Page.BodyAfter %}
+    {{ include('block.twig', {'Blocks': Page.BodyAfter}) }}
+{% endif %}
+{% endraw %}
 {% endhighlight %}
 
-- 78〜84行目  
-レイアウト管理での`#contents_top`枠の箇所となります。
+### #header  
+レイアウト管理での`#head`枠の箇所となり、ヘッダーとして表示したいブロックを設定します。
 
 {% highlight twig  %}
-・
-・{% raw %}
-<div id="contents_top">
-    {# ▼TOP COLUMN #}
-    {% if PageLayout.ContentsTop %}
-        {# ▼上ナビ #}
-        {{ include('block.twig', {'Blocks': PageLayout.ContentsTop}) }}
-        {# ▲上ナビ #}
-    {% endif %}
-    {# ▲TOP COLUMN #}
-</div>{% endraw %}
-・
-・
-{% endhighlight %}
-
-- 88〜96行目  
-レイアウト管理での`#side_left`枠の箇所となります。
-
-{% highlight twig  %}
-・
-・{% raw %}
-<div class="container-fluid inner">
-    {# ▼LEFT COLUMN #}
-    {% if PageLayout.SideLeft %}
-        <div id="side_left" class="side">
-            {# ▼左ナビ #}
-            {{ include('block.twig', {'Blocks': PageLayout.SideLeft}) }}
-            {# ▲左ナビ #}
-        </div>
-    {% endif %}
-    {# ▲LEFT COLUMN #}{% endraw %}
-・
-・
-{% endhighlight %}
-
-
-- 99〜105行目、108行目、111〜117行目  
-レイアウト管理での`#main_top``Main``main_bottom`枠の箇所となります。  
-特に重要なのが`{% raw %}{% block main %}{% endblock %}{% endraw %}`であり、
-この記述で各ページのコンテンツはこの箇所に表示されます。
-
-{% highlight twig  %}
-・
-・{% raw %}
-<div id="main">
-    {# ▼メイン上部 #}
-    {% if PageLayout.MainTop %}
-        <div id="main_top">
-            {{ include('block.twig', {'Blocks': PageLayout.MainTop}) }}
-        </div>
-    {% endif %}
-    {# ▲メイン上部 #}
-
-    <div id="main_middle">
-        {% block main %}{% endblock %}
-    </div>
-
-    {# ▼メイン下部 #}
-    {% if PageLayout.MainBottom %}
-        <div id="main_bottom">
-            {{ include('block.twig', {'Blocks': PageLayout.MainBottom}) }}
-        </div>
-    {% endif %}
-    {# ▲メイン下部 #}
-</div>{% endraw %}
-・
-・
-{% endhighlight %}
-
-
-- 120〜128行目  
-レイアウト管理での`#side_right`枠の箇所となります。
-
-{% highlight twig  %}
-・
-・{% raw %}
-{# ▼RIGHT COLUMN #}
-{% if PageLayout.SideRight %}
-    <div id="side_right" class="side">
-        {# ▼右ナビ #}
-        {{ include('block.twig', {'Blocks': PageLayout.SideRight}) }}
-        {# ▲右ナビ #}
+{% raw %}
+{# Layout: HEADER #}
+{% if Page.Header %}
+    <div class="ec-layoutRole__header">
+        {{ include('block.twig', {'Blocks': Page.Header}) }}
     </div>
 {% endif %}
-{# ▲RIGHT COLUMN #}{% endraw %}
-・
-・
+{% endraw %}
 {% endhighlight %}
 
 
-- 130〜138行目  
-レイアウト管理での`#contents_bottom`枠の箇所となります。
+### #contents_top  
+レイアウト管理での`#contents_top`枠の箇所となり、コンテンツ上部に表示したブロックを設定します。
 
 {% highlight twig  %}
-・
-・{% raw %}
-{# ▼BOTTOM COLUMN #}
-{% if PageLayout.ContentsBottom %}
-    <div id="contents_bottom">
-        {# ▼下ナビ #}
-        {{ include('block.twig', {'Blocks': PageLayout.ContentsBottom}) }}
-        {# ▲下ナビ #}
+{% raw %}
+{# Layout: CONTENTS_TOP #}
+{% if Page.ContentsTop %}
+    <div class="ec-layoutRole__contentTop">
+        {{ include('block.twig', {'Blocks': Page.ContentsTop}) }}
     </div>
 {% endif %}
-{# ▲BOTTOM COLUMN #}
-
-</div>{% endraw %}
-・
-・
+{% endraw %}
 {% endhighlight %}
 
-- 143〜149行目  
-レイアウト管理での`#footer`枠の箇所となります。
+
+### #side_left、#side_right  
+レイアウト管理での`#side_left`、`#side_right`枠の箇所となり、左サイトで表示したブロックを設定します。
 
 {% highlight twig  %}
-・
-・{% raw %}
-<footer id="footer">
-    {# ▼Footer COLUMN#}
-    {% if PageLayout.Footer %}
-        {# ▼上ナビ #}
-        {{ include('block.twig', {'Blocks': PageLayout.Footer}) }}
-        {# ▲上ナビ #}
-    {% endif %}
-    {# ▲Footer COLUMN#}
-
-</footer>
-
-</div>{% endraw %}
-・
-・
+{% raw %}
+{# Layout: SIDE_LEFT #}
+{% if Page.SideLeft %}
+    <div class="ec-ec-layoutRole__left">
+        {{ include('block.twig', {'Blocks': Page.SideLeft}) }}
+    </div>
+{% endif %}
+{% endraw %}
 {% endhighlight %}
 
 
-管理画面のdefault_frame.twigには`#main_top``Main``main_bottom`・・枠は存在していませんが、  
+{% highlight twig  %}
+{% raw %}
+{# Layout: SIDE_RIGHT #}
+{% if Page.SideRight %}
+    <div class="ec-layoutRole__mainRight">
+        {{ include('block.twig', {'Blocks': Page.SideRight}) }}
+    </div>
+{% endif %}
+{% endraw %}
+{% endhighlight %}
+
+
+### #main_top、#main、#main_bottom  
+レイアウト管理での`#main_top`、`#main`、`#main_bottom`枠の箇所となり、  
+特に重要なのが`{% raw %}{% block main %}{% endblock %}{% endraw %}`になります。  
+この記述で各ページのコンテンツがこの枠に表示されます。
+
+{% highlight twig  %}
+{% raw %}
+<div class="{{ layoutRoleMain }}">
+    {# Layout: MAIN_TOP #}
+    {% if Page.MainTop %}
+        <div class="ec-layoutRole__mainTop">
+            {{ include('block.twig', {'Blocks': Page.MainTop}) }}
+        </div>
+    {% endif %}
+
+    {# MAIN AREA #}
+    {% block main %}{% endblock %}
+
+    {# Layout: MAIN_Bottom #}
+    {% if Page.MainBottom %}
+        <div class="ec-layoutRole__mainBottom">
+            {{ include('block.twig', {'Blocks': Page.MainBottom}) }}
+        </div>
+    {% endif %}
+</div>
+{% endraw %}
+{% endhighlight %}
+
+
+### #contents_bottom  
+レイアウト管理での`#contents_bottom`枠の箇所となり、コンテンツ下部に表示したブロックを設定します。
+
+{% highlight twig  %}
+{% raw %}
+{# Layout: CONTENTS_BOTTOM #}
+{% if Page.ContentsBottom %}
+    <div class="ec-layoutRole__contentBottom">
+        {{ include('block.twig', {'Blocks': Page.ContentsBottom}) }}
+    </div>
+{% endif %}
+{% endraw %}
+{% endhighlight %}
+
+
+### #footer  
+レイアウト管理での`#footer`枠の箇所となり、フッターとして表示したブロックを設定します。
+
+{% highlight twig  %}
+{% raw %}
+{# Layout: CONTENTS_FOOTER #}
+{% if Page.Footer %}
+    <div class="ec-layoutRole__footer">
+        {{ include('block.twig', {'Blocks': Page.Footer}) }}
+    </div>
+{% endif %}
+{% endraw %}
+{% endhighlight %}
+
+
+### #drawer  
+レイアウト管理での`#drawer`枠の箇所となり、レスポンシブ利用時にスマホのドロワーメニューとして利用される枠になります。
+
+{% highlight twig  %}
+{% raw %}
+{# Layout: DRAWER #}
+{% if Page.Drawer %}
+    {{ include('block.twig', {'Blocks': Page.Drawer}) }}
+{% endif %}
+{% endraw %}
+{% endhighlight %}
+
+### </body>タグ直前  
+`</body>`タグ直前に記述する必要のあるタグを扱うときに使用します。
+
+{% highlight twig  %}
+{% raw %}
+{# Layout: BodyBefore #}
+{% if Page.BodyBefore %}
+    {{ include('block.twig', {'Blocks': Page.BodyBefore}) }}
+{% endif %}
+{% endraw %}
+{% endhighlight %}
+
+## 管理画面用のdefault_frame.twigの内容
+
+管理画面のdefault_frame.twigにはフロントのような枠は存在していませんが、  
 `{% raw %}{% block main %}{% endblock %}{% endraw %}`は必須で、その部分に各管理画面の内容が表示されます。
 
 
+## フロント用のdefault_frame.twigのカスタマイズ
 
+標準のままだと、各枠は `<div class="ec-layoutRole">` というタグで囲まれています。もし独自でデザインを作成したいという方は、  
+下記のように不要なタグを削除して定義し、それぞれのデザインに合わせてタグやCSSを記述することで好きなようにデザイン可能です。
 
+{% highlight twig  %}
+{% raw %}
+・
+・
+・
+    {# Layout: HEAD #}
+    {% if Page.Head %}
+        {{ include('block.twig', {'Blocks': Page.Head}) }}
+    {% endif %}
+</head>
+<body id="page_{{ app.request.get('_route') }}" class="{{ body_class|default('other_page') }}">
+    {# Layout: BodyAfter #}
+    {% if Page.BodyAfter %}
+        {{ include('block.twig', {'Blocks': Page.BodyAfter}) }}
+    {% endif %}
+
+    {# Layout: HEADER #}
+    {% if Page.Header %}
+        {{ include('block.twig', {'Blocks': Page.Header}) }}
+    {% endif %}
+
+    {# Layout: CONTENTS_TOP #}
+    {% if Page.ContentsTop %}
+        {{ include('block.twig', {'Blocks': Page.ContentsTop}) }}
+    {% endif %}
+
+    {# Layout: SIDE_LEFT #}
+    {% if Page.SideLeft %}
+            {{ include('block.twig', {'Blocks': Page.SideLeft}) }}
+    {% endif %}
+
+    {# Layout: MAIN_TOP #}
+    {% if Page.MainTop %}
+        {{ include('block.twig', {'Blocks': Page.MainTop}) }}
+    {% endif %}
+
+    {# MAIN AREA #}
+    {% block main %}{% endblock %}
+
+    {# Layout: MAIN_Bottom #}
+    {% if Page.MainBottom %}
+        {{ include('block.twig', {'Blocks': Page.MainBottom}) }}
+    {% endif %}
+
+    {# Layout: SIDE_RIGHT #}
+    {% if Page.SideRight %}
+        {{ include('block.twig', {'Blocks': Page.SideRight}) }}
+    {% endif %}
+
+    {# Layout: CONTENTS_BOTTOM #}
+    {% if Page.ContentsBottom %}
+        {{ include('block.twig', {'Blocks': Page.ContentsBottom}) }}
+    {% endif %}
+
+    {# Layout: CONTENTS_FOOTER #}
+    {% if Page.Footer %}
+        {{ include('block.twig', {'Blocks': Page.Footer}) }}
+    {% endif %}
+
+<div class="ec-overlayRole"></div>
+<div class="ec-drawerRole"></div>
+<div class="ec-blockTopBtn"></div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="{{ asset('assets/js/script.js') }}"></script>
+<script src="{{ asset('js/function.js') }}"></script>
+<script src="{{ asset('js/eccube.js') }}"></script>
+{% block javascript %}{% endblock %}
+{# Layout: BodyBefore #}
+{% if Page.BodyBefore %}
+    {{ include('block.twig', {'Blocks': Page.BodyBefore}) }}
+{% endif %}
+</body>
+</html>
+{% endraw %}
+{% endhighlight %}
 
 

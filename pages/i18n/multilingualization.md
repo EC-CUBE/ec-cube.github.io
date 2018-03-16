@@ -93,7 +93,7 @@ var_dump($message);
 
 ```
 
-> FormTypeのラベルやエラーメッセージは自動で翻訳されるため、FormType内でtransする必要はありません。
+※ FormTypeのラベルやエラーメッセージは自動で翻訳されるため、FormType内でtransする必要はありません。
 
 ```php
 class TemplateType extends AbstractType
@@ -122,6 +122,7 @@ class TemplateType extends AbstractType
     }
             
 ```
+
 ## transフィルタ
 
 twig内で翻訳する場合は、transフィルタを使用します。
@@ -140,7 +141,7 @@ twig内で翻訳する場合は、transフィルタを使用します。
 ```twig
 
 {{ 'admin.order.index.paginator_total_count'|trans({
-    '' : 10
+    '%count%' : 10
 }) }}
 
 {# 検索結果：10件が該当しました #}

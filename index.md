@@ -38,7 +38,9 @@ permalink: /
 + [プラグインサンプル](plugin_sample)
 
 ## 多言語化
-+ [多言語化仕様](multilingualization_spec)
++ [多言語化](i18n_multilingualization)
++ [通貨](i18n_currency)
++ [タイムゾーン](i18n_timezone)
 
 ## Supporters
 

@@ -101,7 +101,7 @@ class HelloCommand extends Command
 
 ```bash
 
-$ bin/console acme:helllo
+$ bin/console acme:hello
 
  [OK] hello world
 
@@ -119,7 +119,7 @@ Doctrineのイベントシステムを利用することができます。
 
 ### ショップ名にようこそを付与するイベントリスナーを作成する
 
-`app/Acme/Doctrine`配下に`HelloEventSubscriber.php`を作成します。
+`app/Acme/Doctrine\EventSubscriber`配下に`HelloEventSubscriber.php`を作成します。
 
 ```php
 <?php

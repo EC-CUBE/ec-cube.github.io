@@ -79,6 +79,18 @@ yamlフォーマットの他に、phpやxmlでも記述可能です。
 コンテナの定義については、Symfonyの公式ドキュメントを参照してください。
 https://symfony.com/doc/current/service_container.html
 
+## プラグインのパッケージング
+
+開発したプラグインを配布したり、オーナーズストアに申請する際は、アーカイブする必要があります。
+アーカイブの方式は、tar.gzで行ってください。
+また、圧縮する際は、フォルダごと圧縮しないようにご注意ください。
+
+```bash
+$ cd app/[PluginDir]
+$ tar cvzf ../[PluginDir].tar.gz .
+
+```
+
 ## 3.0.xからの変更点
 
 3.0.xからの主な変更点を記載します。
@@ -86,8 +98,11 @@ https://symfony.com/doc/current/service_container.html
 - ServiceProviderの廃止
     - ServiceProviderで行っていたコンテナ定義は、Symfonyの機構を利用するようになりました。
 - マイグレーション機構の変更
+    - マイグレーションは、doctrine:schema:updateを利用するようになりました。
+    - PluginManagerではマイグレーションは行わず、初期データの投入・更新・削除のみ行うようにしてください。
 - フックポイントの非推奨化
-    - 
-
-- 「インストール」状態でないとロードされない
-    - ファイルの設置のみで動作していたのが、dtb_pluginに
+    - `eccube.event.admin.request`など、リクエストの実行前後に動作するフックポイントは非推奨となりました。
+    - twigファイルにパーツを差し込むために利用している場合は、スニペットを用意し、ユーザに貼り付けてもらう方式になります。
+    - https://github.com/EC-CUBE/ec-cube/issues/2440
+- ファイル設置のみのプラグインはロードされない
+    - dtb_pluginにレコードが登録されている必要があります。

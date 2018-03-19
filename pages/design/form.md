@@ -34,22 +34,23 @@ Twigではフォーム画面を作成する場合、専用の出力関数と変�
 ## フォームレイアウトの変更
 フォーム画面を作成する場合、form関数を利用すると自動的にタグが付加されてフォーム画面が作成されるようになりますが、デザインによってはフォーム画面を変更したい時があります。
 
-EC-CUBE3ではフォーム内容を出力するためのテンプレート`form_div_layout.twig`が用意されており、このファイルの内容を修正することでフォーム出力時のデザインを変更することが可能です。
+EC-CUBEではフォーム内容を出力するためのテンプレートが用意されており、このファイルの内容を修正することでフォーム出力時のデザインを変更することが可能です。
 
-フロントと管理画面のform_layout.twigの配置場所です。
+フロントと管理画面のフォームレイアウトの配置場所です。
 
-- フロント用のform_layout.twig  
+- フロント用のフォームレイアウト  
 ECCUBEROOT/src/Eccube/Resource/template/default/Form/form_div_layout.twig
 
-- 管理画面用のform_layout.twig  
-ECCUBEROOT/src/Eccube/Resource/template/admin/Form/form_div_layout.twig
+- 管理画面用のフォームレイアウト
+ECCUBEROOT/src/Eccube/Resource/template/admin/Form/bootstrap_4_layout.html.twig
+ECCUBEROOT/src/Eccube/Resource/template/admin/Form/bootstrap_4_horizontal_layout.html.twig
 
 ## フロント画面で利用しているform_div_layout.twigの内容
 
-form_div_layout.twigの内容は `block` で定義されている関数(form_errorsやform_labelなど)を独自に上書きしています。  
+フォームレイアウトの内容は `block` で定義されている関数(form_errorsやform_labelなど)を独自に上書きしています。  
 blockの後に続く `form_errors` や `form_label` がTwig関数と対応しています。
 
-### form_dev.layoutの中身
+### form_div_layout.tiwgの中身
 
 {% highlight twig  %}
 {% raw %}

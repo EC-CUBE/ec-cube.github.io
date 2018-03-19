@@ -36,6 +36,7 @@ permalink: /
 + [フォームレイアウトの変更](design_form)
 + [ブロックの利用](design_block)
 + [レイアウト管理の利用](design_layout)
++ [Sassの利用](design_css)
 
 ### Cookbook
 

@@ -38,7 +38,7 @@ public function getExtendedType()
 - configureOptions()
 - finishView()
 
-EC-CUBE 3.nでは、Symfonyの詳細はSymfonyのFormExtensionの仕組みを利用しています。  
+EC-CUBE 3.nでは、SymfonyのFormExtensionの仕組みを利用しています。  
 拡張方法の詳細についてはSymfonyのドキュメントを参照してください。
 https://symfony.com/doc/current/form/create_form_type_extension.html
 
@@ -59,7 +59,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
-class EntryTypeBirthdayExtension extends AbstractTypeExtension
+class CompanyNameRequiredExtension extends AbstractTypeExtension
 {
     /**
      * {@inheritdoc}

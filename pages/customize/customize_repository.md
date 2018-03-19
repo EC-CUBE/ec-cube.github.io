@@ -17,15 +17,18 @@ folder: customize
 リポジトリクラスで QueryBuilder を生成しているメソッドに対して、ソート順や検索条件をカスタマイズできます。
 以下のメソッドで使用できます。
 
-- `ProductRepository::getQueryBuilderBySearchData()`
-- `ProductRepository::getQueryBuilderBySearchDataForAdmin()`
-- `ProductRepository::getFavoriteProductQueryBuilderByCustomer`
-- `CustomerRepository::getQueryBuilderBySearchData()`
-- `OrderRepository::getQueryBuilderBySearchData()`
-- `OrderRepository.getQueryBuilderBySearchDataForAdmin()`
-- `OrderRepository::getQueryBuilderByCustomer()`
+| リポジトリクラス                                            | QueryKey                           |
+|-------------------------------------------------------------|------------------------------------|
+| ProductRepository::getQueryBuilderBySearchData()            | QueryKey::PRODUCT_SEARCH           |
+| ProductRepository::getQueryBuilderBySearchDataForAdmin()    | QueryKey::PRODUCT_SEARCH_ADMIN     |
+| ProductRepository::getFavoriteProductQueryBuilderByCustomer | QueryKey::PRODUCT_GET_FAVORITE     |
+| CustomerRepository::getQueryBuilderBySearchData()           | QueryKey::CUSTOMER_SEARCH          |
+| OrderRepository::getQueryBuilderBySearchData()              | QueryKey::ORDER_SEARCH             |
+| OrderRepository.getQueryBuilderBySearchDataForAdmin()       | QueryKey::ORDER_SEARCH_ADMIN       |
+| OrderRepository::getQueryBuilderByCustomer()                | QueryKey::ORDER_SEARCH_BY_CUSTOMER |
 
 カスタマイズするためのインターフェイスとしては以下を提供しています。
+
 
 | インターフェイス/クラス | 概要                       |
 |-------------------------|----------------------------|

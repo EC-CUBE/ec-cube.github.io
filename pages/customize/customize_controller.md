@@ -211,7 +211,7 @@ class SamplePageController extends AbstractController
 }
 ```
 
-EntityManger以外に、AbstractControllerを継承することで利用できるサービスナは `./src/Eccube/Controller/AbstractController.php` を確認してください。  
+EntityManger以外に、AbstractControllerを継承することで利用できるサービスは `./src/Eccube/Controller/AbstractController.php` を確認してください。  
 
 #### AbstractControllerに無いサービスを利用する
 

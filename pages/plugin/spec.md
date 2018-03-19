@@ -73,7 +73,7 @@ version: 1.0.0
 ### services.yaml
 
 コンテナの定義を行います。
-`[プラグインディレクトリ]/Resouce/services.yml`に設置します。
+`[プラグインディレクトリ]/Resouce/services.yaml`に設置します。
 yamlフォーマットの他に、phpやxmlでも記述可能です。
 
 コンテナの定義については、Symfonyの公式ドキュメントを参照してください。

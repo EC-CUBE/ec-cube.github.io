@@ -122,8 +122,11 @@ entries:
     - title: ブロックの利用
       url: /design_block
       output: web, pdf
-    - title: 例:GoogleAnalyticsタグの設置
-      url: /design_analyticsbloc
+    - title: レイアウトの利用
+      url: /design_layout
+      output: web, pdf
+    - title: 新規ページの作成
+      url: /design_page
       output: web, pdf
 
   - title: プラグインカスタマイズ

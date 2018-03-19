@@ -146,12 +146,12 @@ EC-CUBE既存のルーティングを上書きするには、同じパスと名�
 
 ### 管理画面のルーティングを追加する
 
-管理画面にログインしているユーザーのみがアクセスできるルーティングを追加する場合には、パスに `/{_admin}` を利用します。
+管理画面にログインしているユーザーのみがアクセスできるルーティングを追加する場合には、パスに `/%eccube_admin_route%` を利用します。
 
 ```php
     /**
      * @Method("GET")
-     * @Route("/{_admin}/sample")
+     * @Route("/%eccube_admin_route%/sample")
      */
     public function testMethod()
     {
@@ -159,7 +159,7 @@ EC-CUBE既存のルーティングを上書きするには、同じパスと名�
     }
 ```
 
-同様にUserDataへのルーティングは `/{_user_data}` を指定します。
+同様にUserDataへのルーティングは `/%eccube_user_data_route%` を指定します。
 
 ### リダイレクトを行う
 
@@ -179,9 +179,9 @@ AbstractControllerを継承して `redirectToRoute` 関数を利用すること�
 
 また `forwardToRoute` 関数を利用することで、リダイレクトではなく他のコントローラに処理を渡すことができます。
 
-### Controller内でコンテナを利用する
+### Controller内でサービスを利用する
 
-`AbstractController` を継承することで、よく利用するコンテナを利用することができます。  
+`AbstractController` を継承することで、よく利用するサービスのインスタンスを利用することができます。  
 以下のサンプルでは、EntityManagerを利用して商品のEntityを取得しています。
 
 ```php
@@ -211,11 +211,11 @@ class SamplePageController extends AbstractController
 }
 ```
 
-EntityManger以外に、AbstractControllerを継承することで利用できるコンテナは `./src/Eccube/Controller/AbstractController.php` を確認してください。  
+EntityManger以外に、AbstractControllerを継承することで利用できるサービスナは `./src/Eccube/Controller/AbstractController.php` を確認してください。  
 
-#### AbstractControllerに無いコンテナを利用する
+#### AbstractControllerに無いサービスを利用する
 
-インジェクションを利用することで、AbstractControllerに無いコンテナも利用する事ができます。  
+インジェクションを利用することで、AbstractControllerに無いサービスのインスタンスも利用する事ができます。  
 以下のサンプルでは、BaseInfoからショップ名を取得しています。
 
 ```php

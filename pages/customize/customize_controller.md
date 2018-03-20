@@ -118,14 +118,14 @@ class SamplePageController
         return new Response('Parameter is '.$id);
     }
 ```
- 
+
  他のページのテンプレートファイルからリンクをする場合には、以下のように記述します。  
  パラメータを渡すことも出来ます。
- 
+
 ```twig
-
+{% raw %}
 <a href="{{ url("sample_page", { id : 2}) }}">Sampleページへのリンク</a>
-
+{% endraw %}
 ```
 
 ### EC-CUBE既存のルーティングを上書きする

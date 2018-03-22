@@ -3,7 +3,7 @@
 entries:
 - title: sidebar
   product: EC-CUBE
-  version: 3.n
+  version: 3.n-α4
   folders:
 
   - title: Quick Start

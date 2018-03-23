@@ -24,11 +24,12 @@ entries:
   - title: 本体カスタマイズ
     output: web, pdf
     folderitems:
-      - title: ディレクトリ・ファイル構成
+      - title: ディレクトリ構成
         url: /spec_directory-structure
         output: web, pdf
       - title: Controllerのカスタマイズ
         url: /customize_controller
+<<<<<<< HEAD
         output: web, pdf
       - title: Entityのカスタマイズ
         url: /customize_entity
@@ -54,14 +55,26 @@ entries:
     folderitems:
       - title: Web API β版 プラグインスタートアップガイド
         url: /api_startup-guide
+=======
         output: web, pdf
-      - title: Web API開発指針
-        url: /api_policy
+      - title: Entityのカスタマイズ
+        url: /customize_entity
         output: web, pdf
-      - title: Web API認証 ( Authorization ) ガイド
-        url: /api_authorization
+      - title: Repositoryのカスタマイズ
+        url: /customize_repository
+        output: web, pdf
+      - title: FormTypeのカスタマイズ
+        url: /customize_formtype
+>>>>>>> サイドメニューの編集
+        output: web, pdf
+      - title: テンプレートのカスタマイズ
+        url: /customize_template
+        output: web, pdf
+      - title: Symfonyの機能を使った拡張
+        url: /customize_symfony
         output: web, pdf
 
+<<<<<<< HEAD
   - title: デザインカスタマイズ
     output: web, pdf
     folderitems:
@@ -96,6 +109,20 @@ entries:
     - title: プラグインサンプル
       url: /plugin_sample
       output: web, pdf
+=======
+  - title: プラグインカスタマイズ
+    output: web, pdf
+    folderitems:
+      - title: プラグイン仕様
+        url: /plugin_spec
+        output: web, pdf
+      - title: プラグインのインストール
+        url: /plugin_install
+        output: web, pdf
+      - title: プラグインサンプル
+        url: /plugin_sample
+        output: web, pdf
+>>>>>>> サイドメニューの編集
 
   - title: 多言語化
     output: web, pdf

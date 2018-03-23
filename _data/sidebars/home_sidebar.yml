@@ -3,7 +3,7 @@
 entries:
 - title: sidebar
   product: EC-CUBE
-  version: 3.0
+  version: 3.n
   folders:
 
   - title: Quick Start
@@ -17,61 +17,37 @@ entries:
     - title: インストール方法
       url: /quickstart_install
       output: web, pdf
-    - title: プロキシサーバの設定
-      url: /quickstart_proxy
-      output: web, pdf
-    - title: urlからhtmlを無くす手順
-      url: /quickstart_remove-html
-      output: web, pdf
-    - title: バージョンアップ方法
-      url: /quickstart_update
+    - title: コマンドラインインターフェイス
+      url: /quickstart_cli
       output: web, pdf
 
-  - title: 本体の仕様
+  - title: 本体カスタマイズ
     output: web, pdf
     folderitems:
       - title: ディレクトリ・ファイル構成
         url: /spec_directory-structure
         output: web, pdf
-
-        subfolders:
-        - title: 設定ファイル
-          output: web, pdf
-          subfolderitems:
-            - title: 設定ファイルの概要
-              url: /spec_config
-              output: web, pdf
-            - title: doctrine_cacheの設定
-              url: /spec_doctrine-cache
-              output: web, pdf
-            - title: セッションハンドラの設定
-              url: /spec_session-handler
-              output: web, pdf
-        - title: 機能仕様
-          output: web, pdf
-          subfolderitems:
-            - title: 複数配送
-              url: /spec_multi-shipping
-              output: web, pdf
-            - title: 税率設定
-              url: /spec_tax
-              output: web, pdf
-      - title: パフォーマンス
-        url: /spec_performance
+      - title: Controllerのカスタマイズ
+        url: /customize_controller
         output: web, pdf
-      - title: 実験的な実装
-        url: /spec_experimental
+      - title: Entityのカスタマイズ
+        url: /customize_entity
         output: web, pdf
-      - title: 機能一覧
-        external_url: https://github.com/EC-CUBE/eccube3-doc/blob/master/feature_list.xls
+      - title: Repositoryのカスタマイズ
+        url: /customize_repository
         output: web, pdf
-      - title: テーブル・ER図
-        external_url: https://github.com/EC-CUBE/eccube3-doc/tree/master/ER-D
+      - title: FormTypeのカスタマイズ
+        url: /customize_formtype
         output: web, pdf
-      - title: 結合試験項目書
-        external_url: https://github.com/EC-CUBE/eccube3-doc/tree/master/IntegrationTest
+      - title: Serviceのカスタマイズ
+        url: /customize_service
         output: web, pdf
-
+      - title: テンプレートのカスタマイズ
+        url: /customize_template
+        output: web, pdf
+      - title: Symfonyの機能を使った拡張
+        url: /customize_symfony
+        output: web, pdf
 
   - title: Web API仕様
     output: web, pdf
@@ -86,35 +62,14 @@ entries:
         url: /api_authorization
         output: web, pdf
 
-  - title: 開発共通ガイドライン
-    output: web, pdf
-    folderitems:
-
-    - title: 開発環境の構築
-      url: guideline_development
-      output: web, pdf
-    - title: コーディング規約
-      url: guideline_coding-style
-      output: web, pdf
-    - title: ログ出力設定
-      url: guideline_log
-      output: web, pdf
-    - title: 開発の補助:デバッグ・Tips
-      url: /guideline_tips
-      output: web, pdf
-    - title: EC-CUBE 3の利用技術
-      url: /guideline_architecture
-      output: web, pdf
-
   - title: デザインカスタマイズ
     output: web, pdf
     folderitems:
-
     - title: デザインテンプレートの基礎
       url: /design_template
       output: web, pdf
     - title: デザインのフレーム構成
-      url: /design_default-frame
+      url: /design_default_frame
       output: web, pdf
     - title: フォームレイアウトの変更
       url: /design_form
@@ -122,218 +77,35 @@ entries:
     - title: ブロックの利用
       url: /design_block
       output: web, pdf
-    - title: レイアウトの利用
+    - title: レイアウト管理の利用
       url: /design_layout
       output: web, pdf
-    - title: 新規ページの作成
-      url: /design_page
+    - title: Sassの利用
+      url: /design_css
       output: web, pdf
 
   - title: プラグインカスタマイズ
     output: web, pdf
     folderitems:
-
-    - title: プラグイン導入方法
+    - title: プラグイン仕様
+      url: /plugin_spec
+      output: web, pdf
+    - title: プラグインのインストール
       url: /plugin_install
       output: web, pdf
-    - title: 導入時のトラブルシューティング
-      url: /plugin_troubleshooting
+    - title: プラグインサンプル
+      url: /plugin_sample
       output: web, pdf
 
-      subfolders:
-      - title: プラグイン機構の仕様
-        output: web
-        subfolderitems:
-          - title: プラグイン仕様書
-            external_url: http://downloads.ec-cube.net/src/manual/v3/plugin.pdf
-            output: web, pdf
-          - title: インストーラーの仕様
-            url: /plugin_installer
-            output: web, pdf
-          - title: ハンドラによる優先順位の制御仕様
-            url: /plugin_handler
-            output: web, pdf
-          - title: プラグイン開発用コンソールコマンド
-            url: /plugin_console
-            output: web, pdf
-          - title: CIを利用したプラグインのテスト
-            url: /plugin_test
-            output: web, pdf
-          - title: EC-CUBE 3.0.11 の変更と影響
-            url: /plugin_update-for3011
-            output: web, pdf
-
-      - title: プラグインの開発方法
-        output: web, pdf
-        subfolderitems:
-          - title: プラグインジェネレータの利用方法
-            url: /plugin_tutorial-generate
-            output: web, pdf
-          - title: プラグインジェネレータエンティティの利用方法
-            url: /plugin_tutorial-generate-entity
-            output: web, pdf
-          - title: 新規ページの追加
-            url: /plugin_tutorial-pageadd
-            output: web, pdf
-          - title: 利用しないページの削除
-            url: /plugin_tutorial-pagedelete
-            output: web, pdf
-          - title: フォームの追加、変更
-            url: /plugin_tutorial-form
-            output: web, pdf
-          - title: プラグイン用テーブルの追加
-            url: /plugin_tutorial-table
-            output: web, pdf
-          - title: チュートリアル
-            url: /plugin_tutorial
-            output: web, pdf
-
-      - title: ベストプラクティス
-        output: web, pdf
-        subfolderitems:
-          - title: ベストプラクティスとは
-            url: /plugin_bp_about
-            output: web, pdf
-          - title: プラグインベストプラクティスとは
-            url: /plugin_bp_about
-            output: web, pdf
-          - title: バージョン違いによる動作
-            url: /plugin_bp_version
-            output: web, pdf
-          - title: ディレクトリ構成について
-            url: /plugin_bp_directory
-            output: web, pdf
-          - title: プラグインの設定、定義
-            url: /plugin_bp_config
-            output: web, pdf
-          - title: プラグインマネージャー
-            url: /plugin_bp_pluginmanager
-            output: web, pdf
-          - title: イベント
-            url: /plugin_bp_event
-            output: web, pdf
-          - title: サービスプロバイダー
-            url: /plugin_bp_serviceprovider
-            output: web, pdf
-          - title: コントローラー
-            url: /plugin_bp_controller
-            output: web, pdf
-          - title: フォーム
-            url: /plugin_bp_form
-            output: web, pdf
-          - title: テンプレート
-            url: /plugin_bp_template
-            output: web, pdf
-          - title: リソースファイル、ブロック
-            url: /plugin_bp_asset
-            output: web, pdf
-          - title: マイグレーション
-            url: /plugin_bp_migration
-            output: web, pdf
-          - title: エンティティ、リポジトリ
-            url: /plugin_bp_db
-            output: web, pdf
-          - title: トランザクション
-            url: /plugin_update-for3011
-            output: web, pdf
-          - title: ログ
-            url: /guideline_log
-            output: web, pdf
-          - title: セキュリティ
-            url: /plugin_bp_security
-            output: web, pdf
-          - title: プラグインのテスト
-            url: /plugin_test
-            output: web, pdf
-          - title: ライセンス
-            url: /plugin_bp_license
-            output: web, pdf
-          - title: プラグイン注意点
-            url: /plugin_bp_badknowhow
-            output: web, pdf
-    - title: app/console向けプラグイン
-      url: /plugin_console-plugin
-      output: web, pdf
-    - title: オーナーズストアへの公開
-      external_url: http://www.ec-cube.net/plugin/
-      output: web, pdf
-
-  - title: コアコードのカスタマイズ
+  - title: 多言語化
     output: web, pdf
     folderitems:
-
-    - title: カスタマイズ指針
-      url: /customize_policy
+    - title: 多言語化
+      url: /i18n_multilingualization
       output: web, pdf
-    - title: 例:会員管理へ項目の追加
-      url: /customize_example-adminadd
+    - title: 通貨
+      url: /i18n_currency
       output: web, pdf
-
-
-  - title: 本体開発に参加する
-    output: web, pdf
-    folderitems:
-
-    - title: 開発作業全体概要
-      url: /collaboration_workflow
+    - title: タイムゾーン
+      url: /i18n_timezone
       output: web, pdf
-    - title: Gitを用いた開発手順
-      url: /collaboration_githubflow
-      output: web, pdf
-    - title: マイグレーションガイド
-      url: /collaboration_migration
-      output: web, pdf
-    - title: 外部Componentの利用
-      url: /collaboration_component
-      output: web, pdf
-
-#    - title: チュートリアル
-#      output: web, pdf
-#      subfolderitems:
-#      - title: ルーティングとコントローラープロバイダー
-#        url: /tutorial-1.html
-#        output: web, pdf
-#      - title: ビューのレンダリング
-#        url: /tutorial-2.html
-#        output: web, pdf
-#      - title: Twig構文とView変数
-#        url: /tutorial-3.html
-#        output: web, pdf
-#      - title: Formとフォームビルダー
-#        url: /tutorial-4.html
-#        output: web, pdf
-#      - title: FormType
-#        url: /tutorial-5.html
-#        output: web, pdf
-#      - title: チュートリアルのテーブル定義
-#        url: /tutorial-6.html
-#        output: web, pdf
-#      - title: データーベーススキーマ定義
-#        url: /tutorial-7.html
-#        output: web, pdf
-#      - title: エンティティ
-#        url: /tutorial-8.html
-#        output: web, pdf
-#      - title: エンティティマネージャーを利用した情報の登録
-#        url: /tutorial-9.html
-#        output: web, pdf
-#      - title: データーベース情報の取得とViewのループ処理
-#        url: /tutorial-10.html
-#        output: web, pdf
-#      - title: レポジトリとデータベース操作
-#        url: /tutorial-11.html
-#        output: web, pdf
-#      - title: 条件検索とアップデート処理
-#        url: /tutorial-12.html
-#        output: web, pdf
-#      - title: レコードの削除
-#        url: /tutorial-13.html
-#        output: web, pdf
-#
-#  - title: クックブック
-#    url: /
-#    output: web, pdf
-#    folderitems:
-#    - title: 管理画面項目の追加
-#      url: /cookbook-1-cube3-customize-admin-add.html
-#      output: web, pdf

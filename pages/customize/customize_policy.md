@@ -33,14 +33,14 @@ twigテンプレートは、テンプレート読み込み順序の仕様に記�
 
 ## データベースの拡張について
 
-新たな項目が必要な場合、[テーブルの追加](plugin-table)を参考に、プラグイン側でテーブルを作成します。
+新たな項目が必要な場合、[テーブルの追加](plugin_tutorial-table)を参考に、プラグイン側でテーブルを作成します。
 ただし、外部キーを使う必要がある場合（dtb_productに対してリレーションしたい場合など)、本体側のエンティティを直接編集します。
 
 ## 画面の作成、URLについて
 
 新規ページを作成する際、静的ページの場合は、ページ管理機能を利用し、作成します。
 
-ロジックが必要な場合は、[新規ページの追加](plugin-pageadd)を参考に、
+ロジックが必要な場合は、[新規ページの追加](plugin_tutorial-pageadd)を参考に、
 
 - Controllerの作成
 - twigテンプレートの作成
@@ -48,12 +48,12 @@ twigテンプレートは、テンプレート読み込み順序の仕様に記�
 
 を行います。
 
-既存ページのURLの変更や、無効化を行う場合は、[利用しないページの無効化](plugin-pagedelete)を参考に、既存のルーティングに対して設定を行います。
+既存ページのURLの変更や、無効化を行う場合は、[利用しないページの無効化](plugin_tutorial-pagedelete)を参考に、既存のルーティングに対して設定を行います。
 
 ## Formの拡張について
 
-新規フォームを作成する際、[FormTypeの追加](plugin-form)を参考に、FormTypeを追加します。
-既存のフォームを拡張する場合、[Form Extensionを利用したForm拡張](plugin-form)を参考に拡張を行います。
+新規フォームを作成する際、[FormTypeの追加](plugin_tutorial-form)を参考に、FormTypeを追加します。
+既存のフォームを拡張する場合、[Form Extensionを利用したForm拡張](plugin_tutorial-form)を参考に拡張を行います。
 
 ## ディレクトリ構成
 
@@ -104,7 +104,7 @@ php composer.phar install --no-dev --no-interaction --optimize-autoloader
 
 ```php app/console migrations:migrate```
 
-参考：[マイグレーションガイド](/migration.html)
+参考：[マイグレーションガイド](plugin_bp_migration)
 
 ## セキュリティFIXが合った場合の対応
 

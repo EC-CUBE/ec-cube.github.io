@@ -62,6 +62,7 @@ EC-CUBEのインストールディレクトリ以下をすべてバックアッ�
 | 3.0.12-p1 → 3.0.13  	 | app/console <br> composer.json <br> composer.lock <br> eccube_install.php |
 | 3.0.13 → 3.0.14  	 | app/console <br> composer.json <br> composer.lock <br> eccube_install.sh |
 | 3.0.14 → 3.0.15  	 | composer.json <br> composer.lock <br> eccube_install.php <br> web.config.sample |
+| 3.0.15 → 3.0.16  	 | composer.json <br> composer.lock |
 
 ※ `3.0.8 → 3.0.10` のように複数バージョンをまたぐバージョンアップを行う場合は、`3.0.8 → 3.0.9`→`3.0.9 → 3.0.10` のように段階的なバージョンアップを行ってください。
 
@@ -210,3 +211,4 @@ src/Eccube/Service/ShoppingService.php
 | 3.0.12-p1 → 3.0.13 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.12-p1...3.0.13](https://github.com/EC-CUBE/ec-cube/compare/3.0.12-p1...3.0.13?w=1) |
 | 3.0.13 → 3.0.14 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.13...3.0.14](https://github.com/EC-CUBE/ec-cube/compare/3.0.13...3.0.14?w=1) |
 | 3.0.14 → 3.0.15 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.14...3.0.15](https://github.com/EC-CUBE/ec-cube/compare/3.0.14...3.0.15?w=1) |
+| 3.0.15 → 3.0.16 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.15...dev/3.0.16?w=1](https://github.com/EC-CUBE/ec-cube/compare/3.0.15...dev/3.0.16?w=1) |

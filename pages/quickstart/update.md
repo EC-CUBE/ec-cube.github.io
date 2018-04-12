@@ -211,4 +211,4 @@ src/Eccube/Service/ShoppingService.php
 | 3.0.12-p1 → 3.0.13 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.12-p1...3.0.13](https://github.com/EC-CUBE/ec-cube/compare/3.0.12-p1...3.0.13?w=1) |
 | 3.0.13 → 3.0.14 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.13...3.0.14](https://github.com/EC-CUBE/ec-cube/compare/3.0.13...3.0.14?w=1) |
 | 3.0.14 → 3.0.15 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.14...3.0.15](https://github.com/EC-CUBE/ec-cube/compare/3.0.14...3.0.15?w=1) |
-| 3.0.15 → 3.0.16 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.15...3.0.16](https://github.com/EC-CUBE/ec-cube/compare/3.0.15...3.0.16?w=1) |
+| 3.0.15 → 3.0.16 | [https://github.com/EC-CUBE/ec-cube/compare/3.0.15...dev/3.0.16](https://github.com/EC-CUBE/ec-cube/compare/3.0.15...dev/3.0.16?w=1) |

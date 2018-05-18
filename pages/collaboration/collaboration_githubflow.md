@@ -44,7 +44,7 @@ folder: collaboration
 $ git clone https://github.com/[GitHubUser(ご自身のアカウント)]/ec-cube.git
 ```
 
-- ブランチの状態を確認してみます。  
+ブランチの状態を確認してみます。  
 ※gitコマンドを実行するために、事前にcloneしたリポジトリのディレクトリ直下に移動してください。  
 例：`cd ec-cube`
 

@@ -29,7 +29,6 @@ entries:
         output: web, pdf
       - title: Controllerのカスタマイズ
         url: /customize_controller
-<<<<<<< HEAD
         output: web, pdf
       - title: Entityのカスタマイズ
         url: /customize_entity
@@ -50,66 +49,6 @@ entries:
         url: /customize_symfony
         output: web, pdf
 
-  - title: Web API仕様
-    output: web, pdf
-    folderitems:
-      - title: Web API β版 プラグインスタートアップガイド
-        url: /api_startup-guide
-=======
-        output: web, pdf
-      - title: Entityのカスタマイズ
-        url: /customize_entity
-        output: web, pdf
-      - title: Repositoryのカスタマイズ
-        url: /customize_repository
-        output: web, pdf
-      - title: FormTypeのカスタマイズ
-        url: /customize_formtype
->>>>>>> サイドメニューの編集
-        output: web, pdf
-      - title: テンプレートのカスタマイズ
-        url: /customize_template
-        output: web, pdf
-      - title: Symfonyの機能を使った拡張
-        url: /customize_symfony
-        output: web, pdf
-
-<<<<<<< HEAD
-  - title: デザインカスタマイズ
-    output: web, pdf
-    folderitems:
-    - title: デザインテンプレートの基礎
-      url: /design_template
-      output: web, pdf
-    - title: デザインのフレーム構成
-      url: /design_default_frame
-      output: web, pdf
-    - title: フォームレイアウトの変更
-      url: /design_form
-      output: web, pdf
-    - title: ブロックの利用
-      url: /design_block
-      output: web, pdf
-    - title: レイアウト管理の利用
-      url: /design_layout
-      output: web, pdf
-    - title: Sassの利用
-      url: /design_css
-      output: web, pdf
-
-  - title: プラグインカスタマイズ
-    output: web, pdf
-    folderitems:
-    - title: プラグイン仕様
-      url: /plugin_spec
-      output: web, pdf
-    - title: プラグインのインストール
-      url: /plugin_install
-      output: web, pdf
-    - title: プラグインサンプル
-      url: /plugin_sample
-      output: web, pdf
-=======
   - title: プラグインカスタマイズ
     output: web, pdf
     folderitems:
@@ -122,7 +61,6 @@ entries:
       - title: プラグインサンプル
         url: /plugin_sample
         output: web, pdf
->>>>>>> サイドメニューの編集
 
   - title: 多言語化
     output: web, pdf

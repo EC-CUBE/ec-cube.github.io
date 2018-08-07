@@ -13,8 +13,8 @@ topnav_dropdowns:
   folders:
     - title: GitHub
       folderitems:
-        - title: EC-CUBE 3.n Repo
-          external_url: https://github.com/EC-CUBE/ec-cube/tree/experimental/sf
+        - title: EC-CUBE 4.0 Repo
+          external_url: https://github.com/EC-CUBE/ec-cube/tree/4.0
         - title: EC-CUBE 3.0.x Repo
           external_url: https://github.com/EC-CUBE/ec-cube
         - title: EC-CUBE 2.13 Repo

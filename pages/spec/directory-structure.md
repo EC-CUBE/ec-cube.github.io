@@ -9,7 +9,7 @@ permalink: spec_directory-structure
 
 ## 特徴
 
-1. [Symfony3系のディレクトリ構造](https://symfony.com/doc/3.4/quick_tour/the_architecture.html)を参考に、EC-CUBE 3.n独自構成となっています。
+1. [Symfony3系のディレクトリ構造](https://symfony.com/doc/3.4/quick_tour/the_architecture.html)を参考に、EC-CUBE 4.0独自構成となっています。
 
 ## 主なディレクトリと役割
 

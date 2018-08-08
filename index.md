@@ -1,6 +1,6 @@
 ---
 layout: default
-title: EC-CUBE 3.n 開発ドキュメント・マニュアル
+title: EC-CUBE 4.0 開発ドキュメント・マニュアル
 keywords: このサイトについて, QuickStart
 tags: [quickstart]
 sidebar: home_sidebar
@@ -9,7 +9,7 @@ permalink: /
 
 # {{page.title}}
 
-現在開発中のEC-CUBE 3.n の開発ドキュメントサイトです。  
+現在開発中のEC-CUBE 4.0 の開発ドキュメントサイトです。  
 EC-CUBEのインストール方法、開発ガイドラインや要素技術の概念、本体開発やプラグイン開発のチュートリアル、Cookbookなどの情報を提供しています。  
 ドキュメントへの追記、記載内容の修正についてはEC-CUBE本体と同様に[GitHub](https://github.com/EC-CUBE/ec-cube.github.io/){:target="_blank"}で受け付けております。
 

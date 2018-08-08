@@ -18,4 +18,4 @@ permalink: plugin_sample
 
 #### ダウンロード・詳細
 
-https://github.com/EC-CUBE/ProductReview-plugin/tree/experimental/sf
+https://github.com/EC-CUBE/ProductReview-plugin/tree/4.0

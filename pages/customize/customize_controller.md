@@ -282,7 +282,7 @@ Content-Type: text/plain; charset=utf-8
 
 ## 参考情報
 
-EC-CUBE 3.n ではSymfonyのController機構を利用しています。  
+EC-CUBE 4.0 ではSymfonyのController機構を利用しています。  
 その他のカスタマイズ方法についてはSymfonyのドキュメントを参照してください。
 
 https://symfony.com/doc/current/controller.html

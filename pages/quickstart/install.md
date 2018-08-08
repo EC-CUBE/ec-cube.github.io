@@ -19,7 +19,7 @@ EC-CUBEのインストールは、以下の2種類の方法があります。
 前提として、 [Composer のインストール](https://getcomposer.org/download/) が必要です。
 
 ```
-php composer.phar create-project ec-cube/ec-cube ec-cube "dev-experimental/sf" --keep-vcs
+php composer.phar create-project ec-cube/ec-cube ec-cube "4.0.x-dev" --keep-vcs
 ```
 
 上記の例では、データベースに SQLite3 が選択されます。
@@ -54,7 +54,7 @@ postgres://<user>:<password>@<host>/<database name>
 前提として、 [Composer のインストール](https://getcomposer.org/download/) が必要です。
 
 ```
-php composer.phar create-project --no-scripts ec-cube/ec-cube ec-cube "dev-experimental/sf" --keep-vcs
+php composer.phar create-project --no-scripts ec-cube/ec-cube ec-cube "4.0.x-dev" --keep-vcs
 ```
 
 ec-cube ディレクトリに移動し、 `bin/console server:run` コマンドを実行すると、ビルトインウェブサーバーが起動します。

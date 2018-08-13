@@ -66,7 +66,7 @@ Plugin\Customize\Entity\Sample:
     lifecycleCallbacks: {  }
 ```
 
-doctrineのマッピング定義について詳しくは[こちら](http://doctrine-orm.readthedocs.io/projects/doctrine-orm/en/latest/reference/yaml-mapping.html){:target="_blank"}をを参照してください。
+doctrineのマッピング定義について詳しくは[こちら](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/yaml-mapping.html){:target="_blank"}をを参照してください。
 
 ## テーブルの作成
 

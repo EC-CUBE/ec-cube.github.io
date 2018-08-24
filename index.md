@@ -52,9 +52,6 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 
 EC-CUBEは以下のサポートを受けています。
 
-+ [JetBrains](https://www.jetbrains.com/)  
-[![JetBrains](/images/logo_JetBrains_4.png)](https://www.jetbrains.com/){:target="_blank"}  
-
 + [SAKURA internet](https://www.sakura.ad.jp/)  
 [![SAKURA internet](/images/3-1-2line-rgb-whiteback.png)](https://www.sakura.ad.jp/){:target="_blank"}  
 

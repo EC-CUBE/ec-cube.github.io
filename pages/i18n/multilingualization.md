@@ -104,9 +104,9 @@ class TemplateType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        
+
             ...
-            
+
             ->add('file', FileType::class, array(
                 'mapped' => false,
                 'required' => true,
@@ -120,7 +120,7 @@ class TemplateType extends AbstractType
                 ),
             ));
     }
-            
+
 ```
 
 ## transフィルタ
@@ -139,13 +139,13 @@ twig内で翻訳する場合は、transフィルタを使用します。
 メッセージがパラメータ付きで定義されている場合は、以下のように使用します。
 
 ```twig
-
+{% raw %}
 {{ 'admin.order.index.paginator_total_count'|trans({
     '%count%' : 10
 }) }}
 
 {# 検索結果：10件が該当しました #}
-
+{% endraw %}
 ```
 
 # 参考

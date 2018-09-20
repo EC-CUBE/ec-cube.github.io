@@ -15,17 +15,31 @@ forder: i18n
 
 環境変数でロケールを指定し、言語表示を切り替えることが出来ます。
 
-EC-CUBEのルートディレクトリ直下に、`.env`ファイルを作成し、`ECCUBE_LOCALE`を設定します。
+EC-CUBEのルートディレクトリ直下の`.env`ファイルの`ECCUBE_LOCALE`を設定します。初期状態ではコメントアウトされています。.envファイルで何も設定されていなければ日本語が利用されます。
 
 ```bash
 //.env
 
+#ECCUBE_LOCALE=ja
 ECCUBE_LOCALE=en
 
 ```
 
 環境変数設定後、画面をリロードすると、表示言語が切り替わります。
 キャッシュの削除を行う必要はありません。
+
+## インストール時の言語指定
+
+インストール時に言語指定をするためには、EC-CUBEのルートディレクトリ直下の`.env.install`に`ECCUBE_LOCALE`を設定します。何も指定しなければ日本語でインストールされます。`/src/Eccube/Resource/doctrine/import_csv`配下に対象の言語の初期データが存在する場合はそのデータが利用され、マスタデータ等が指定した言語でインストールされます。
+
+```bash
+//.env.install
+
+ECCUBE_LOCALE=en
+
+```
+
+現状ではインストール直後は日本語が言語設定として指定されます。インストール後にEC-CUBEのルートディレクトリ直下の`.env.install`の`ECCUBE_LOCALE`の値を利用したい言語に設定します。
 
 ※ 現時点では、データベースに保持されているデータは翻訳されません。
 ※ ショップ画面/管理画面ともに表示言語が切り替わります。
@@ -35,26 +49,23 @@ ECCUBE_LOCALE=en
 メッセージファイルは、`src/Eccube/Resouce/locale`以下に保存されています。
 `ECCUBE_LOCALE`の値に応じて、
 
-- messages.xxx.php
-- validators.xxx.php
+- messages.xxx.yaml
+- validators.xxx.yaml
 
 のファイルが読み込まれます。
 
-メッセージファイルは単純な連想配列で定義されたphpファイルです。
-連想配列のキーはメッセージのID、値は翻訳された文字列を表します。
+メッセージファイルはハッシュのyamlファイルです。
+ハッシュのキーはメッセージのID、値は翻訳された文字列を表します。
 
-```php
-// messages.ja.php
+```yaml
+#====================================================================================
+# 共通
+#====================================================================================
 
-<?php
-
-return [
-
-    //common
-    'common.label.add' => '新規作成',
-    'common.label.edit' => '編集',
-    'common.label.delete' => '削除',
-    'common.label.save' => '登録',
+common.select: 選択してください
+common.select__pref: 都道府県を選択
+common.select__unspecified: 指定なし
+common.select__all_products: 全ての商品
     ...
 ```
 

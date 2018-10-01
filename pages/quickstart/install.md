@@ -82,3 +82,56 @@ bin/console server:run
 ```
 
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/) にアクセスすると、 Webインストーラが表示されますので、指示にしたがってインストールしてください。
+
+## 本番環境での .env ファイルの利用について
+
+インストール完了後、インストールディレクトリにデータベースの接続情報等が設定された **.env** ファイルが生成されます。
+**.env** ファイルは、開発用途での環境変数を設定するためのものであり、本番環境での使用は推奨されません。
+本番環境では、環境変数をサーバー設定ファイルに設定することを推奨します。
+サーバー設定ファイルに環境変数を設定することにより、環境変数が外部に暴露される危険性が減り、安全に運用できます。
+
+### Apache での設定例
+
+httpd.conf や、 .htaccess ファイルに設定します。
+
+```
+SetEnv APP_ENV prod
+SetEnv APP_DEBUG 0
+SetEnv DATABASE_URL pgsql://dbuser:password@127.0.0.1/cube4_dev
+SetEnv DATABASE_SERVER_VERSION 10.5
+SetEnv ECCUBE_AUTH_MAGIC 8PPlCHZVdH5vbMkIUKeuTeDHycQQMuaB
+SetEnv ECCUBE_ADMIN_ALLOW_HOSTS []
+SetEnv ECCUBE_FORCE_SSL false
+SetEnv ECCUBE_ADMIN_ROUTE admin
+SetEnv ECCUBE_COOKIE_PATH /
+```
+
+[参考: Apache HTTP サーバ バージョン 2.4 - SetEnv ディレクティブ](https://httpd.apache.org/docs/2.4/ja/mod/mod_env.html#setenv)
+
+### IIS での設定例
+
+ApplicationHost.config の environmentVariables セクションに設定します。このファイルは `C:\Windows\System32\Inetsrv\Config` にあります。
+PHP実行ファイルのパスは適宜変更してください。
+
+```
+<fastCgi>
+    <application fullPath="C:\Program Files\PHP\v7.2\php-cgi.exe" activityTimeout="600" requestTimeout="600" instanceMaxRequests="10000">
+        <environmentVariables>
+            <environmentVariable name="PHP_FCGI_MAX_REQUESTS" value="10000" />
+            <environmentVariable name="PHPRC" value="C:\Program Files\PHP\v7.2" />
+            <environmentVariable name="APP_ENV" value="prod" />
+            <environmentVariable name="APP_DEBUG" value="0" />
+            <environmentVariable name="DATABASE_URL" value="pgsql://dbuser:password@127.0.0.1/cube4_dev" />
+            <environmentVariable name="DATABASE_SERVER_VERSION" value="10.5" />
+            <environmentVariable name="ECCUBE_AUTH_MAGIC" value="8PPlCHZVdH5vbMkIUKeuTeDHycQQMuaB" />
+            <environmentVariable name="ECCUBE_ADMIN_ALLOW_HOSTS" value="[]" />
+            <environmentVariable name="ECCUBE_FORCE_SSL" value="false" />
+            <environmentVariable name="ECCUBE_ADMIN_ROUTE" value="admin" />
+            <environmentVariable name="ECCUBE_COOKIE_PATH" value="/" />
+        </environmentVariables>
+    </application>
+<!-- /追加 -->
+</fastCgi>
+```
+
+[参考: IIS コンフィギュレーション リファレンス](https://msdn.microsoft.com/ja-jp/library/ee431592.aspx#EDA)

@@ -23,6 +23,7 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 
 ## 機能仕様
 
++ [機能一覧](https://www.ec-cube.net/product/functions.php)
 + [受注関連](spec_order)
 
 ## 本体カスタマイズ

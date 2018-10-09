@@ -37,6 +37,10 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 + [Symfonyの機能を使った拡張](customize_symfony)
 
 ## デザインカスタマイズ
+
++ [フロント画面デザイン参考資料（スタイルガイド）](http://eccube4-styleguide.herokuapp.com/)
++ [管理画面デザイン参考資料（デザインガイド）](/pdf/ec-cube4_design-guide180930.pdf)
+
 + [デザインテンプレートの基礎](design_template)
 + [デザインのフレーム構成](design_default_frame)
 + [フォームレイアウトの変更](design_form)

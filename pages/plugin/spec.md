@@ -83,12 +83,13 @@ https://symfony.com/doc/current/service_container.html
 
 開発したプラグインを配布したり、オーナーズストアに申請する際は、アーカイブする必要があります。
 アーカイブの方式は、tar.gzで行ってください。
-また、圧縮する際は、フォルダごと圧縮しないようにご注意ください。
+また、以下の点に注意してアーカイブを作成してください。
+- フォルダごと圧縮しないようにする
+- `.git` ディレクトリや `.DS_Store` ファイル等をアーカイブに含めないようにする
 
 ```bash
 $ cd app/[PluginDir]
-$ tar cvzf ../[PluginDir].tar.gz .
-
+$ tar --exclude  ".git" --exclude ".DS_Store" -cvzf ../[PluginDir].tar.gz *
 ```
 
 ## 3.0.xからの変更点

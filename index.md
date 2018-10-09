@@ -21,6 +21,11 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 + [インストール方法](quickstart_install)
 + [コマンドラインインターフェイス](quickstart_cli)
 
+## 機能仕様
+
++ [機能一覧](https://www.ec-cube.net/product/functions.php)
++ [受注関連](spec_order)
+
 ## 本体カスタマイズ
 + [ディレクトリ構成](spec_directory-structure)
 + [Controllerのカスタマイズ](customize_controller)
@@ -32,6 +37,10 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 + [Symfonyの機能を使った拡張](customize_symfony)
 
 ## デザインカスタマイズ
+
++ [フロント画面デザイン参考資料（スタイルガイド）](http://eccube4-styleguide.herokuapp.com/)
++ [管理画面デザイン参考資料（デザインガイド）](/pdf/ec-cube4_design-guide180930.pdf)
+
 + [デザインテンプレートの基礎](design_template)
 + [デザインのフレーム構成](design_default_frame)
 + [フォームレイアウトの変更](design_form)
@@ -58,4 +67,4 @@ EC-CUBEは以下のサポートを受けています。
 [![SAKURA internet](/images/3-1-2line-rgb-whiteback.png)](https://www.sakura.ad.jp/){:target="_blank"}  
 
 + [VAddy](https://vaddy.net/ja/)  
-[![VAddy](/images/VAddy_logo.png)](https://vaddy.net/ja/){:target="_blank"}  
+[![VAddy](/images/VAddy_logo.png)](https://vaddy.net/ja/){:target="_blank"}

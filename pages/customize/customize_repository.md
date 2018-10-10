@@ -46,7 +46,7 @@ folder: customize
 <?php
 
 
-namespace Acme\Entity;
+namespace Customize\Entity;
 
 
 use Eccube\Doctrine\Query\OrderByClause;

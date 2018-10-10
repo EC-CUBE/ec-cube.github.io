@@ -16,7 +16,7 @@ FormExtensionの仕組みを利用すれば、既存のフォームをカスタ�
 
 ### 拡張方法
 
-`./app/Acme/Form/Extension/` に `AbstractTypeExtension` を継承したクラスファイルを作成することで、自動的にFormExtensionとして認識されます。
+`./app/Customize/Form/Extension/` に `AbstractTypeExtension` を継承したクラスファイルを作成することで、自動的にFormExtensionとして認識されます。
 
 #### 拡張するフォーム種類の指定
 
@@ -46,12 +46,12 @@ https://symfony.com/doc/current/form/create_form_type_extension.html
 
 会員登録ページのフォームを拡張して、会社名を入力必須項目に変更するサンプルです。
 
-./app/Acme/Form/Extension/EntryTypeBirthdayExtension.php
+./app/Customize/Form/Extension/EntryTypeBirthdayExtension.php
 
 ```php
 <?php
 
-namespace Acme\Form\Extension;
+namespace Customize\Form\Extension;
 
 use Eccube\Form\Type\Front\EntryType;
 use Symfony\Component\Form\AbstractTypeExtension;

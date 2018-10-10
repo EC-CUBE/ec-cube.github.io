@@ -34,40 +34,52 @@ app/Plugin/SamplePlugin/
 │   ├── config
 │   ├── locale
 │   └── template
-└── config.yml
+└── composer.json
 ```
 
 上記のすべてのディレクトリ、ファイルが必要なわけではありません。
-必須となるのは、`config.yml`のみです。
+必須となるのは、`composer.json`のみです。
 
 ## 設定ファイル
 
-プラグインの情報を記述する`config.yml`と、コンテナの定義を行う`services.yaml`があります。
+プラグインの情報を記述する`composer.json`と、コンテナの定義を行う`services.yaml`があります。
 
-### config.yml
+### composer.json
 
 プラグインの情報を記述します。
-`[プラグインディレクトリ]/config.yml`に設置します。
+`[プラグインディレクトリ]/composer.json`に設置します。
 
 設定項目は以下のとおりです。
 
-- name: プラグイン名
-    - プラグインの名称です。
-- code: プラグインコード
-    - プラグインの識別子となるコードです。
-    - 英数の文字列のみ利用できます。
-    - プラグインのディレクトリ名と同じである必要があります。
-    - 他のプラグインと重複しないよう、vender名などをprefixとすることを推奨します。
+- name: パッケージ名
+    - `"ec-cube/[プラグインコード]"` を記述します。
 - version: バージョン
     - プラグインのバージョン番号です。
-    - phpのバージョンフォーマットに合わせることを推奨します。
+    - phpのバージョンフォーマットに合わせてください。
+- description: プラグイン名称
+- type: パッケージタイプ
+    - `"eccube-plugin"` にします。
+- require: 依存パッケージ
+    - プラグインが利用するパッケージがあれば追記します。
+    - `"ec-cube/plugin-installer": "~0.0.6"` は常に記述してください。
+- extra: 付属情報
+    - `"code": "[プラグインコード]"` を記述してください。
 
 記載例は以下の通りです。
 
 ```yaml
-name: 商品レビュー
-code: ProductReview
-version: 1.0.0
+{
+    "name": "ec-cube/ProductReview",
+    "version": "1.0.0",
+    "description": "商品レビュープラグイン",
+    "type": "eccube-plugin",
+    "require": {
+        "ec-cube/plugin-installer": "~0.0.6"
+    },
+    "extra": {
+        "code": "ProductReview"
+    }
+}
 ```
 
 ### services.yaml
@@ -83,12 +95,13 @@ https://symfony.com/doc/current/service_container.html
 
 開発したプラグインを配布したり、オーナーズストアに申請する際は、アーカイブする必要があります。
 アーカイブの方式は、tar.gzで行ってください。
-また、圧縮する際は、フォルダごと圧縮しないようにご注意ください。
+また、以下の点に注意してアーカイブを作成してください。
+- フォルダごと圧縮しないようにする
+- `.git` ディレクトリや `.DS_Store` ファイル等をアーカイブに含めないようにする
 
 ```bash
 $ cd app/[PluginDir]
-$ tar cvzf ../[PluginDir].tar.gz .
-
+$ tar --exclude  ".git" --exclude ".DS_Store" -cvzf ../[PluginDir].tar.gz *
 ```
 
 ## 3.0.xからの変更点

@@ -22,7 +22,7 @@ trait と `@EntityExtension` アノテーションを使用して、 Entity の�
 ``` php
 <?php
 
-namespace Acme\Entity;
+namespace Customize\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Annotation\EntityExtension;
@@ -89,7 +89,7 @@ public function index()
 ``` php
 <?php
 
-namespace Acme\Entity;
+namespace Customize\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Annotation as Eccube;
@@ -118,7 +118,7 @@ trait BaseInfoTrait
 ``` php
 <?php
 
-namespace Acme\Entity;
+namespace Customize\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Annotation as Eccube;

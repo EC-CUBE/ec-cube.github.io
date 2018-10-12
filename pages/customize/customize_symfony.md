@@ -23,12 +23,12 @@ Symfonyのイベントシステムを利用することができます。
 
 ### hello worldを表示するイベントリスナーを作成する
 
-`app/Acme/EventListener`配下にに`HelloListener.php`を作成します。
+`app/Customize/EventListener`配下にに`HelloListener.php`を作成します。
 
 ```php
 <?php
 
-namespace Acme\EventListener;
+namespace Customize\EventListener;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
@@ -67,12 +67,12 @@ class HelloListener implements EventSubscriberInterface
 
 ### hello worldを表示するコマンドを作成する
 
-`app/Acme/Command`配下に`HelloCommand.php`を作成します。
+`app/Customize/Command`配下に`HelloCommand.php`を作成します。
 
 ```php
 <?php
 
-namespace Acme\Command;
+namespace Customize\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -119,12 +119,12 @@ Doctrineのイベントシステムを利用することができます。
 
 ### ショップ名にようこそを付与するイベントリスナーを作成する
 
-`app/Acme/Doctrine/EventSubscriber`配下に`HelloEventSubscriber.php`を作成します。
+`app/Customize/Doctrine/EventSubscriber`配下に`HelloEventSubscriber.php`を作成します。
 
 ```php
 <?php
 
-namespace Acme\Doctrine\EventSubscriber;
+namespace Customize\Doctrine\EventSubscriber;
 
 use Doctrine\Common\EventSubscriber;
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;

@@ -12,19 +12,19 @@ folder: customize
 
 ## 新しいルーティングの追加
 
-`@Route` アノテーションを付与したクラスファイルを `./app/Acme/Controller/` 以下に配置することで、サイトに新しいルーティングを追加することが可能です。  
+`@Route` アノテーションを付与したクラスファイルを `./app/Customize/Controller/` 以下に配置することで、サイトに新しいルーティングを追加することが可能です。  
 
 以下は最もシンプルなルーティング追加の例です。  
 `http://サイトURL/samlple` にアクセスすると"Hello sample page !"と表示するルーティングを追加しています。
 
 ### Controllerファイル
 
-./app/Acme/Controller/SamplePageController.php
+./app/Customize/Controller/SamplePageController.php
 
 ```php
 <?php
 
-namespace Acme\Controller;
+namespace Customize\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -53,7 +53,7 @@ class SamplePageController
 ```php
 <?php
 
-namespace Acme\Controller;
+namespace Customize\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -187,7 +187,7 @@ AbstractControllerを継承して `redirectToRoute` 関数を利用すること�
 ```php
 <?php
 
-namespace Acme\Controller;
+namespace Customize\Controller;
 
 use Eccube\Controller\AbstractController;
 use Eccube\Entity\Product;
@@ -221,7 +221,7 @@ EntityManger以外に、AbstractControllerを継承することで利用でき�
 ```php
 <?php
 
-namespace Acme\Controller;
+namespace Customize\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

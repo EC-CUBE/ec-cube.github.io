@@ -19,7 +19,7 @@ permalink: spec_directory-structure
 
 ```
 app
-├── Acme      カスタマイズ用PHPコードを配置
+├── Customize      カスタマイズ用PHPコードを配置
 ├── Plugin    インストールしたプラグインを配置
 ├── config    設定ファイルを配置
 ├── proxy     Entity拡張機能によって生成されたProxyクラスを配置

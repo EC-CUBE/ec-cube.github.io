@@ -234,11 +234,11 @@ class SamplePageController
 
     /**
      * SamplePageController constructor.
-     * @param \Eccube\Entity\BaseInfo $BaseInfo
+     * @param \Eccube\Repository\BaseInfoRepository $baseInfoRepository
      */
-    public function __construct(\Eccube\Entity\BaseInfo $BaseInfo)
+    public function __construct(\Eccube\Repository\BaseInfoRepository $baseInfoRepository)
     {
-        $this->BaseInfo = $BaseInfo;
+        $this->BaseInfo = $baseInfoRepository->get();
     }
 
     /**

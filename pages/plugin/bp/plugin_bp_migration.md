@@ -69,7 +69,7 @@ class VersionYYYYMMDDHHMMSS extends AbstractMigration
         if ($schema->hasTable(self::NAME)) {
             return true;
         }
-        $table = $schema->getTable(self::NAME);
+        $table = $schema->createTable(self::NAME);
         $table->addColumn('nickname', 'string', array('notnull' => true, 'length' => 50));
         $table->changeColumn('email', 'string', array('notnull' => false, 'length' => 250));
     }

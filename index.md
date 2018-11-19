@@ -19,6 +19,7 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 
 + [システム要件](quickstart_requirement)
 + [インストール方法](quickstart_install)
++ [バージョンアップ方法](quickstart_update)
 + [コマンドラインインターフェイス](quickstart_cli)
 
 ## 機能仕様

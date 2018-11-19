@@ -17,6 +17,9 @@ entries:
     - title: インストール方法
       url: /quickstart_install
       output: web, pdf
+    - title: バージョンアップ方法
+      url: /quickstart_update
+      output: web, pdf
     - title: コマンドラインインターフェイス
       url: /quickstart_cli
       output: web, pdf

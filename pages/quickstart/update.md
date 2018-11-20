@@ -120,6 +120,7 @@ bin/console doctrine:migrations:migrate
 4.0.1で実装された[メンテナンス機能](https://github.com/EC-CUBE/ec-cube/pull/3998)を利用する場合, .envに以下を記載する必要があります。
 
 ```
+ECCUBE_LOCALE=ja
 ECCUBE_ADMIN_ROUTE=admin
 ECCUBE_TEMPLATE_CODE=default
 

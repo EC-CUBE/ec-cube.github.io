@@ -67,7 +67,7 @@ permalink: /
 + [フォームレイアウトの変更](/design_form)
 + [ブロックの利用](/design_block)
 + [例:GoogleAnalyticsタグの設置](/design_analyticsbloc)
-+ [Adobe XDテンプレート](http://downloads.ec-cube.net/manual/documents/eccube4_xd_front_template.zip?argument=2qpV46CP&dmai=a5bf51b05bacc5)
++ [フロント画面テンプレート for Adobe XD](http://downloads.ec-cube.net/manual/documents/eccube4_xd_front_template.zip?argument=2qpV46CP&dmai=a5bf51b05bacc5)
 
 
 

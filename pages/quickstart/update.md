@@ -1,6 +1,6 @@
 ---
 title: EC-CUBE本体のバージョンアップ
-keywords: howto update 
+keywords: howto update
 tags: [quickstart, getting_started]
 sidebar: home_sidebar
 permalink: quickstart_update
@@ -25,7 +25,7 @@ summary : EC-CUBE本体のバージョンアップ手順について記載しま
 
 ### 1. サイトのバックアップ
 
-EC-CUBEのインストールディレクトリ以下をすべてバックアップしてください。
+EC-CUBEのデータベースとインストールディレクトリ以下をすべてバックアップしてください。
 
 ### 2. 共通ファイル差し替え
 
@@ -82,8 +82,8 @@ composer require psr/http-message
 
 ### 5. スキーマ更新/マイグレーション
 
-スキーマ更新およびマイグレーション機能を利用して、データベースのバージョンアップを行います。 
- 
+スキーマ更新およびマイグレーション機能を利用して、データベースのバージョンアップを行います。
+
 以下のコマンドを実行してください。
 
 スキーマ更新
@@ -117,7 +117,7 @@ bin/console doctrine:migrations:migrate
 
 #### 4.0.0 -> 4.0.1
 
-4.0.1で実装された[メンテナンス機能](https://github.com/EC-CUBE/ec-cube/pull/3998)を利用する場合, .envに以下を記載する必要があります。
+環境変数に以下を記載する必要があります。
 
 ```
 ECCUBE_LOCALE=ja

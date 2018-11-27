@@ -46,7 +46,7 @@ https://symfony.com/doc/current/form/create_form_type_extension.html
 
 会員登録ページのフォームを拡張して、会社名を入力必須項目に変更するサンプルです。
 
-./app/Customize/Form/Extension/EntryTypeBirthdayExtension.php
+./app/Customize/Form/Extension/CompanyNameRequiredExtension.php
 
 ```php
 <?php

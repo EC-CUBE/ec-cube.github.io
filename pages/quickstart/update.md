@@ -3,7 +3,7 @@ title: EC-CUBE本体のバージョンアップ
 keywords: howto update 
 tags: [quickstart, getting_started]
 sidebar: home_sidebar
-permalink: 
+permalink: quickstart_update
 summary : EC-CUBE本体のバージョンアップ手順について記載します。  
 ---
 

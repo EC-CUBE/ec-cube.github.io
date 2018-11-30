@@ -43,7 +43,6 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 + [管理画面デザイン参考資料（デザインガイド）](/pdf/ec-cube4_design-guide180930.pdf)
 
 + [デザインテンプレートの基礎](design_template)
-+ [デザインのフレーム構成](design_default_frame)
 + [フォームレイアウトの変更](design_form)
 + [ブロックの利用](design_block)
 + [レイアウト管理の利用](design_layout)

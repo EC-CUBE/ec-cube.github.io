@@ -11,7 +11,7 @@ summary : EC-CUBE本体のバージョンアップ手順について記載しま
 ## ご注意
 - 本番環境でバージョンアップを行う前に、テスト環境で事前検証を必ず行ってください。
 - この手順では、ec-cube.netからダウンロードしたEC-CUBEのパッケージを利用していることを想定しています。
-- EC-CUBE本体のコード(app/config/eccube, app/DoctrineMigrations, bin, src, htmlディレクトリ)をカスタマイズしている場合、ファイルが上書きされてしまうため、この手順ではバージョンアップできません。[各バージョンでの変更差分](##各バージョンでの変更差分)を確認して必要な差分を取り込んでください。
+- EC-CUBE本体のコード(app/config/eccube, app/DoctrineMigrations, bin, src, htmlディレクトリ)をカスタマイズしている場合、ファイルが上書きされてしまうため、この手順ではバージョンアップできません。[各バージョンでの変更差分](#各バージョンでの変更差分)を確認して必要な差分を取り込んでください。
 
 ## 作業の流れ
 1. サイトのバックアップ
@@ -112,11 +112,16 @@ composer require psr/http-message
  
 以下のコマンドを実行してください。
 
+**※ 4.0.0 → 4.0.1 へのアップデートでは、スキーマ更新は必要ありません。**
+
+参考：[プラグインが無効の状態だと Doctrine SchemaTool でエンティティ拡張が認識されない](https://github.com/EC-CUBE/ec-cube/issues/4056)
+
+
 スキーマ更新
 
 ```
 bin/console doctrine:schema:update --force --dump-sql
-```
+``` 
 
 マイグレーション
 

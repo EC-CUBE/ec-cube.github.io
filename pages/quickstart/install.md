@@ -231,10 +231,10 @@ cssファイルやjsファイル等が配置されます。
 
 | ディレクトリ・ファイル | 必要な権限 | 設定例 |
 |--------------------|----------|-------|
-| eccube_root/ <br> app/ <br>  app/Plugin/ <br>  app/PluginData/ <br>  app/proxy/ <br>  app/template/ <br>  html/ <br>  var/ <br> vendor/ | 読み取り、書き込み | 707(rwx---rwx) |
-| その他のディレクトリ | 読み取り | 705(rwx---r-x) |
-| composer.json <br> composer.lock | 読み取り、書き込み | 606(rw----rw-) |
-| その他のファイル | 読み取り | 604(rw----r--) |
+| eccube_root/ <br> app/ <br>  app/Plugin/ <br>  app/PluginData/ <br>  app/proxy/ <br>  app/template/ <br>  html/ <br>  var/ <br> vendor/ | 読み取り、書き込み | 707( `rwx---rwx` ) |
+| その他のディレクトリ | 読み取り | 705( `rwx---r-x` ) |
+| composer.json <br> composer.lock | 読み取り、書き込み | 606( `rw----rw-` ) |
+| その他のファイル | 読み取り | 604( `rw----r--` ) |
 
 #### 本体のバージョンアップについて
 

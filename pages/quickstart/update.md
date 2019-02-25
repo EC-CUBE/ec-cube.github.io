@@ -80,7 +80,7 @@ bin/console cache:clear --no-warmup
 | バージョンアップ対象 | 差し替え対象ファイル                                                                              |
 |----------------------|---------------------------------------------------------------------------------------------------|
 | 4.0.0 → 4.0.1        | composer.json<br>composer.lock<br>.htaccess<br>index.php<br>maintenance.php|
-| 4.0.0 → 4.0.1        | composer.json<br>composer.lock|
+| 4.0.1 → 4.0.2        | composer.json<br>composer.lock|
 
 
 - ※ 差し替え対象に、composer.json/composer.lockがある場合は 上書き後、`composer.json/composer.lockの更新の手順`を実施してください。
@@ -159,9 +159,9 @@ bin/console doctrine:migrations:migrate
 
 |ページ名                               |ファイル名|
 |--------------------------------------|---------------|
-|MYページ/購入履歴詳細                    |<a href="../documents/updatedoc/4.0.2/Mypage_history_twig.htm" target = "_blank">Mypage/history.twig</a>|
-|注文受付メール                          |<a href="../documents/updatedoc/4.0.2/Mail_order_twig.htm" target = "_blank">Mail/order.twig</a>|
-|注文受付メール(HTML)                    |<a href="../documents/updatedoc/4.0.2/Mail_order_html_twig.htm" target = "_blank">Mail/order.html.twig</a>|
+|MYページ/購入履歴詳細                    |<a href="https://github.com/EC-CUBE/ec-cube/pull/4008/files" target = "_blank">Mypage/history.twig</a>|
+|注文受付メール                          |<a href="https://github.com/EC-CUBE/ec-cube/pull/4060/files" target = "_blank">Mail/order.twig</a>|
+|注文受付メール(HTML)                    |<a href="https://github.com/EC-CUBE/ec-cube/pull/4060/files" target = "_blank">Mail/order.html.twig</a>|
 
 
 ### 8.メンテナンスモードを無効にする（バージョン4.0.1以降）

@@ -79,11 +79,13 @@ bin/console cache:clear --no-warmup
 
 | バージョンアップ対象 | 差し替え対象ファイル                                                                              |
 |----------------------|---------------------------------------------------------------------------------------------------|
-| 4.0.0 → 4.0.1        | composer.json<br>composer.lock<br>.htaccess<br>index.php<br>maintenance.php
+| 4.0.0 → 4.0.1        | composer.json<br>composer.lock<br>.htaccess<br>index.php<br>maintenance.php|
+| 4.0.1 → 4.0.2        | composer.json<br>composer.lock|
 
-※ 差し替え対象に、composer.json/composer.lockがある場合は 上書き後、`composer.json/composer.lockの更新の手順`を実施してください。
 
-※ `4.0.0 → 4.0.2` のように複数バージョンをまたぐバージョンアップを行う場合は、`4.0.0 → 4.0.1`→`4.0.1 → 4.0.2` のように段階的なバージョンアップを行ってください。
+- ※ 差し替え対象に、composer.json/composer.lockがある場合は 上書き後、`composer.json/composer.lockの更新の手順`を実施してください。
+- ※ `4.0.0 → 4.0.2` のように複数バージョンをまたぐバージョンアップを行う場合は、`4.0.0 → 4.0.1`→`4.0.1 → 4.0.2` のように段階的なバージョンアップを行ってください。
+
 
 ### 5. composer.json/composer.lockの更新
 
@@ -112,7 +114,7 @@ composer require psr/http-message
  
 以下のコマンドを実行してください。
 
-**※ 4.0.0 → 4.0.1 へのアップデートでは、スキーマ更新は必要ありません。**
+**※ 4.0.0 → 4.0.1, 4.0.1 → 4.0.2 へのアップデートでは、スキーマ更新は必要ありません。**
 
 参考：[プラグインが無効の状態だと Doctrine SchemaTool でエンティティ拡張が認識されない](https://github.com/EC-CUBE/ec-cube/issues/4056)
 
@@ -129,11 +131,12 @@ bin/console doctrine:schema:update --force --dump-sql
 bin/console doctrine:migrations:migrate
 ```
 
-### 7. テンプレートファイルの更新
+### 7. フロントテンプレートファイルの更新
 
-対象となるバージョンごとに、テンプレートファイル(twig)の更新が必要です。  
+対象となるバージョンごとに、フロントテンプレートファイル(twig)の更新が必要です。  
 
-管理画面のコンテンツ管理から、該当するページ/ブロックを編集してください。  
+管理画面のコンテンツ管理もしくは店舗設定＞メール設定から、該当するページ/ブロック/メールテンプレートを編集してください。  
+
 
 #### 4.0.0 → 4.0.1
 
@@ -149,6 +152,17 @@ bin/console doctrine:migrations:migrate
 |非会員購入情報入力                      |<a href="../documents/updatedoc/4.0.1/Shopping_nonmember_twig.htm" target = "_blank">Shopping/nonmember.twig</a>|
 |商品購入/お届け先の追加                  |<a href="../documents/updatedoc/4.0.1/Shopping_shipping_edit_twig.htm" target = "_blank">Shopping/shipping_edit.twig</a>|
 |商品購入/お届け先の複数指定(お届け先の追加)|<a href="../documents/updatedoc/4.0.1/Shopping_shipping_multiple_edit_twig.htm" target = "_blank">Shopping/shipping_multiple_edit.twig</a>|
+
+#### 4.0.1 → 4.0.2
+
+変更対象の差分は、以下リンクからご確認いただくが[各バージョンでの変更差分](#各バージョンでの変更差分)からご確認いただけます。
+
+|ページ名                               |ファイル名|
+|--------------------------------------|---------------|
+|MYページ/購入履歴詳細                    |<a href="https://github.com/EC-CUBE/ec-cube/pull/4008/files" target = "_blank">Mypage/history.twig</a>|
+|注文受付メール                          |<a href="https://github.com/EC-CUBE/ec-cube/pull/4060/files" target = "_blank">Mail/order.twig</a>|
+|注文受付メール(HTML)                    |<a href="https://github.com/EC-CUBE/ec-cube/pull/4060/files" target = "_blank">Mail/order.html.twig</a>|
+
 
 ### 8.メンテナンスモードを無効にする（バージョン4.0.1以降）
 
@@ -172,6 +186,11 @@ ECCUBE_TEMPLATE_CODE=default
 ※設定値は記載例です。環境にあわせて変更してください。
 ```
 
+#### 4.0.1 -> 4.0.2
+
+- [faviconパスの変更](https://github.com/EC-CUBE/ec-cube/pull/4075)を利用する場合,  [差分](https://github.com/EC-CUBE/ec-cube/commit/50fcbdea4c66e5eabc03ba1e38ce7952a53ca97d#diff-7cefac9fd3759d999afb711a36b6dad9)を適用後、ファイル管理からfaviconファイルをアップロードすることでfaviconの変更を行うことができます。
+- [CSS管理](https://github.com/EC-CUBE/ec-cube/pull/4083) を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/7994bd00de19399d7c6a8e22dd280791478b9435#diff-7cefac9fd3759d999afb711a36b6dad9)の適用が必要です。
+- [Javascript管理](https://github.com/EC-CUBE/ec-cube/pull/4084)を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/008236d28633d803d18e15abecf5a04224d0a4f4#diff-7cefac9fd3759d999afb711a36b6dad9R50)の適用が必要です。
 
 EC-CUBEのバージョンアップ手順は以上です。
 
@@ -181,5 +200,6 @@ EC-CUBEのバージョンアップ手順は以上です。
 
 | バージョン      | 差分ページ                                                                                                             |
 |-----------------|------------------------------------------------------------------------------------------------------------------------|
-| 4.0.0 → 4.0.1   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.0...4.0.1#files_bucket](https://github.com/EC-CUBE/ec-cube/compare/4.0.0...4.0.1?w=1)   |
+| 4.0.0 → 4.0.1   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.0...4.0.1](https://github.com/EC-CUBE/ec-cube/compare/4.0.0...4.0.1?w=1#files_bucket)   |
+| 4.0.1 → 4.0.2   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.1...4.0.2](https://github.com/EC-CUBE/ec-cube/compare/4.0.1...4.0.2?w=1#files_bucket)   |
 

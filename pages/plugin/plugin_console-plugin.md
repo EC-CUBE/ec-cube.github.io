@@ -1,5 +1,5 @@
 ---
-title: app/console向けプラグイン
+title: プラグインでコンソールコマンドを作成する
 keywords: plugin console
 tags: [plugin]
 sidebar: home_sidebar
@@ -7,70 +7,98 @@ permalink: plugin_console-plugin
 folder: plugin
 ---
 
-## コンソールプラグイン作成方法 
+## 概要
 
 [3.0.13以降](https://github.com/EC-CUBE/ec-cube/pull/1952){:target="_blank"}からコンソールコマンドを拡張し、cronジョブやインポートなどのバッチジョブをプラグインで開発できます。  
 
-### コンソールフォーマト
+### コンソールプラグインの実行方法
+
+コンソールプラグインを開発することで、以下のように実行することができます。
 
 ```
-php app/console [グループ名]:[アクション名] [パラメター]
+php app/console [グループ名]:[アクション名] [パラメータ]
 ```
 
-### ファイルとフォルダー作成方法
+開発中は、`display_errors`をオンにしておくとデバッグが行いやすいです。
 
-ファイルとフォルダーはapp/Pluginの以下に作成します
+```
+php -d display_errors app/console [グループ名]:[アクション名] [パラメータ]
+```
 
-* example (商品インポート)
+### コンソールプラグインの実装方法
+
+例として、引数として渡された商品IDから商品情報を出力するコマンドを作成します。
+
+ファイルとフォルダはapp/Pluginの以下に作成します
+
+* ファイル・ディレクトリ構造
 
 ```
   app/Plugin/
-    └── ProductImport
-        ├── Import.php
+    └── ProductDisplay
+        ├── Dispaly.php
         ├── ServiceProvider
-        │  └── ProductImportServiceProvider.php
+        │  └── ProductDisplayServiceProvider.php
         └── config.yml
 ```
- - Import.phpこちらにビジネスロジックを書きます
+ - Dispaly.phpに、ロジックを実装します。
 
 ```
- //Import.php
- // \Knp\Command\Command拡張する
- class Import extends \Knp\Command\Command
+<?php
+namespace Plugin\ProductDisplay;
+
+use Knp\Command\Command;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Formatter\OutputFormatterStyle;
+use Symfony\Component\Console\Helper\TableHelper;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputDefinition;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+
+class Dispaly extends Command
 {
     protected function configure()
     {
-        //コンソールパラメターと説明書きます
-		//参考はこちらですhttp://docs.symfony.gr.jp/symfony2/cookbook/console.html
+        // コマンド名やパラメータの設定を行います。
+        // 参考：http://docs.symfony.gr.jp/symfony2/cookbook/console.html
+
+    	$this
+            ->setName('product:display')
+    	    ->setDescription('Display product info by product id')
+    	    ->addArgument('id', InputArgument::REQUIRED, 'Product ID');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        //Eccube\Application
+        // Eccube\Application
         $app = $this->getSilexApplication();
-        
-		//こちらビジネスロジックを始まります
+
+        // 以下にロジックを実装していきます。
+        // サンプルとして、引数で指定したIDの商品情報を表示します。
+        $output->writeln('<info>Product Info.</info>');
+        dump($app["eccube.repository.product"]->find( $input->getArgument('id')));
     }
 }
  
 ```
  
- - ProductImportServiceProvider.php以下のソースご覧ください
+ - ProductDisplayServiceProvider.php では、コマンドをEC-CUBEに登録する処理を記述します。
 
 ```
- //ProductImportServiceProvider.php
- <?php
-namespace Plugin\ProductImport\ServiceProvider;
+<?php
+namespace Plugin\ProductDisplay\ServiceProvider;
 
-class ProductImportServiceProvider implements \Silex\ServiceProviderInterface
+class ProductDisplayServiceProvider implements \Silex\ServiceProviderInterface
 {
     public function register(\Silex\Application $app)
     {
-	    //コマンドライン以外STOPする
-        if(!isset($app['console'])){
+        // コマンドライン以外ではコマンドの登録はスキップする
+        if (!isset($app['console'])) {
             return;
         }
-        $app['console']->add(new \Plugin\ProductImport\Import());
+        $app['console']->add(new \Plugin\ProductDisplay\Display());
     }
 
     public function boot(\Silex\Application $app)
@@ -80,16 +108,14 @@ class ProductImportServiceProvider implements \Silex\ServiceProviderInterface
 }
 ```
 
-- config.ymlプラグイン情報を書きます
+- config.ymlにプラグイン情報を記述します。
 
 ```
- //config.yml
-name: 商品インポート
-code: ProductImport
+name: 商品情報表示コマンド
+code: ProductDisplay
 version: 0.0.1
 service:
-    - ProductImportServiceProvider
-
+    - ProductDisplayServiceProvider
 ```
 
 ### コンソールプラグインの確認
@@ -97,11 +123,11 @@ service:
 以下のコマンドを実行する
 
 ```
-　php app/console
+php app/console
 
 ```
 
-結果の中に追加したプラグイン表示すること確認します（Available commands:以下）
+結果の中に追加したプラグインが表示されることを確認します（Available commands:以下）
 
 ```
 $ php app/console
@@ -136,7 +162,7 @@ Available commands:
  plugin
   plugin:develop       plugin commandline installer.
  product
-  product:import       Import products from csv file.
+  product:display       Display product info by product id.
  router
   router:debug         Displays current routes for an application
 

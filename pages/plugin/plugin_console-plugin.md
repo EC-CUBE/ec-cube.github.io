@@ -122,14 +122,13 @@ service:
 
 プラグインが無効状態の場合は有効化してください。
 
-以下のコマンドを実行します。
+以下で、コマンドの一覧を確認します。
 
 ```
 php app/console
-
 ```
 
-結果の中に追加したプラグインが表示されることを確認します（Available commands:以下）
+結果の中に、追加したプラグインのコマンドが表示されることを確認します（Available commands:以下）
 
 ```
 $ php app/console
@@ -164,8 +163,16 @@ Available commands:
  plugin
   plugin:develop       plugin commandline installer.
  product
-  product:display       Display product info by product id.
+  product:display      Display product info by product id.
  router
   router:debug         Displays current routes for an application
 
 ```
+
+コマンドを実行します。
+
+```
+php app/console product:display 1
+```
+
+指定した商品のdump結果が表示されたら成功です。

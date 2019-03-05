@@ -29,19 +29,19 @@ php -d display_errors app/console [グループ名]:[アクション名] [パラ
 
 例として、引数として渡された商品IDから商品情報を出力するコマンドを作成します。
 
-ファイルとフォルダはapp/Pluginの以下に作成します
+ファイルとフォルダはapp/Plugin以下に作成します
 
 * ファイル・ディレクトリ構造
 
 ```
   app/Plugin/
     └── ProductDisplay
-        ├── Dispaly.php
+        ├── Display.php
         ├── ServiceProvider
         │  └── ProductDisplayServiceProvider.php
         └── config.yml
 ```
- - Dispaly.phpに、ロジックを実装します。
+ - Display.phpに、ロジックを実装します。
 
 ```
 <?php
@@ -57,7 +57,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class Dispaly extends Command
+class Display extends Command
 {
     protected function configure()
     {
@@ -120,7 +120,9 @@ service:
 
 ### コンソールプラグインの確認
 
-以下のコマンドを実行する
+プラグインが無効状態の場合は有効化してください。
+
+以下のコマンドを実行します。
 
 ```
 php app/console

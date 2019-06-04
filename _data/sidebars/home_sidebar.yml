@@ -31,8 +31,8 @@ entries:
             url: /quickstart_update
             output: web, pdf
           - title: 3.0.18での注意点
-              url: /quickstart_update_3_0_18
-              output: web, pdf
+            url: /quickstart_update_3_0_18
+            output: web, pdf
 
   - title: 本体の仕様
     output: web, pdf

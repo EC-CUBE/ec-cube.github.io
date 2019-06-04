@@ -23,18 +23,18 @@ RememberMeなどでログイン情報を保存している場合も、再度ロ�
 
 Symfonyの仕様変更に伴い、ShoppingControllerでの非会員情報をセッションに保存をする箇所に修正が入っています。
   
-詳しくは[こちら](hoge)をご確認ください。
+詳しくは[こちら](#非会員のセッション情報取得の修正方法)をご確認ください。
 
 ### Entityを含んだクラスのデータの扱い方について
 
 Symfonyの仕様変更に伴い、Entityを含むオブジェクトをそのまま `serialize` `unserialize` をした際にエラーが発生する可能性があります。  
   
-詳しくは[こちら](hoge)をご確認ください。
+詳しくは[こちら](#Entityを含んだクラスのデータの扱い方の修正)をご確認ください。
 
 
 ## 該当コードの修正方法
 
-### 1. 非会員のセッション情報取得の修正方法
+### 非会員のセッション情報取得の修正方法
 
 Symfonyの仕様変更に伴い、ShoppingControllerでの非会員情報をセッションに保存をする箇所に修正が入っています。
 ShoppingControllerのカスタマイズやプラグインでオーバーライドを行なっている場合は修正が必要となります。
@@ -59,7 +59,7 @@ ShoppingControllerで非会員情報を扱う場合は、`setNonMember`と`getNo
 参考：本体ソースコードの修正差分  
 [https://github.com/EC-CUBE/ec-cube/pull/2865/files#diff-615c41c60c70bb3b6ddabc92fa58c67c](https://github.com/EC-CUBE/ec-cube/pull/2865/files#diff-615c41c60c70bb3b6ddabc92fa58c67c)
 
-### 2. Entityを含んだクラスのデータの扱い方の修正
+### Entityを含んだクラスのデータの扱い方の修正
 
 Symfonyの仕様変更に伴い、Entityを含むオブジェクトをそのまま `serialize` `unserialize` をした際にエラーが発生する可能性があります。  
 そのため、該当するコードがある場合は動作確認の上、下記修正方法に従って修正をする必要があります。

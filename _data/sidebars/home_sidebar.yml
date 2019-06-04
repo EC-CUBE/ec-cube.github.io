@@ -30,7 +30,7 @@ entries:
       - title: バージョンアップ
         output: web, pdf
         subfolderitems:
-        　- title: バージョンアップ方法
+          - title: バージョンアップ方法
             url: /quickstart_update
             output: web, pdf
 

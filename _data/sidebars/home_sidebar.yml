@@ -26,6 +26,13 @@ entries:
     - title: バージョンアップ方法
       url: /quickstart_update
       output: web, pdf
+      subfolders:
+      - title: バージョンアップ
+        output: web, pdf
+        subfolderitems:
+        　- title: バージョンアップ方法
+            url: /quickstart_update
+            output: web, pdf
 
   - title: 本体の仕様
     output: web, pdf

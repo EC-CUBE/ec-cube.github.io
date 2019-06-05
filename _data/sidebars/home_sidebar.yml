@@ -23,9 +23,16 @@ entries:
     - title: urlからhtmlを無くす手順
       url: /quickstart_remove-html
       output: web, pdf
-    - title: バージョンアップ方法
-      url: /quickstart_update
-      output: web, pdf
+      subfolders:
+      - title: バージョンアップ
+        output: web, pdf
+        subfolderitems:
+          - title: バージョンアップ方法
+            url: /quickstart_update
+            output: web, pdf
+          - title: 3.0.18での注意点
+            url: /quickstart_update_3_0_18
+            output: web, pdf
 
   - title: 本体の仕様
     output: web, pdf

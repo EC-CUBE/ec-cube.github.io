@@ -59,6 +59,8 @@ ShoppingControllerで非会員情報を扱う場合は、`setNonMember`と`getNo
 　$app['eccube.service.shopping']->setNonMember($this->sessionKey, $Customer);
 ```
 
+なお[その他考慮すべき項目](#その他考慮すべき項目) にも該当していないかご確認ください。
+
 参考：EC-CUBE本体では今回の変更に伴い、下記のような変更を行っています。  
 [https://github.com/EC-CUBE/ec-cube/pull/2865/files#diff-615c41c60c70bb3b6ddabc92fa58c67c](https://github.com/EC-CUBE/ec-cube/pull/2865/files#diff-615c41c60c70bb3b6ddabc92fa58c67c)
 
@@ -111,10 +113,29 @@ $CustomerAddress->setPropertiesFromArray($CustomerAddressArray); // 配列から
 $CustomerAddress->setPref($app['eccube.repository.master.pref']->find($CustomerAddressArray['Pref']['id'])); // Prefオブジェクトの復元
 ```
 
+なお[その他考慮すべき項目](#その他考慮すべき項目) にも該当していないかご確認ください。
+
 参考：EC-CUBE本体では今回の変更に伴い、下記のような変更を行っています。  
-[https://github.com/EC-CUBE/ec-cube/pull/4167/files#diff-615c41c60c70bb3b6ddabc92fa58c67c](https://github.com/EC-CUBE/ec-cube/pull/4167/files#diff-615c41c60c70bb3b6ddabc92fa58c67c)
+[https://github.com/EC-CUBE/ec-cube/pull/4168/files](https://github.com/EC-CUBE/ec-cube/pull/4168/files)
 
 
+### その他考慮すべき項目
+
+#### 非会員のセッション情報取得時の注意点
+
+同一コードで3.0.17以前で動作させる場合は、setNonMember関数が存在しないため、条件分岐等を行ってください。
+```php
+if (method_exists($app['eccube.service.shopping'], 'setNonMember')) {
+    // 3.0.18以降
+    $app['eccube.service.shopping']->setNonMember($this->sessionKey, $Customer);
+} else {
+    // 既存の処理
+}
+```
+
+#### プラグインアップデート時の注意点
+すでにEntityを含んだクラスのデータをSerializeしてデータベースに保存している場合、プラグインアップデート時の互換性を考慮（*1）する必要があります。  
+*1 プラグインアップデート時のマイグレーション処理でデータを変換する等
 
 
 

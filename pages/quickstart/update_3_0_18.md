@@ -59,7 +59,7 @@ ShoppingControllerで非会員情報を扱う場合は、`setNonMember`と`getNo
 　$app['eccube.service.shopping']->setNonMember($this->sessionKey, $Customer);
 ```
 
-なお[その他考慮すべき項目](#その他考慮すべき項目) にも該当していないかご確認ください。
+なお[その他プラグインで考慮すべき項目](#その他プラグインで考慮すべき項目) にも該当していないかご確認ください。
 
 参考：EC-CUBE本体では今回の変更に伴い、下記のような変更を行っています。  
 [https://github.com/EC-CUBE/ec-cube/pull/2865/files#diff-615c41c60c70bb3b6ddabc92fa58c67c](https://github.com/EC-CUBE/ec-cube/pull/2865/files#diff-615c41c60c70bb3b6ddabc92fa58c67c)
@@ -113,13 +113,13 @@ $CustomerAddress->setPropertiesFromArray($CustomerAddressArray); // 配列から
 $CustomerAddress->setPref($app['eccube.repository.master.pref']->find($CustomerAddressArray['Pref']['id'])); // Prefオブジェクトの復元
 ```
 
-なお[その他考慮すべき項目](#その他考慮すべき項目) にも該当していないかご確認ください。
+なお[その他プラグインで考慮すべき項目](#その他プラグインで考慮すべき項目) にも該当していないかご確認ください。
 
 参考：EC-CUBE本体では今回の変更に伴い、下記のような変更を行っています。  
 [https://github.com/EC-CUBE/ec-cube/pull/4168/files](https://github.com/EC-CUBE/ec-cube/pull/4168/files)
 
 
-### その他考慮すべき項目
+### その他プラグインで考慮すべき項目
 
 #### 非会員のセッション情報取得時の注意点
 

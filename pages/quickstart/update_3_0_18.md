@@ -137,5 +137,68 @@ if (method_exists($app['eccube.service.shopping'], 'setNonMember')) {
 すでにEntityを含んだクラスのデータをSerializeしてデータベースに保存している場合、プラグインアップデート時の互換性を考慮（*1）する必要があります。  
 *1 プラグインアップデート時のマイグレーション処理でデータを変換する等
 
+#### マイグレーションのサンプルコード
+
+
+
+参考：メールマガジンプラグインでは今回の変更に伴い、下記のようなマイグレーションを行っています。  
+[https://github.com/EC-CUBE/mail-magazine-plugin/blob/3.0/Resource/doctrine/migration/Version201906031100.php](https://github.com/EC-CUBE/mail-magazine-plugin/blob/3.0/Resource/doctrine/migration/Version201906031100.php)
+
+```php
+
+public function up(Schema $schema)
+{
+	// PDOインスタンスの取得
+    $pdo = $this->connection->getWrappedConnection();
+    // JSONに変換が必要なデータを取得
+    $stmt = $pdo->prepare('SELECT send_id, search_data FROM plg_send_history;');
+    $stmt->execute();
+    foreach ($stmt as $row) {
+        // 配信履歴テーブルのsearch_dataをserializeされたデータからjson形式に変換する
+        $formData = $this->unserializeWrapper(base64_decode($row['search_data']));
+        // unserializeしたデータから配列fに変換
+        $formDataArray = $formData;
+        $formDataArray['pref'] = ($formData['pref'] instanceof Pref) ? $formData['pref']->toArray() : null;
+        $formDataArray['sex'] = array_filter(array_map(function ($entity) {
+            if ($entity instanceof Sex) {
+                return $entity->toArray();
+            } else {
+                return false;
+            }
+        }, $formData['sex']->toArray()));
+        $formDataArray['customer_status'] = array_filter(array_map(function ($entity) {
+            if ($entity instanceof CustomerStatus) {
+                return $entity->toArray();
+            } else {
+                return false;
+            }
+        }, $formData['customer_status']->toArray()));
+        // 不要なデータを削除
+        unset($formDataArray['buy_category']);
+        // 配列をJSONに変換
+        $json = json_encode($formDataArray);
+        // 変換したJSON形式のデータを配信履歴テーブルのsearch_dataに保存
+        $stmt = $pdo->prepare('UPDATE plg_send_history SET search_data = :search_data WHERE send_id = :send_id;');
+        $stmt->execute(array(':search_data' => $json, ':send_id' => $row['send_id']));
+    }
+}
+
+/**
+ * 互換性のないEntityを取り除いた状態でUnserialiseを実行する
+ * Member,Customerは "__php_incomplete_class"となる.
+ *
+ * @param array $serializedData Base64でエンコードされたシリアライズデータ
+ *
+ * @return mixed unserializeしたデータ
+ */
+private function unserializeWrapper($serializedData)
+{
+    $serializedData = str_replace('DoctrineProxy\__CG__\Eccube\Entity\Member', '__Workaround_\__CG__\Eccube\Entity\Member', $serializedData);
+    $serializedData = str_replace('DoctrineProxy\__CG__\Eccube\Entity\Customer', '__Workaround_\__CG__\Eccube\Entity\Customer', $serializedData);
+    return unserialize($serializedData);
+}
+
+```
+
 
 

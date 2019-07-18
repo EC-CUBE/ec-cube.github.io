@@ -17,6 +17,10 @@ permalink: quickstart_requirement
 |Database|MySQL|5.5.x / 5.6.x / 5.7.x <br> (InnoDBエンジン 必須) |5.6.33|
 |Database|SQLite(開発用途向け) |3.x |-|
 
+※ 4.0.0, 4.0.1 は、PHP7.3で動作いたしません。PHP7.3をご利用の場合、4.0.2以降のバージョンをご使用ください。
+
+[バージョンアップ方法はこちら](http://doc4.ec-cube.net/quickstart_update)
+
 # PHPライブラリ
 
 | 分類 | ライブラリ|

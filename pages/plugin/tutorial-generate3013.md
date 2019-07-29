@@ -152,7 +152,7 @@ Input[7] :
 [+]Plugin Name:  サンプルプラグイン
 [+]Plugin Code:  Sample
 [+]Version:  1.0.0
-[+]Author:  Lockon co,.ltd.
+[+]Author:  EC-CUBE co,.ltd.
 [+]Old version support:  No
 [+]Site events:
   eccube.event.app.request

@@ -58,7 +58,7 @@ EC-CUBE3本体ではエラーメッセージは極力ソースコードには記
   │       └── message.ja.yml
 ```
 
-プラグインから`message.ja.yml`を読み込むためには、`ServiceProvider`で以下のように定義します。(サービスプロバイダーについては[サービスプロバイダー](serviceprovider)で解説します)
+プラグインから`message.ja.yml`を読み込むためには、`ServiceProvider`で以下のように定義します。(サービスプロバイダーについては[サービスプロバイダー](/plugin_bp_serviceprovider)で解説します)
 
 ```
 // メッセージ登録

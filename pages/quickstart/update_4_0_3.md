@@ -1,5 +1,5 @@
 ---
-title: EC-CUBE本体のバージョンアップ
+title: 4.0.3での注意点
 keywords: howto update 
 tags: [quickstart, getting_started]
 sidebar: home_sidebar

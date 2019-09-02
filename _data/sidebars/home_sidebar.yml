@@ -13,20 +13,35 @@ entries:
       url: /quickstart_requirement
       output: web, pdf
       type: homepage
-      output: web, pdf
     - title: インストール方法
       url: /quickstart_install
       output: web, pdf
-      subfolderitems:
-          - title: バージョンアップ方法
-            url: /quickstart_update
-            output: web, pdf
-          - title: 4.0.3での注意点
-            url: /quickstart_update_4_0_3
-            output: web, pdf
+      subfolders:
+        - title: バージョンアップ
+          output: web, pdf
+          subfolderitems:
+            - title: バージョンアップ方法
+              url: /quickstart_update
+              output: web, pdf
+            - title: 4.0.3での注意点
+              url: /quickstart_update_4_0_3
+              output: web, pdf
     - title: コマンドラインインターフェイス
       url: /quickstart_cli
       output: web, pdf
+
+  - title: 機能仕様
+    output: web, pdf
+    folderitems:
+      - title: 機能一覧
+        external_url: https://www.ec-cube.net/product/functions.php
+        output: web, pdf
+      - title: 受注関連
+        url: /spec_order
+        output: web, pdf
+      - title: 税率設定
+        url: /spec_tax
+        output: web, pdf
 
   - title: 本体カスタマイズ
     output: web, pdf

@@ -26,7 +26,7 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 
 + [機能一覧](https://www.ec-cube.net/product/functions.php)
 + [受注関連](spec_order)
-+ [税率設定](/spec_tax)
++ [税率設定](spec_tax)
 
 ## 本体カスタマイズ
 + [ディレクトリ構成](spec_directory-structure)

@@ -87,7 +87,7 @@ bin/console cache:clear --no-warmup
 |----------------------|---------------------------------------------------------------------------------------------------|
 | 4.0.0 → 4.0.1        | composer.json<br>composer.lock<br>.htaccess<br>index.php<br>maintenance.php|
 | 4.0.1 → 4.0.2        | composer.json<br>composer.lock|
-
+| 4.0.1 → 4.0.2        | composer.json<br>composer.lock<br>.htaccess<br>index.php|
 
 - ※ 差し替え対象に、composer.json/composer.lockがある場合は 上書き後、`composer.json/composer.lockの更新の手順`を実施してください。
 - ※ `4.0.0 → 4.0.2` のように複数バージョンをまたぐバージョンアップを行う場合は、`4.0.0 → 4.0.1`→`4.0.1 → 4.0.2` のように段階的なバージョンアップを行ってください。
@@ -169,6 +169,11 @@ bin/console doctrine:migrations:migrate
 |注文受付メール                          |<a href="https://github.com/EC-CUBE/ec-cube/pull/4060/files" target = "_blank">Mail/order.twig</a>|
 |注文受付メール(HTML)                    |<a href="https://github.com/EC-CUBE/ec-cube/pull/4060/files" target = "_blank">Mail/order.html.twig</a>|
 
+#### 4.0.2 → 4.0.3
+
+変更対象の差分は、以下リンクからご確認いただくか[各バージョンでの変更差分](#各バージョンでの変更差分)からご確認いただけます。
+
+<a href="https://github.com/EC-CUBE/ec-cube/pulls?q=is%3Apr+label%3Aaffected%3Atemplate+is%3Aclosed+milestone%3A4.0.3" target = "_blank">フロントテンプレートファイルの差分</a>
 
 ### 8.メンテナンスモードを無効にする（バージョン4.0.1以降）
 
@@ -198,6 +203,13 @@ ECCUBE_TEMPLATE_CODE=default
 - [CSS管理](https://github.com/EC-CUBE/ec-cube/pull/4083) を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/7994bd00de19399d7c6a8e22dd280791478b9435#diff-7cefac9fd3759d999afb711a36b6dad9)の適用が必要です。
 - [Javascript管理](https://github.com/EC-CUBE/ec-cube/pull/4084)を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/008236d28633d803d18e15abecf5a04224d0a4f4#diff-7cefac9fd3759d999afb711a36b6dad9R50)の適用が必要です。
 
+#### 4.0.2 -> 4.0.3
+
+- [軽減税率制度に関する対応](https://github.com/EC-CUBE/ec-cube/issues/4183)を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/pulls?q=is%3Apr+is%3Aclosed+label%3A%E8%BB%BD%E6%B8%9B%E7%A8%8E%E7%8E%87%E5%AF%BE%E5%BF%9C)の適用が必要です。
+  ※合わせて[注意点](quickstart_update_4_0_3)もご確認下さい。
+- [PDFのロゴ画像変更](https://github.com/EC-CUBE/ec-cube/pull/4216) を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/e8f2952925dda75db5b02ab52bf357f59343ecef)の適用が必要です。
+- [複数ファイルのアップロード](https://github.com/EC-CUBE/ec-cube/pull/4235)を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/fe5cae800fa4e7f09cbb905e1ef3632b34e41489)の適用が必要です。
+
 EC-CUBEのバージョンアップ手順は以上です。
 
 ## 各バージョンでの変更差分
@@ -208,4 +220,5 @@ EC-CUBEのバージョンアップ手順は以上です。
 |-----------------|------------------------------------------------------------------------------------------------------------------------|
 | 4.0.0 → 4.0.1   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.0...4.0.1](https://github.com/EC-CUBE/ec-cube/compare/4.0.0...4.0.1?w=1#files_bucket)   |
 | 4.0.1 → 4.0.2   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.1...4.0.2](https://github.com/EC-CUBE/ec-cube/compare/4.0.1...4.0.2?w=1#files_bucket)   |
+| 4.0.2 → 4.0.3   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.2...4.0.3](https://github.com/EC-CUBE/ec-cube/compare/4.0.2...4.0.3?w=1#files_bucket)   |
 

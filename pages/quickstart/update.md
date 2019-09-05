@@ -87,7 +87,7 @@ bin/console cache:clear --no-warmup
 |----------------------|---------------------------------------------------------------------------------------------------|
 | 4.0.0 → 4.0.1        | composer.json<br>composer.lock<br>.htaccess<br>index.php<br>maintenance.php|
 | 4.0.1 → 4.0.2        | composer.json<br>composer.lock|
-| 4.0.1 → 4.0.2        | composer.json<br>composer.lock<br>.htaccess<br>index.php|
+| 4.0.2 → 4.0.3        | composer.json<br>composer.lock<br>.htaccess<br>index.php|
 
 - ※ 差し替え対象に、composer.json/composer.lockがある場合は 上書き後、`composer.json/composer.lockの更新の手順`を実施してください。
 - ※ `4.0.0 → 4.0.2` のように複数バージョンをまたぐバージョンアップを行う場合は、`4.0.0 → 4.0.1`→`4.0.1 → 4.0.2` のように段階的なバージョンアップを行ってください。

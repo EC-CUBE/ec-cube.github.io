@@ -137,7 +137,31 @@ bin/console doctrine:schema:update --force --dump-sql
 bin/console doctrine:migrations:migrate
 ```
 
-### 7. フロントテンプレートファイルの更新
+### 7. プロキシの再生成
+
+4.0.3へのバージョンアップのみ、プロキシの再生成が必要です。そうでなければスキップしてください。
+
+プロキシファイルを削除
+```
+rm -f app/proxy/entity/*.php
+```
+
+auloloadファイルの再生成
+```
+composer dump-autoload
+```
+
+プロキシファイルを再生成
+```
+bin/console eccube:generate:proxy
+```
+
+キャッシュファイルの再生成
+```
+bin/console cache:warmup --env=prod
+```
+
+### 8. フロントテンプレートファイルの更新
 
 対象となるバージョンごとに、フロントテンプレートファイル(twig)の更新が必要です。  
 
@@ -175,7 +199,7 @@ bin/console doctrine:migrations:migrate
 
 <a href="https://github.com/EC-CUBE/ec-cube/pulls?q=is%3Apr+label%3Aaffected%3Atemplate+is%3Aclosed+milestone%3A4.0.3" target = "_blank">フロントテンプレートファイルの差分</a>
 
-### 8.メンテナンスモードを無効にする（バージョン4.0.1以降）
+### 9.メンテナンスモードを無効にする（バージョン4.0.1以降）
 
 EC-CUBEの管理画面へアクセスし、「コンテンツ管理」の「メンテナンス管理」から、メンテナンスモードを無効にしてください。
 
@@ -183,7 +207,7 @@ EC-CUBEの管理画面へアクセスし、「コンテンツ管理」の「メ�
 
 ※ この機能は、EC-CUBEのバージョンが「4.0.1」以上でないと使用できません。
 
-### 9. その他
+### 10. その他
 
 #### 4.0.0 -> 4.0.1
 

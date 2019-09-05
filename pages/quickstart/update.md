@@ -153,7 +153,7 @@ composer dump-autoload
 
 プロキシファイルを再生成
 ```
-bin/console eccube:generate:proxy
+bin/console eccube:generate:proxies
 ```
 
 キャッシュファイルの再生成

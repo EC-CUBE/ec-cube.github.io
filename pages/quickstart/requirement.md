@@ -12,7 +12,7 @@ permalink: quickstart_requirement
 | 分類 | ソフトウェア|Version|動作確認済み|
 |---|-------|---|-------|
 |WebServer|Apache |2.4.x <br> (mod_rewrite / mod_ssl 必須) |2.4.6|
-|PHP | PHP | 7.1 〜 |7.1.20|
+|PHP | PHP | 7.1 〜 |7.2.19|
 |Database|PostgreSQL| 9.2.x / 10.x <br> (pg_settingsテーブルへの参照権限 必須) |9.6.6|
 |Database|MySQL|5.5.x / 5.6.x / 5.7.x <br> (InnoDBエンジン 必須) |5.6.33|
 |Database|SQLite(開発用途向け) |3.x |-|

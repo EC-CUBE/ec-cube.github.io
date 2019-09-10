@@ -71,6 +71,37 @@ entries:
         url: /customize_symfony
         output: web, pdf
 
+  - title: デザインカスタマイズ
+    output: web, pdf
+    folderitems:
+      - title: フロント画面デザイン参考資料（スタイルガイド）
+        external_url: http://eccube4-styleguide.herokuapp.com/
+        output: web, pdf
+      - title: 管理画面デザイン参考資料（デザインガイド）
+        url: /pdf/ec-cube4_design-guide180930.pdf
+        output: web, pdf
+      - title: デザインテンプレートの基礎
+        url: /design_template
+        output: web, pdf
+      - title: フォームレイアウトの変更
+        url: /design_form
+        output: web, pdf
+      - title: ブロックの利用
+        url: /design_block
+        output: web, pdf
+      - title: レイアウト管理の利用
+        url: /design_layout
+        output: web, pdf
+      - title: Sassの利用
+        url: /design_css
+        output: web, pdf
+      - title: フロント画面テンプレート for Adobe XD
+        external_url: http://downloads.ec-cube.net/manual/documents/eccube4_xd_front_template.zip?argument=2qpV46CP&dmai=a5bf51b05bacc5
+        output: web, pdf
+      - title: 管理画面テンプレート for Adobe XD
+        external_url: http://downloads.ec-cube.net/manual/documents/eccube4_xd_admin_template.zip?argument=2qpV46CP&dmai=a5bf51b05bacc5
+        output: web, pdf
+
   - title: プラグインカスタマイズ
     output: web, pdf
     folderitems:

@@ -140,7 +140,7 @@ mailcatcher を使用します
 
 ```shell
 ## .env にて MAILER_URL=smtp://mailcatcher:1025 としておく
-docker run -d -p 1080:1080 -p 1025:1025 --name mailcatcher schickling/mailcatche
+docker run -d -p 1080:1080 -p 1025:1025 --name mailcatcher schickling/mailcatcher
 docker run --name ec-cube -p "8080:80" -p "4430:443"  --link mailcatcher:mailcatcher eccube4-php-apache
 ```
 

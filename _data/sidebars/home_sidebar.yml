@@ -78,7 +78,7 @@ entries:
         external_url: http://eccube4-styleguide.herokuapp.com/
         output: web, pdf
       - title: 管理画面デザイン参考資料（デザインガイド）
-        url: /pdf/ec-cube4_design-guide180930.pdf
+        external_url: /pdf/ec-cube4_design-guide180930.pdf
         output: web, pdf
       - title: デザインテンプレートの基礎
         url: /design_template

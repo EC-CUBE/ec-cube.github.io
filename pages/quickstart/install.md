@@ -9,13 +9,13 @@ forder: quickstart
 
 ## インストール方法
 
-EC-CUBEのインストールは、以下の2種類の方法があります。
+EC-CUBEのインストールは、以下の3種類の方法があります。
 
 - パッケージを使用してインストールする
-- コマンドラインからインストールする
+- コマンドラインでのインストールする
 - Webインストーラでインストールする
 
-## パッケージを使用したインストール
+## パッケージを使用してインストールする
 
 [EC-CUBE 4のパッケージ](http://downloads.ec-cube.net/src/eccube-4.0.0-rc.zip)をダウンロードし、解凍してください。
 
@@ -31,7 +31,7 @@ FTP/SSHを使用し、ファイルをサーバへアップロードしてくだ�
 
 webインストーラが表示されますので必要な情報を入力してインストールします。
 
-## コマンドラインでのインストール
+## コマンドラインでのインストールする
 
 前提として、 [Composer のインストール](https://getcomposer.org/download/) が必要です。
 
@@ -66,7 +66,7 @@ mysql://<user>:<password>@<host>/<database name>
 postgres://<user>:<password>@<host>/<database name>
 ```
 
-## Webインストーラーを利用したインストール
+## Webインストーラでインストールする
 
 前提として、 [Composer のインストール](https://getcomposer.org/download/) が必要です。
 

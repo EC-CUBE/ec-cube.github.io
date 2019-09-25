@@ -15,6 +15,10 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 
 ドキュメント化に向けた情報、実装時参考にしたい情報については、随時[Issue](https://github.com/EC-CUBE/ec-cube/issues/3380){:target="_blank"}を更新しております。
 
+運用者向けには以下のサイトをご覧ください。
+
++ [EC-CUBE 4管理・運用 マニュアル（株式会社シロハチ様）](https://www.shiro8.net/manual4/v40x/index.html){:target="_blank"}
+
 ## Quick Start
 
 + [システム要件](quickstart_requirement)

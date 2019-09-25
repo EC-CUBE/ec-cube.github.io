@@ -41,7 +41,7 @@ EC-CUBE 3 では、 [OpenID Connect](http://openid-foundation-japan.github.io/op
 
 ### .htaccess の設定
 
-一部のレンタルサーバーや SAPI CGI/FastCGI の環境では、認証情報(Authorization ヘッダ)が取得できず、 401 Unauthorized エラーとなってしまう場合があります。
+一部のレンタルサーバや SAPI CGI/FastCGI の環境では、認証情報(Authorization ヘッダ)が取得できず、 401 Unauthorized エラーとなってしまう場合があります。
 この場合は、 `<ec-cube-install-path>/html/.htaccess` に以下を追記してください。
 
 ```.htaccess

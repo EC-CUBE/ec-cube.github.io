@@ -19,6 +19,9 @@ permalink: /
 + [EC-CUBE 3運用マニュアル（株式会社クロスキューブ様）](https://www.xross-cube.com/service/ec-cube%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/eccube3-manual/){:target="_blank"}
 + [EC-CUBE 3管理・運用 マニュアル（株式会社シロハチ様）](https://www.shiro8.net/manual/v30x/){:target="_blank"}
 
+**商品別税率設定が適用されない不具合が確認されております。
+詳しくは、[こちら(4系ドキュメント)](http://doc4.ec-cube.net/workaround-product-tax-rule)をご確認ください。**
+
 ## Quick Start
 
 + [システム要件](/quickstart_requirement)

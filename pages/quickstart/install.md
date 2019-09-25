@@ -107,7 +107,7 @@ bin/console server:run
 
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/) にアクセスすると、 Webインストーラが表示されますので、指示にしたがってインストールしてください。
 
-## Dockerを使用したインストール
+### Dockerを使用してインストールする
 
 前提として、 [Docker Desktop のインストール](https://hub.docker.com) が必要です。
 
@@ -125,7 +125,7 @@ docker run --name ec-cube -p "8080:80" -p "4430:443" eccube4-php-apache
 docker run --name ec-cube -p "8080:80" -p "4430:443"  -v "$PWD/html:/var/www/html/html:cached" -v "$PWD/src:/var/www/html/src:cached" -v "$PWD/app:/var/www/html/app:cached" eccube4-php-apache
 ```
 
-### 設定ファイルを編集する場合
+#### 設定ファイルを編集する場合
 
 .env など、インストールディレクトリ直下のファイルを編集する場合は、コンテナ上のファイルを直接編集するか、個別にマウントする必要があります
 
@@ -134,7 +134,7 @@ docker exec -it ec-cube /bin/bash
 root@de5372ce7139:/var/www/html# vi .env
 ```
 
-### メール送信を使用する場合
+#### メール送信を使用する場合
 
 mailcatcher を使用します
 
@@ -144,7 +144,7 @@ docker run -d -p 1080:1080 -p 1025:1025 --name mailcatcher schickling/mailcatche
 docker run --name ec-cube -p "8080:80" -p "4430:443"  --link mailcatcher:mailcatcher eccube4-php-apache
 ```
 
-### PostgreSQL を使用する場合
+#### PostgreSQL を使用する場合
 
 ```
 ## .env にて DATABASE_URL=pgsql://postgres:password@db/cube4_dev としておく
@@ -152,7 +152,7 @@ docker run --name container_postgres -e POSTGRES_PASSWORD=password  -p 5432:5432
 docker run --name ec-cube -p "8080:80" -p "4430:443" --link container_postgres:db eccube4-php-apache
 ```
 
-### MySQL を使用する場合
+#### MySQL を使用する場合
 
 ```
 ## .env にて DATABASE_URL=mysql://root:password@db/cube4_dev としておく

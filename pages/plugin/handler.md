@@ -20,7 +20,7 @@ summary: EC-CUBEのPlugin間の優先度を制御する機構について説明�
 起動順序は管理画面等からDB上のハンドラ優先度テーブル（仮）に保持する。  
 SymfonyのEventDispatcher の仕様に合わせて実行順は-511～+511の降順とする  
 
-テーブル構成は[プラグインインストーラーの仕様](/plugin_installer#dtbpluginhookpoint)を参照
+テーブル構成は[プラグインインストーラの仕様](/plugin_installer#dtbpluginhookpoint)を参照
 
 ## 起動優先度とハンドラ種別
 

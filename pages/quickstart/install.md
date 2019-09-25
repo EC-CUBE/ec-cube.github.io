@@ -11,12 +11,12 @@ forder: quickstart
 
 EC-CUBEのインストールは、以下の方法があります。
 
-- パッケージを使用してインストールする
-- コマンドラインからインストールする(開発環境としておすすめ)
-- Webインストーラでインストールする
-- Dockerを使用してインストールする
+1. パッケージを使用してインストールする
+1. コマンドラインからインストールする
+1. Webインストーラでインストールする
+1. Dockerを使用してインストールする
 
-## パッケージを使用したインストール
+### パッケージを使用してインストールする
 
 [EC-CUBE 4のパッケージ](https://www.ec-cube.net/download/)をダウンロードし、解凍してください。
 
@@ -32,7 +32,7 @@ FTP/SSHを使用し、ファイルをサーバへアップロードしてくだ�
 
 webインストーラが表示されますので必要な情報を入力してインストールします。
 
-## コマンドラインでのインストール
+### コマンドラインからインストールする
 
 **開発環境としておすすめの方法です。**
 
@@ -57,7 +57,7 @@ bin/console server:run
 
 *終了する場合は Ctrl+C を押してください*
 
-### データベースの種類を変更したい場合
+#### データベースの種類を変更したい場合
 
 インストール後、 `bin/console eccube:install` コマンドを実行し、 `Database Url` を以下のように設定してください。
 
@@ -69,7 +69,7 @@ mysql://<user>:<password>@<host>/<database name>
 postgres://<user>:<password>@<host>/<database name>
 ```
 
-### Windows 環境を使用する場合
+#### Windows 環境を使用する場合
 
 `bin/console eccube:install` コマンドは使用できません。
 代替として、以下のコマンド使用して下さい。
@@ -90,7 +90,7 @@ bin/console eccube:fixtures:load
 - *`bin/console eccube:install` コマンドでは、これらのコマンドを内部的に実行しています。*
 - Symfony と Windows 環境の相性があまり良くないため、動作が大変遅くなる可能性があります。 [Dockerを使用したインストール](http://doc4.ec-cube.net/quickstart_install#Docker%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB) をおすすめします。
 
-## Webインストーラーを利用したインストール
+### Webインストーラでインストールする
 
 前提として、 [Composer のインストール](https://getcomposer.org/download/){:target="_blank"} が必要です。
 

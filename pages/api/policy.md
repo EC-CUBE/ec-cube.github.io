@@ -91,7 +91,7 @@ https://ドメイン名/api/v1/search?name=aaaa&price=1000
 |500|Internal Server Error|サーバサイドでエラーが発生した場合に返される。|
 |503|Service Unavailable|サービス利用不可。サービスが一時的に過負荷やメンテナンスで使用不可能である。|
 
-* 参考 [https://ja.wikipedia.org/wiki/HTTPステータスコード](https://ja.wikipedia.org/wiki/HTTPステータスコード)
+* 参考 [https://ja.wikipedia.org/wiki/HTTPステータスコード](https://ja.wikipedia.org/wiki/HTTPステータスコード){:target="_blank"}
 
 EC-CUBE 3ではレスポンスを渡す時にHTTPステータスコードの`200`番台を返すようにします。
 
@@ -125,7 +125,7 @@ HTTPステータスコードに加えてエラーが発生した場合、エラ�
 }
 
 ```
-* 参考 [http://qiita.com/suin/items/f7ac4de914e9f3f35884](http://qiita.com/suin/items/f7ac4de914e9f3f35884)
+* 参考 [http://qiita.com/suin/items/f7ac4de914e9f3f35884](http://qiita.com/suin/items/f7ac4de914e9f3f35884){:target="_blank"}
 
 エラーが発生したときのステータスコードは処理によって異なりますが、基本は`400`番台を返すようにします。  
 また、レスポンスヘッダの内容については別途検討します。
@@ -169,7 +169,7 @@ JSONの属性名に規約はありませんがJavaScriptの命名規約におい
   "status": "available"
 }
 ```
-* 参考 [http://json.org/example.html](http://json.org/example.html)
+* 参考 [http://json.org/example.html](http://json.org/example.html){:target="_blank"}
 
 
 
@@ -244,7 +244,7 @@ EC-CUBE で Web API を実行する際、一般公開された情報を参照す
 
 EC-CUBE 3 では、 OpenID Connect を使用した
 
-[OAuth2.0 Authorization](http://openid-foundation-japan.github.io/rfc6749.ja.html) 及び [OpenID Connect](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html) をサポートしています。
+[OAuth2.0 Authorization](http://openid-foundation-japan.github.io/rfc6749.ja.html) 及び [OpenID Connect](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html){:target="_blank"} をサポートしています。
 
 詳しくは [Web API Authorization ガイド](/api_authorization.html) を参照してください。
 
@@ -252,10 +252,10 @@ EC-CUBE 3 では、 OpenID Connect を使用した
 
 以下の認証フローに対応しています。
 
-- [OAuth2.0 Authorization Code Flow](http://openid-foundation-japan.github.io/rfc6749.ja.html#grant-code) - 主にWebアプリ向け
-- [OAuth2.0 Implicit Flow](http://openid-foundation-japan.github.io/rfc6749.ja.html#grant-implicit) - 主にJavaScript、 ネイティブアプリ向け
-- [OpenID Connect Authorization Code Flow](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#CodeFlowAuth) - 主にWebアプリ向け
-- [OpenID Connect Implicit Flow](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#ImplicitFlowAuth) - 主にJavaScript、 ネイティブアプリ向け
+- [OAuth2.0 Authorization Code Flow](http://openid-foundation-japan.github.io/rfc6749.ja.html#grant-code){:target="_blank"} - 主にWebアプリ向け
+- [OAuth2.0 Implicit Flow](http://openid-foundation-japan.github.io/rfc6749.ja.html#grant-implicit){:target="_blank"} - 主にJavaScript、 ネイティブアプリ向け
+- [OpenID Connect Authorization Code Flow](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#CodeFlowAuth){:target="_blank"} - 主にWebアプリ向け
+- [OpenID Connect Implicit Flow](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#ImplicitFlowAuth){:target="_blank"} - 主にJavaScript、 ネイティブアプリ向け
 
 ### 利用方法
 
@@ -278,12 +278,12 @@ EC-CUBE 3 では、 OpenID Connect を使用した
 
 ### サンプルクライアント
 
-- [PHP(Symfony2) での実装例](https://github.com/nanasess/eccube3-oauth2-client)
-- [Python(Flask) での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-python)
-- [Node.js(Express) での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-nodejs)
-- [C# での実装例(Web/Wpf)](https://github.com/nanasess/DotNetOpenAuth)
-- [Java での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-java)
-- [Google OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)
+- [PHP(Symfony2) での実装例](https://github.com/nanasess/eccube3-oauth2-client){:target="_blank"}
+- [Python(Flask) での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-python){:target="_blank"}
+- [Node.js(Express) での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-nodejs){:target="_blank"}
+- [C# での実装例(Web/Wpf)](https://github.com/nanasess/DotNetOpenAuth){:target="_blank"}
+- [Java での実装例](https://github.com/nanasess/eccube3-oauth2-client-for-java){:target="_blank"}
+- [Google OAuth 2.0 Playground](https://developers.google.com/oauthplayground/){:target="_blank"}
     - OAuth 2.0 Configuration -> OAuth endpoint -> *Custom* にて動作確認済み
     - Authorization Endpoint に `?state=<random_state>` を付与する必要があります
 
@@ -293,7 +293,7 @@ Swagger Editorを使ってWeb APIドキュメント(swagger.yml)を記述しま�
 
 [Swagger Editor](http://editor.swagger.io/)
 
-* 参考 [http://qiita.com/weed/items/539f6bbade6b75980468](http://qiita.com/weed/items/539f6bbade6b75980468)
+* 参考 [http://qiita.com/weed/items/539f6bbade6b75980468](http://qiita.com/weed/items/539f6bbade6b75980468){:target="_blank"}
 
 
 ## 参考URL

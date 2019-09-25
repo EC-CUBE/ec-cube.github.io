@@ -122,7 +122,7 @@ composer require psr/http-message
 
 **※ 4.0.0 → 4.0.1, 4.0.1 → 4.0.2 へのアップデートでは、スキーマ更新は必要ありません。**
 
-参考：[プラグインが無効の状態だと Doctrine SchemaTool でエンティティ拡張が認識されない](https://github.com/EC-CUBE/ec-cube/issues/4056)
+参考：[プラグインが無効の状態だと Doctrine SchemaTool でエンティティ拡張が認識されない](https://github.com/EC-CUBE/ec-cube/issues/4056){:target="_blank"}
 
 
 スキーマ更新
@@ -211,7 +211,7 @@ EC-CUBEの管理画面へアクセスし、「コンテンツ管理」の「メ�
 
 #### 4.0.0 -> 4.0.1
 
-4.0.1で実装された[メンテナンス機能](https://github.com/EC-CUBE/ec-cube/pull/3998)を利用する場合, .envに以下を記載するか、環境変数として以下の値を定義する必要があります。
+4.0.1で実装された[メンテナンス機能](https://github.com/EC-CUBE/ec-cube/pull/3998){:target="_blank"}を利用する場合, .envに以下を記載するか、環境変数として以下の値を定義する必要があります。
 
 ```
 ECCUBE_LOCALE=ja
@@ -223,16 +223,16 @@ ECCUBE_TEMPLATE_CODE=default
 
 #### 4.0.1 -> 4.0.2
 
-- [faviconパスの変更](https://github.com/EC-CUBE/ec-cube/pull/4075)を利用する場合,  [差分](https://github.com/EC-CUBE/ec-cube/commit/50fcbdea4c66e5eabc03ba1e38ce7952a53ca97d#diff-7cefac9fd3759d999afb711a36b6dad9)を適用後、ファイル管理からfaviconファイルをアップロードすることでfaviconの変更を行うことができます。
-- [CSS管理](https://github.com/EC-CUBE/ec-cube/pull/4083) を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/7994bd00de19399d7c6a8e22dd280791478b9435#diff-7cefac9fd3759d999afb711a36b6dad9)の適用が必要です。
-- [Javascript管理](https://github.com/EC-CUBE/ec-cube/pull/4084)を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/008236d28633d803d18e15abecf5a04224d0a4f4#diff-7cefac9fd3759d999afb711a36b6dad9R50)の適用が必要です。
+- [faviconパスの変更](https://github.com/EC-CUBE/ec-cube/pull/4075){:target="_blank"}を利用する場合,  [差分](https://github.com/EC-CUBE/ec-cube/commit/50fcbdea4c66e5eabc03ba1e38ce7952a53ca97d#diff-7cefac9fd3759d999afb711a36b6dad9){:target="_blank"}を適用後、ファイル管理からfaviconファイルをアップロードすることでfaviconの変更を行うことができます。
+- [CSS管理](https://github.com/EC-CUBE/ec-cube/pull/4083){:target="_blank"} を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/7994bd00de19399d7c6a8e22dd280791478b9435#diff-7cefac9fd3759d999afb711a36b6dad9){:target="_blank"}の適用が必要です。
+- [Javascript管理](https://github.com/EC-CUBE/ec-cube/pull/4084){:target="_blank"}を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/008236d28633d803d18e15abecf5a04224d0a4f4#diff-7cefac9fd3759d999afb711a36b6dad9R50){:target="_blank"}の適用が必要です。
 
 #### 4.0.2 -> 4.0.3
 
-- [軽減税率制度に関する対応](https://github.com/EC-CUBE/ec-cube/issues/4183)を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/pulls?q=is%3Apr+is%3Aclosed+label%3A%E8%BB%BD%E6%B8%9B%E7%A8%8E%E7%8E%87%E5%AF%BE%E5%BF%9C)の適用が必要です。
+- [軽減税率制度に関する対応](https://github.com/EC-CUBE/ec-cube/issues/4183){:target="_blank"}を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/pulls?q=is%3Apr+is%3Aclosed+label%3A%E8%BB%BD%E6%B8%9B%E7%A8%8E%E7%8E%87%E5%AF%BE%E5%BF%9C){:target="_blank"}の適用が必要です。
   ※合わせて[注意点](quickstart_update_4_0_3)もご確認下さい。
-- [PDFのロゴ画像変更](https://github.com/EC-CUBE/ec-cube/pull/4216) を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/e8f2952925dda75db5b02ab52bf357f59343ecef)の適用が必要です。
-- [複数ファイルのアップロード](https://github.com/EC-CUBE/ec-cube/pull/4235)を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/fe5cae800fa4e7f09cbb905e1ef3632b34e41489)の適用が必要です。
+- [PDFのロゴ画像変更](https://github.com/EC-CUBE/ec-cube/pull/4216){:target="_blank"} を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/e8f2952925dda75db5b02ab52bf357f59343ecef){:target="_blank"}の適用が必要です。
+- [複数ファイルのアップロード](https://github.com/EC-CUBE/ec-cube/pull/4235){:target="_blank"}を利用する場合, [差分](https://github.com/EC-CUBE/ec-cube/commit/fe5cae800fa4e7f09cbb905e1ef3632b34e41489){:target="_blank"}の適用が必要です。
 
 EC-CUBEのバージョンアップ手順は以上です。
 
@@ -242,7 +242,7 @@ EC-CUBEのバージョンアップ手順は以上です。
 
 | バージョン      | 差分ページ                                                                                                             |
 |-----------------|------------------------------------------------------------------------------------------------------------------------|
-| 4.0.0 → 4.0.1   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.0...4.0.1](https://github.com/EC-CUBE/ec-cube/compare/4.0.0...4.0.1?w=1#files_bucket)   |
-| 4.0.1 → 4.0.2   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.1...4.0.2](https://github.com/EC-CUBE/ec-cube/compare/4.0.1...4.0.2?w=1#files_bucket)   |
-| 4.0.2 → 4.0.3   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.2...4.0.3](https://github.com/EC-CUBE/ec-cube/compare/4.0.2...4.0.3?w=1#files_bucket)   |
+| 4.0.0 → 4.0.1   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.0...4.0.1](https://github.com/EC-CUBE/ec-cube/compare/4.0.0...4.0.1?w=1#files_bucket){:target="_blank"}   |
+| 4.0.1 → 4.0.2   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.1...4.0.2](https://github.com/EC-CUBE/ec-cube/compare/4.0.1...4.0.2?w=1#files_bucket){:target="_blank"}   |
+| 4.0.2 → 4.0.3   | [https://github.com/EC-CUBE/ec-cube/compare/4.0.2...4.0.3](https://github.com/EC-CUBE/ec-cube/compare/4.0.2...4.0.3?w=1#files_bucket){:target="_blank"}   |
 

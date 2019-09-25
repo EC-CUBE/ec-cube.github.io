@@ -11,15 +11,15 @@ summary: EC-CUBE API で認証が必要な情報にアクセスする方法に�
 
 EC-CUBE で Web API を実行する際、一般公開された情報を参照する場合は必要ありませんが、顧客情報を参照したり、受注情報を更新する場合などは認証が必要です。
 
-EC-CUBE 3 では、 [OpenID Connect](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html) を使用した認証をサポートしています。
-本認証を使用する場合は、[TLS をサポート](http://openid-foundation-japan.github.io/openid-connect-basic-1_0.ja.html#TLSRequirements)する必要があります。
+EC-CUBE 3 では、 [OpenID Connect](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html){:target="_blank"} を使用した認証をサポートしています。
+本認証を使用する場合は、[TLS をサポート](http://openid-foundation-japan.github.io/openid-connect-basic-1_0.ja.html#TLSRequirements){:target="_blank"}する必要があります。
 
 ## 対応するフロー
 
-- [Authorization Code Flow](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#CodeFlowAuth) - 主にWebアプリ向け
-- [Implicit Flow](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#ImplicitFlowAuth) - 主にJavaScript、 ネイティブアプリ向け
+- [Authorization Code Flow](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#CodeFlowAuth){:target="_blank"} - 主にWebアプリ向け
+- [Implicit Flow](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#ImplicitFlowAuth){:target="_blank"} - 主にJavaScript、 ネイティブアプリ向け
 
-信頼性の確保された、プライベート環境で使用する場合は、 [OAuth2.0 Authorization](http://openid-foundation-japan.github.io/rfc6749.ja.html) も使用可能です。
+信頼性の確保された、プライベート環境で使用する場合は、 [OAuth2.0 Authorization](http://openid-foundation-japan.github.io/rfc6749.ja.html){:target="_blank"} も使用可能です。
 
 ## 設定方法
 
@@ -57,7 +57,7 @@ RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
 
 #### state パラメータ
 
-OAuth2.0 では CSRF を防ぐための state パラメータが[推奨となっています](http://openid-foundation-japan.github.io/rfc6749.ja.html#CSRF)。
+OAuth2.0 では CSRF を防ぐための state パラメータが[推奨となっています](http://openid-foundation-japan.github.io/rfc6749.ja.html#CSRF){:target="_blank"}。
 しかし、多くの OAuth2.0 クライアントのサンプルは、 state パラメータに標準では対応していません。
 EC-CUBE 3 では、 **state パラメータは必須** ですので、ご注意ください。
 
@@ -114,8 +114,8 @@ curl -F grant_type=authorization_code \
 
 #### 3. id_token の検証
 
-2 で取得した `id_token` を[検証](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#SelfIssuedValidation)します。
-[tokeninfo](#tokeninfo) エンドポイントや [jwt.io](https://jwt.io/) を使用することができます。
+2 で取得した `id_token` を[検証](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#SelfIssuedValidation){:target="_blank"}します。
+[tokeninfo](#tokeninfo) エンドポイントや [jwt.io](https://jwt.io/){:target="_blank"} を使用することができます。
 
 #### 4. APIアクセス
 
@@ -169,10 +169,10 @@ curl -F grant_type=refresh_token \
 - **auth_time** - 認証の発生時刻の UNIX タイムスタンプ。
 - **nonce** - クライアントセッションの識別子。リプレイスアタック防止のために使用する。
 
-この情報を元に、以下のような内容を検証する必要があります。[参考](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#SelfIssuedValidation)
+この情報を元に、以下のような内容を検証する必要があります。[参考](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#SelfIssuedValidation){:target="_blank"}
 
 - **iss** の値が API の認証をしたホスト名と一致することを確認します。
-- **sub** の値が `id_token` の公開鍵の *thumbprint* と一致することを確認します。[JOSE_JWK::thumbprint()](https://github.com/gree/jose/blob/master/src/JOSE/JWK.php#L35) などで検証できます。
+- **sub** の値が `id_token` の公開鍵の *thumbprint* と一致することを確認します。[JOSE_JWK::thumbprint()](https://github.com/gree/jose/blob/master/src/JOSE/JWK.php#L35){:target="_blank"} などで検証できます。
 - **aud** の値が Client ID と一致することを確認します。
 - **iat** の値が、`現在のUNIXタイムスタンプ値 - 600秒` 以上であることを確認します。
 - **exp** の値が、現在時刻のUNIXタイムスタンプ値より大きいことを確認します。
@@ -222,7 +222,7 @@ Authorization Code Flow にて、 `redirect_uri` に `urn:ietf:wg:oauth:2.0:oob`
 [OpenID Connect UserInfo Endpoint](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#UserInfo) を使用しています。
 
 - この Endpoint を使用する場合は `scope=openid` で認証する必要があります。
-- 以下の scope を使用して、 [各種クレーム](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#Claims) の取得が可能です。
+- 以下の scope を使用して、 [各種クレーム](http://openid-foundation-japan.github.io/openid-connect-core-1_0.ja.html#Claims){:target="_blank"} の取得が可能です。
   - profile
   - email
   - address

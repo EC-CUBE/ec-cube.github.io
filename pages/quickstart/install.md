@@ -33,7 +33,7 @@ webインストーラが表示されますので必要な情報を入力して�
 
 ## コマンドラインでのインストール
 
-前提として、 [Composer のインストール](https://getcomposer.org/download/) が必要です。
+前提として、 [Composer のインストール](https://getcomposer.org/download/){:target="_blank"} が必要です。
 
 ```
 php composer.phar create-project ec-cube/ec-cube ec-cube "4.0.x-dev" --keep-vcs
@@ -68,7 +68,7 @@ postgres://<user>:<password>@<host>/<database name>
 
 ## Webインストーラーを利用したインストール
 
-前提として、 [Composer のインストール](https://getcomposer.org/download/) が必要です。
+前提として、 [Composer のインストール](https://getcomposer.org/download/){:target="_blank"} が必要です。
 
 ```
 php composer.phar create-project --no-scripts ec-cube/ec-cube ec-cube "4.0.x-dev" --keep-vcs

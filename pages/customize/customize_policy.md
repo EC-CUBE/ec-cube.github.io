@@ -108,10 +108,10 @@ php composer.phar install --no-dev --no-interaction --optimize-autoloader
 
 ## セキュリティFIXが合った場合の対応
 
-EC-CUBEに脆弱性が発見された場合、[脆弱性リスト](http://www.ec-cube.net/info/weakness/)で告知が行われます。
+EC-CUBEに脆弱性が発見された場合、[脆弱性リスト](http://www.ec-cube.net/info/weakness/){:target="_blank"}で告知が行われます。
 脆弱性の内容や差分の提供が行われるため、告知があればできるかぎり早急な対応が必要です。
 
 ## 参考情報
 
-- [EC-CUBE3コードリーディング #5](https://speakerdeck.com/amidaike/ec-cube3kodorideingu-number-5)
-- [Git を使って EC-CUBE を簡単アップデート](http://qiita.com/nanasess/items/fe2a93ff64833d87eb19)
+- [EC-CUBE3コードリーディング #5](https://speakerdeck.com/amidaike/ec-cube3kodorideingu-number-5){:target="_blank"}
+- [Git を使って EC-CUBE を簡単アップデート](http://qiita.com/nanasess/items/fe2a93ff64833d87eb19){:target="_blank"}

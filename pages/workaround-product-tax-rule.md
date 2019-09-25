@@ -37,7 +37,7 @@ EC-CUBEの本体バージョンが４系または３系で、基本税率設定�
 商品別税率設定は、設定作業を行った日時で「apply_date（適用日時）」が登録されます。
 商品別税率設定の「apply_date（適用日時）」が、基本税率設定で設定されている「apply_date（適用日時）」より、新しい日時に設定すれば不具合を回避できます。
 
-不具合の詳細に関しては、[こちら](https://github.com/EC-CUBE/ec-cube/issues/4330)からご確認ください。
+不具合の詳細に関しては、[こちら](https://github.com/EC-CUBE/ec-cube/issues/4330){:target="_blank"}からご確認ください。
 
 
 ## 不具合の回避方法

@@ -8,7 +8,7 @@ permalink: design_css
 
 ## Sassの利用
 
-EC-CUBEのCSSは、[Sass](http://sass-lang.com) を使用して記述されています。
+EC-CUBEのCSSは、[Sass](http://sass-lang.com){:target="_blank"} を使用して記述されています。
 Sass のソースコードは `html/template/{admin,default}/assets/scss` にあります。
 
 ## Sassのビルド
@@ -27,5 +27,5 @@ npm run build # Sass のビルド
 EC-CUBEでは、CSSやHTMLの設計指針やコーディングルールを確認できるよう、`スタイルガイド`を用意しています。
 詳しくは以下を参照ください。
 
-- [フロント画面のスタイルガイド](https://github.com/EC-CUBE/Eccube-Styleguide)
-- [管理画面のスタイルガイド](https://github.com/EC-CUBE/Eccube-Styleguide-Admin)
+- [フロント画面のスタイルガイド](https://github.com/EC-CUBE/Eccube-Styleguide){:target="_blank"}
+- [管理画面のスタイルガイド](https://github.com/EC-CUBE/Eccube-Styleguide-Admin){:target="_blank"}

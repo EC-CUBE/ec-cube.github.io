@@ -122,7 +122,7 @@ Input[3] :
 
 
 このコマンドはファイルを作成しただけなので、DBに対してテーブルは作成されません。  
-テーブルを作成する場合、[PluginManager](http://127.0.0.1:4005/plugin_bp_pluginmanager)に対して処理を記述後に[プラグイン開発用コンソールコマンド](plugin_console)を利用すると便利です。
+テーブルを作成する場合、[PluginManager](http://127.0.0.1:4005/plugin_bp_pluginmanager){:target="_blank"}に対して処理を記述後に[プラグイン開発用コンソールコマンド](plugin_console)を利用すると便利です。
 
 
 ## 既存のテーブルからエンティティクラスを作成

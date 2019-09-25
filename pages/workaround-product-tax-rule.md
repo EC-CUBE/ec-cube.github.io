@@ -90,3 +90,15 @@ SQLで更新をする場合は、更新する値や条件をご確認の上更�
 ```UPDATE dtb_tax_rule SET apply_date = '2019-10-01 00:00:01' WHERE product_class_id IS NOT NULL;```
 
 **※ EC-CUBEのデフォルトの仕様では、商品別率設定で登録されたレコードは、「product_class_id」に商品規格のIDが登録されます。**
+
+### EC-CUBE 3.0.x系の場合の回避方法
+
+EC-CUBE3系においても同様の不具合が発生します。
+EC-CUBE3系では上記の回避対応に加えて、<u>ソースコードの修正も必要</u>となります。(ソースコードの修正を行わないと商品別税率が反映されません)
+
+修正ファイル：  
+src/Eccube/Repository/TaxRuleRepository.php
+差分コード：  
+[https://github.com/EC-CUBE/ec-cube/pull/4310/files#diff-9ebf9d0c89cef624ee2648733e557603](https://github.com/EC-CUBE/ec-cube/pull/4310/files#diff-9ebf9d0c89cef624ee2648733e557603)
+修正後の動作確認：  
+商品別税率が購入時の価格に反映されていることを確認してください。

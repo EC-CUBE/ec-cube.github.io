@@ -15,7 +15,7 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 
 ドキュメント化に向けた情報、実装時参考にしたい情報については、随時[Issue](https://github.com/EC-CUBE/ec-cube/issues/3380){:target="_blank"}を更新しております。
 
-## Topic
+## Topics
 
 |掲載日|内容|
 |---|---|

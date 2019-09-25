@@ -11,7 +11,7 @@ permalink: /
 
 現在開発中のEC-CUBE 4.0 の開発ドキュメントサイトです。  
 EC-CUBEのインストール方法、開発ガイドラインや要素技術の概念、本体開発やプラグイン開発のチュートリアル、Cookbookなどの情報を提供しています。  
-ドキュメントへの追記、記載内容の修正についてはEC-CUBE本体と同様に[GitHub](https://github.com/EC-CUBE/ec-cube.github.io/){:target="_blank"}で受け付けております。
+ドキュメントへの追記、記載内容の修正についてはEC-CUBE本体と同様に[GitHub](https://github.com/EC-CUBE/ec-cube.github.io/tree/4.0){:target="_blank"}で受け付けております。
 
 ドキュメント化に向けた情報、実装時参考にしたい情報については、随時[Issue](https://github.com/EC-CUBE/ec-cube/issues/3380){:target="_blank"}を更新しております。
 

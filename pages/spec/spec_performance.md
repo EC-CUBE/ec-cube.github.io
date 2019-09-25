@@ -48,10 +48,10 @@ EC-CUBE3.0.11以降のバージョンではパフォーマンス対応を行い�
 
 #### 関連Issue
 
-- [https://github.com/EC-CUBE/ec-cube/issues/1638](https://github.com/EC-CUBE/ec-cube/issues/1638)
-- [https://github.com/EC-CUBE/ec-cube/issues/1673](https://github.com/EC-CUBE/ec-cube/issues/1673)
-- [https://github.com/EC-CUBE/ec-cube/issues/1684](https://github.com/EC-CUBE/ec-cube/issues/1684)
-- [https://github.com/EC-CUBE/ec-cube/issues/1686](https://github.com/EC-CUBE/ec-cube/issues/1686)
+- [https://github.com/EC-CUBE/ec-cube/issues/1638](https://github.com/EC-CUBE/ec-cube/issues/1638){:target="_blank"}
+- [https://github.com/EC-CUBE/ec-cube/issues/1673](https://github.com/EC-CUBE/ec-cube/issues/1673){:target="_blank"}
+- [https://github.com/EC-CUBE/ec-cube/issues/1684](https://github.com/EC-CUBE/ec-cube/issues/1684){:target="_blank"}
+- [https://github.com/EC-CUBE/ec-cube/issues/1686](https://github.com/EC-CUBE/ec-cube/issues/1686){:target="_blank"}
 
 
 ### パフォーマンス比較

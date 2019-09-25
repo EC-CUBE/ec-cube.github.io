@@ -36,7 +36,7 @@ webインストーラが表示されますので必要な情報を入力して�
 
 **開発環境としておすすめの方法です。**
 
-前提として、 [Composer のインストール](https://getcomposer.org/download/) が必要です。
+前提として、 [Composer のインストール](https://getcomposer.org/download/){:target="_blank"} が必要です。
 
 ```
 php composer.phar create-project ec-cube/ec-cube ec-cube "4.0.x-dev" --keep-vcs
@@ -92,7 +92,7 @@ bin/console eccube:fixtures:load
 
 ## Webインストーラーを利用したインストール
 
-前提として、 [Composer のインストール](https://getcomposer.org/download/) が必要です。
+前提として、 [Composer のインストール](https://getcomposer.org/download/){:target="_blank"} が必要です。
 
 ```
 php composer.phar create-project --no-scripts ec-cube/ec-cube ec-cube "4.0.x-dev" --keep-vcs

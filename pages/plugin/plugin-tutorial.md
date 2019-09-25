@@ -560,7 +560,7 @@ admin.product.category.index.initialize: ★カテゴリコントローラのフ
 
 注.) この際、メソッド名を記述している行ですが、スペースを4つの後に「-(ハイフン)」その後に、またスペースを1つ付与しないと、設定が読み込まれないため正しく記述してください
 
-※フックポイントの一覧は、[プラグイン仕様書](http://downloads.ec-cube.net/src/manual/v3/plugin.pdf){:target=_blank}を参考にしてください。
+※フックポイントの一覧は、[プラグイン仕様書](http://downloads.ec-cube.net/src/manual/v3/plugin.pdf){:target="_blank"}を参考にしてください。
 
 ### イベントクラスを作成
 

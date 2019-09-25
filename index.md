@@ -26,7 +26,7 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 
 ## 機能仕様
 
-+ [機能一覧](https://www.ec-cube.net/product/functions.php)
++ [機能一覧](https://www.ec-cube.net/product/functions.php){:target="_blank"}
 + [受注関連](spec_order)
 + [税率設定](spec_tax)
 
@@ -42,7 +42,7 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 
 ## デザインカスタマイズ
 
-+ [フロント画面デザイン参考資料（スタイルガイド）](http://eccube4-styleguide.herokuapp.com/)
++ [フロント画面デザイン参考資料（スタイルガイド）](http://eccube4-styleguide.herokuapp.com/){:target="_blank"}
 + [管理画面デザイン参考資料（デザインガイド）](/pdf/ec-cube4_design-guide180930.pdf)
 
 + [デザインテンプレートの基礎](design_template)
@@ -50,8 +50,8 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 + [ブロックの利用](design_block)
 + [レイアウト管理の利用](design_layout)
 + [Sassの利用](design_css)
-+ [フロント画面テンプレート for Adobe XD](http://downloads.ec-cube.net/manual/documents/eccube4_xd_front_template.zip?argument=2qpV46CP&dmai=a5bf51b05bacc5)
-+ [管理画面テンプレート for Adobe XD](http://downloads.ec-cube.net/manual/documents/eccube4_xd_admin_template.zip?argument=2qpV46CP&dmai=a5bf51b05bacc5)
++ [フロント画面テンプレート for Adobe XD](http://downloads.ec-cube.net/manual/documents/eccube4_xd_front_template.zip?argument=2qpV46CP&dmai=a5bf51b05bacc5){:target="_blank"}
++ [管理画面テンプレート for Adobe XD](http://downloads.ec-cube.net/manual/documents/eccube4_xd_admin_template.zip?argument=2qpV46CP&dmai=a5bf51b05bacc5){:target="_blank"}
 
 ## プラグインカスタマイズ
 
@@ -68,8 +68,8 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 
 EC-CUBEは以下のサポートを受けています。
 
-+ [SAKURA internet](https://www.sakura.ad.jp/)  
++ [SAKURA internet](https://www.sakura.ad.jp/){:target="_blank"}  
 [![SAKURA internet](/images/3-1-2line-rgb-whiteback.png)](https://www.sakura.ad.jp/){:target="_blank"}  
 
-+ [VAddy](https://vaddy.net/ja/)  
++ [VAddy](https://vaddy.net/ja/){:target="_blank"}  
 [![VAddy](/images/VAddy_logo.png)](https://vaddy.net/ja/){:target="_blank"}

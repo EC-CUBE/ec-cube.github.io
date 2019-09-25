@@ -70,7 +70,7 @@ SSD など、高速なストレージを使用している場合に効果を期�
 ### apc
 
 [APC User Cache](https://pecl.php.net/package/APCU) を利用して、キャッシュをメモリ上に保持します。  
-予め [apcu](https://pecl.php.net/package/APCU) をインストールしておく必要があります。  
+予め [apcu](https://pecl.php.net/package/APCU){:target="_blank"} をインストールしておく必要があります。  
 
 ```
 pecl install apcu
@@ -90,7 +90,7 @@ pecl install apcu
 ### xcache
 
 [xCache](https://xcache.lighttpd.net/) を利用して、キャッシュをメモリ上に保持します。  
-予め [xCache](https://xcache.lighttpd.net/) をインストールしておく必要があります。  
+予め [xCache](https://xcache.lighttpd.net/){:target="_blank"} をインストールしておく必要があります。  
 
 ```
 ## for ubuntu
@@ -118,7 +118,7 @@ brew install php56-xcache
 ### memcached
 
 [memcached](https://memcached.org/) にキャッシュを保存します。  
-libmemcached を必要とします。 [PECL memcached](https://pecl.php.net/package/memcached) を入れておく必要があります。  
+libmemcached を必要とします。 [PECL memcached](https://pecl.php.net/package/memcached){:target="_blank"} を入れておく必要があります。  
 `host: ` 及び `port: ` で memcached の接続先を指定します。  
 
 ```
@@ -167,7 +167,7 @@ pecl install memcached
 ### redis
 
 [redis](http://redis.io/) にキャッシュを保持します。  
-予め [PECL redis](https://pecl.php.net/package/redis) をインストールしておく必要があります。  
+予め [PECL redis](https://pecl.php.net/package/redis){:target="_blank"} をインストールしておく必要があります。  
 `host: ` 及び `port: ` で redis-server の接続先を指定します。  
 
 - 設定例

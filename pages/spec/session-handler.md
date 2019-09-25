@@ -22,7 +22,7 @@ summary: Doctrineのキャッシュの利用設定について解説します。
 ### memcached
 
 [memcached](https://memcached.org/) にセッションを保存します。  
-libmemcached を必要とします。 [PECL memcached](https://pecl.php.net/package/memcached) を入れておく必要があります。  
+libmemcached を必要とします。 [PECL memcached](https://pecl.php.net/package/memcached){:target="_blank"} を入れておく必要があります。  
 `save_handler: ` 及び `save_path: ` で memcached の接続先を指定します。  
 
 ```yml
@@ -50,7 +50,7 @@ session_handler:
 ### redis
 
 [redis](http://redis.io/) にセッションを保持します。  
-予め [PECL redis](https://pecl.php.net/package/redis) をインストールしておく必要があります。  
+予め [PECL redis](https://pecl.php.net/package/redis){:target="_blank"} をインストールしておく必要があります。  
 `save_handler: ` 及び `save_path: ` で redis-server の接続先を指定します。  
 
 - 設定例

@@ -33,29 +33,26 @@ summary: EC-CUBEでは、税率の設定について、共通税率と商品ご�
 個別税率設定を有効にすると、商品単位（正確には商品規格単位）で税率が登録できるようになります。  
 
 <div style="background-color: #fdefef; margin: 2em 0 !important; padding: 1em;">
-<b>注意</b>
-<p>
-商品別税率が反映されない不具合が報告されています。<br>
-(EC-CUBE 3.0.0〜3.0.18までのバージョンが対象)<br>   
-<a href = "https://github.com/EC-CUBE/ec-cube/issues/2251" target="_blank">https://github.com/EC-CUBE/ec-cube/issues/2251</a>
-</p>
-<p>
+**注意**
+
+商品別税率が反映されない不具合が報告されています。   
+(EC-CUBE 3.0.0〜3.0.18までのバージョンが対象)   
+[https://github.com/EC-CUBE/ec-cube/issues/2251](https://github.com/EC-CUBE/ec-cube/issues/2251)
+
 ソースコードの変更を行うことで修正が可能です。
-</p>
-<p>
-修正ファイル：src/Eccube/Repository/TaxRuleRepository.php<br>   
-修正内容：<a href="https://github.com/EC-CUBE/ec-cube/pull/4310/files#diff-9ebf9d0c89cef624ee2648733e557603" target="_blank">PullRequest #4310 の修正差分</a> をソースコードに反映
-</p>
+
+修正ファイル：/src/Eccube/Repository/TaxRuleRepository.php   
+修正内容：[PullRequest #4310 の修正差分](https://github.com/EC-CUBE/ec-cube/pull/4310/files#diff-9ebf9d0c89cef624ee2648733e557603) をソースコードに反映
+
 </div>
 
 <div style="background-color: #fdefef; margin: 2em 0 !important; padding: 1em;">
-<b>注意</b>
-<p>
-共通税率と商品別税率の設定順序によっては、商品別税率が正しく反映されないケースが報告されています。<br>
-</p>
-<p>
-詳細は <a href="/workaround-product-tax-rule">商品別税率設定が適用されない不具合について</a> をご確認下さい。
-</p>
+**注意**
+
+共通税率と商品別税率の設定順序によっては、商品別税率が正しく反映されないケースが報告されています。
+
+詳細は [商品別税率設定が適用されない不具合について](/workaround-product-tax-rule) をご確認下さい。
+
 </div>
 
 ![個別税率を有効にする](/images/img-tax-03.png)  

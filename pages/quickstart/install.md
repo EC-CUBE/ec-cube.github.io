@@ -44,7 +44,7 @@ php composer.phar create-project ec-cube/ec-cube ec-cube "4.0.x-dev" --keep-vcs
 
 上記の例では、データベースに SQLite3 が選択されます。
 
-ec-cube ディレクトリに移動し、 `bin/console server:run` コマンドを実行すると、ビルトインウェブサーバーが起動します。
+ec-cube ディレクトリに移動し、 `bin/console server:run` コマンドを実行すると、ビルトインウェブサーバが起動します。
 
 ```
 cd ec-cube
@@ -98,7 +98,7 @@ bin/console eccube:fixtures:load
 php composer.phar create-project --no-scripts ec-cube/ec-cube ec-cube "4.0.x-dev" --keep-vcs
 ```
 
-ec-cube ディレクトリに移動し、 `bin/console server:run` コマンドを実行すると、ビルトインウェブサーバーが起動します。
+ec-cube ディレクトリに移動し、 `bin/console server:run` コマンドを実行すると、ビルトインウェブサーバが起動します。
 
 ```
 cd ec-cube
@@ -107,7 +107,7 @@ bin/console server:run
 
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/) にアクセスすると、 Webインストーラが表示されますので、指示にしたがってインストールしてください。
 
-## Dockerを使用したインストール
+### Dockerを使用してインストールする
 
 前提として、 [Docker Desktop のインストール](https://hub.docker.com) が必要です。
 
@@ -125,7 +125,7 @@ docker run --name ec-cube -p "8080:80" -p "4430:443" eccube4-php-apache
 docker run --name ec-cube -p "8080:80" -p "4430:443"  -v "$PWD/html:/var/www/html/html:cached" -v "$PWD/src:/var/www/html/src:cached" -v "$PWD/app:/var/www/html/app:cached" eccube4-php-apache
 ```
 
-### 設定ファイルを編集する場合
+#### 設定ファイルを編集する場合
 
 .env など、インストールディレクトリ直下のファイルを編集する場合は、コンテナ上のファイルを直接編集するか、個別にマウントする必要があります
 
@@ -134,7 +134,7 @@ docker exec -it ec-cube /bin/bash
 root@de5372ce7139:/var/www/html# vi .env
 ```
 
-### メール送信を使用する場合
+#### メール送信を使用する場合
 
 mailcatcher を使用します
 
@@ -144,7 +144,7 @@ docker run -d -p 1080:1080 -p 1025:1025 --name mailcatcher schickling/mailcatche
 docker run --name ec-cube -p "8080:80" -p "4430:443"  --link mailcatcher:mailcatcher eccube4-php-apache
 ```
 
-### PostgreSQL を使用する場合
+#### PostgreSQL を使用する場合
 
 ```
 ## .env にて DATABASE_URL=pgsql://postgres:password@db/cube4_dev としておく
@@ -152,7 +152,7 @@ docker run --name container_postgres -e POSTGRES_PASSWORD=password  -p 5432:5432
 docker run --name ec-cube -p "8080:80" -p "4430:443" --link container_postgres:db eccube4-php-apache
 ```
 
-### MySQL を使用する場合
+#### MySQL を使用する場合
 
 ```
 ## .env にて DATABASE_URL=mysql://root:password@db/cube4_dev としておく
@@ -164,8 +164,8 @@ docker run --name ec-cube -p "8080:80" -p "4430:443" --link container_mysql:db e
 
 インストール完了後、インストールディレクトリにデータベースの接続情報等が設定された **.env** ファイルが生成されます。
 **.env** ファイルは、開発用途での環境変数を設定するためのものであり、本番環境での使用は推奨されません。
-本番環境では、環境変数をサーバー設定ファイルに設定することを推奨します。
-サーバー設定ファイルに環境変数を設定することにより、環境変数が外部に暴露される危険性が減り、安全に運用できます。
+本番環境では、環境変数をサーバ設定ファイルに設定することを推奨します。
+サーバ設定ファイルに環境変数を設定することにより、環境変数が外部に暴露される危険性が減り、安全に運用できます。
 
 ### Apache での設定例
 
@@ -213,11 +213,11 @@ PHP実行ファイルのパスは適宜変更してください。
 
 [参考: IIS コンフィギュレーション リファレンス](https://msdn.microsoft.com/ja-jp/library/ee431592.aspx#EDA)
 
-### サーバー設定ファイルに環境変数を設定した場合の注意事項
+### サーバ設定ファイルに環境変数を設定した場合の注意事項
 
-サーバー設定ファイルに環境変数を設定した場合、 以下の機能を管理画面から設定することができません。
+サーバ設定ファイルに環境変数を設定した場合、 以下の機能を管理画面から設定することができません。
 
-**サーバー設定ファイルの環境変数を変更し、キャッシュクリアする必要がありますのでご注意ください。**
+**サーバ設定ファイルの環境変数を変更し、キャッシュクリアする必要がありますのでご注意ください。**
 
 - 管理画面→オーナーズストア→テンプレート
 - 管理画面→設定→システム設定→セキュリティ管理

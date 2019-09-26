@@ -1,6 +1,8 @@
 ---
 title: 商品別税率設定が適用されない不具合について
+keywords: tax workaround 
 tags: [spec, getting_started]
+sidebar: home_sidebar
 permalink: workaround-product-tax-rule
 summary: 一定条件下で商品別税率設定が適用されない不具合の原因と対策。
 ---

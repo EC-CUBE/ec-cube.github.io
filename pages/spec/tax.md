@@ -32,7 +32,17 @@ summary: EC-CUBEでは、税率の設定について、共通税率と商品ご�
 
 個別税率設定を有効にすると、商品単位（正確には商品規格単位）で税率が登録できるようになります。  
 
-<div style="background-color: #fdefef; margin: 2em 0 !important; padding: 1em;">
+![個別税率を有効にする](/images/img-tax-03.png)  
+
+規格なし商品の登録例  
+![規格なし商品の登録例](/images/img-tax-04.png)  
+
+規格あり商品の登録例  
+![規格あり商品の登録例](/images/img-tax-05.png)  
+
+個別税率設定が有効時、税率を設定している商品はその税率で、それ以外の商品は共通税率で税額が計算されます。  
+
+<div style="background-color: #fdefef; margin: 1em 0 !important; padding: 1em;">
 <b>注意</b>
 </div>
 
@@ -45,23 +55,12 @@ summary: EC-CUBEでは、税率の設定について、共通税率と商品ご�
 修正ファイル：/src/Eccube/Repository/TaxRuleRepository.php   
 修正内容：[PullRequest #4310 の修正差分](https://github.com/EC-CUBE/ec-cube/pull/4310/files#diff-9ebf9d0c89cef624ee2648733e557603) をソースコードに反映
 
-<div style="background-color: #fdefef; margin: 2em 0 !important; padding: 1em;">
+<div style="background-color: #fdefef; margin: 1em 0 !important; padding: 1em;">
 <b>注意</b>
 </div>
 
-共通税率と商品別税率の設定順序によっては、商品別税率が正しく反映されないケースが報告されています。
+共通税率と商品別税率の設定順序によっては、商品別税率が正しく反映されないケースが報告されています。詳細は [商品別税率設定が適用されない不具合について](/workaround-product-tax-rule) をご確認下さい。
 
-詳細は [商品別税率設定が適用されない不具合について](/workaround-product-tax-rule) をご確認下さい。
-
-![個別税率を有効にする](/images/img-tax-03.png)  
-
-規格なし商品の登録例  
-![規格なし商品の登録例](/images/img-tax-04.png)  
-
-規格あり商品の登録例  
-![規格あり商品の登録例](/images/img-tax-05.png)  
-
-個別税率設定が有効時、税率を設定している商品はその税率で、それ以外の商品は共通税率で税額が計算されます。  
 
 # 関連課題
 

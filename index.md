@@ -15,6 +15,19 @@ EC-CUBEのインストール方法、開発ガイドラインや要素技術の�
 
 ドキュメント化に向けた情報、実装時参考にしたい情報については、随時[Issue](https://github.com/EC-CUBE/ec-cube/issues/3380){:target="_blank"}を更新しております。
 
+運用者向けには以下のサイトをご覧ください。
+
++ [EC-CUBE 4管理・運用 マニュアル（株式会社シロハチ様）](https://www.shiro8.net/manual4/v40x/index.html){:target="_blank"}
+
+## Topics
+
+|掲載日|内容|
+|---|---|
+|2019/09/25|[Dockerを使用したインストール方法](quickstart_install#dockerを使用したインストール)が追加されました。| 
+|2019/09/24|EC-CUBE4.0.3で商品別税率設定が適用されない不具合が確認されております。詳しくは、[こちら](workaround-product-tax-rule)をご確認ください。|
+|2019/09/05|EC-CUBE4.0.3への[バージョンアップ手順](quickstart_update)と[注意点](quickstart_update_4_0_3)が追加されました。| 
+|2019/09/02|[税率設定のページ](spec_tax)が追加されました。| 
+
 ## Quick Start
 
 + [システム要件](quickstart_requirement)

@@ -80,4 +80,4 @@ EC-CUBE標準のポイント機能および公式のクーポンプラグイン�
 
 税率機能について、以下のissueが登録されています。合わせてご確認ください。  
 
-- [https://github.com/EC-CUBE/ec-cube/issues/4183](https://github.com/EC-CUBE/ec-cube/issues/4183)
+- [https://github.com/EC-CUBE/ec-cube/issues/4183](https://github.com/EC-CUBE/ec-cube/issues/4183){:target="_blank"}

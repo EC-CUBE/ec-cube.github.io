@@ -12,7 +12,7 @@ folder: customize
 
 # Service のカスタマイズ
 
-## カートのカスタマイズ [#2613](https://github.com/EC-CUBE/ec-cube/issues/2613)
+## カートのカスタマイズ [#2613](https://github.com/EC-CUBE/ec-cube/issues/2613){:target="_blank"}
 
 `CartItemComparator` クラス、 `CartItemAllocator` クラスを実装することにより、カートに商品を投入した際の動作をカスタマイズ可能です。
 
@@ -128,7 +128,7 @@ services:
 ```
 
 
-### 購入フローのカスタマイズ [#2424](https://github.com/EC-CUBE/ec-cube/pull/2424)
+### 購入フローのカスタマイズ [#2424](https://github.com/EC-CUBE/ec-cube/pull/2424){:target="_blank"}
 
 集計処理や、在庫チェックなどのバリデーションは、受注に関わる共通したロジックです。
 従来は、CartService や ShoppingService など、利用される画面で個別に実装されており、カスタマイズ時の影響が読みづらい、再利用しにくいなどの課題がありました(たとえば、配送料の計算ロジックを変更する際には複数箇所を修正する必要があります)
@@ -190,7 +190,7 @@ CartItem や OrderItem が実装クラスとなります。
 ##### PurchaseFlow
 
 明細処理や集計処理の全体のフローを制御するクラスです。
-PurchaseFlow は、集計を行う [calculate()](https://github.com/EC-CUBE/ec-cube/pull/2424/files#diff-1d9b0d44b6269dc98b5c09f331ff0c41R48) と完了処理を行う [purchase()](https://github.com/EC-CUBE/ec-cube/pull/2424/files#diff-1d9b0d44b6269dc98b5c09f331ff0c41R80) メソッドを持っています。
+PurchaseFlow は、集計を行う [calculate()](https://github.com/EC-CUBE/ec-cube/pull/2424/files#diff-1d9b0d44b6269dc98b5c09f331ff0c41R48){:target="_blank"} と完了処理を行う [purchase()](https://github.com/EC-CUBE/ec-cube/pull/2424/files#diff-1d9b0d44b6269dc98b5c09f331ff0c41R80){:target="_blank"} メソッドを持っています。
 メソッドが実行されると、Item や ItemHolder を Processor に渡し、Processor を順次実行していきます。また、Processor の実行結果を呼び出し元に返却します。
 
 ##### ItemHolderProcessor

@@ -9,15 +9,16 @@ forder: quickstart
 
 ## インストール方法
 
-EC-CUBEのインストールは、以下の2種類の方法があります。
+EC-CUBEのインストールは、以下の方法があります。
 
-- パッケージを使用してインストールする
-- コマンドラインからインストールする
-- Webインストーラでインストールする
+1. パッケージを使用してインストールする
+1. コマンドラインからインストールする
+1. Webインストーラでインストールする
+1. Dockerを使用してインストールする
 
-## パッケージを使用したインストール
+### パッケージを使用してインストールする
 
-[EC-CUBE 4のパッケージ](http://downloads.ec-cube.net/src/eccube-4.0.0-rc.zip)をダウンロードし、解凍してください。
+[EC-CUBE 4のパッケージ](https://www.ec-cube.net/download/)をダウンロードし、解凍してください。
 
 FTP/SSHを使用し、ファイルをサーバへアップロードしてください。  
 ※ファイル数が多いためエラーが発生することがございます。エラー発生時は分割してアップロードをお願いします。
@@ -31,9 +32,11 @@ FTP/SSHを使用し、ファイルをサーバへアップロードしてくだ�
 
 webインストーラが表示されますので必要な情報を入力してインストールします。
 
-## コマンドラインでのインストール
+### コマンドラインからインストールする
 
-前提として、 [Composer のインストール](https://getcomposer.org/download/) が必要です。
+**開発環境としておすすめの方法です。**
+
+前提として、 [Composer のインストール](https://getcomposer.org/download/){:target="_blank"} が必要です。
 
 ```
 php composer.phar create-project ec-cube/ec-cube ec-cube "4.0.x-dev" --keep-vcs
@@ -41,7 +44,7 @@ php composer.phar create-project ec-cube/ec-cube ec-cube "4.0.x-dev" --keep-vcs
 
 上記の例では、データベースに SQLite3 が選択されます。
 
-ec-cube ディレクトリに移動し、 `bin/console server:run` コマンドを実行すると、ビルトインウェブサーバーが起動します。
+ec-cube ディレクトリに移動し、 `bin/console server:run` コマンドを実行すると、ビルトインウェブサーバが起動します。
 
 ```
 cd ec-cube
@@ -54,7 +57,7 @@ bin/console server:run
 
 *終了する場合は Ctrl+C を押してください*
 
-### データベースの種類を変更したい場合
+#### データベースの種類を変更したい場合
 
 インストール後、 `bin/console eccube:install` コマンドを実行し、 `Database Url` を以下のように設定してください。
 
@@ -66,15 +69,36 @@ mysql://<user>:<password>@<host>/<database name>
 postgres://<user>:<password>@<host>/<database name>
 ```
 
-## Webインストーラーを利用したインストール
+#### Windows 環境を使用する場合
 
-前提として、 [Composer のインストール](https://getcomposer.org/download/) が必要です。
+`bin/console eccube:install` コマンドは使用できません。
+代替として、以下のコマンド使用して下さい。
+
+```
+# (optional) データベース削除
+bin/console doctrine:database:drop --force
+# データベース作成
+bin/console doctrine:database:create
+# (optional) スキーマ削除
+bin/console doctrine:schema:drop --force
+# スキーマ生成
+bin/console doctrine:schema:create
+# 初期データ生成
+bin/console eccube:fixtures:load
+```
+
+- *`bin/console eccube:install` コマンドでは、これらのコマンドを内部的に実行しています。*
+- Symfony と Windows 環境の相性があまり良くないため、動作が大変遅くなる可能性があります。 [Dockerを使用したインストール](http://doc4.ec-cube.net/quickstart_install#Docker%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB) をおすすめします。
+
+### Webインストーラでインストールする
+
+前提として、 [Composer のインストール](https://getcomposer.org/download/){:target="_blank"} が必要です。
 
 ```
 php composer.phar create-project --no-scripts ec-cube/ec-cube ec-cube "4.0.x-dev" --keep-vcs
 ```
 
-ec-cube ディレクトリに移動し、 `bin/console server:run` コマンドを実行すると、ビルトインウェブサーバーが起動します。
+ec-cube ディレクトリに移動し、 `bin/console server:run` コマンドを実行すると、ビルトインウェブサーバが起動します。
 
 ```
 cd ec-cube
@@ -83,12 +107,65 @@ bin/console server:run
 
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/) にアクセスすると、 Webインストーラが表示されますので、指示にしたがってインストールしてください。
 
+### Dockerを使用してインストールする
+
+前提として、 [Docker Desktop のインストール](https://hub.docker.com) が必要です。
+
++ 初期状態では SQLite3 を使用します
++ コンテナ上のファイルを使用しても、VOLUME をマウントしても使用可能です
+
+```shell
+cd path/to/ec-cube
+docker build -t eccube4-php-apache .
+## コンテナ上のファイルを使用する場合
+docker run --name ec-cube -p "8080:80" -p "4430:443" eccube4-php-apache
+
+## ローカルディレクトリをマウントする場合
+# var 以下をマウントすると強烈に遅くなるため、 src, html, app 以下のみをマウントする
+docker run --name ec-cube -p "8080:80" -p "4430:443"  -v "$PWD/html:/var/www/html/html:cached" -v "$PWD/src:/var/www/html/src:cached" -v "$PWD/app:/var/www/html/app:cached" eccube4-php-apache
+```
+
+#### 設定ファイルを編集する場合
+
+.env など、インストールディレクトリ直下のファイルを編集する場合は、コンテナ上のファイルを直接編集するか、個別にマウントする必要があります
+
+```shell
+docker exec -it ec-cube /bin/bash
+root@de5372ce7139:/var/www/html# vi .env
+```
+
+#### メール送信を使用する場合
+
+mailcatcher を使用します
+
+```shell
+## .env にて MAILER_URL=smtp://mailcatcher:1025 としておく
+docker run -d -p 1080:1080 -p 1025:1025 --name mailcatcher schickling/mailcatcher
+docker run --name ec-cube -p "8080:80" -p "4430:443"  --link mailcatcher:mailcatcher eccube4-php-apache
+```
+
+#### PostgreSQL を使用する場合
+
+```
+## .env にて DATABASE_URL=pgsql://postgres:password@db/cube4_dev としておく
+docker run --name container_postgres -e POSTGRES_PASSWORD=password  -p 5432:5432 -d postgres
+docker run --name ec-cube -p "8080:80" -p "4430:443" --link container_postgres:db eccube4-php-apache
+```
+
+#### MySQL を使用する場合
+
+```
+## .env にて DATABASE_URL=mysql://root:password@db/cube4_dev としておく
+docker run --name container_mysql -e MYSQL_ROOT_PASSWORD=password  -d -p 3306:3306 mysql:5.7
+docker run --name ec-cube -p "8080:80" -p "4430:443" --link container_mysql:db eccube4-php-apache
+```
+
 ## 本番環境での .env ファイルの利用について
 
 インストール完了後、インストールディレクトリにデータベースの接続情報等が設定された **.env** ファイルが生成されます。
 **.env** ファイルは、開発用途での環境変数を設定するためのものであり、本番環境での使用は推奨されません。
-本番環境では、環境変数をサーバー設定ファイルに設定することを推奨します。
-サーバー設定ファイルに環境変数を設定することにより、環境変数が外部に暴露される危険性が減り、安全に運用できます。
+本番環境では、環境変数をサーバ設定ファイルに設定することを推奨します。
+サーバ設定ファイルに環境変数を設定することにより、環境変数が外部に暴露される危険性が減り、安全に運用できます。
 
 ### Apache での設定例
 
@@ -136,11 +213,11 @@ PHP実行ファイルのパスは適宜変更してください。
 
 [参考: IIS コンフィギュレーション リファレンス](https://msdn.microsoft.com/ja-jp/library/ee431592.aspx#EDA)
 
-### サーバー設定ファイルに環境変数を設定した場合の注意事項
+### サーバ設定ファイルに環境変数を設定した場合の注意事項
 
-サーバー設定ファイルに環境変数を設定した場合、 以下の機能を管理画面から設定することができません。
+サーバ設定ファイルに環境変数を設定した場合、 以下の機能を管理画面から設定することができません。
 
-**サーバー設定ファイルの環境変数を変更し、キャッシュクリアする必要がありますのでご注意ください。**
+**サーバ設定ファイルの環境変数を変更し、キャッシュクリアする必要がありますのでご注意ください。**
 
 - 管理画面→オーナーズストア→テンプレート
 - 管理画面→設定→システム設定→セキュリティ管理

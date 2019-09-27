@@ -57,9 +57,9 @@ class HelloListener implements EventSubscriberInterface
 
 イベントに関する詳細は以下を参照してください。
 
-- [The HttpKernel Component](https://symfony.com/doc/current/components/http_kernel.html)
-- [Events and Event Listeners](https://symfony.com/doc/current/event_dispatcher.html)
-- [Built-in Symfony Events](https://symfony.com/doc/current/reference/events.html)
+- [The HttpKernel Component](https://symfony.com/doc/current/components/http_kernel.html){:target="_blank"}
+- [Events and Event Listeners](https://symfony.com/doc/current/event_dispatcher.html){:target="_blank"}
+- [Built-in Symfony Events](https://symfony.com/doc/current/reference/events.html){:target="_blank"}
 
 ## Command
 
@@ -111,7 +111,7 @@ $ bin/console acme:hello
 
 Commandに関する詳細は以下を参照してください。
 
-- [Console Commands](https://symfony.com/doc/current/console.html)
+- [Console Commands](https://symfony.com/doc/current/console.html){:target="_blank"}
 
 ## Doctrine Event
 
@@ -156,10 +156,10 @@ class HelloEventSubscriber implements EventSubscriber
 
 イベントに関する詳細は以下を参照してください。
 
-- [The Event System](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/events.html)
-- [Doctrine Event Listeners and Subscribers](https://symfony.com/doc/current/doctrine/event_listeners_subscribers.html)
+- [The Event System](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/events.html){:target="_blank"}
+- [Doctrine Event Listeners and Subscribers](https://symfony.com/doc/current/doctrine/event_listeners_subscribers.html){:target="_blank"}
 
-※ [Doctrine Event Listeners and Subscribers](https://symfony.com/doc/current/doctrine/event_listeners_subscribers.html)では、`services.yaml`での設定方法が記載されていますが、EC-CUBEはDoctrineのイベントリスナーをコンテナへ自動登録します。そのため、`services.yaml`での設定は不要です。
+※ [Doctrine Event Listeners and Subscribers](https://symfony.com/doc/current/doctrine/event_listeners_subscribers.html){:target="_blank"}では、`services.yaml`での設定方法が記載されていますが、EC-CUBEはDoctrineのイベントリスナーをコンテナへ自動登録します。そのため、`services.yaml`での設定は不要です。
 
 ## SymfonyのBundleを利用する
 

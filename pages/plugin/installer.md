@@ -1,5 +1,5 @@
 ---
-title: プラグインインストーラーの仕様
+title: プラグインインストーラの仕様
 keywords: plugin installer spec
 tags: [plugin, spec]
 sidebar: home_sidebar

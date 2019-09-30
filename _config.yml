@@ -2,10 +2,10 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: EC-CUBE 開発ドキュメント
+topnav_title: EC-CUBE 3.0 開発ドキュメント
 # this appears on the top navigation bar next to the home button
 
-site_title: EC-CUBE 開発ドキュメント
+site_title: EC-CUBE 3.0 開発ドキュメント
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: EC-CUBE co,.ltd.

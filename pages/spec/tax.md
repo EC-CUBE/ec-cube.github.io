@@ -42,8 +42,10 @@ summary: EC-CUBEでは、税率の設定について、共通税率と商品ご�
 
 個別税率設定が有効時、税率を設定している商品はその税率で、それ以外の商品は共通税率で税額が計算されます。  
 
+## 不具合についての情報
+
 <div style="background-color: #fdefef; margin: 1em 0 !important; padding: 1em;">
-<b>注意</b>
+<b>注意：商品別税率が反映されない</b>
 </div>
 
 商品別税率が反映されない不具合が報告されています。   
@@ -56,11 +58,18 @@ summary: EC-CUBEでは、税率の設定について、共通税率と商品ご�
 修正内容：[PullRequest #4310 の修正差分](https://github.com/EC-CUBE/ec-cube/pull/4310/files#diff-9ebf9d0c89cef624ee2648733e557603) をソースコードに反映
 
 <div style="background-color: #fdefef; margin: 1em 0 !important; padding: 1em;">
-<b>注意</b>
+<b>注意:複数の税率設定がある場合に商品別税率が反映されない</b>
 </div>
 
 共通税率と商品別税率の設定順序によっては、商品別税率が正しく反映されないケースが報告されています。詳細は [商品別税率設定が適用されない不具合について](/workaround-product-tax-rule) をご確認下さい。
 
+<div style="background-color: #fdefef; margin: 1em 0 !important; padding: 1em;">
+<b>注意:商品別税率の課税規則が常に「四捨五入」で計算される</b>
+</div>
+
+個別税率を設定した商品の場合、課税規則が常に「四捨五入」で計算される不具合が報告されています。
+
+[https://github.com/EC-CUBE/ec-cube/issues/4356](https://github.com/EC-CUBE/ec-cube/issues/4356)   
 
 # 関連課題
 

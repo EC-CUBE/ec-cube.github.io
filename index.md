@@ -1,6 +1,6 @@
 ---
 layout: default
-title: EC-CUBE開発ドキュメント・マニュアル
+title: EC-CUBE 3.0 開発ドキュメント・マニュアル
 keywords: このサイトについて, QuickStart
 tags: [quickstart]
 sidebar: home_sidebar

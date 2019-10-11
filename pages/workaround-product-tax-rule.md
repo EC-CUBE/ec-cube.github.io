@@ -84,7 +84,7 @@ MySQLをご使用の場合は、環境に合わせて `time_zone` を設定が�
 
 #### SQLサンプル1：任意の商品のみの「基本税率の適用日時」を更新する場合
 
-```UPDATE dtb_tax_rule SET apply_date = '2019-10-01 00:00:01' WHERE id = [任意のproduct_class_id];```
+```UPDATE dtb_tax_rule SET apply_date = '2019-10-01 00:00:01' WHERE product_class_id = [変更したい商品のproduct_class_id];```
 
 #### SQLサンプル2：商品別税率設定があるすべての「基本税率の適用日時」を更新する場合
 
@@ -93,3 +93,4 @@ MySQLをご使用の場合は、環境に合わせて `time_zone` を設定が�
 #### SQL実行後の確認事項
 
 上記 Step1〜2を対応後、商品別税率が商品価格に反映されていることをご確認下さい。
+

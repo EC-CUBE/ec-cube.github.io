@@ -24,7 +24,7 @@ Build the site to see the instructions for using it. Or just go here: [http://id
 
 ## ローカル開発環境の構築
 
-EC-CUBE 3開発ドキュメントはローカル開発環境を構築することにより、
+EC-CUBE 4開発ドキュメントはローカル開発環境を構築することにより、
 ドキュメントを修正した場合にローカルPCで確認することができます。
 Windows、Macの環境で動作確認済みです。
 

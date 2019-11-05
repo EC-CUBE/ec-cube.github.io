@@ -15,7 +15,7 @@ folder: customize
 `@Route` アノテーションを付与したクラスファイルを `./app/Customize/Controller/` 以下に配置することで、サイトに新しいルーティングを追加することが可能です。  
 
 以下は最もシンプルなルーティング追加の例です。  
-`http://サイトURL/samlple` にアクセスすると"Hello sample page !"と表示するルーティングを追加しています。
+`http://サイトURL/sample` にアクセスすると"Hello sample page !"と表示するルーティングを追加しています。
 
 ### Controllerファイル
 
@@ -46,7 +46,7 @@ class SamplePageController
 ## テンプレートファイルの利用
 
 `@Template` を利用することで、Twigのテンプレートファイルを利用することができます。  
-以下のサンプルは、`http://サイトURL/samlple` にアクセスすると"Hello EC-CUBE !"と表示します。
+以下のサンプルは、`http://サイトURL/sample` にアクセスすると"Hello EC-CUBE !"と表示します。
 
 ### Controllerファイル
 
@@ -89,7 +89,7 @@ class SamplePageController
 
 ### URLからパラメータを受け取る
 
-`http://サイトURL/samlple/1` のようにURLに含まれるパラメータを変数の値として受け取ることができます。  
+`http://サイトURL/sample/1` のようにURLに含まれるパラメータを変数の値として受け取ることができます。  
 @Routeに含まれる `{id}` の部分を同名の変数 `$id` として受け取れます。
 
 ```php

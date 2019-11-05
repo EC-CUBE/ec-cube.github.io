@@ -104,6 +104,6 @@ description: "EC-CUBEのドキュメントサイトです。開発ガイドラ�
 # needed for sitemap.xml file only
 url: http://idratherbewriting.com
 
-google_analytics: UA-12978473-11
+google_analytics: UA-12978473-13
 
 repository: ec-cube/ec-cube.github.io

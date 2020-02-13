@@ -8,16 +8,19 @@ summary : EC-CUBE3系でのSameSite Cookieの暫定対応方法について
 
 
 ## 概要
-- 2020年2月にリリースされた Chrome 80 より、他サイトからEC-CUBEで構築されたサイトに遷移する場合に、条件によってはEC-CUBEのCookieが送信されなくなり、決済が完了しない等の現象が発生します。この問題に対応するために以下の修正パッチを適用して頂く必要があります。
+- 2020年2月にリリースされた Chrome 80 より、他サイトからEC-CUBEで構築されたサイトに遷移する場合に、条件によってはEC-CUBEのCookieが送信されなくなり、決済が完了しない等の現象が発生します。この問題に対応するために以下のHot-fixパッチを適用して頂く必要があります。
 
 ### 関連情報
 - [Google Developers Japan: 新しい Cookie 設定 SameSite=None; Secure の準備を始めましょう](https://developers-jp.googleblog.com/2019/11/cookie-samesitenone-secure.html])
 - [SameSite Updates - The Chromium Projects](https://www.chromium.org/updates/same-site)
+- [Chrome80のSameSiteの影響で3Dセキュア等を利用する場合に購入に失敗する #4457](https://github.com/EC-CUBE/ec-cube/issues/4457)
 
-## 修正パッチ
+## Hot-fixパッチ
 
 ### __注意事項__
-ローカル環境やSSL未対応のサイトではこのパッチを適用すると正しく動作しなくなります。SSL未対応のサイトはSSLに対応後、このパッチを適用してください。
+- SSL未対応のサイトではこのパッチを適用すると正しく動作しなくなります。SSL未対応のサイトはSSLに対応後、このパッチを適用してください。
+- ローカル開発環境ではこのパッチを適用しないことをおすすめします。適用する場合はローカル環境でもSSLに対応させる必要があります。
+- 今後、SameSite Cookieの設定を環境変数等で設定できるように検討していきます。詳しくは、[こちらのIssue #4457](https://github.com/EC-CUBE/ec-cube/issues/4457) を参照ください。
 
 ### 修正内容
 このパッチにより以下の修正が適用されます。

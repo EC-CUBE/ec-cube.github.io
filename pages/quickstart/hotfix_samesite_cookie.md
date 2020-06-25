@@ -29,9 +29,9 @@ summary : EC-CUBE3系でのSameSite Cookieの対応方法について
 
 - 他サイトからPOSTされたときにもセッションキーを保持したCookieが送信されるように セッションキーのCookieに `SammeSite=None` を設定する。
 - MacやiOSのsafariについては、`SammeSite=None`は付与されません。
-- samesiteを有効にするには、管理画面の SSL強制を ON にする必要があります。
+- samesiteを有効にするには、管理画面の設定＞システム情報設定＞セキュリティ管理から、`SSL強制`を ON にする必要があります。
 
-GitHub Issue：[https://github.com/EC-CUBE/ec-cube3/pull/82](https://github.com/EC-CUBE/ec-cube3/pull/82)
+GitHub PR：[https://github.com/EC-CUBE/ec-cube3/pull/82](https://github.com/EC-CUBE/ec-cube3/pull/82)
 
 ### 適用方法
 

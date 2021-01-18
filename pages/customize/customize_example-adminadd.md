@@ -88,7 +88,7 @@ folder: customize
 
 1.AdminControllerProvider.phpを開いたら、URL語尾の画面に関連した文字を検索します。
 
-  - 今回であれば、**cutomer**を検索します。
+  - 今回であれば、**customer**を検索します。
 
 <script src="http://gist-it.appspot.com/https://github.com/EC-CUBE/ec-cube.github.io/blob/master/Source/cookbook1_customize/AdminControllerProvider_view.php"></script>
 
